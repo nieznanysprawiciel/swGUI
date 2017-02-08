@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="EngineGUI">
+      <UniqueIdentifier>{e9d5caa6-af62-4385-8920-d9e98a01281d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\System">
+      <UniqueIdentifier>{60c54db1-0e13-4bf6-bb8e-ab60ea848f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\Controls">
+      <UniqueIdentifier>{774b1ce6-12e5-42c3-9683-86e75e033158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\System\Events">
+      <UniqueIdentifier>{cd4f9f1c-0719-481d-83b4-ff11d52368f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\System\Events\Input">
+      <UniqueIdentifier>{cb217187-f6ff-4754-8cf9-ed59c105e437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\Controls\ArrangeControls">
+      <UniqueIdentifier>{ec02b47f-e168-46d5-884c-6d01fe49a764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\System\Windows">
+      <UniqueIdentifier>{66f98e77-03de-4536-b03e-c471bdf63f5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\System\CommonTypes">
+      <UniqueIdentifier>{a0d3499c-5079-4a81-a5c4-06ce7231e3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineGUI\System\Windows\WinAPI">
+      <UniqueIdentifier>{412a1947-6828-4e73-ad19-dae56ea8d593}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\targetver.h">
+      <Filter>EngineGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\IControl.h">
+      <Filter>EngineGUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\IEventArgs.h">
+      <Filter>EngineGUI\System\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\Input\InputEventArgs.h">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\Input\MouseEventArgs.h">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\Input\MouseButtonEventArgs.h">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\ArrangeControls\IPanel.h">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\ArrangeControls\Grid.h">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\ArrangeControls\StackPanel.h">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\ArrangeControls\DockPanel.h">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\ArrangeControls\WrapPanel.h">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\Input\MouseWheelEventArgs.h">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\HostWindow.h">
+      <Filter>EngineGUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Windows\INativeWindow.h">
+      <Filter>EngineGUI\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Controls\TopLevelControl.h">
+      <Filter>EngineGUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\GUISystem.h">
+      <Filter>EngineGUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\Input\KeyboardEventArgs.h">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Events\Input\KeyEventArgs.h">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\CommonTypes\Thickness.h">
+      <Filter>EngineGUI\System\CommonTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\CommonTypes\CommonTypes.h">
+      <Filter>EngineGUI\System\CommonTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Windows\INativeGUI.h">
+      <Filter>EngineGUI\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Windows\WinAPI\Win32ApiWindow.h">
+      <Filter>EngineGUI\System\Windows\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\System\Windows\WinAPI\WinAPIGUI.h">
+      <Filter>EngineGUI\System\Windows\WinAPI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Controls\IControl.cpp">
+      <Filter>EngineGUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\Input\InputEventArgs.cpp">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\Input\MouseEventArgs.cpp">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\Input\MouseButtonEventArgs.cpp">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\IEventArgs.cpp">
+      <Filter>EngineGUI\System\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Controls\ArrangeControls\IPanel.cpp">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Controls\ArrangeControls\Grid.cpp">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Controls\ArrangeControls\StackPanel.cpp">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Controls\ArrangeControls\DockPanel.cpp">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Controls\ArrangeControls\WrapPanel.cpp">
+      <Filter>EngineGUI\Controls\ArrangeControls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\Input\MouseWheelEventArgs.cpp">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\HostWindow.cpp">
+      <Filter>EngineGUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\GUISystem.cpp">
+      <Filter>EngineGUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\Input\KeyboardEventArgs.cpp">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Events\Input\KeyEventArgs.cpp">
+      <Filter>EngineGUI\System\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Windows\WinAPI\Win32ApiWindow.cpp">
+      <Filter>EngineGUI\System\Windows\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Windows\WinAPI\WinAPIGUI.cpp">
+      <Filter>EngineGUI\System\Windows\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\System\Initializers.cpp">
+      <Filter>EngineGUI\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

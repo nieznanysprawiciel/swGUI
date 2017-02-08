@@ -1,10 +1,10 @@
 #pragma once
 
-#include "EngineGUI/System/Windows/INativeWindow.h"
-#include "EngineGUI/Controls/IControl.h"
-#include "EngineGUI/Controls/TopLevelControl.h"
+#include "swGUI/System/Windows/INativeWindow.h"
+#include "swGUI/Controls/IControl.h"
+#include "swGUI/Controls/TopLevelControl.h"
 
-#include "InputLibrary/IInput.h"
+#include "swInputLibrary/IInput.h"
 
 #include <vector>
 #include <map>

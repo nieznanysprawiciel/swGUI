@@ -1,8 +1,8 @@
 #include "GUISystem.h"
 
-#include "InputLibrary/KeyboardState.h"
-#include "GraphicAPI/ResourcesFactory.h"
-#include "GraphicAPI/ResourceManager.h"
+#include "swInputLibrary/KeyboardState.h"
+#include "swGraphicAPI/Resources/ResourcesFactory.h"
+#include "swGraphicAPI/ResourceManager/ResourceManager.h"
 
 #include <map>
 #include <string>

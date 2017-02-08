@@ -1,7 +1,7 @@
 #include "Win32ApiWindow.h"
 
 #include "WinAPIGUI.h"
-#include "Common/Converters.h"
+#include "swCommonLib/Common/Converters.h"
 
 
 namespace GUI

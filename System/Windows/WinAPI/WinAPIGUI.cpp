@@ -1,7 +1,7 @@
 #include "WinAPIGUI.h"
 #include "Win32ApiWindow.h"
 
-#include "InputLibrary/InputWinApi/WinApiInputProxy.h"
+#include "swInputLibrary/InputWinApi/WinApiInputProxy.h"
 #include <Windows.h>
 
 

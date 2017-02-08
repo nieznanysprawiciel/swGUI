@@ -1,7 +1,7 @@
 #pragma once
 
-#include "GraphicAPI/MeshResources.h"
-#include "GraphicAPI/SwapChain.h"
+#include "swGraphicAPI/Resources/MeshResources.h"
+#include "swGraphicAPI/Resources/SwapChain.h"
 
 #include <string>
 

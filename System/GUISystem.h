@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Common/EngineObject.h"
-#include "GraphicAPI/IGraphicAPIInitializer.h"
-#include "EngineGUI/System/Windows/INativeGUI.h"
+#include "swCommonLib/Common/EngineObject.h"
+#include "swGraphicAPI/Rendering/IGraphicAPIInitializer.h"
+#include "swGUI/System/Windows/INativeGUI.h"
 
 #include "HostWindow.h"
 
@@ -34,8 +34,8 @@ struct CommandLineArgs
 
 Use example of GUI:
 @code
-#include "EngineGUI/System/GUISystem.h"
-#include "EngineGUI/System/Windows/WinAPI/WinAPIGUI.h"
+#include "swGUI/System/GUISystem.h"
+#include "swGUI/System/Windows/WinAPI/WinAPIGUI.h"
 
 #include "Application.h"
 

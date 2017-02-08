@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "EngineGUI/System/Windows/INativeGUI.h"
+#include "swGUI/System/Windows/INativeGUI.h"
 
 
 class WinApiInputProxy;

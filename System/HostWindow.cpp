@@ -1,9 +1,9 @@
 #include "HostWindow.h"
 
-#include "Common/Converters.h"
+#include "swCommonLib/Common/Converters.h"
 
-#include "GraphicAPI/IGraphicAPIInitializer.h"
-#include "GraphicAPI/ResourceManager.h"
+#include "swGraphicAPI/Rendering/IGraphicAPIInitializer.h"
+#include "swGraphicAPI/ResourceManager/ResourceManager.h"
 
 #include "CommonTypes/CommonTypes.h"
 
