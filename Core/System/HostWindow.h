@@ -1,8 +1,8 @@
 #pragma once
 
-#include "swGUI/System/Windows/INativeWindow.h"
-#include "swGUI/Controls/IControl.h"
-#include "swGUI/Controls/TopLevelControl.h"
+#include "swGUI/Native/INativeWindow.h"
+#include "swGUI/Core/Controls/IControl.h"
+#include "swGUI/Core/Controls/TopLevelControl.h"
 
 #include "swInputLibrary/IInput.h"
 

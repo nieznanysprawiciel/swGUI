@@ -1,6 +1,6 @@
 #pragma once
 
-#include "swGUI/System/Windows/INativeWindow.h"
+#include "swGUI/Native/INativeWindow.h"
 
 
 #include <Windows.h>

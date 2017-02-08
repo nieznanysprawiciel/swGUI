@@ -1,6 +1,6 @@
 #pragma once
 
-#include "swGUI/Controls/IControl.h"
+#include "swGUI/Core/Controls/IControl.h"
 
 
 

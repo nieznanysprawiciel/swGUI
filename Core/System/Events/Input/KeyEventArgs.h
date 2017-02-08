@@ -1,6 +1,6 @@
 #pragma once
 
-#include "swGUI/System/Events/Input/KeyboardEventArgs.h"
+#include "swGUI/Core/System/Events/Input/KeyboardEventArgs.h"
 
 
 namespace GUI

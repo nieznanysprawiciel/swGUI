@@ -1,7 +1,7 @@
 #pragma once
 
 #include "swCommonLib/Common/EngineObject.h"
-#include "swGUI/System/CommonTypes/CommonTypes.h"
+#include "swGUI/Core/System/CommonTypes/CommonTypes.h"
 
 #include <string>
 

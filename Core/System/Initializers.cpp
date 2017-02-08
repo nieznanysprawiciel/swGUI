@@ -1,11 +1,11 @@
-#include "Windows/INativeGUI.h"
+#include "swGUI/Native/INativeGUI.h"
 
 
 
 #define USE_WIN32_API
 
 #ifdef USE_WIN32_API
-	#include "swGUI/System/Windows/WinAPI/WinAPIGUI.h"
+	#include "swGUI/Native/WinAPI/WinAPIGUI.h"
 	typedef GUI::WinAPIGUI NativeGUI;
 #else
 	#error Macro USE_WIN32_API not defined!

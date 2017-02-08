@@ -1,5 +1,5 @@
-#include "swGUI/System/GUISystem.h"
-#include "swGUI/System/Windows/WinAPI/WinAPIGUI.h"
+#include "swGUI/Core/System/GUISystem.h"
+#include "swGUI/Native/WinAPI/WinAPIGUI.h"
 
 #include "Application.h"
 

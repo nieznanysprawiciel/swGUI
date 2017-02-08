@@ -1,7 +1,7 @@
 #include "IControl.h"
 
-#include "swGUI/Controls/TopLevelControl.h"
-#include "swGUI/System/HostWindow.h"
+#include "swGUI/Core/Controls/TopLevelControl.h"
+#include "swGUI/Core/System/HostWindow.h"
 
 
 RTTR_REGISTRATION

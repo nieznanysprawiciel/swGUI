@@ -1,6 +1,6 @@
 #pragma once
 
-#include "swGUI/System/GUISystem.h"
+#include "swGUI/Core/System/GUISystem.h"
 
 
 

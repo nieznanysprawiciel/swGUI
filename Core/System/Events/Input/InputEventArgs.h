@@ -1,6 +1,6 @@
 #pragma once
 
-#include "swGUI/System/Events/IEventArgs.h"
+#include "swGUI/Core/System/Events/IEventArgs.h"
 
 
 namespace GUI

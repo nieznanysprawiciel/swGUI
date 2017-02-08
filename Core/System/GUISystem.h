@@ -2,7 +2,7 @@
 
 #include "swCommonLib/Common/EngineObject.h"
 #include "swGraphicAPI/Rendering/IGraphicAPIInitializer.h"
-#include "swGUI/System/Windows/INativeGUI.h"
+#include "swGUI/Native/INativeGUI.h"
 
 #include "HostWindow.h"
 
@@ -34,8 +34,8 @@ struct CommandLineArgs
 
 Use example of GUI:
 @code
-#include "swGUI/System/GUISystem.h"
-#include "swGUI/System/Windows/WinAPI/WinAPIGUI.h"
+#include "swGUI/Core/System/GUISystem.h"
+#include "swGUI/Core/System/Windows/WinAPI/WinAPIGUI.h"
 
 #include "Application.h"
 
