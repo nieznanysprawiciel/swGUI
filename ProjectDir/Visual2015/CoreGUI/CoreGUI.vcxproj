@@ -181,6 +181,11 @@
     <ClCompile Include="..\..\..\System\Windows\WinAPI\Win32ApiWindow.cpp" />
     <ClCompile Include="..\..\..\System\Windows\WinAPI\WinAPIGUI.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\swGraphicAPI\ProjectsDir\Visual2015\ResourceManager\ResourceManager.vcxproj">
+      <Project>{9f71f0da-1d72-4e96-93b7-5ac2c9cb6ede}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
