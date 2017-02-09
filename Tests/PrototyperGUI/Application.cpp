@@ -23,7 +23,9 @@ void Application::Initialize()
 In this function you should initialize your application logic.
 */
 void		Application::OnInitialized()
-{ }
+{
+	CreateNativeHostWindow( 500, 500, "Additional window" );
+}
 
 /**@brief Function invoked when application is going to close itself.*/
 void		Application::OnClosing()

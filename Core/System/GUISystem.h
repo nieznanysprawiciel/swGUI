@@ -74,10 +74,7 @@ protected:
 public:
 	explicit		GUISystem		( int argc, char** argv, INativeGUI* gui );
 	virtual			~GUISystem		();
-
-	int				MainLoop		();
-
-
+	
 	Size			GetMemorySize	();
 
 	int				NumCommandLineArgs	();
@@ -93,15 +90,32 @@ protected:
 	virtual void	OnIdle			() = 0;
 	///@}
 
-	void			DefaultInit		( uint16 width, uint16 height, const std::string& windowTitle );
+	///@name Default initialization functions
+	///@{
+	void			DefaultInit				( uint16 width, uint16 height, const std::string& windowTitle );
+	bool			DefaultInitNativeGUI	();
+	bool			DefaultInitGraphicAPI	();
+	///@}
 
 public:
 	
+	///@name Main functions
+	///@{
 	void			Init			();
+	int				MainLoop		();
+	///@}
 
 public:
 
-	void			OnFocusChanged	( INativeWindow* window, bool value );
+	void			OnFocusChanged				( INativeWindow* window, bool value );
+
+	/**@brief Calls CreateNativeHostWindow with default values.
+	@see GUISystem::CreateNativeHostWindow*/
+	HostWindow*		CreateNativeHostWindow		( uint16 width, uint16 height, const std::string& windowTitle );
+	/**@brief Creates host window based on native window.
+	Window will be added to windows list.
+	@note windowDesc can change. For instance: if you set AdjustSize to true, function will return real window size.*/
+	HostWindow*		CreateNativeHostWindow		( NativeWindowDescriptor& windowDesc );
 
 
 public:

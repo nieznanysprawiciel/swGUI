@@ -81,11 +81,39 @@ int					GUISystem::MainLoop()
 }
 
 
-/**@brief */
-void				GUISystem::DefaultInit( uint16 width, uint16 height, const std::string& windowTitle )
+/**@brief Default GUI system initialization function.*/
+void				GUISystem::DefaultInit				( uint16 width, uint16 height, const std::string& windowTitle )
 {
 	m_resourceManager = new ResourceManager();
 
+	DefaultInitGraphicAPI();
+	DefaultInitNativeGUI();
+
+	// Note: we must always initialize first focus window. This is probably hack, but OnFocusChanged delegate won't be invoked.
+	m_focusedWindow = CreateNativeHostWindow( width, height, windowTitle );
+}
+
+
+/**@brief Default native GUI initialization.
+
+Native GUI object is set in constructor. Here we initialize it.
+Function creates native input object.*/
+bool				GUISystem::DefaultInitNativeGUI		()
+{
+	NativeGUIInitData nativeGUIInit;
+	nativeGUIInit.FocusChanged = fastdelegate::MakeDelegate( this, &GUISystem::OnFocusChanged );
+
+	m_nativeGUI->Init( nativeGUIInit );
+
+	m_input = m_nativeGUI->UseNativeInput();
+	assert( m_input );
+
+	return true;
+}
+
+/**@brief Default graphic api initialization.*/
+bool				GUISystem::DefaultInitGraphicAPI	()
+{
 	// ResourceFactory creates api which is linked as library.
 	m_graphicApi = ResourcesFactory::CreateAPIInitializer();
 	GraphicAPIInitData graphicApiData;
@@ -94,27 +122,7 @@ void				GUISystem::DefaultInit( uint16 width, uint16 height, const std::string& 
 	auto result = m_graphicApi->InitAPI( graphicApiData );
 	assert( result );
 
-	// Initialize native gui
-	NativeGUIInitData nativeGUIInit;
-	nativeGUIInit.FocusChanged = fastdelegate::MakeDelegate( this, &GUISystem::OnFocusChanged );
-
-	m_nativeGUI->Init( nativeGUIInit );
-
-	// Create native window.
-	NativeWindowDescriptor init( windowTitle );
-	init.Height = height;
-	init.Width = width;
-
-	m_input = m_nativeGUI->UseNativeInput();
-	assert( m_input );
-
-	auto nativeWindow = m_nativeGUI->CreateWindow( init );
-	assert( nativeWindow );
-
-	// Create host window from underlying native window.
-	HostWindow* hostWindow = new HostWindow( nativeWindow, m_input, m_resourceManager, m_graphicApi );
-	m_focusedWindow = hostWindow;
-	m_windows.push_back( hostWindow );
+	return result;
 }
 
 /**@brief Changes focused window.
@@ -160,6 +168,31 @@ void				GUISystem::OnFocusChanged	( INativeWindow* window, bool value )
 		//if( !m_focusedWindow )
 		// ReportError
 	}
+}
+
+// ================================ //
+//
+HostWindow*			GUISystem::CreateNativeHostWindow	( uint16 width, uint16 height, const std::string& windowTitle )
+{
+	NativeWindowDescriptor init( windowTitle );
+	init.Height = height;
+	init.Width = width;
+
+	return CreateNativeHostWindow( init );
+}
+
+// ================================ //
+//
+HostWindow*			GUISystem::CreateNativeHostWindow	( NativeWindowDescriptor& windowDesc )
+{
+	auto nativeWindow = m_nativeGUI->CreateWindow( windowDesc );
+	assert( nativeWindow );
+
+	// Create host window from underlying native window.
+	HostWindow* hostWindow = new HostWindow( nativeWindow, m_input, m_resourceManager, m_graphicApi );
+	m_windows.push_back( hostWindow );
+
+	return hostWindow;
 }
 
 /**@copydoc EngineObject::MemorySize*/

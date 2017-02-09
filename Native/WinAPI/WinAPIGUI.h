@@ -39,10 +39,10 @@ public:
 
 
 	// Inherited via INativeGUI
-	virtual bool				MainLoop		( bool blockingMode )					override;
-	virtual bool				Init			( const NativeGUIInitData& initData )	override;
-	virtual IInput*				UseNativeInput	()										override;
-	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor& descriptor )	override;
+	virtual bool				MainLoop		( bool blockingMode )							override;
+	virtual bool				Init			( const NativeGUIInitData& initData )			override;
+	virtual IInput*				UseNativeInput	()												override;
+	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor& descriptor )			override;
 
 	static WinAPIGUI*			Create			();
 

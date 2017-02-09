@@ -69,8 +69,12 @@ IInput*			WinAPIGUI::UseNativeInput()
 INativeWindow*	WinAPIGUI::CreateWindow		( NativeWindowDescriptor& descriptor )
 {
 	Win32ApiWindow* newWindow = Win32ApiWindow::CreateWindowInstance( descriptor );
+	HWND newWindowHandle = (HWND)newWindow->GetHandle();
 	
-	SetClassLongPtr( (HWND)newWindow->GetHandle(), 0, (LONG_PTR)this );
+	if( GetNativeAPIPointer( newWindowHandle ) == nullptr )
+	{
+		SetClassLongPtr( newWindowHandle, 0, (LONG_PTR)this );
+	}
 
 	return newWindow;
 }
@@ -180,7 +184,7 @@ void        WinAPIGUI::HandleEvent              ( HWND hWnd, UINT message, WPARA
 			m_initData.FocusChanged( GetNativePointer( hWnd ), false );
             break;
 		case WM_ACTIVATE:
-			m_initData.FocusChanged( GetNativePointer( hWnd ), (bool)wParam );
+			m_initData.FocusChanged( GetNativePointer( hWnd ), wParam != 0 );
             break;
 		//case WM_MOUSEACTIVATE:
 		//	m_initData.FocusChanged( GetNativePointer( hWnd ), true );
