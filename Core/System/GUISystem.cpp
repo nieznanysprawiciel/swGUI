@@ -94,6 +94,13 @@ void				GUISystem::DefaultInit( uint16 width, uint16 height, const std::string& 
 	auto result = m_graphicApi->InitAPI( graphicApiData );
 	assert( result );
 
+	// Initialize native gui
+	NativeGUIInitData nativeGUIInit;
+	nativeGUIInit.FocusChanged = fastdelegate::MakeDelegate( this, &GUISystem::OnFocusChanged );
+
+	m_nativeGUI->Init( nativeGUIInit );
+
+	// Create native window.
 	NativeWindowDescriptor init( windowTitle );
 	init.Height = height;
 	init.Width = width;
@@ -104,11 +111,56 @@ void				GUISystem::DefaultInit( uint16 width, uint16 height, const std::string& 
 	auto nativeWindow = m_nativeGUI->CreateWindow( init );
 	assert( nativeWindow );
 
+	// Create host window from underlying native window.
 	HostWindow* hostWindow = new HostWindow( nativeWindow, m_input, m_resourceManager, m_graphicApi );
 	m_focusedWindow = hostWindow;
 	m_windows.push_back( hostWindow );
 }
 
+/**@brief Changes focused window.
+
+Delegate for native GUI.*/
+void				GUISystem::OnFocusChanged	( INativeWindow* window, bool value )
+{
+	if( !value )
+	{
+		// Only lost focus
+		if( m_focusedWindow && m_focusedWindow->GetNativeWindow() == window )
+		{
+			m_focusedWindow->LostFocus();
+			m_focusedWindow = nullptr;
+		}
+		//else
+		// ReportError
+	}
+	else
+	{
+		// Previous window loses focus.
+		if( m_focusedWindow && m_focusedWindow->GetNativeWindow() == window )
+		{
+			return;
+		}
+		else if( m_focusedWindow && m_focusedWindow->GetNativeWindow() != window )
+		{
+			m_focusedWindow->LostFocus();
+			m_focusedWindow = nullptr;
+		}
+
+		// Find new window with focus.
+		for( auto hostWindow : m_windows )
+		{
+			if( hostWindow->GetNativeWindow() == window )
+			{
+				m_focusedWindow = hostWindow;
+				m_focusedWindow->GotFocus();
+				break;
+			}
+		}
+
+		//if( !m_focusedWindow )
+		// ReportError
+	}
+}
 
 /**@copydoc EngineObject::MemorySize*/
 Size				GUISystem::GetMemorySize()
@@ -125,20 +177,20 @@ Size				GUISystem::GetMemorySize()
 /**@brief Gets number of commnad line arguments.
 
 Function doesn't take program nameinto account .*/
-int			GUISystem::NumCommandLineArgs()
+int					GUISystem::NumCommandLineArgs()
 {
 	return m_cmdArgs.ArgsCount - 1;
 }
 
 /**@brief Returns command line argument. 0 is first argument
 not program name.*/
-const char* GUISystem::CommandLineArg( int num )
+const char*			GUISystem::CommandLineArg( int num )
 {
 	return m_cmdArgs.Arguments[ num -1 ];
 }
 
 /**@brief Returns program name retrived from 0 command line argument.*/
-const char* GUISystem::ProgramPath()
+const char*			GUISystem::ProgramPath()
 {
 	return m_cmdArgs.ProgramName();
 }

@@ -148,15 +148,15 @@
     <ClInclude Include="..\..\..\Core\System\CommonTypes\Thickness.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\KeyboardEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\KeyEventArgs.h" />
-    <ClInclude Include="..\..\..\Core\System\GUISystem.h" />
     <ClInclude Include="..\..\..\Core\System\Events\IEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\InputEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseButtonEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseWheelEventArgs.h" />
+    <ClInclude Include="..\..\..\Core\System\GUISystem.h" />
     <ClInclude Include="..\..\..\Core\System\HostWindow.h" />
-    <ClInclude Include="..\..\..\Core\System\Windows\INativeGUI.h" />
-    <ClInclude Include="..\..\..\Core\System\Windows\INativeWindow.h" />
+    <ClInclude Include="..\..\..\Native\INativeGUI.h" />
+    <ClInclude Include="..\..\..\Native\INativeWindow.h" />
     <ClInclude Include="..\..\..\targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,12 +168,12 @@
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\KeyboardEventArgs.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\KeyEventArgs.cpp" />
-    <ClCompile Include="..\..\..\Core\System\GUISystem.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\IEventArgs.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\InputEventArgs.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\MouseButtonEventArgs.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\MouseEventArgs.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\MouseWheelEventArgs.cpp" />
+    <ClCompile Include="..\..\..\Core\System\GUISystem.cpp" />
     <ClCompile Include="..\..\..\Core\System\HostWindow.cpp" />
     <ClCompile Include="..\..\..\Core\System\Initializers.cpp" />
   </ItemGroup>

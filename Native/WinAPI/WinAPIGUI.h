@@ -5,8 +5,19 @@
 
 
 class WinApiInputProxy;
-struct tagMSG;
-typedef tagMSG MSG;
+
+#include <Windows.h>
+#undef CreateWindow
+
+//struct tagMSG;
+//typedef tagMSG MSG;
+//
+//struct HWND__;
+//typedef HWND__* HWND;
+//
+//typedef UINT_PTR            WPARAM;
+//typedef LONG_PTR            LPARAM;
+
 
 
 
@@ -19,6 +30,7 @@ class WinAPIGUI : public INativeGUI
 {
 private:
 	WinApiInputProxy*		m_input;
+	NativeGUIInitData		m_initData;
 
 protected:
 public:
@@ -27,10 +39,10 @@ public:
 
 
 	// Inherited via INativeGUI
-	virtual bool				MainLoop		( bool blockingMode ) override;
-	virtual bool				Init			() override;
-	virtual IInput*				UseNativeInput	() override;
-	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor & descriptor ) override;
+	virtual bool				MainLoop		( bool blockingMode )					override;
+	virtual bool				Init			( const NativeGUIInitData& initData )	override;
+	virtual IInput*				UseNativeInput	()										override;
+	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor& descriptor )	override;
 
 	static WinAPIGUI*			Create			();
 
@@ -43,6 +55,11 @@ public:
 	static void				PrintLastError			();
 	static const wchar_t*	GetWindowClassName		();
 
+public:
+	///@Internal
+	///@{
+	void                    HandleEvent 			( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
+	///@}
 };
 
 }	// GUI

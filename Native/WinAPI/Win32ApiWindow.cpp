@@ -101,28 +101,28 @@ bool		Win32ApiWindow::Initialize	( NativeWindowDescriptor& descriptor )
 
 // ================================ //
 //
-uint16			Win32ApiWindow::GetWidth()
+uint16			Win32ApiWindow::GetWidth() const
 {
 	return m_width;
 }
 
 // ================================ //
 //
-uint16			Win32ApiWindow::GetHeght()
+uint16			Win32ApiWindow::GetHeight() const
 {
 	return m_height;
 }
 
 // ================================ //
 //
-WindowHandler	Win32ApiWindow::GetHandle()
+WindowHandler	Win32ApiWindow::GetHandle() const
 {
 	return (WindowHandler)m_windowHandle;
 }
 
 // ================================ //
 //
-std::string		Win32ApiWindow::GetTitle()
+std::string		Win32ApiWindow::GetTitle() const
 {
 	return Convert::ToString( m_title );
 }
@@ -151,7 +151,7 @@ void			Win32ApiWindow::SetTitle		( const std::string& newTitle )
 
 // ================================ //
 //
-uint16 Win32ApiWindow::GetClientWidth()
+uint16 Win32ApiWindow::GetClientWidth() const
 {
 	RECT windowRect;
 	GetClientRect( m_windowHandle, &windowRect );
@@ -161,7 +161,7 @@ uint16 Win32ApiWindow::GetClientWidth()
 
 // ================================ //
 //
-uint16 Win32ApiWindow::GetClientHeight()
+uint16 Win32ApiWindow::GetClientHeight() const
 {
 	RECT windowRect;
 	GetClientRect( m_windowHandle, &windowRect );

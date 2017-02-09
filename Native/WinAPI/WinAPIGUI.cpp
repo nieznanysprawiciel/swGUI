@@ -12,20 +12,21 @@ namespace GUI
 
 LRESULT CALLBACK		WindowProcedure		( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
 INativeWindow*			GetNativePointer	( HWND window );
+WinAPIGUI*				GetNativeAPIPointer	( HWND window );
 
 
+
+// ================================ //
+//
 WinAPIGUI::WinAPIGUI()
 	:	m_input( nullptr )
 {}
 
+
 /**@brief Creates WinAPIGUI object.*/
 WinAPIGUI*		WinAPIGUI::Create()
 {
-	auto nativeGUI = new WinAPIGUI();
-	bool result = nativeGUI->Init();
-	assert( result );
-
-	return nativeGUI;
+	return new WinAPIGUI();
 }
 
 
@@ -43,6 +44,8 @@ const wchar_t*	WinAPIGUI::GetWindowClassName()
 	return WINDOW_CLASS_NAME;
 }
 
+// ================================ //
+//
 IInput*			WinAPIGUI::UseNativeInput()
 {
 	InputInitInfo init;
@@ -65,7 +68,11 @@ IInput*			WinAPIGUI::UseNativeInput()
 /**@copydoc INativeGUI::CreateWindow*/
 INativeWindow*	WinAPIGUI::CreateWindow		( NativeWindowDescriptor& descriptor )
 {
-	return Win32ApiWindow::CreateWindowInstance( descriptor );
+	Win32ApiWindow* newWindow = Win32ApiWindow::CreateWindowInstance( descriptor );
+	
+	SetClassLongPtr( (HWND)newWindow->GetHandle(), 0, (LONG_PTR)this );
+
+	return newWindow;
 }
 
 
@@ -83,8 +90,8 @@ void		WinAPIGUI::RegisterWindowClass()
 
 	wcex.style = CS_HREDRAW | CS_VREDRAW;
 	wcex.lpfnWndProc = WindowProcedure;
-	wcex.cbClsExtra = 0;
-	wcex.cbWndExtra = sizeof( Win32ApiWindow );
+	wcex.cbClsExtra = sizeof( WinAPIGUI* );
+	wcex.cbWndExtra = sizeof( Win32ApiWindow* );
 	wcex.hInstance = GetModuleHandle( nullptr );
 	wcex.hIcon = LoadIcon( wcex.hInstance, IDI_APPLICATION );
 	wcex.hCursor = LoadCursor( NULL, IDC_ARROW );
@@ -112,15 +119,24 @@ void		WinAPIGUI::PrintLastError()
 }
 
 /**@brief Retrives INativeWindow pointer hidden in native window extra bytes.*/
-INativeWindow*		GetNativePointer( HWND window )
+INativeWindow*		GetNativePointer	( HWND window )
 {
 	return (INativeWindow*)GetWindowLongPtr( window, 0 );
 }
 
+/**@brief Retrives WinAPIGUI pointer hidden in native window extra bytes.*/
+WinAPIGUI*			GetNativeAPIPointer	( HWND window )
+{
+	return (WinAPIGUI*)GetClassLongPtr( window, 0 );
+}
+
 
 /**@copydoc INativeGUI::Init*/
-bool		WinAPIGUI::Init()
+bool		WinAPIGUI::Init				( const NativeGUIInitData& initData )
 {
+	assert( !initData.FocusChanged.empty() );
+
+	m_initData = initData;
 	RegisterWindowClass();
 
 	return true;
@@ -133,12 +149,15 @@ bool		WinAPIGUI::Init()
 //====================================================================================//
 
 /**@brief Core functionality of main loop function.*/
-bool		WinAPIGUI::MainLoopCore( MSG* msg )
+bool		WinAPIGUI::MainLoopCore             ( MSG* msg )
 {
 	TranslateMessage( msg );
 
 	if( m_input )
 		m_input->HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
+
+	// Don't process same message two times.
+    //HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
 
 	DispatchMessage( msg );
 
@@ -149,11 +168,29 @@ bool		WinAPIGUI::MainLoopCore( MSG* msg )
 	return false;
 }
 
-
+/**@brief Captures important events like changing focus.*/
+void        WinAPIGUI::HandleEvent              ( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
+{
+    switch( message )
+    {
+        case WM_SETFOCUS:
+			m_initData.FocusChanged( GetNativePointer( hWnd ), true );
+            break;
+        case WM_KILLFOCUS:
+			m_initData.FocusChanged( GetNativePointer( hWnd ), false );
+            break;
+		case WM_ACTIVATE:
+			m_initData.FocusChanged( GetNativePointer( hWnd ), (bool)wParam );
+            break;
+		//case WM_MOUSEACTIVATE:
+		//	m_initData.FocusChanged( GetNativePointer( hWnd ), true );
+  //          break;
+    }
+}
 
 
 /**@copydoc INativeGUI::MainLoop*/
-bool		WinAPIGUI::MainLoop( bool blockingMode )
+bool		WinAPIGUI::MainLoop                 ( bool blockingMode )
 {
 	MSG msg;
 
@@ -193,6 +230,15 @@ LRESULT CALLBACK		WindowProcedure		( HWND hWnd, UINT message, WPARAM wParam, LPA
 		// TODO: Add any drawing code here...
 		EndPaint( hWnd, &ps );
 	break;
+    case WM_SETFOCUS:
+    case WM_KILLFOCUS:
+	case WM_ACTIVATE:
+	{
+		auto nativeGUI = GetNativeAPIPointer( hWnd );
+		if( nativeGUI )
+			nativeGUI->HandleEvent( hWnd, message, wParam, lParam );
+		break;
+	}
 	case WM_DESTROY:
 		PostQuitMessage( 0 );
 		break;

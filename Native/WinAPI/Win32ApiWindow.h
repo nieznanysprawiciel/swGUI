@@ -37,16 +37,16 @@ private:
 	bool			Initialize				( NativeWindowDescriptor& descriptor );
 
 
+public:
 	// Inherited via INativeWindow
-	virtual uint16				GetWidth		() override;
-	virtual uint16				GetHeght		() override;
-	virtual uint16				GetClientWidth	() override;
+	virtual uint16				GetWidth		() const override;
+	virtual uint16				GetHeight		() const override;
+	virtual uint16				GetClientWidth	() const override;
+	virtual uint16				GetClientHeight	() const override;
 
-	virtual uint16				GetClientHeight	() override;
+	virtual WindowHandler		GetHandle		() const override;
 
-	virtual WindowHandler		GetHandle		() override;
-
-	virtual std::string			GetTitle		() override;
+	virtual std::string			GetTitle		() const override;
 
 	virtual void				Show			() override;
 	virtual void				Hide			() override;

@@ -7,6 +7,11 @@
 
 #include "CommonTypes/CommonTypes.h"
 
+
+// Temporary
+#include <iostream>
+
+
 namespace GUI
 {
 
@@ -48,7 +53,7 @@ HostWindow::~HostWindow()
 
 
 /**@brief Returns memory consumed by this object and all object owned by this.*/
-Size		HostWindow::GetMemorySize()
+Size				HostWindow::GetMemorySize		()
 {
 	Size size = sizeof( HostWindow );
 
@@ -70,26 +75,26 @@ Size		HostWindow::GetMemorySize()
 /**@brief Pozwala ustawiæ i pobraæ DataContext.
 
 DataContext zostanie przepropagowany do wszystkich kontrolek w hierarchii.*/
-EngineObject*&		HostWindow::DataContext()
+EngineObject*&		HostWindow::DataContext			()
 {
 	return m_dataContext;
 }
 
 /**@brief Removes control from GUI system.*/
-void		HostWindow::RemoveControl( IControl* control )
+void				HostWindow::RemoveControl		( IControl* control )
 {
 
 }
 
 /**@brief Allows control to register it's name.*/
-void		HostWindow::RegisterControlName( IControl* control, const std::string& name )
+void				HostWindow::RegisterControlName	( IControl* control, const std::string& name )
 {
 	assert( m_controlsNames.find( control ) == m_controlsNames.end() );
 	m_controlsNames[ control ] = name;
 }
 
 /**@brief Gets name of registered control.*/
-const std::string& HostWindow::GetControlName( IControl* control )
+const std::string& HostWindow::GetControlName		( IControl* control )
 {
 	auto iter = m_controlsNames.find( control );
 	if( iter != m_controlsNames.end() )
@@ -98,5 +103,29 @@ const std::string& HostWindow::GetControlName( IControl* control )
 		return EMPTY_STRING;
 }
 
+// ================================ //
+//
+INativeWindow*		HostWindow::GetNativeWindow		()
+{
+	return m_nativeWindow;
+}
+
+//====================================================================================//
+//				GUI system interaction
+//====================================================================================//
+
+// ================================ //
+//
+void				HostWindow::LostFocus			()
+{
+	std::cout << "Window [" + m_nativeWindow->GetTitle() + "] lost focus." << std::endl;
+}
+
+// ================================ //
+//
+void				HostWindow::GotFocus			()
+{
+	std::cout << "Window [" + m_nativeWindow->GetTitle() + "] got focus." << std::endl;
+}
 
 }	// GUI

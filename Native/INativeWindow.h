@@ -73,14 +73,14 @@ public:
 	INativeWindow() = default;
 	~INativeWindow() = default;
 
-	virtual uint16				GetWidth	() = 0;
-	virtual uint16				GetHeght	() = 0;
+	virtual uint16				GetWidth	() const		= 0;
+	virtual uint16				GetHeight	() const		= 0;
 
-	virtual uint16				GetClientWidth	() = 0;
-	virtual uint16				GetClientHeight	() = 0;
+	virtual uint16				GetClientWidth	() const	= 0;
+	virtual uint16				GetClientHeight	() const	= 0;
 
-	virtual WindowHandler		GetHandle	() = 0;
-	virtual std::string			GetTitle	() = 0;
+	virtual WindowHandler		GetHandle	() const		= 0;
+	virtual std::string			GetTitle	() const		= 0;
 
 	virtual void				Show		() = 0;
 	virtual void				Hide		() = 0;

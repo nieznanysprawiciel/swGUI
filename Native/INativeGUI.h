@@ -2,12 +2,22 @@
 
 
 #include "INativeWindow.h"
+#include "swCommonLib/External/FastDelegate/FastDelegate.h"
+
 
 class IInput;
 
 namespace GUI
 {
 
+typedef fastdelegate::FastDelegate2< INativeWindow*, bool > ChangedFocusDelegate;
+
+
+/**@brief Provides data needed for native GUI system initialization.*/
+struct NativeGUIInitData
+{
+	ChangedFocusDelegate		FocusChanged;
+};
 
 
 /**@brief Encasulates native GUI system.*/
@@ -26,7 +36,7 @@ public:
 
 	/**@brief Initializes native GUI.
 	@return Returns false if initialization failed.*/
-	virtual bool			Init			() = 0;
+	virtual bool			Init			( const NativeGUIInitData& initData ) = 0;
 
 	/**@brief Initalize native api for this gui system and return IInput object.
 	GUI can use native input api for specific gui system or provide different

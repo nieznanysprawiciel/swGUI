@@ -66,6 +66,17 @@ public:
 
 	ResourcePtr< RenderTargetObject >	GetRenderTarget		();
 	ResourcePtr< SwapChain >			GetSwapChain		();
+
+	INativeWindow*						GetNativeWindow		();
+
+public:
+	///@name GUI system interaction
+	///@{
+	void				LostFocus		();
+	void				GotFocus		();
+
+	///@}
+
 };
 
 

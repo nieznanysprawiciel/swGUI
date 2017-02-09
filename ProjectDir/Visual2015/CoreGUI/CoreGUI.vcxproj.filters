@@ -33,14 +33,8 @@
     <ClInclude Include="..\..\..\Core\Controls\IControl.h">
       <Filter>Core\Controls</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Core\System\HostWindow.h">
-      <Filter>Core\System</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Core\Controls\TopLevelControl.h">
       <Filter>Core\Controls</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Core\System\GUISystem.h">
-      <Filter>Core\System</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Core\System\CommonTypes\Thickness.h">
       <Filter>Core\System\CommonTypes</Filter>
@@ -69,12 +63,6 @@
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseWheelEventArgs.h">
       <Filter>Core\System\Events\Input</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Core\System\Windows\INativeWindow.h">
-      <Filter>Native</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Core\System\Windows\INativeGUI.h">
-      <Filter>Native</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Core\Controls\ArrangeControls\DockPanel.h">
       <Filter>Core\Controls\ArrangeControls</Filter>
     </ClInclude>
@@ -90,19 +78,22 @@
     <ClInclude Include="..\..\..\Core\Controls\ArrangeControls\WrapPanel.h">
       <Filter>Core\Controls\ArrangeControls</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Native\INativeGUI.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Native\INativeWindow.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\GUISystem.h">
+      <Filter>Core\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\HostWindow.h">
+      <Filter>Core\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp">
       <Filter>Core\Controls</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Core\System\HostWindow.cpp">
-      <Filter>Core\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Core\System\GUISystem.cpp">
-      <Filter>Core\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Core\System\Initializers.cpp">
-      <Filter>Core\System</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Core\System\Events\IEventArgs.cpp">
       <Filter>Core\System\Events</Filter>
@@ -139,6 +130,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Core\Controls\ArrangeControls\WrapPanel.cpp">
       <Filter>Core\Controls\ArrangeControls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Core\System\GUISystem.cpp">
+      <Filter>Core\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Core\System\HostWindow.cpp">
+      <Filter>Core\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Core\System\Initializers.cpp">
+      <Filter>Core\System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

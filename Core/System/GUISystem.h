@@ -35,7 +35,7 @@ struct CommandLineArgs
 Use example of GUI:
 @code
 #include "swGUI/Core/System/GUISystem.h"
-#include "swGUI/Core/System/Windows/WinAPI/WinAPIGUI.h"
+#include "swGUI/Native/WinAPI/WinAPIGUI.h"
 
 #include "Application.h"
 
@@ -85,15 +85,24 @@ public:
 	const char*		ProgramPath			();
 
 protected:
+	///@name User overrides
+	///@{
 	virtual	void	Initialize		();
 	virtual void	OnInitialized	() = 0;
 	virtual void	OnClosing		() = 0;
 	virtual void	OnIdle			() = 0;
+	///@}
 
 	void			DefaultInit		( uint16 width, uint16 height, const std::string& windowTitle );
 
 public:
+	
 	void			Init			();
+
+public:
+
+	void			OnFocusChanged	( INativeWindow* window, bool value );
+
 
 public:
 	static GUISystem&	Get			();
