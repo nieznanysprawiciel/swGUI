@@ -44,23 +44,6 @@ GUISystem::~GUISystem()
 }
 
 
-
-/**@brief Invoke this function in application entry point (main).*/
-void GUISystem::Init()
-{
-	Initialize();		// Initialize subsystems.
-	OnInitialized();	// User initialization.
-}
-
-/**@brief GUI subsystems initialization.
-
-If you need specific gui initialization in your application override this function.
-You can set different GraphicApi or input api.*/
-void				GUISystem::Initialize()
-{
-	DefaultInit( 1024, 768, "Window Tittle" );
-}
-
 /**@brief Application main loop.
 
 @see Application*/
@@ -81,6 +64,24 @@ int					GUISystem::MainLoop()
 }
 
 
+/**@brief Invoke this function in application entry point (main).*/
+void GUISystem::Init()
+{
+	Initialize();		// Initialize subsystems.
+	OnInitialized();	// User initialization.
+}
+
+
+/**@brief GUI subsystems initialization.
+
+If you need specific gui initialization in your application override this function.
+You can set different GraphicApi or input api.*/
+void				GUISystem::Initialize()
+{
+	DefaultInit( 1024, 768, "Window Tittle" );
+}
+
+
 /**@brief Default GUI system initialization function.*/
 void				GUISystem::DefaultInit				( uint16 width, uint16 height, const std::string& windowTitle )
 {
@@ -91,6 +92,8 @@ void				GUISystem::DefaultInit				( uint16 width, uint16 height, const std::stri
 
 	// Note: we must always initialize first focus window. This is probably hack, but OnFocusChanged delegate won't be invoked.
 	m_focusedWindow = CreateNativeHostWindow( width, height, windowTitle );
+	assert( m_focusedWindow );
+	m_focusedWindow->GotFocus();
 }
 
 
