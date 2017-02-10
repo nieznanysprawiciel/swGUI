@@ -108,6 +108,9 @@ public:
 public:
 
 	void			OnFocusChanged				( INativeWindow* window, bool value );
+	void			OnResized					( INativeWindow* window, uint16 newWidth, uint16 newHeight );
+	void			OnMaximized					( INativeWindow* window );
+	void			OnMinimized					( INativeWindow* window );
 
 	/**@brief Calls CreateNativeHostWindow with default values.
 	@see GUISystem::CreateNativeHostWindow*/

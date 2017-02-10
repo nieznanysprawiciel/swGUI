@@ -75,6 +75,9 @@ public:
 	void				LostFocus		();
 	void				GotFocus		();
 
+	void				OnResized		( uint16 newWidth, uint16 newHeight );
+	void				OnMaximized		();
+	void				OnMinimized		();
 	///@}
 
 };
