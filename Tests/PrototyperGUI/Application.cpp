@@ -1,6 +1,9 @@
 #include "Application.h"
 
 
+#include "Sizeofs/Sizeofs.h"
+
+
 
 // ================================ //
 //
@@ -24,6 +27,9 @@ In this function you should initialize your application logic.
 */
 void		Application::OnInitialized()
 {
+	// In this function sizeofs basic classes are printed. Test purposes only.
+	PrintSizeofs();
+
 	CreateNativeHostWindow( 500, 500, "Additional window" );
 }
 
