@@ -12,14 +12,15 @@ static const std::string	EMPTY_STRING;
 
 
 typedef DirectX::XMFLOAT2	Position;
+typedef DirectX::XMFLOAT2	Size2D;
 
 
 struct Rect
 {
-	float	Left;
-	float	Right;
-	float	Top;
-	float	Bottom;
+	float			Left;
+	float			Right;
+	float			Top;
+	float			Bottom;
 
 	float		GetWidth	()		{ return Right - Left; }
 	float		GetHeight	()		{ return Top - Bottom; }

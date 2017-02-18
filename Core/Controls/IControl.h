@@ -25,7 +25,7 @@ class TopLevelControl;
 
 
 
-enum class VerticalAlignement : char
+enum class VerticalAlignment : char
 {
 	Bottom,
 	Center,
@@ -33,7 +33,7 @@ enum class VerticalAlignement : char
 	Top
 };
 
-enum class HorizontalAlignement : char
+enum class HorizontalAlignment : char
 {
 	Left,
 	Center,
@@ -66,8 +66,8 @@ protected:
 	bool					m_isFocused : 1;
 	bool					m_isFocusable : 1;
 
-	VerticalAlignement		m_verticalAlignement;
-	HorizontalAlignement	m_horizontalAlignement;
+	VerticalAlignment		m_verticalAlignement;
+	HorizontalAlignment		m_horizontalAlignement;
 
 	Thickness				m_margin;
 
