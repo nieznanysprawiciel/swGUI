@@ -57,8 +57,20 @@ public:
 	explicit		UIElement	() = default;
 					~UIElement	() = default;
 
+
+	///@name Layout fuctions
+	///@{
+	/**@brief Meassure pass. Check documentation in WPF.*/
 	virtual Size2D			Measure				( Size2D availableSize )		= 0;
+	/**@brief Arragement pass. Check WPF documentation.*/
 	virtual void			Arrange				( Rect& finalRect )				= 0;
+	///@}
+
+
+	/**@brief Get number of children in visual tree.*/
+	virtual Size			GetNumChildren		()								= 0;
+	/**@brief Gets child in visual tree.*/
+	virtual UIElement*		GetUIChild			( Size idx )					= 0;
 
 public:
 

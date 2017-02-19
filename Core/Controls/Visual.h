@@ -47,6 +47,7 @@ public:
 	/**@brief Control rendering behavior.*/
 	virtual void			OnRender			( DrawingContext& context )		= 0;
 
+
 };
 
 
