@@ -8,7 +8,8 @@
 #include "swCommonLib/Common/EngineObject.h"
 
 
-namespace GUI
+namespace sw {
+namespace gui
 {
 
 /**@brief Support for data binding.
@@ -17,7 +18,7 @@ It should correpsond WPF DependencyObject.*/
 class DependencyObject : public EngineObject
 {
 	RTTR_ENABLE( EngineObject )
-	RTTR_REGISTRATION_FRIEND
+		RTTR_REGISTRATION_FRIEND
 private:
 protected:
 
@@ -26,11 +27,12 @@ protected:
 
 public:
 	explicit		DependencyObject	();
-					~DependencyObject	() = default;
-	
+	~DependencyObject	() = default;
+
 };
 
 
 
-}	// GUI
+}	// gui
+}	// sw
 

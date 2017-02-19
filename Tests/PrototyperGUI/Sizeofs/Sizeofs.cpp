@@ -31,6 +31,6 @@ void			PrintSizeofs()
 {
 	std::cout << "Objects name" << std::setw( NameSize ) << "Sizeof" << std::endl;
 
-	PrintSizeofType< GUI::IControl >( std::cout );
+	PrintSizeofType< sw::gui::IControl >( std::cout );
 
 }

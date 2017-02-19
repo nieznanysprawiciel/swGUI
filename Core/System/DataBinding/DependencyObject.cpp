@@ -7,15 +7,32 @@
 
 #include "DependencyObject.h"
 
-namespace GUI
+
+RTTR_REGISTRATION
+{
+	using namespace rttr;
+
+	registration::class_< sw::gui::DependencyObject >( "sw::gui::DependencyObject" );
+
+
+};
+
+
+
+namespace sw {
+namespace gui
 {
 
 
 // ================================ //
 //
 DependencyObject::DependencyObject()
-	:	m_dataContext( nullptr )
-{}
+	: m_dataContext( nullptr )
+{ }
 
-}	// GUI
+
+
+
+}	// gui
+}	// sw
 

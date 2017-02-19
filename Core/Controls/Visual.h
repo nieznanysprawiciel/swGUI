@@ -13,7 +13,8 @@
 #include "swGUI/Core/System/Rendering/DrawingContext.h"
 
 
-namespace GUI
+namespace sw {
+namespace gui
 {
 
 
@@ -24,10 +25,10 @@ Provides interfaces and base implementation of:
 - Rendering
 
 This classs correpsonds to WPF Visual class.*/
-class Visual  : public DependencyObject
+class Visual : public DependencyObject
 {
 	RTTR_ENABLE( DependencyObject )
-	RTTR_REGISTRATION_FRIEND
+		RTTR_REGISTRATION_FRIEND
 private:
 
 	Position		m_position;		///< Control position. (@todo Relative to parent ???)
@@ -38,10 +39,10 @@ protected:
 
 public:
 	explicit		Visual		() = default;
-					~Visual		() = default;
+	~Visual		() = default;
 
-	/**@brief Checks if point is within this object.
-	@todo We must specify if point is in relative coordinates or absolut.*/
+/**@brief Checks if point is within this object.
+@todo We must specify if point is in relative coordinates or absolut.*/
 	virtual bool			HitTest				( const Position& point )		= 0;
 
 	/**@brief Control rendering behavior.*/
@@ -52,6 +53,7 @@ public:
 
 
 
-}	// GUI
+}	// gui
+}	// sw
 
 

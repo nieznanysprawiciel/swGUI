@@ -1,12 +1,25 @@
 #pragma once
+/**
+@file CommonTypes.h
+@author nieznanysprawiciel
+@copyright File is part of Sleeping Wombat Libraries.
+*/
+
+
 
 #include <string>
 #include <DirectXMath.h>
 
 #include "Thickness.h"
 
-namespace GUI
+
+
+
+namespace sw {
+namespace gui
 {
+
+
 
 static const std::string	EMPTY_STRING;
 
@@ -15,6 +28,7 @@ typedef DirectX::XMFLOAT2	Position;
 typedef DirectX::XMFLOAT2	Size2D;
 
 
+/**@brief Rectangle structure.*/
 struct Rect
 {
 	float			Left;
@@ -22,8 +36,8 @@ struct Rect
 	float			Top;
 	float			Bottom;
 
-	float		GetWidth	()		{ return Right - Left; }
-	float		GetHeight	()		{ return Top - Bottom; }
+	float		GetWidth	() { return Right - Left; }
+	float		GetHeight	() { return Top - Bottom; }
 
 	bool		Intersects	( const Position& pos )
 	{
@@ -39,4 +53,5 @@ struct Rect
 	}
 };
 
-}	// GUI
+}	// gui
+}	// sw

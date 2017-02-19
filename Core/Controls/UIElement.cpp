@@ -7,7 +7,8 @@
 #include "UIElement.h"
 
 
-namespace GUI
+namespace sw {
+namespace gui
 {
 
 
@@ -16,5 +17,6 @@ namespace GUI
 
 
 
-}	// GUI
+}	// gui
+}	// sw
 

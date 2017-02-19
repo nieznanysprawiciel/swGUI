@@ -7,7 +7,8 @@
 
 
 
-namespace GUI
+namespace sw {
+namespace gui
 {
 
 
@@ -18,10 +19,12 @@ private:
 protected:
 public:
 	explicit		RenderingSystem		() = default;
-					~RenderingSystem	() = default;
+	~RenderingSystem	() = default;
 
 };
 
 
 
-}	// GUI
+}	// gui
+}	// sw
+

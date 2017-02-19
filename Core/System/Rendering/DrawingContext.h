@@ -7,7 +7,8 @@
 
 
 
-namespace GUI
+namespace sw {
+namespace gui
 {
 
 
@@ -20,10 +21,11 @@ private:
 protected:
 public:
 	explicit		DrawingContext		() = default;
-					~DrawingContext		() = default;
+	~DrawingContext		() = default;
 
 };
 
 
 
-}	// GUI
+}	// gui
+}	// sw
