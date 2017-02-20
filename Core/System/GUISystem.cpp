@@ -237,10 +237,11 @@ const char*			GUISystem::ProgramPath()
 
 
 /**@brief */
-GUISystem&	GUISystem::Get()
+GUISystem&			GUISystem::Get()
 {
 	return *m_instance;
 }
+
 
 }	// gui
 }	// sw

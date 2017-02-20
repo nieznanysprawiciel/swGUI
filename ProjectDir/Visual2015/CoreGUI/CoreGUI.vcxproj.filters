@@ -111,6 +111,12 @@
     <ClInclude Include="..\..\..\Core\System\Rendering\DrawingContext.h">
       <Filter>Core\System\Rendering</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\Events\DelegateContainer.h">
+      <Filter>Core\System\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\Events\EventsManager.h">
+      <Filter>Core\System\Events</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp">
@@ -167,5 +173,6 @@
     <ClCompile Include="..\..\..\Core\Controls\UIElement.cpp">
       <Filter>Core\Controls</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Core\System\Events\EventsManager.cpp" />
   </ItemGroup>
 </Project>

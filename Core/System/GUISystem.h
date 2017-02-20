@@ -3,6 +3,7 @@
 #include "swCommonLib/Common/EngineObject.h"
 #include "swGraphicAPI/Rendering/IGraphicAPIInitializer.h"
 #include "swGUI/Native/INativeGUI.h"
+#include "Events/EventsManager.h"
 
 #include "HostWindow.h"
 
@@ -123,7 +124,7 @@ public:
 
 
 public:
-	static GUISystem&	Get			();
+	static GUISystem&	Get				();
 };
 
 
