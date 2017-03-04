@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['m_5factualsize',['m_actualSize',['../classsw_1_1gui_1_1_visual.html#aa436b375173db06c789602c016de6264',1,'sw::gui::Visual']]],
+  ['m_5fcontrolsnames',['m_controlsNames',['../classsw_1_1gui_1_1_host_window.html#a62dfd88050cece88d3d211110064abb4',1,'sw::gui::HostWindow']]],
+  ['m_5fcontroltree',['m_controlTree',['../classsw_1_1gui_1_1_host_window.html#ac0d5434fa20bb9fffd96eee8ed1f2f6e',1,'sw::gui::HostWindow']]],
+  ['m_5fdatacontext',['m_dataContext',['../classsw_1_1gui_1_1_dependency_object.html#a4a9d17c5b92797bcf8b9316409dab31f',1,'sw::gui::DependencyObject']]],
+  ['m_5fdelegates',['m_delegates',['../classsw_1_1gui_1_1_delegates_container.html#a33d538c7f9f34b3be00670a215a1eb07',1,'sw::gui::DelegatesContainer']]],
+  ['m_5fdesiredsize',['m_desiredSize',['../classsw_1_1gui_1_1_u_i_element.html#a5b66a7e8a2d74d11039f8bba3347a999',1,'sw::gui::UIElement']]],
+  ['m_5feventtype',['m_eventType',['../classsw_1_1gui_1_1_delegates_container_base.html#a15e0cbda109f3b926f30c2369a5baf2d',1,'sw::gui::DelegatesContainerBase']]],
+  ['m_5ffocusedwindow',['m_focusedWindow',['../classsw_1_1gui_1_1_g_u_i_system.html#a4b6a0c1d3871d0b0243fd288b29c6c6b',1,'sw::gui::GUISystem']]],
+  ['m_5ffocuspath',['m_focusPath',['../classsw_1_1gui_1_1_host_window.html#a7161a60c9ded6f8971908153a226d7b3',1,'sw::gui::HostWindow']]],
+  ['m_5fgraphicapi',['m_graphicApi',['../classsw_1_1gui_1_1_g_u_i_system.html#a7cdbe3c0d4e73f00847f9a6883412067',1,'sw::gui::GUISystem']]],
+  ['m_5finput',['m_input',['../classsw_1_1gui_1_1_g_u_i_system.html#a7dd9507366728ba4131642aa0e7b9a9f',1,'sw::gui::GUISystem']]],
+  ['m_5finvalidated',['m_invalidated',['../classsw_1_1gui_1_1_host_window.html#a27a044f1feedf11a363973f3da70ff3f',1,'sw::gui::HostWindow']]],
+  ['m_5fisenabled',['m_isEnabled',['../classsw_1_1gui_1_1_u_i_element.html#ac0cd1c7d9f944429fc6082f7fecd65b8',1,'sw::gui::UIElement']]],
+  ['m_5fmousepath',['m_mousePath',['../classsw_1_1gui_1_1_host_window.html#a173de353ba65cee96ad9dca358abc807',1,'sw::gui::HostWindow']]],
+  ['m_5fnativegui',['m_nativeGUI',['../classsw_1_1gui_1_1_g_u_i_system.html#a8ae3ba8802726518ebaa1b06b7d0dc5c',1,'sw::gui::GUISystem']]],
+  ['m_5fnext',['m_next',['../classsw_1_1gui_1_1_delegates_container_base.html#ab315f51f061c5ed5a045be1c1965b166',1,'sw::gui::DelegatesContainerBase']]],
+  ['m_5fparent',['m_parent',['../classsw_1_1gui_1_1_u_i_element.html#a41ebe4824d9e5d468b617a98004d8de4',1,'sw::gui::UIElement']]],
+  ['m_5fposition',['m_position',['../classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1',1,'sw::gui::Visual']]],
+  ['m_5fresourcemanager',['m_resourceManager',['../classsw_1_1gui_1_1_g_u_i_system.html#a9e5aa342499f22a3b788cb497751f94f',1,'sw::gui::GUISystem']]],
+  ['mainloop',['MainLoop',['../classsw_1_1gui_1_1_g_u_i_system.html#a4ff76aa79da14c603e1e05c2836f906e',1,'sw::gui::GUISystem::MainLoop()'],['../classsw_1_1gui_1_1_i_native_g_u_i.html#ad14361cbe7365a843ece4d3f0b44f462',1,'sw::gui::INativeGUI::MainLoop()'],['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a450dc91af90e9776994d0555ccb591dc',1,'sw::gui::WinAPIGUI::MainLoop()']]],
+  ['mainloopcore',['MainLoopCore',['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac7555a40d030ebd255c3e983196b55ef',1,'sw::gui::WinAPIGUI']]],
+  ['measure',['Measure',['../classsw_1_1gui_1_1_u_i_element.html#aa19d5edd15230b4b62ee163b60efd108',1,'sw::gui::UIElement']]],
+  ['mousebuttoneventargs',['MouseButtonEventArgs',['../structsw_1_1gui_1_1_mouse_button_event_args.html',1,'sw::gui']]],
+  ['mouseeventargs',['MouseEventArgs',['../structsw_1_1gui_1_1_mouse_event_args.html',1,'sw::gui']]],
+  ['mousewheeleventargs',['MouseWheelEventArgs',['../structsw_1_1gui_1_1_mouse_wheel_event_args.html',1,'sw::gui']]]
+];
