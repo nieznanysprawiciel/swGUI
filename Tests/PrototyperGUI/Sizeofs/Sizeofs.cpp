@@ -15,6 +15,14 @@
 
 
 
+class VirtualEmptyClass : std::enable_shared_from_this< VirtualEmptyClass >
+{
+
+	virtual ~VirtualEmptyClass() { }
+};
+
+
+
 const int NameSize = 60;
 
 
@@ -23,8 +31,9 @@ const int NameSize = 60;
 template< typename Type >
 void			PrintSizeofType		( std::ostream& stream )
 {
-	stream << typeid( Type ).name();
+	stream << std::left;
 	stream << std::setw( NameSize );
+	stream << typeid( Type ).name();
 	stream << sizeof( Type ) << std::endl;
 }
 
@@ -33,10 +42,17 @@ void			PrintSizeofType		( std::ostream& stream )
 //
 void			PrintSizeofs()
 {
-	std::cout << "Objects name" << std::setw( NameSize ) << "Sizeof" << std::endl;
+	std::cout << std::left;
+	std::cout << "GUI Elements:" << std::endl;
+	std::cout << std::setw( NameSize ) << "Objects name"  << "Sizeof" << std::endl;
 
 	PrintSizeofType< sw::gui::IControl >( std::cout );
 	PrintSizeofType< sw::gui::Visual >( std::cout );
 	PrintSizeofType< sw::gui::UIElement >( std::cout );
 
+
+	std::cout << std::endl << "Other:" << std::endl;
+	std::cout << std::setw( NameSize ) << "Objects name" << "Sizeof" << std::endl;
+	
+	std::cout << std::setw( NameSize ) << "std::enable_shared_from_this additional size" << ( sizeof( VirtualEmptyClass ) - sizeof( VirtualEmptyClass* ) ) << std::endl;
 }
