@@ -186,6 +186,7 @@
     <ClCompile Include="..\..\..\Core\System\GUISystem.cpp" />
     <ClCompile Include="..\..\..\Core\System\HostWindow.cpp" />
     <ClCompile Include="..\..\..\Core\System\Initializers.cpp" />
+    <ClCompile Include="..\..\..\Core\System\Rendering\RenderingSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\swGraphicAPI\ProjectsDir\Visual2015\ResourceManager\ResourceManager.vcxproj">

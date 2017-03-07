@@ -173,6 +173,11 @@
     <ClCompile Include="..\..\..\Core\Controls\UIElement.cpp">
       <Filter>Core\Controls</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Core\System\Events\EventsManager.cpp" />
+    <ClCompile Include="..\..\..\Core\System\Rendering\RenderingSystem.cpp">
+      <Filter>Core\System\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Core\System\Events\EventsManager.cpp">
+      <Filter>Core\System\Events</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

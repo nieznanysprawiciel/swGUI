@@ -23,6 +23,8 @@ public:
 	explicit		DrawingContext		() = default;
 	~DrawingContext		() = default;
 
+
+
 };
 
 
