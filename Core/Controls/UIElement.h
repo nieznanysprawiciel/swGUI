@@ -9,6 +9,7 @@
 
 #include "swGUI/Core/Controls/Visual.h"
 #include "swGUI/Core/System/Events/DelegateContainer.h"
+#include "swGUI/Core/System/Events/EventsSystem.h"
 
 
 namespace sw {
@@ -45,18 +46,17 @@ protected:
 	UIElement*				m_parent;				///< Parent in controls visual tree.
 
 	bool					m_isVisible : 1;
-	bool					m_isEnabled : 1;	///< @todo Maybe it's something from higher level.
+	bool					m_isEnabled : 1;		///< @todo Maybe it's something from higher level.
 	bool					m_isMouseOver : 1;
 	bool					m_isFocused : 1;
 	bool					m_isFocusable : 1;
 
 	Size2D					m_desiredSize;			///< Desired size after Messure pass.
-
-
+	EventHandlers			m_eventHandlers;		///< Managing delegates.
 
 public:
 	explicit		UIElement	() = default;
-	~UIElement	() = default;
+	virtual			~UIElement	() = default;
 
 
 ///@name Layout fuctions

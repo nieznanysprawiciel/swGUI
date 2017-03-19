@@ -1,6 +1,6 @@
 #pragma once
 /**
-@file EventsManager.h
+@file EventsSystem.h
 @author nieznanysprawiciel
 @copyright File is part of Sleeping Wombat Libraries.
 */
@@ -9,9 +9,13 @@
 #include "swCommonLib/Common/TypesDefinitions.h"
 #include "swCommonLib/Common/RTTR.h"
 
+#include "EventProxy.h"
+#include "EventHandlers.h"
+
 
 #include <mutex>
 #include <set>
+#include <string>
 
 
 namespace sw {
@@ -19,24 +23,36 @@ namespace gui
 {
 
 
-typedef uint32 EventType;
+
+
+/**@brief Describes how event behaves in visual tree.*/
+enum class RoutingStrategy : uint8
+{
+	Bubble,
+	Direct,
+	Tunnel
+};
 
 
 
-/**@brief */
+/**@brief Structure describes event registered by controls.
+
+You can register event by calling @ref EventsSystem::RegisterEvent*/
 struct RegisteredEvent
 {
-	const char*			EventName;
 	TypeID				OwnerType;
 	TypeID				EventArgumentsType;
 	EventType			ID;
+	RoutingStrategy		Strategy;
+	std::string			EventName;
 
 // ================================ //
 //
-	RegisteredEvent( const char* eventName, TypeID ownerType, TypeID eventTypeId )
-		: EventName( eventName )
-		, OwnerType( ownerType )
-		, EventArgumentsType( eventTypeId )
+	RegisteredEvent( const std::string& eventName, RoutingStrategy strategy, TypeID ownerType, TypeID eventTypeId )
+		:	EventName( eventName )
+		,	Strategy( strategy )
+		,	OwnerType( ownerType )
+		,	EventArgumentsType( eventTypeId )
 	{}
 };
 
@@ -48,7 +64,7 @@ bool		operator<( const RegisteredEvent& left, const RegisteredEvent& right );
 For now this class stores only registered events. Think about future use.
 
 Registering events needs to be in separate dll, otherwise controls can't register their static variables.*/
-class EventsManager
+class EventsSystem
 {
 private:
 
@@ -59,18 +75,18 @@ private:
 
 protected:
 public:
-					~EventsManager		() = default;
+					~EventsSystem		() = default;
 
 	/**@brief Registers new event and return idetifier used in DelegateContainers.*/
-	EventType		RegisterEvent		( const char* eventName, TypeID ownerType, TypeID eventTypeId );
+	const RegisteredEvent*		RegisterEvent		( const char* eventName, RoutingStrategy strategy, TypeID ownerType, TypeID eventTypeId );
 
 
 
 public:
-	static EventsManager&		Get	();
+	static EventsSystem&		Get	();
 
 private:
-	explicit		EventsManager		();
+	explicit		EventsSystem		();
 };
 
 

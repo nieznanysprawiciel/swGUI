@@ -3,7 +3,7 @@
 #include "swCommonLib/Common/EngineObject.h"
 #include "swGraphicAPI/Rendering/IGraphicAPIInitializer.h"
 #include "swGUI/Native/INativeGUI.h"
-#include "Events/EventsManager.h"
+#include "Events/EventsSystem.h"
 #include "swGUI/Core/System/Rendering/RenderingSystem.h"
 
 #include "HostWindow.h"

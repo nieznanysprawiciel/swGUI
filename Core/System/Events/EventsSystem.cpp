@@ -1,11 +1,11 @@
 /**
-@file EventsManager.h
+@file EventsSystem.h
 @author nieznanysprawiciel
 @copyright File is part of Sleeping Wombat Libraries.
 */
 
 
-#include "EventsManager.h"
+#include "EventsSystem.h"
 
 
 namespace sw {
@@ -25,8 +25,7 @@ bool				operator<		( const RegisteredEvent& left, const RegisteredEvent& right )
 			return true;
 		else if( left.EventArgumentsType == right.EventArgumentsType )
 		{
-			auto result = strcmp( left.EventName, right.EventName );
-			if( result < 0 )
+			if( left.EventName < right.EventName )
 				return true;
 		}
 	}
@@ -37,36 +36,37 @@ bool				operator<		( const RegisteredEvent& left, const RegisteredEvent& right )
 
 // ================================ //
 //
-EventsManager::EventsManager()
+EventsSystem::EventsSystem()
 	:	m_counter( 1 )
 {}
 
 
 // ================================ //
 //
-EventType			EventsManager::RegisterEvent		( const char* eventName, TypeID ownerType, TypeID eventTypeId )
+const RegisteredEvent*			EventsSystem::RegisterEvent		( const char* eventName, RoutingStrategy strategy, TypeID ownerType, TypeID eventTypeId )
 {
-	RegisteredEvent eventInfo( eventName, ownerType, eventTypeId );
+	RegisteredEvent eventInfo( eventName, strategy, ownerType, eventTypeId );
 
 	std::lock_guard< std::mutex > lock( m_registerMutex );
 	
+	eventInfo.ID = m_counter;
+
+	// Note: if new entry have been added, we must increment m_counter. Otherwise event was already registered
+	// and we use object stored in m_registeredEvents set.
 	auto iter = m_registeredEvents.insert( eventInfo );
 	if( iter.second )
-	{
-		// Sad
-		const_cast< RegisteredEvent& >( *(iter.first) ).ID = m_counter++;
-	}
+		m_counter++;
 
-	return iter.first->ID;
+	return &(*iter.first);
 }
 
 
 
 // ================================ //
 //
-EventsManager&		EventsManager::Get()
+EventsSystem&		EventsSystem::Get()
 {
-	static EventsManager manager;
+	static EventsSystem manager;
 	return manager;
 }
 
