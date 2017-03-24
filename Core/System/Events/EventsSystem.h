@@ -51,7 +51,7 @@ public:
 	const RegisteredEvent*		RegisterEvent		( const char* eventName, RoutingStrategy strategy, TypeID ownerType, TypeID eventTypeId );
 
 	/**@brief Sends event to visual tree using @ref RoutingStrategy specyfied in eventInfo.*/
-	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgsOPtr&& arguments );
 
 
 private:

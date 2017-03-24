@@ -7,7 +7,7 @@
 
 
 #include "DelegateContainer.h"
-
+#include "IEventArgs.h"
 
 
 namespace sw {
@@ -48,7 +48,7 @@ private:
 	Calls @ref EventsSystem::RaiseEvent.
 	@return Returns false if event couldn't be sent. False means you provided wrong argument type for this event,
 	or sender type is different then registered. Normally you don't have to check this.*/
-	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgsOPtr&& arguments );
 
 	///@}
 	

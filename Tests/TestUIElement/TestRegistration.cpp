@@ -12,6 +12,9 @@ struct ValidationEventArgs : public IEventArgs
 	RTTR_ENABLE( IEventArgs );
 };
 
+DEFINE_OPTR_TYPE( ValidationEventArgs );
+
+
 RTTR_REGISTRATION
 {
 	rttr::registration::class_< ValidationEventArgs >( "ValidationEventArgs" );
@@ -86,7 +89,7 @@ const RegisteredEvent* TestUIElementClass::sValidationStarted = EventsSystem::Ge
 //
 void		TestUIElementClass::EventRaisingFunction		()
 {
-	bool result = ValidationStarted().RaiseEvent( this, new ValidationEventArgs );
+	bool result = ValidationStarted().RaiseEvent( this, ValidationEventArgsOPtr( new ValidationEventArgs() ) );
 	CHECK( result );
 }
 

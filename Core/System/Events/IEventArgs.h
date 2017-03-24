@@ -19,6 +19,7 @@ public:
 	bool			Handled;		///< Mark event as handled to stop further processing.
 };
 
+DEFINE_OPTR_TYPE( IEventArgs );
 
 }	// gui
 }	// sw

@@ -65,7 +65,7 @@ const RegisteredEvent*			EventsSystem::RegisterEvent		( const char* eventName, R
 
 // ================================ //
 //
-bool				EventsSystem::RaiseEvent					( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+bool				EventsSystem::RaiseEvent					( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgsOPtr&& arguments )
 {
 	// Type checking. If sender is different then registered then something gone wrong.
 	// Argument checking could be done only in debug mode...
@@ -78,11 +78,11 @@ bool				EventsSystem::RaiseEvent					( const RegisteredEvent* eventInfo, UIEleme
 	switch( eventInfo->Strategy )
 	{
 		case RoutingStrategy::Direct:
-			return RaiseDirectEvent( eventInfo, sender, arguments );
+			return RaiseDirectEvent( eventInfo, sender, arguments.get() );
 		case RoutingStrategy::Bubble:
-			return RaiseBubbleEvent( eventInfo, sender, arguments );
+			return RaiseBubbleEvent( eventInfo, sender, arguments.get() );
 		case RoutingStrategy::Tunnel:
-			return RaiseTunnelEvent( eventInfo, sender, arguments );
+			return RaiseTunnelEvent( eventInfo, sender, arguments.get() );
 		default:
 			return false;
 	}

@@ -88,9 +88,9 @@ bool						EventHandlers::RemoveContainer			( EventType eventID )
 
 // ================================ //
 //
-bool						EventHandlers::RaiseEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+bool						EventHandlers::RaiseEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgsOPtr&& arguments )
 {
-	return EventsSystem::Get().RaiseEvent( eventInfo, sender, arguments );
+	return EventsSystem::Get().RaiseEvent( eventInfo, sender, std::move( arguments ) );
 }
 
 

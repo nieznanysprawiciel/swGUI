@@ -22,7 +22,8 @@ template< typename EventArgType >
 class EventProxy
 {
 public:
-	typedef EventDelegate< EventArgType > DelegateType;
+	typedef EventDelegate< EventArgType >		DelegateType;
+	typedef std::unique_ptr< EventArgType >		ArgumentsOwnerPtr;
 private:
 
 	EventHandlers&							m_handlers;
@@ -37,7 +38,7 @@ public:
 	inline void			AddDelegate		( DelegateType delegate );
 	inline bool			RemoveDelegate	( DelegateType delegate );
 
-	bool				RaiseEvent		( UIElement* sender, EventArgType* arguments );
+	bool				RaiseEvent		( UIElement* sender, ArgumentsOwnerPtr&& arguments );
 };
 
 
@@ -107,9 +108,9 @@ inline bool				EventProxy< EventArgType >::RemoveDelegate	( typename EventProxy<
 // ================================ //
 //
 template< typename EventArgType >
-inline bool				EventProxy< EventArgType >::RaiseEvent		( UIElement* sender, EventArgType* arguments )
+inline bool				EventProxy< EventArgType >::RaiseEvent		( UIElement* sender, ArgumentsOwnerPtr&& arguments )
 {
-	return m_handlers.RaiseEvent( m_eventInfo, sender, arguments );
+	return m_handlers.RaiseEvent( m_eventInfo, sender, std::move( arguments ) );
 }
 
 }	// gui
