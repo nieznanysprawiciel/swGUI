@@ -9,6 +9,7 @@
 #include "swCommonLib/Common/TypesDefinitions.h"
 #include "swCommonLib/External/FastDelegate/FastDelegate.h"
 
+#include "RegisteredEvent.h"
 
 #include <vector>
 
@@ -19,16 +20,15 @@ namespace sw {
 namespace gui
 {
 
-typedef uint32 EventType;
-
 
 
 class DelegatesContainerBase;
+struct IEventArgs;
 class UIElement;
 DEFINE_OPTR_TYPE( DelegatesContainerBase );
 
 template< typename EventArgType >
-using Delegate = fastdelegate::FastDelegate2< UIElement*, EventArgType* >;
+using EventDelegate = fastdelegate::FastDelegate2< UIElement*, EventArgType* >;
 
 
 /**@brief Base class for delegates containers.
@@ -56,7 +56,7 @@ private:
 
 protected:
 public:
-	explicit		DelegatesContainerBase		( EventType type );
+	explicit		DelegatesContainerBase		( EventType eventID );
 	virtual			~DelegatesContainerBase		() = default;
 
 
@@ -75,6 +75,9 @@ public:
 
 	/**@brief Steal list following this */
 	DelegatesContainerBaseOPtr	StealRestOfList		();
+
+	/**@brief Invokes delegates functions.*/
+	virtual void				CallDelegates		( UIElement* sender, IEventArgs* arguments ) = 0;
 };
 
 
@@ -87,7 +90,7 @@ class DelegatesContainer : public DelegatesContainerBase
 {
 public:
 
-	typedef Delegate< EventArgType > DelegateType;
+	typedef EventDelegate< EventArgType > DelegateType;
 
 private:
 
@@ -104,6 +107,9 @@ public:
 	bool				RemoveDelegate	( DelegateType delegate );
 
 	bool				Exists			( DelegateType delegate );
+
+	
+	virtual void		CallDelegates	( UIElement* sender, IEventArgs* arguments ) override;
 };
 
 
@@ -113,8 +119,8 @@ public:
 
 // ================================ //
 //
-inline DelegatesContainerBase::DelegatesContainerBase	( EventType type )
-	:	m_eventType( type )
+inline DelegatesContainerBase::DelegatesContainerBase	( EventType eventID )
+	:	m_eventType( eventID )
 	,	m_next( nullptr )
 {}
 
@@ -200,6 +206,17 @@ inline bool				DelegatesContainer< EventArgType >::Exists			( typename Delegates
 			return true;
 	}
 	return false;
+}
+
+// ================================ //
+//
+template< typename EventArgType >
+inline void				DelegatesContainer< EventArgType >::CallDelegates	( UIElement* sender, IEventArgs* arguments )
+{
+	// @todo What should be done if event will be marked as handled ??
+	EventArgType* typedArgs = static_cast< EventArgType* >( arguments );
+	for( auto& delegateFun : m_delegates )
+		delegateFun( sender, typedArgs );
 }
 
 }	// gui

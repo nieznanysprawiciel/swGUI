@@ -9,6 +9,7 @@
 
 #include "DelegateContainer.h"
 #include "EventHandlers.h"
+#include "RegisteredEvent.h"
 
 
 namespace sw {
@@ -21,20 +22,22 @@ template< typename EventArgType >
 class EventProxy
 {
 public:
-	typedef Delegate< EventArgType > DelegateType;
+	typedef EventDelegate< EventArgType > DelegateType;
 private:
 
 	EventHandlers&							m_handlers;
-	EventType								m_eventID;
+	const RegisteredEvent* 					m_eventInfo;
 
 public:
-	explicit			EventProxy		( EventHandlers& delegatesContainer, EventType eventID );
+	explicit			EventProxy		( EventHandlers& delegatesContainer, const RegisteredEvent* eventInfo );
 
 
 	inline void			operator+=		( DelegateType delegate );
 	inline bool			operator-=		( DelegateType delegate );
 	inline void			AddDelegate		( DelegateType delegate );
 	inline bool			RemoveDelegate	( DelegateType delegate );
+
+	bool				RaiseEvent		( UIElement* sender, EventArgType* arguments );
 };
 
 
@@ -45,9 +48,9 @@ public:
 // ================================ //
 //
 template< typename EventArgType >
-inline					EventProxy< EventArgType >::EventProxy		( EventHandlers& delegatesContainer, EventType eventID )
+inline					EventProxy< EventArgType >::EventProxy		( EventHandlers& delegatesContainer, const RegisteredEvent* eventInfo )
 	:	m_handlers( delegatesContainer )
-	,	m_eventID( eventID )
+	,	m_eventInfo( eventInfo )
 {}
 
 // ================================ //
@@ -72,13 +75,13 @@ template< typename EventArgType >
 inline void				EventProxy< EventArgType >::AddDelegate		( typename EventProxy< EventArgType >::DelegateType delegate )
 {
 	// Find delegates container.
-	DelegatesContainerBase* delegateContainer = m_handlers.FindContainer( m_eventID );
+	DelegatesContainerBase* delegateContainer = m_handlers.FindContainer( m_eventInfo->ID );
 	DelegatesContainer< EventArgType >* typedDelegateContainer = nullptr;
 
 	// Create delegates container if it doesn't exists.
 	if( !delegateContainer )
 	{
-		DelegatesContainer< EventArgType >* container = new DelegatesContainer< EventArgType >( m_eventID );
+		DelegatesContainer< EventArgType >* container = new DelegatesContainer< EventArgType >( m_eventInfo->ID );
 		delegateContainer = m_handlers.AddContainer( std::move( DelegatesContainerBaseOPtr( container ) ) );
 	}
 
@@ -91,7 +94,7 @@ inline void				EventProxy< EventArgType >::AddDelegate		( typename EventProxy< E
 template< typename EventArgType >
 inline bool				EventProxy< EventArgType >::RemoveDelegate	( typename EventProxy< EventArgType >::DelegateType delegate )
 {
-	DelegatesContainerBase* delegateContainer = m_handlers.FindContainer( m_eventID );
+	DelegatesContainerBase* delegateContainer = m_handlers.FindContainer( m_eventInfo->ID );
 
 	if( delegateContainer )
 	{
@@ -99,6 +102,14 @@ inline bool				EventProxy< EventArgType >::RemoveDelegate	( typename EventProxy<
 		return typedDelegateContainer.RemoveDelegate( delegate );
 	}
 	return false;
+}
+
+// ================================ //
+//
+template< typename EventArgType >
+inline bool				EventProxy< EventArgType >::RaiseEvent		( UIElement* sender, EventArgType* arguments )
+{
+	return m_handlers.RaiseEvent( m_eventInfo, sender, arguments );
 }
 
 }	// gui

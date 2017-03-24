@@ -16,6 +16,14 @@ namespace gui
 
 
 
+// ================================ //
+//
+void		UIElement::InvokeEventDelegates		( EventType eventID, UIElement* sender, IEventArgs* e, AccessKey )
+{
+	auto container = m_eventHandlers.FindContainer( eventID );
+	if( container )
+		container->CallDelegates( sender, e );
+}
 
 }	// gui
 }	// sw

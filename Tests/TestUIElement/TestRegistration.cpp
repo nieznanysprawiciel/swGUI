@@ -12,6 +12,11 @@ struct ValidationEventArgs : public IEventArgs
 	RTTR_ENABLE( IEventArgs );
 };
 
+RTTR_REGISTRATION
+{
+	rttr::registration::class_< ValidationEventArgs >( "ValidationEventArgs" );
+}
+
 
 //====================================================================================//
 //			Header	
@@ -24,10 +29,13 @@ public:
 	// Event part
 	static const RegisteredEvent* sValidationStarted;
 
-	EventProxy< ValidationEventArgs >		ValidationStarted() { return EventProxy< ValidationEventArgs >( m_eventHandlers, sValidationStarted->ID ); }
+	EventProxy< ValidationEventArgs >		ValidationStarted() { return EventProxy< ValidationEventArgs >( m_eventHandlers, sValidationStarted ); }
 
 public:
-	void		EventRaisingFunction	();
+	void		EventRaisingFunction		();
+
+	/// Check functions.
+	bool		ExistsDelegatesContainer	( EventType eventID );
 
 #pragma region Inherited
 
@@ -76,9 +84,17 @@ const RegisteredEvent* TestUIElementClass::sValidationStarted = EventsSystem::Ge
 
 // ================================ //
 //
-void		TestUIElementClass::EventRaisingFunction()
+void		TestUIElementClass::EventRaisingFunction		()
 {
-	//ValidationStarted().RaiseEvent( this, new ValidationEventArgs )
+	bool result = ValidationStarted().RaiseEvent( this, new ValidationEventArgs );
+	CHECK( result );
+}
+
+// ================================ //
+//
+bool		TestUIElementClass::ExistsDelegatesContainer	( EventType eventID )
+{
+	return m_eventHandlers.FindContainer( eventID ) ? true : false;
 }
 
 
@@ -93,11 +109,13 @@ void		ValidationDelegate	( UIElement* sender, ValidationEventArgs* e )
 }
 
 
-TEST_CASE( "Event call" )
+TEST_CASE( "Raising events" )
 {
 	TestUIElementClass testClass;
 
-	testClass.ValidationStarted() += Delegate< ValidationEventArgs >( &ValidationDelegate );
+	testClass.ValidationStarted() += EventDelegate< ValidationEventArgs >( &ValidationDelegate );
+
+	CHECK( testClass.ExistsDelegatesContainer( TestUIElementClass::sValidationStarted->ID ) );
 
 	testClass.EventRaisingFunction();
 	CHECK( validationDelegateCounter == 1 );

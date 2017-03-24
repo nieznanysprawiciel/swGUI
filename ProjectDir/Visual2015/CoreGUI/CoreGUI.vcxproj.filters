@@ -147,6 +147,12 @@
     <ClInclude Include="..\..\..\Core\System\Events\EventHandlers.h">
       <Filter>Core\System\Events</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\Events\RegisteredEvent.h">
+      <Filter>Core\System\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\CommonTypes\AccessKey.h">
+      <Filter>Core\System\CommonTypes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp">

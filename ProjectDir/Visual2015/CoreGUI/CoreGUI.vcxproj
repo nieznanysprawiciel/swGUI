@@ -152,6 +152,7 @@
     <ClInclude Include="..\..\..\Core\Media\Brushes\LinearGradient.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\RadialGradient.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\SolidColorBrush.h" />
+    <ClInclude Include="..\..\..\Core\System\CommonTypes\AccessKey.h" />
     <ClInclude Include="..\..\..\Core\System\CommonTypes\CommonTypes.h" />
     <ClInclude Include="..\..\..\Core\System\CommonTypes\Thickness.h" />
     <ClInclude Include="..\..\..\Core\System\DataBinding\DependencyObject.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseButtonEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseWheelEventArgs.h" />
+    <ClInclude Include="..\..\..\Core\System\Events\RegisteredEvent.h" />
     <ClInclude Include="..\..\..\Core\System\GUISystem.h" />
     <ClInclude Include="..\..\..\Core\System\HostWindow.h" />
     <ClInclude Include="..\..\..\Core\System\Rendering\DrawingContext.h" />

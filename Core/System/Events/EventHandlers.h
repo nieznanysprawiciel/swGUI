@@ -14,6 +14,8 @@ namespace sw {
 namespace gui
 {
 
+struct IEventArgs;
+
 
 /**@brief Container class for delegates.*/
 class EventHandlers
@@ -41,6 +43,12 @@ private:
 	/**@brief Removes container with deelgates.
 	@return Returns false if container for eventID didn't exist.*/
 	bool						RemoveContainer		( EventType eventID );
+
+	/**@brief Sends event to visual tree using @ref RoutingStrategy specyfied in eventInfo.
+	Calls @ref EventsSystem::RaiseEvent.
+	@return Returns false if event couldn't be sent. False means you provided wrong argument type for this event,
+	or sender type is different then registered. Normally you don't have to check this.*/
+	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
 
 	///@}
 	

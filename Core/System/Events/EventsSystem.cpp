@@ -7,6 +7,9 @@
 
 #include "EventsSystem.h"
 
+#include "swGUI/Core/Controls/UIElement.h"
+
+
 
 namespace sw {
 namespace gui
@@ -58,6 +61,53 @@ const RegisteredEvent*			EventsSystem::RegisterEvent		( const char* eventName, R
 		m_counter++;
 
 	return &(*iter.first);
+}
+
+// ================================ //
+//
+bool				EventsSystem::RaiseEvent					( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+{
+	// Type checking. If sender is different then registered then something gone wrong.
+	// Argument checking could be done only in debug mode...
+	if( sender->GetType().is_derived_from( eventInfo->OwnerType ) )
+		return false;
+
+	if( !arguments->get_type().is_derived_from( eventInfo->EventArgumentsType ) )
+		return false;
+
+	switch( eventInfo->Strategy )
+	{
+		case RoutingStrategy::Direct:
+			return RaiseDirectEvent( eventInfo, sender, arguments );
+		case RoutingStrategy::Bubble:
+			return RaiseBubbleEvent( eventInfo, sender, arguments );
+		case RoutingStrategy::Tunnel:
+			return RaiseTunnelEvent( eventInfo, sender, arguments );
+		default:
+			return false;
+	}
+}
+
+// ================================ //
+//
+bool				EventsSystem::RaiseDirectEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+{
+	sender->InvokeEventDelegates( eventInfo->ID, sender, arguments, AccessKey() );
+	return true;
+}
+
+// ================================ //
+//
+bool				EventsSystem::RaiseBubbleEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+{
+	return false;
+}
+
+// ================================ //
+//
+bool				EventsSystem::RaiseTunnelEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+{
+	return false;
 }
 
 

@@ -11,6 +11,8 @@
 
 #include "EventProxy.h"
 #include "EventHandlers.h"
+#include "IEventArgs.h"
+#include "RegisteredEvent.h"
 
 
 #include <mutex>
@@ -22,41 +24,9 @@ namespace sw {
 namespace gui
 {
 
+class UIElement;
 
 
-
-/**@brief Describes how event behaves in visual tree.*/
-enum class RoutingStrategy : uint8
-{
-	Bubble,
-	Direct,
-	Tunnel
-};
-
-
-
-/**@brief Structure describes event registered by controls.
-
-You can register event by calling @ref EventsSystem::RegisterEvent*/
-struct RegisteredEvent
-{
-	TypeID				OwnerType;
-	TypeID				EventArgumentsType;
-	EventType			ID;
-	RoutingStrategy		Strategy;
-	std::string			EventName;
-
-// ================================ //
-//
-	RegisteredEvent( const std::string& eventName, RoutingStrategy strategy, TypeID ownerType, TypeID eventTypeId )
-		:	EventName( eventName )
-		,	Strategy( strategy )
-		,	OwnerType( ownerType )
-		,	EventArgumentsType( eventTypeId )
-	{}
-};
-
-bool		operator<( const RegisteredEvent& left, const RegisteredEvent& right );
 
 
 /**@brief Events management.
@@ -80,7 +50,14 @@ public:
 	/**@brief Registers new event and return idetifier used in DelegateContainers.*/
 	const RegisteredEvent*		RegisterEvent		( const char* eventName, RoutingStrategy strategy, TypeID ownerType, TypeID eventTypeId );
 
+	/**@brief Sends event to visual tree using @ref RoutingStrategy specyfied in eventInfo.*/
+	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
 
+
+private:
+	bool			RaiseDirectEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	bool			RaiseBubbleEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	bool			RaiseTunnelEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
 
 public:
 	static EventsSystem&		Get	();

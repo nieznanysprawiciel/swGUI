@@ -75,6 +75,13 @@ public:
 
 public:
 
+	///@name Restricted
+	///@{
+	virtual	void			InvokeEventDelegates		( EventType eventID, UIElement* sender, IEventArgs* e, AccessKey );
+
+	///@}
+
+
 	///@name GUISystem interaction events
 	///Mouse and Keyboard input events and focus.
 	///@{

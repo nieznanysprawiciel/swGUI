@@ -5,6 +5,9 @@
 */
 
 #include "EventHandlers.h"
+#include "IEventArgs.h"
+
+#include "EventsSystem.h"
 
 
 namespace sw {
@@ -81,6 +84,13 @@ bool						EventHandlers::RemoveContainer			( EventType eventID )
 	}
 
 	return false;
+}
+
+// ================================ //
+//
+bool						EventHandlers::RaiseEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
+{
+	return EventsSystem::Get().RaiseEvent( eventInfo, sender, arguments );
 }
 
 
