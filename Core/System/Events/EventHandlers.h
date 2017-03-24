@@ -15,6 +15,7 @@ namespace gui
 {
 
 struct IEventArgs;
+struct RegisteredEvent;
 
 
 /**@brief Container class for delegates.*/
@@ -64,4 +65,11 @@ private:
 
 }	// gui
 }	// sw
+
+#define REGISTER_EVENT_DECLARATION( name, strategy, className, argsType )		\
+static const RegisteredEvent* s ## name;										\
+EventProxy< argsType >		name() { return EventProxy< argsType >( m_eventHandlers, s ## name ); }
+
+#define REGISTER_EVENT_DEFINITION( name, strategy, className, argsType )		\
+const RegisteredEvent* className::s ## name = EventsSystem::Get().RegisterEvent( #name, strategy, TypeID::get< className >(), TypeID::get< argsType >() );
 

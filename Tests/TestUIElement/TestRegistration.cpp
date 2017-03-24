@@ -7,17 +7,30 @@
 using namespace sw::gui;
 
 
+// ================================ //
+//
 struct ValidationEventArgs : public IEventArgs
 {
 	RTTR_ENABLE( IEventArgs );
 };
-
 DEFINE_OPTR_TYPE( ValidationEventArgs );
 
 
+// ================================ //
+//
+struct UnusedEventArgs : public IEventArgs
+{
+	RTTR_ENABLE( IEventArgs );
+};
+DEFINE_OPTR_TYPE( UnusedEventArgs );
+
+
+// ================================ //
+//
 RTTR_REGISTRATION
 {
 	rttr::registration::class_< ValidationEventArgs >( "ValidationEventArgs" );
+	rttr::registration::class_< UnusedEventArgs >( "UnusedEventArgs" );
 }
 
 
@@ -30,10 +43,8 @@ class TestUIElementClass : public sw::gui::UIElement
 private:
 public:
 	// Event part
-	static const RegisteredEvent* sValidationStarted;
-
-	EventProxy< ValidationEventArgs >		ValidationStarted() { return EventProxy< ValidationEventArgs >( m_eventHandlers, sValidationStarted ); }
-
+	REGISTER_EVENT_DECLARATION( ValidationStarted, RoutingStrategy::Direct, TestUIElementClass, ValidationEventArgs );
+	REGISTER_EVENT_DECLARATION( UnusedEvent, RoutingStrategy::Direct, TestUIElementClass, UnusedEventArgs );
 public:
 	void		EventRaisingFunction		();
 
@@ -81,8 +92,8 @@ public:
 //====================================================================================//
 
 
-const RegisteredEvent* TestUIElementClass::sValidationStarted = EventsSystem::Get().RegisterEvent( "ValidationEvent", RoutingStrategy::Direct, TypeID::get< TestUIElementClass >(), TypeID::get< ValidationEventArgs >() );
-
+REGISTER_EVENT_DEFINITION( ValidationStarted, RoutingStrategy::Direct, TestUIElementClass, ValidationEventArgs );
+REGISTER_EVENT_DEFINITION( UnusedEvent, RoutingStrategy::Direct, TestUIElementClass, UnusedEventArgs );
 
 
 // ================================ //
@@ -90,6 +101,9 @@ const RegisteredEvent* TestUIElementClass::sValidationStarted = EventsSystem::Ge
 void		TestUIElementClass::EventRaisingFunction		()
 {
 	bool result = ValidationStarted().RaiseEvent( this, ValidationEventArgsOPtr( new ValidationEventArgs() ) );
+	CHECK( result );
+
+	result = UnusedEvent().RaiseEvent( this, UnusedEventArgsOPtr( new UnusedEventArgs() ) );
 	CHECK( result );
 }
 

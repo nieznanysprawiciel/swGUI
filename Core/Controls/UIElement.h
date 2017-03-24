@@ -8,7 +8,7 @@
 
 
 #include "swGUI/Core/Controls/Visual.h"
-#include "swGUI/Core/System/Events/DelegateContainer.h"
+#include "swGUI/Core/System/Events/EventHandlers.h"
 #include "swGUI/Core/System/Events/EventsSystem.h"
 
 
