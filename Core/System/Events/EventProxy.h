@@ -100,7 +100,15 @@ inline bool				EventProxy< EventArgType >::RemoveDelegate	( typename EventProxy<
 	if( delegateContainer )
 	{
 		DelegatesContainer< EventArgType >* typedDelegateContainer = static_cast< DelegatesContainer< EventArgType >* >( delegateContainer );
-		return typedDelegateContainer.RemoveDelegate( delegate );
+		bool result = typedDelegateContainer->RemoveDelegate( delegate );
+		
+		// Remove container if isn't usufull anymore.
+		if( typedDelegateContainer->IsEmpty() )
+		{
+			m_handlers.RemoveContainer( m_eventInfo->ID );
+		}
+
+		return result;
 	}
 	return false;
 }

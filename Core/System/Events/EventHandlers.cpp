@@ -64,23 +64,31 @@ DelegatesContainerBase*		EventHandlers::AddContainer				( DelegatesContainerBase
 //
 bool						EventHandlers::RemoveContainer			( EventType eventID )
 {
+	if( !m_delegatesList )
+		return false;
+
 	DelegatesContainerBase* prevContainer = m_delegatesList.get();
 	DelegatesContainerBase* container = nullptr;
 
 	if( prevContainer->GetEventType() == eventID )
-		m_delegatesList = prevContainer->StealRestOfList();
-
-	container = prevContainer->GetNextContainer();
-	while( container )
 	{
-		if( container->GetEventType() == eventID )
+		m_delegatesList = prevContainer->StealRestOfList();
+		return true;
+	}
+	else
+	{
+		container = prevContainer->GetNextContainer();
+		while( container )
 		{
-			prevContainer->RemoveNext();
-			return true;
-		}
+			if( container->GetEventType() == eventID )
+			{
+				prevContainer->RemoveNext();
+				return true;
+			}
 
-		prevContainer = container;
-		container = container->GetNextContainer();
+			prevContainer = container;
+			container = container->GetNextContainer();
+		}
 	}
 
 	return false;

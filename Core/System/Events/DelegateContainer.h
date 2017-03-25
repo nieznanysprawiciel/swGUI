@@ -107,6 +107,7 @@ public:
 	bool				RemoveDelegate	( DelegateType delegate );
 
 	bool				Exists			( DelegateType delegate );
+	bool				IsEmpty			() const;
 
 	
 	virtual void		CallDelegates	( UIElement* sender, IEventArgs* arguments ) override;
@@ -188,11 +189,19 @@ inline void				DelegatesContainer< EventArgType >::AddDelegate		( typename Deleg
 template< typename EventArgType >
 inline bool				DelegatesContainer< EventArgType >::RemoveDelegate	( typename DelegatesContainer< EventArgType >::DelegateType delegate )
 {
-	for( auto iter = m_delegates.begin(); iter != m_delegates.end(); iter++ )
+	bool removed = false;
+	for( auto iter = m_delegates.begin(); iter != m_delegates.end(); )
 	{
 		if( *iter == delegate )
+		{
 			iter = m_delegates.erase( iter );
+			removed = true;
+		}
+		else
+			iter++;
 	}
+
+	return removed;
 }
 
 // ================================ //
@@ -206,6 +215,14 @@ inline bool				DelegatesContainer< EventArgType >::Exists			( typename Delegates
 			return true;
 	}
 	return false;
+}
+
+// ================================ //
+//
+template< typename EventArgType >
+inline bool				DelegatesContainer< EventArgType >::IsEmpty() const
+{
+	return m_delegates.empty();
 }
 
 // ================================ //
