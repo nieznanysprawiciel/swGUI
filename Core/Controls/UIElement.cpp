@@ -18,6 +18,13 @@ namespace gui
 
 // ================================ //
 //
+void		UIElement::SetParent				( UIElement* parent )
+{
+	m_parent = parent;
+}
+
+// ================================ //
+//
 void		UIElement::InvokeEventDelegates		( EventType eventID, UIElement* sender, IEventArgs* e, AccessKey )
 {
 	auto container = m_eventHandlers.FindContainer( eventID );

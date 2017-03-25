@@ -17,6 +17,7 @@ namespace gui
 {
 
 class UIElement;
+DEFINE_OPTR_TYPE( UIElement );
 
 struct IEventArgs;
 struct InputEventArgs;
@@ -59,8 +60,8 @@ public:
 	virtual			~UIElement	() = default;
 
 
-///@name Layout fuctions
-///@{
+	///@name Layout fuctions
+	///@{
 	/**@brief Meassure pass. Check documentation in WPF.*/
 	virtual Size2D			Measure				( Size2D availableSize )		= 0;
 	/**@brief Arragement pass. Check WPF documentation.*/
@@ -68,10 +69,27 @@ public:
 	///@}
 
 
+	///@name Visual tree manipulation
+	///@{
 	/**@brief Get number of children in visual tree.*/
 	virtual Size			GetNumChildren		()								= 0;
+	
 	/**@brief Gets child in visual tree.*/
 	virtual UIElement*		GetUIChild			( Size idx )					= 0;
+	
+	/**@brief Add child.
+	This function should set child parent to this pointer.
+	@return Returns false if this control can't have children.*/
+	virtual bool			AddChild			( UIElementOPtr&& child )		= 0;
+
+	/**@brief Set control parent.
+	Internal use.*/
+	virtual void			SetParent			( UIElement* parent );
+
+	/**@brief Returns control parent.*/
+	virtual UIElement*		GetParent			() { return m_parent; }
+
+	///@}
 
 public:
 

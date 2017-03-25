@@ -66,10 +66,10 @@ private:
 }	// gui
 }	// sw
 
-#define REGISTER_EVENT_DECLARATION( name, strategy, className, argsType )		\
-static const RegisteredEvent* s ## name;										\
-EventProxy< argsType >		name() { return EventProxy< argsType >( m_eventHandlers, s ## name ); }
+#define REGISTER_EVENT_DECLARATION( name, strategy, className, argsType )				\
+static const ::sw::gui::RegisteredEvent* s ## name;										\
+::sw::gui::EventProxy< argsType >		name() { return ::sw::gui::EventProxy< argsType >( m_eventHandlers, s ## name ); }
 
-#define REGISTER_EVENT_DEFINITION( name, strategy, className, argsType )		\
-const RegisteredEvent* className::s ## name = EventsSystem::Get().RegisterEvent( #name, strategy, TypeID::get< className >(), TypeID::get< argsType >() );
+#define REGISTER_EVENT_DEFINITION( name, strategy, className, argsType )				\
+const ::sw::gui::RegisteredEvent* className::s ## name = ::sw::gui::EventsSystem::Get().RegisterEvent( #name, ::sw::gui::strategy, TypeID::get< className >(), TypeID::get< argsType >() );
 

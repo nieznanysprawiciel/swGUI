@@ -7,6 +7,9 @@
     <Filter Include="Test\Events">
       <UniqueIdentifier>{d369a4e0-e82a-4fab-b552-ac350d44d9f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Test\Classes">
+      <UniqueIdentifier>{070b5be7-3f16-4dab-b861-86e673c9589d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Tests\TestUIElement\main.cpp">
@@ -15,5 +18,16 @@
     <ClCompile Include="..\..\..\..\Tests\TestUIElement\TestRegistration.cpp">
       <Filter>Test\Events</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Tests\TestUIElement\Classes\TestUIElementClass.cpp">
+      <Filter>Test\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Tests\TestUIElement\TestEventRouting.cpp">
+      <Filter>Test\Events</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Tests\TestUIElement\Classes\TestUIElementClass.h">
+      <Filter>Test\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
