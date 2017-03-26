@@ -107,7 +107,21 @@ bool				EventsSystem::RaiseBubbleEvent				( const RegisteredEvent* eventInfo, UI
 //
 bool				EventsSystem::RaiseTunnelEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
 {
-	return false;
+	RaiseTunnelEventForParents( eventInfo, sender, arguments, sender );
+	return true;
+}
+
+// ================================ //
+//
+void				EventsSystem::RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement )
+{
+	if( !raiseForElement )
+		return;
+
+	RaiseTunnelEventForParents( eventInfo, sender, arguments, raiseForElement->GetParent() );
+
+	if( !arguments->Handled )
+		raiseForElement->InvokeEventDelegates( eventInfo->ID, sender, arguments, AccessKey() );
 }
 
 

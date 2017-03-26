@@ -55,9 +55,12 @@ public:
 
 
 private:
-	bool			RaiseDirectEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
-	bool			RaiseBubbleEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
-	bool			RaiseTunnelEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+
+	bool			RaiseDirectEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	bool			RaiseBubbleEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	bool			RaiseTunnelEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	/**@brief Calls recursivly event for parents.*/
+	void			RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement );
 
 public:
 	static EventsSystem&		Get	();

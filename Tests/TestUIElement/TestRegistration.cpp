@@ -88,6 +88,19 @@ TEST_CASE( "Raising events" )
 
 	CHECK( !testClass.ExistsDelegatesContainer( TestUIElementClass::sValidationStarted->ID ) );
 	CHECK( !testClass.ExistsDelegatesContainer( TestUIElementClass::sUnusedEvent->ID ) );
+
+	// Test adding two delegates for the same object
+	CleanCounters();
+
+	testClass.ValidationStarted() += EventDelegate< ValidationEventArgs >( &ValidationDelegate );
+	testClass.ValidationStarted() += EventDelegate< ValidationEventArgs >( &ValidationDelegate );
+
+	CHECK( testClass.ExistsDelegatesContainer( TestUIElementClass::sValidationStarted->ID ) );
+	CHECK( !testClass.ExistsDelegatesContainer( TestUIElementClass::sUnusedEvent->ID ) );
+
+	testClass.EventRaisingFunction();
+	CHECK( validationDelegateCounter == 1 );
+	CHECK( valid1Counter == 1 );
 }
 
 
