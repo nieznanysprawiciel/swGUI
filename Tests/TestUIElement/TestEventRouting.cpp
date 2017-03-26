@@ -18,6 +18,7 @@ int validateElement3 = 0;
 int validateElement4 = 0;
 int validateElement5 = 0;
 
+std::vector< int > eventsOrder;
 
 
 // ================================ //
@@ -30,6 +31,8 @@ void		CleanGlobals()
 	validateElement3 = 0;
 	validateElement4 = 0;
 	validateElement5 = 0;
+
+	eventsOrder.clear();
 }
 
 // ================================ //
@@ -37,6 +40,7 @@ void		CleanGlobals()
 void		CheckUIElement0	( UIElement* sender, ValidationEventArgs* e )
 {
 	validateElement0++;
+	eventsOrder.push_back( 0 );
 }
 
 // ================================ //
@@ -44,6 +48,7 @@ void		CheckUIElement0	( UIElement* sender, ValidationEventArgs* e )
 void		CheckUIElement1	( UIElement* sender, ValidationEventArgs* e )
 {
 	validateElement1++;
+	eventsOrder.push_back( 1 );
 }
 
 // ================================ //
@@ -51,6 +56,7 @@ void		CheckUIElement1	( UIElement* sender, ValidationEventArgs* e )
 void		CheckUIElement2	( UIElement* sender, ValidationEventArgs* e )
 {
 	validateElement2++;
+	eventsOrder.push_back( 2 );
 }
 
 // ================================ //
@@ -58,6 +64,7 @@ void		CheckUIElement2	( UIElement* sender, ValidationEventArgs* e )
 void		CheckUIElement3	( UIElement* sender, ValidationEventArgs* e )
 {
 	validateElement3++;
+	eventsOrder.push_back( 3 );
 }
 
 // ================================ //
@@ -65,6 +72,7 @@ void		CheckUIElement3	( UIElement* sender, ValidationEventArgs* e )
 void		CheckUIElement4	( UIElement* sender, ValidationEventArgs* e )
 {
 	validateElement4++;
+	eventsOrder.push_back( 4 );
 }
 
 // ================================ //
@@ -72,6 +80,7 @@ void		CheckUIElement4	( UIElement* sender, ValidationEventArgs* e )
 void		CheckUIElement5	( UIElement* sender, ValidationEventArgs* e )
 {
 	validateElement5++;
+	eventsOrder.push_back( 5 );
 }
 
 
@@ -122,6 +131,8 @@ TEST_CASE( "Tunnel Events Routing" )
 	level2Child4->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement4 );
 	level2Child5->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement5 );
 
+	std::vector< int > eventsOrderValidation;
+
 // ================================ //
 //
 
@@ -135,6 +146,10 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 0 );
 
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 1 );
+	eventsOrderValidation.push_back( 4 );
+
 	//
 	level2Child5->RaiseTunnelEvent();
 
@@ -144,6 +159,10 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement3 == 0 );
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
+
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 1 );
+	eventsOrderValidation.push_back( 5 );
 
 	//
 	level1Child3->RaiseTunnelEvent();
@@ -155,6 +174,9 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
 
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 3 );
+
 	//
 	level1Child2->RaiseTunnelEvent();
 
@@ -164,6 +186,9 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement3 == 1 );
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
+
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 2 );
 
 	//
 	root->RaiseTunnelEvent();
@@ -175,6 +200,8 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
 
+	eventsOrderValidation.push_back( 0 );
+
 	//
 	level1Child1->RaiseTunnelEvent();
 
@@ -184,6 +211,10 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement3 == 1 );
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
+
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 1 );
+
 
 	level1Child1->PreviewTunnelEvent() -= EventDelegate< ValidationEventArgs >( CheckUIElement1 );
 
@@ -197,6 +228,9 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement4 == 2 );
 	CHECK( validateElement5 == 1 );
 
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 4 );
+
 	//
 	level2Child5->RaiseTunnelEvent();
 
@@ -206,6 +240,16 @@ TEST_CASE( "Tunnel Events Routing" )
 	CHECK( validateElement3 == 1 );
 	CHECK( validateElement4 == 2 );
 	CHECK( validateElement5 == 2 );
+
+	eventsOrderValidation.push_back( 0 );
+	eventsOrderValidation.push_back( 5 );
+
+	REQUIRE( eventsOrderValidation.size() == eventsOrder.size() );
+	for( int i = 0; i < eventsOrderValidation.size(); ++i )
+	{
+		INFO( i );
+		CHECK( eventsOrderValidation[ i ] == eventsOrder[ i ] );
+	}
 }
 
 
@@ -252,6 +296,8 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	level2Child4->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement4 );
 	level2Child5->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement5 );
 
+	std::vector< int > eventsOrderValidation;
+
 // ================================ //
 //
 
@@ -265,6 +311,10 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 0 );
 
+	eventsOrderValidation.push_back( 4 );
+	eventsOrderValidation.push_back( 1 );
+	eventsOrderValidation.push_back( 0 );
+
 	//
 	level2Child5->RaiseBubbleEvent();
 
@@ -274,6 +324,10 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement3 == 0 );
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
+
+	eventsOrderValidation.push_back( 5 );
+	eventsOrderValidation.push_back( 1 );
+	eventsOrderValidation.push_back( 0 );
 
 	//
 	level1Child3->RaiseBubbleEvent();
@@ -285,6 +339,9 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
 
+	eventsOrderValidation.push_back( 3 );
+	eventsOrderValidation.push_back( 0 );
+
 	//
 	level1Child2->RaiseBubbleEvent();
 
@@ -294,6 +351,9 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement3 == 1 );
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
+
+	eventsOrderValidation.push_back( 2 );
+	eventsOrderValidation.push_back( 0 );
 
 	//
 	root->RaiseBubbleEvent();
@@ -305,6 +365,8 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
 
+	eventsOrderValidation.push_back( 0 );
+
 	//
 	level1Child1->RaiseBubbleEvent();
 
@@ -314,6 +376,9 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement3 == 1 );
 	CHECK( validateElement4 == 1 );
 	CHECK( validateElement5 == 1 );
+
+	eventsOrderValidation.push_back( 1 );
+	eventsOrderValidation.push_back( 0 );
 
 	level1Child1->BubbleEvent() -= EventDelegate< ValidationEventArgs >( CheckUIElement1 );
 
@@ -327,6 +392,9 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement4 == 2 );
 	CHECK( validateElement5 == 1 );
 
+	eventsOrderValidation.push_back( 4 );
+	eventsOrderValidation.push_back( 0 );
+
 	//
 	level2Child5->RaiseBubbleEvent();
 
@@ -336,4 +404,15 @@ TEST_CASE( "Tunnel Bubble Routing" )
 	CHECK( validateElement3 == 1 );
 	CHECK( validateElement4 == 2 );
 	CHECK( validateElement5 == 2 );
+
+	eventsOrderValidation.push_back( 5 );
+	eventsOrderValidation.push_back( 0 );
+
+
+	REQUIRE( eventsOrderValidation.size() == eventsOrder.size() );
+	for( int i = 0; i < eventsOrderValidation.size(); ++i )
+	{
+		INFO( i );
+		CHECK( eventsOrderValidation[ i ] == eventsOrder[ i ] );
+	}
 }
