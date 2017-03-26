@@ -100,7 +100,14 @@ bool				EventsSystem::RaiseDirectEvent				( const RegisteredEvent* eventInfo, UI
 //
 bool				EventsSystem::RaiseBubbleEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
 {
-	return false;
+	UIElement* element = sender;
+	while( element && !arguments->Handled )
+	{
+		element->InvokeEventDelegates( eventInfo->ID, sender, arguments, AccessKey() );
+		element = element->GetParent();
+	}
+
+	return true;
 }
 
 // ================================ //

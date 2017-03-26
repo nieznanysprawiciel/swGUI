@@ -210,59 +210,130 @@ TEST_CASE( "Tunnel Events Routing" )
 
 
 
-//TEST_CASE( "Tunnel Bubble Routing" )
-//{
-//	CleanGlobals();
+TEST_CASE( "Tunnel Bubble Routing" )
+{
+	CleanGlobals();
+
+	// Build tree
+	TestUIElementClassOPtr root = TestUIElementClassOPtr( new TestUIElementClass() );
+
+	TestUIElementClass* level1Child1 = new TestUIElementClass();
+	TestUIElementClass* level1Child2 = new TestUIElementClass();
+	TestUIElementClass* level1Child3 = new TestUIElementClass();
+
+	TestUIElementClass* level2Child4 = new TestUIElementClass();
+	TestUIElementClass* level2Child5 = new TestUIElementClass();
+
+	bool result = root->AddChild( TestUIElementClassOPtr( level1Child1 ) );
+	CHECK( result );
+	CHECK( level1Child1->GetParent() == root.get() );
+
+	result = root->AddChild( TestUIElementClassOPtr( level1Child2 ) );
+	CHECK( result );
+	CHECK( level1Child2->GetParent() == root.get() );
+
+	result = root->AddChild( TestUIElementClassOPtr( level1Child3 ) );
+	CHECK( result );
+	CHECK( level1Child3->GetParent() == root.get() );
+
+	result = level1Child1->AddChild( TestUIElementClassOPtr( level2Child4 ) );
+	CHECK( result );
+	CHECK( level2Child4->GetParent() == level1Child1 );
+
+	result = level1Child1->AddChild( TestUIElementClassOPtr( level2Child5 ) );
+	CHECK( result );
+	CHECK( level2Child5->GetParent() == level1Child1 );
+
+	// Assign delegates
+	root->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement0 );
+	level1Child1->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement1 );
+	level1Child2->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement2 );
+	level1Child3->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement3 );
+	level2Child4->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement4 );
+	level2Child5->BubbleEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement5 );
+
+// ================================ //
 //
-//	// Build tree
-//	TestUIElementClassOPtr root = TestUIElementClassOPtr( new TestUIElementClass() );
-//
-//	TestUIElementClass* level1Child1 = new TestUIElementClass();
-//	TestUIElementClass* level1Child2 = new TestUIElementClass();
-//	TestUIElementClass* level1Child3 = new TestUIElementClass();
-//
-//	TestUIElementClass* level2Child4 = new TestUIElementClass();
-//	TestUIElementClass* level2Child5 = new TestUIElementClass();
-//
-//	bool result = root->AddChild( TestUIElementClassOPtr( level1Child1 ) );
-//	CHECK( result );
-//	CHECK( level1Child1->GetParent() == root.get() );
-//
-//	result = root->AddChild( TestUIElementClassOPtr( level1Child2 ) );
-//	CHECK( result );
-//	CHECK( level1Child2->GetParent() == root.get() );
-//
-//	result = root->AddChild( TestUIElementClassOPtr( level1Child3 ) );
-//	CHECK( result );
-//	CHECK( level1Child3->GetParent() == root.get() );
-//
-//	result = level1Child1->AddChild( TestUIElementClassOPtr( level2Child4 ) );
-//	CHECK( result );
-//	CHECK( level2Child4->GetParent() == level1Child1 );
-//
-//	result = level1Child1->AddChild( TestUIElementClassOPtr( level2Child5 ) );
-//	CHECK( result );
-//	CHECK( level2Child5->GetParent() == level1Child1 );
-//
-//	// Assign delegates
-//	root->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement0 );
-//	level1Child1->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement1 );
-//	level1Child2->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement2 );
-//	level1Child3->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement3 );
-//	level2Child4->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement4 );
-//	level2Child5->PreviewTunnelEvent() += EventDelegate< ValidationEventArgs >( CheckUIElement5 );
-//
-//// ================================ //
-////
-//
-//	// 
-//	level2Child4->RaiseBubbleEvent();
-//
-//	CHECK( validateElement0 == 1 );
-//	CHECK( validateElement1 == 1 );
-//	CHECK( validateElement2 == 0 );
-//	CHECK( validateElement3 == 0 );
-//	CHECK( validateElement4 == 1 );
-//	CHECK( validateElement5 == 0 );
-//
-//}
+
+	// 
+	level2Child4->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 1 );
+	CHECK( validateElement1 == 1 );
+	CHECK( validateElement2 == 0 );
+	CHECK( validateElement3 == 0 );
+	CHECK( validateElement4 == 1 );
+	CHECK( validateElement5 == 0 );
+
+	//
+	level2Child5->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 2 );
+	CHECK( validateElement1 == 2 );
+	CHECK( validateElement2 == 0 );
+	CHECK( validateElement3 == 0 );
+	CHECK( validateElement4 == 1 );
+	CHECK( validateElement5 == 1 );
+
+	//
+	level1Child3->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 3 );
+	CHECK( validateElement1 == 2 );
+	CHECK( validateElement2 == 0 );
+	CHECK( validateElement3 == 1 );
+	CHECK( validateElement4 == 1 );
+	CHECK( validateElement5 == 1 );
+
+	//
+	level1Child2->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 4 );
+	CHECK( validateElement1 == 2 );
+	CHECK( validateElement2 == 1 );
+	CHECK( validateElement3 == 1 );
+	CHECK( validateElement4 == 1 );
+	CHECK( validateElement5 == 1 );
+
+	//
+	root->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 5 );
+	CHECK( validateElement1 == 2 );
+	CHECK( validateElement2 == 1 );
+	CHECK( validateElement3 == 1 );
+	CHECK( validateElement4 == 1 );
+	CHECK( validateElement5 == 1 );
+
+	//
+	level1Child1->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 6 );
+	CHECK( validateElement1 == 3 );
+	CHECK( validateElement2 == 1 );
+	CHECK( validateElement3 == 1 );
+	CHECK( validateElement4 == 1 );
+	CHECK( validateElement5 == 1 );
+
+	level1Child1->BubbleEvent() -= EventDelegate< ValidationEventArgs >( CheckUIElement1 );
+
+	//
+	level2Child4->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 7 );
+	CHECK( validateElement1 == 3 );
+	CHECK( validateElement2 == 1 );
+	CHECK( validateElement3 == 1 );
+	CHECK( validateElement4 == 2 );
+	CHECK( validateElement5 == 1 );
+
+	//
+	level2Child5->RaiseBubbleEvent();
+
+	CHECK( validateElement0 == 8 );
+	CHECK( validateElement1 == 3 );
+	CHECK( validateElement2 == 1 );
+	CHECK( validateElement3 == 1 );
+	CHECK( validateElement4 == 2 );
+	CHECK( validateElement5 == 2 );
+}
