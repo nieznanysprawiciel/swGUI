@@ -11,8 +11,42 @@ namespace sw {
 namespace gui
 {
 
+//====================================================================================//
+//			Events definition	
+//====================================================================================//
+
+REGISTER_EVENT_DEFINITION( PreviewMouseUp, RoutingStrategy::Tunnel, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( PreviewMouseDown, RoutingStrategy::Tunnel, UIElement, MouseButtonEventArgs );
+
+REGISTER_EVENT_DEFINITION( PreviewMouseRightButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( PreviewMouseRightButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( PreviewMouseLeftButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( PreviewMouseLeftButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+
+REGISTER_EVENT_DEFINITION( PreviewMouseWheel, RoutingStrategy::Tunnel, UIElement, MouseWheelEventArgs );
+REGISTER_EVENT_DEFINITION( PreviewMouseMove, RoutingStrategy::Tunnel, UIElement, MouseEventArgs );
+
+REGISTER_EVENT_DEFINITION( PreviewKeyDown, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+REGISTER_EVENT_DEFINITION( PreviewKeyUp, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
 
 
+REGISTER_EVENT_DEFINITION( MouseUp, RoutingStrategy::Bubble, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( MouseDown, RoutingStrategy::Bubble, UIElement, MouseButtonEventArgs );
+
+REGISTER_EVENT_DEFINITION( MouseRightButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( MouseRightButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( MouseLeftButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+REGISTER_EVENT_DEFINITION( MouseLeftButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+
+REGISTER_EVENT_DEFINITION( MouseWheel, RoutingStrategy::Bubble, UIElement, MouseWheelEventArgs );
+REGISTER_EVENT_DEFINITION( MouseMove, RoutingStrategy::Bubble, UIElement, MouseEventArgs );
+
+REGISTER_EVENT_DEFINITION( KeyUp, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+REGISTER_EVENT_DEFINITION( KeyDown, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+
+
+REGISTER_EVENT_DEFINITION( MouseEnter, RoutingStrategy::Direct, UIElement, MouseEventArgs );
+REGISTER_EVENT_DEFINITION( MouseLeave, RoutingStrategy::Direct, UIElement, MouseEventArgs );
 
 
 

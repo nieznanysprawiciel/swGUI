@@ -11,6 +11,11 @@
 #include "swGUI/Core/System/Events/EventHandlers.h"
 #include "swGUI/Core/System/Events/EventsSystem.h"
 
+// Include events arguments
+#include "swGUI/Core/System/Events/Input/MouseButtonEventArgs.h"
+#include "swGUI/Core/System/Events/Input/MouseWheelEventArgs.h"
+#include "swGUI/Core/System/Events/Input/KeyEventArgs.h"
+
 
 namespace sw {
 namespace gui
@@ -125,8 +130,6 @@ public:
 	virtual void			MouseLeftButtonUp			( UIElement* sender, MouseButtonEventArgs* e ) { }
 
 
-	virtual void			PreviewMouseEnter				( UIElement* sender, MouseEventArgs* e ) { }
-	virtual void			PreviewMouseLeave				( UIElement* sender, MouseEventArgs* e ) { }
 	virtual void			PreviewMouseMove				( UIElement* sender, MouseEventArgs* e ) { }
 	virtual void			PreviewMouseWheel				( UIElement* sender, MouseWheelEventArgs* e ) { }
 
@@ -146,6 +149,42 @@ public:
 	virtual void			PreviewKeyDown					( UIElement* sender, KeyEventArgs* e ) { }
 	virtual void			PreviewKeyUp					( UIElement* sender, KeyEventArgs* e ) { }
 	///@}
+
+
+public:
+
+	REGISTER_EVENT_DECLARATION( PreviewMouseUp, RoutingStrategy::Tunnel, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( PreviewMouseDown, RoutingStrategy::Tunnel, UIElement, MouseButtonEventArgs );
+
+	REGISTER_EVENT_DECLARATION( PreviewMouseRightButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( PreviewMouseRightButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( PreviewMouseLeftButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( PreviewMouseLeftButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+
+	REGISTER_EVENT_DECLARATION( PreviewMouseWheel, RoutingStrategy::Tunnel, UIElement, MouseWheelEventArgs );
+	REGISTER_EVENT_DECLARATION( PreviewMouseMove, RoutingStrategy::Tunnel, UIElement, MouseEventArgs );
+
+	REGISTER_EVENT_DECLARATION( PreviewKeyDown, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+	REGISTER_EVENT_DECLARATION( PreviewKeyUp, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+
+
+	REGISTER_EVENT_DECLARATION( MouseUp, RoutingStrategy::Bubble, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( MouseDown, RoutingStrategy::Bubble, UIElement, MouseButtonEventArgs );
+
+	REGISTER_EVENT_DECLARATION( MouseRightButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( MouseRightButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( MouseLeftButtonDown, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+	REGISTER_EVENT_DECLARATION( MouseLeftButtonUp, RoutingStrategy::Direct, UIElement, MouseButtonEventArgs );
+
+	REGISTER_EVENT_DECLARATION( MouseWheel, RoutingStrategy::Bubble, UIElement, MouseWheelEventArgs );
+	REGISTER_EVENT_DECLARATION( MouseMove, RoutingStrategy::Bubble, UIElement, MouseEventArgs );
+
+	REGISTER_EVENT_DECLARATION( KeyUp, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+	REGISTER_EVENT_DECLARATION( KeyDown, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
+
+
+	REGISTER_EVENT_DECLARATION( MouseEnter, RoutingStrategy::Direct, UIElement, MouseEventArgs );
+	REGISTER_EVENT_DECLARATION( MouseLeave, RoutingStrategy::Direct, UIElement, MouseEventArgs );
 };
 
 

@@ -69,7 +69,7 @@ void		ValidationDelegate4	( UIElement* sender, ValidationEventArgs* e )
 //====================================================================================//
 
 
-TEST_CASE( "Raising events" )
+TEST_CASE( "Raising direct events" )
 {
 	CleanCounters();
 
@@ -104,7 +104,7 @@ TEST_CASE( "Raising events" )
 }
 
 
-TEST_CASE( "Adding removing deelgates" )
+TEST_CASE( "Adding/removing delegates" )
 {
 	CleanCounters();
 

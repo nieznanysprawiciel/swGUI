@@ -53,6 +53,15 @@ public:
 	/**@brief Sends event to visual tree using @ref RoutingStrategy specyfied in eventInfo.*/
 	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgsOPtr&& arguments );
 
+	/**@brief Sends event in response to other event.
+	Use this function when you are in event handler and you want to send the same event structure under different name.
+	Good example is UIElement::MouseRightButtonDown which is sent by UIElement in response to UIElement::MouseDown event
+	sent by EventsSystem.
+
+	@param[in] arguments Arguments structure. Note that this structure is raw pointer and you are not owner of it.
+	Never use this function when you created event structure on your own. This couses memory leaks.*/
+	bool						RaiseForwardEvent	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+
 
 private:
 
@@ -61,6 +70,8 @@ private:
 	bool			RaiseTunnelEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
 	/**@brief Calls recursivly event for parents.*/
 	void			RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement );
+
+	bool			RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
 
 public:
 	static EventsSystem&		Get	();
