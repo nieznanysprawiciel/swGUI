@@ -219,4 +219,9 @@
       <Filter>Core\System\Events</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Core\System\Events\EventsSystem.inl">
+      <Filter>Core\System\Events</Filter>
+    </None>
+  </ItemGroup>
 </Project>

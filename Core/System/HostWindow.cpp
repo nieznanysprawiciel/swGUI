@@ -82,20 +82,20 @@ EngineObject*&		HostWindow::DataContext			()
 }
 
 /**@brief Removes control from GUI system.*/
-void				HostWindow::RemoveControl		( IControl* control )
+void				HostWindow::RemoveControl		( UIElement* control )
 {
 
 }
 
 /**@brief Allows control to register it's name.*/
-void				HostWindow::RegisterControlName	( IControl* control, const std::string& name )
+void				HostWindow::RegisterControlName	( UIElement* control, const std::string& name )
 {
 	assert( m_controlsNames.find( control ) == m_controlsNames.end() );
 	m_controlsNames[ control ] = name;
 }
 
 /**@brief Gets name of registered control.*/
-const std::string& HostWindow::GetControlName		( IControl* control )
+const std::string& HostWindow::GetControlName		( UIElement* control )
 {
 	auto iter = m_controlsNames.find( control );
 	if( iter != m_controlsNames.end() )

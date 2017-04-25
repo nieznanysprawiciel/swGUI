@@ -6,6 +6,7 @@
 
 
 #include "EventsSystem.h"
+#include "EventsSystem.inl"
 
 #include "swGUI/Core/Controls/UIElement.h"
 
@@ -67,85 +68,15 @@ const RegisteredEvent*			EventsSystem::RegisterEvent		( const char* eventName, R
 //
 bool				EventsSystem::RaiseEvent					( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgsOPtr&& arguments )
 {
-	return RaiseEventImpl( eventInfo, sender, arguments.get() );
+	return RaiseEventImpl< IEventArgs >( eventInfo, sender, arguments.get(), nullptr );
 }
 
 // ================================ //
 //
 bool				EventsSystem::RaiseForwardEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
 {
-	return RaiseEventImpl( eventInfo, sender, arguments );
+	return RaiseEventImpl< IEventArgs >( eventInfo, sender, arguments, nullptr );
 }
-
-// ================================ //
-//
-bool				EventsSystem::RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
-{
-	// Type checking. If sender is different then registered then something gone wrong.
-	// Argument checking could be done only in debug mode...
-	if( sender->GetType().is_derived_from( eventInfo->OwnerType ) )
-		return false;
-
-	if( !arguments->get_type().is_derived_from( eventInfo->EventArgumentsType ) )
-		return false;
-
-	switch( eventInfo->Strategy )
-	{
-		case RoutingStrategy::Direct:
-			return RaiseDirectEvent( eventInfo, sender, arguments );
-		case RoutingStrategy::Bubble:
-			return RaiseBubbleEvent( eventInfo, sender, arguments );
-		case RoutingStrategy::Tunnel:
-			return RaiseTunnelEvent( eventInfo, sender, arguments );
-		default:
-			return false;
-	}
-}
-
-// ================================ //
-//
-bool				EventsSystem::RaiseDirectEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
-{
-	sender->InvokeEventDelegates( eventInfo->ID, sender, arguments, AccessKey() );
-	return true;
-}
-
-// ================================ //
-//
-bool				EventsSystem::RaiseBubbleEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
-{
-	UIElement* element = sender;
-	while( element && !arguments->Handled )
-	{
-		element->InvokeEventDelegates( eventInfo->ID, sender, arguments, AccessKey() );
-		element = element->GetParent();
-	}
-
-	return true;
-}
-
-// ================================ //
-//
-bool				EventsSystem::RaiseTunnelEvent				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments )
-{
-	RaiseTunnelEventForParents( eventInfo, sender, arguments, sender );
-	return true;
-}
-
-// ================================ //
-//
-void				EventsSystem::RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement )
-{
-	if( !raiseForElement )
-		return;
-
-	RaiseTunnelEventForParents( eventInfo, sender, arguments, raiseForElement->GetParent() );
-
-	if( !arguments->Handled )
-		raiseForElement->InvokeEventDelegates( eventInfo->ID, sender, arguments, AccessKey() );
-}
-
-
 
 // ================================ //
 //

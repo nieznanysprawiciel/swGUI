@@ -153,6 +153,7 @@ public:
 
 public:
 
+	//
 	REGISTER_EVENT_DECLARATION( PreviewMouseUp, RoutingStrategy::Tunnel, UIElement, MouseButtonEventArgs );
 	REGISTER_EVENT_DECLARATION( PreviewMouseDown, RoutingStrategy::Tunnel, UIElement, MouseButtonEventArgs );
 
@@ -167,7 +168,7 @@ public:
 	REGISTER_EVENT_DECLARATION( PreviewKeyDown, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
 	REGISTER_EVENT_DECLARATION( PreviewKeyUp, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
 
-
+	//
 	REGISTER_EVENT_DECLARATION( MouseUp, RoutingStrategy::Bubble, UIElement, MouseButtonEventArgs );
 	REGISTER_EVENT_DECLARATION( MouseDown, RoutingStrategy::Bubble, UIElement, MouseButtonEventArgs );
 
@@ -182,7 +183,7 @@ public:
 	REGISTER_EVENT_DECLARATION( KeyUp, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
 	REGISTER_EVENT_DECLARATION( KeyDown, RoutingStrategy::Tunnel, UIElement, KeyEventArgs );
 
-
+	//
 	REGISTER_EVENT_DECLARATION( MouseEnter, RoutingStrategy::Direct, UIElement, MouseEventArgs );
 	REGISTER_EVENT_DECLARATION( MouseLeave, RoutingStrategy::Direct, UIElement, MouseEventArgs );
 };

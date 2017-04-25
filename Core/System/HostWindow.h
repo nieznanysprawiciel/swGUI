@@ -1,7 +1,7 @@
 #pragma once
 
 #include "swGUI/Native/INativeWindow.h"
-#include "swGUI/Core/Controls/IControl.h"
+#include "swGUI/Core/Controls/UIElement.h"
 #include "swGUI/Core/Controls/TopLevelControl.h"
 
 #include "swInputLibrary/IInput.h"
@@ -33,11 +33,11 @@ private:
 
 	EngineObject*				m_dataContext;
 
-	std::vector< IControl* >	m_mousePath;		///< Controls hierarchy that captured mouse in this frame.
-	std::vector< IControl* >	m_focusPath;		///< Controls hierarchy that have focus in this frame.
-	std::vector< IControl* >	m_invalidated;		///< Controls which needs to be redrawn in this frame.
+	std::vector< UIElement* >	m_mousePath;		///< Controls hierarchy that captured mouse in this frame.
+	std::vector< UIElement* >	m_focusPath;		///< Controls hierarchy that have focus in this frame.
+	std::vector< UIElement* >	m_invalidated;		///< Controls which needs to be redrawn in this frame.
 
-	std::vector< TopLevelControl* >		m_controlTree;	///< Top level controls.
+	std::vector< UIElement* >			m_controlTree;	///< Top level controls.
 
 	ResourcePtr< RenderTargetObject >	m_renderTarget;
 	ResourcePtr< SwapChain >			m_swapChain;
@@ -47,7 +47,7 @@ private:
 
 	/// Map containing windows names. Most controls don't have name, so it's better to store
 	/// them separatly, to lower memory consumption.
-	std::map< IControl*, std::string >	m_controlsNames;
+	std::map< UIElement*, std::string >	m_controlsNames;
 
 	///@}
 
@@ -61,10 +61,10 @@ public:
 
 
 	EngineObject*&		DataContext			();
-	void				RemoveControl		( IControl* control );
+	void				RemoveControl		( UIElement* control );
 
-	void				RegisterControlName	( IControl* control, const std::string& name );
-	const std::string&	GetControlName		( IControl* control );
+	void				RegisterControlName	( UIElement* control, const std::string& name );
+	const std::string&	GetControlName		( UIElement* control );
 
 
 	ResourcePtr< RenderTargetObject >	GetRenderTarget		();

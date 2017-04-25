@@ -27,6 +27,8 @@ namespace gui
 class UIElement;
 
 
+template< typename ArgumentType >
+using EventHandlerPointer = void ( UIElement::* )( UIElement*, ArgumentType* );
 
 
 /**@brief Events management.
@@ -62,16 +64,27 @@ public:
 	Never use this function when you created event structure on your own. This couses memory leaks.*/
 	bool						RaiseForwardEvent	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
 
+	template< typename ArgumentType >
+	bool						RaiseEvent			( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler );
+
 
 private:
 
-	bool			RaiseDirectEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
-	bool			RaiseBubbleEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
-	bool			RaiseTunnelEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
-	/**@brief Calls recursivly event for parents.*/
-	void			RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement );
+	template< typename ArgumentType >
+	bool			RaiseDirectEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
 
-	bool			RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments );
+	template< typename ArgumentType >
+	bool			RaiseBubbleEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
+
+	template< typename ArgumentType >
+	bool			RaiseTunnelEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
+
+	/**@brief Calls recursivly event for parents.*/
+	template< typename ArgumentType >
+	void			RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement, EventHandlerPointer< ArgumentType > handler );
+
+	template< typename ArgumentType >
+	bool			RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
 
 public:
 	static EventsSystem&		Get	();
@@ -79,6 +92,9 @@ public:
 private:
 	explicit		EventsSystem		();
 };
+
+
+
 
 
 }	// gui
