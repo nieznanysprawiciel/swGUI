@@ -4,7 +4,7 @@
 #include "swGUI/Core/Controls/UIElement.h"
 #include "swGUI/Core/Controls/TopLevelControl.h"
 
-#include "swInputLibrary/IInput.h"
+#include "swInputLibrary/InputCore/IInput.h"
 
 #include <vector>
 #include <map>
@@ -28,7 +28,7 @@ class HostWindow
 private:
 
 	INativeWindow*				m_nativeWindow;
-	IInput*						m_input;
+	input::IInput*				m_input;
 	ResourceManager*			m_resourceManager;
 
 	EngineObject*				m_dataContext;
@@ -53,7 +53,7 @@ private:
 
 protected:
 public:
-	explicit		HostWindow	( INativeWindow* nativeWindow, IInput* input, ResourceManager* resourceManager, IGraphicAPIInitializer* graphicApi );
+	explicit		HostWindow	( INativeWindow* nativeWindow, input::IInput* input, ResourceManager* resourceManager, IGraphicAPIInitializer* graphicApi );
 	~HostWindow	();
 
 

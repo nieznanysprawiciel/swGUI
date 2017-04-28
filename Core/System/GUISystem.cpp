@@ -1,6 +1,6 @@
 #include "GUISystem.h"
 
-#include "swInputLibrary/KeyboardState.h"
+#include "swInputLibrary/InputCore/KeyboardState.h"
 #include "swGraphicAPI/Resources/ResourcesFactory.h"
 #include "swGraphicAPI/ResourceManager/ResourceManager.h"
 

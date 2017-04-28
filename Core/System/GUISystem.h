@@ -66,7 +66,7 @@ protected:
 
 	IGraphicAPIInitializer*		m_graphicApi;		///< Contains object responsible for dealing with specifics graphic apis.
 	INativeGUI*					m_nativeGUI;		///< Native window system used to display main application window.
-	IInput*						m_input;			///< Input processor.
+	input::IInput*				m_input;			///< Input processor.
 
 	ResourceManager*			m_resourceManager;	///< Resources.
 	RenderingSystemOPtr			m_renderingSystem;	///< All rendering connceted functionalities.

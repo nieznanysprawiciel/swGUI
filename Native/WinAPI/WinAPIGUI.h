@@ -3,11 +3,10 @@
 
 #include "swGUI/Native/INativeGUI.h"
 
-
-class WinApiInputProxy;
-
 #include <Windows.h>
 #undef CreateWindow
+
+
 
 //struct tagMSG;
 //typedef tagMSG MSG;
@@ -17,6 +16,16 @@ class WinApiInputProxy;
 //
 //typedef UINT_PTR            WPARAM;
 //typedef LONG_PTR            LPARAM;
+
+
+
+namespace sw {
+namespace input
+{
+class WinApiInputProxy;
+
+}}	// sw::input
+
 
 
 
@@ -30,19 +39,19 @@ namespace gui
 class WinAPIGUI : public INativeGUI
 {
 private:
-	WinApiInputProxy*		m_input;
-	NativeGUIInitData		m_initData;
+	sw::input::WinApiInputProxy*	m_input;
+	NativeGUIInitData				m_initData;
 
 protected:
 public:
-	explicit			WinAPIGUI();
-	~WinAPIGUI() = default;
+	explicit			WinAPIGUI	();
+	virtual				~WinAPIGUI	() = default;
 
 
 // Inherited via INativeGUI
 	virtual bool				MainLoop		( bool blockingMode )							override;
 	virtual bool				Init			( const NativeGUIInitData& initData )			override;
-	virtual IInput*				UseNativeInput	()												override;
+	virtual sw::input::IInput*	UseNativeInput	()												override;
 	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor& descriptor )			override;
 
 	static WinAPIGUI*			Create			();
