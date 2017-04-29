@@ -143,5 +143,62 @@ void				HostWindow::GotFocus			()
 	std::cout << "Window [" + m_nativeWindow->GetTitle() + "] got focus." << std::endl;
 }
 
+// ================================ //
+//
+void				HostWindow::HandleInput			()
+{
+
+}
+
+//====================================================================================//
+//			Implement pure virtuals - temporary implementation	
+//====================================================================================//
+
+
+// ================================ //
+//
+bool				HostWindow::HitTest				( const Position& point )
+{
+	return false;
+}
+
+// ================================ //
+//
+void				HostWindow::OnRender			( DrawingContext& context )
+{}
+
+// ================================ //
+//
+Size2D				HostWindow::Measure				( Size2D availableSize )
+{
+	return Size2D();
+}
+
+// ================================ //
+//
+void				HostWindow::Arrange				( Rect & finalRect )
+{}
+
+// ================================ //
+//
+Size				HostWindow::GetNumChildren		()
+{
+	return Size();
+}
+
+// ================================ //
+//
+UIElement*			HostWindow::GetUIChild			( Size idx )
+{
+	return nullptr;
+}
+
+// ================================ //
+//
+bool				HostWindow::AddChild			( UIElementOPtr&& child )
+{
+	return false;
+}
+
 }	// gui
 }	// sw

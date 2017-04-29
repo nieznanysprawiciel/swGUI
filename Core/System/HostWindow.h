@@ -1,4 +1,10 @@
 #pragma once
+/**
+@file HostWindow.h
+@author nieznanysprawiciel
+@copyright File is part of Sleeping Wombat Libraries.
+*/
+
 
 #include "swGUI/Native/INativeWindow.h"
 #include "swGUI/Core/Controls/UIElement.h"
@@ -23,15 +29,13 @@ namespace gui
 
 Children of this class must inherit from TopLevelControl. This means that top level classes must be
 Windows, ContextMenus, PopupMenus or others similar.*/
-class HostWindow
+class HostWindow : public UIElement
 {
 private:
 
 	INativeWindow*				m_nativeWindow;
 	input::IInput*				m_input;
 	ResourceManager*			m_resourceManager;
-
-	EngineObject*				m_dataContext;
 
 	std::vector< UIElement* >	m_mousePath;		///< Controls hierarchy that captured mouse in this frame.
 	std::vector< UIElement* >	m_focusPath;		///< Controls hierarchy that have focus in this frame.
@@ -54,7 +58,7 @@ private:
 protected:
 public:
 	explicit		HostWindow	( INativeWindow* nativeWindow, input::IInput* input, ResourceManager* resourceManager, IGraphicAPIInitializer* graphicApi );
-	~HostWindow	();
+	virtual			~HostWindow	();
 
 
 	Size				GetMemorySize		();
@@ -81,8 +85,24 @@ public:
 	void				OnResized		( uint16 newWidth, uint16 newHeight );
 	void				OnMaximized		();
 	void				OnMinimized		();
+
+	void				HandleInput		();
 	///@}
 
+
+	// Inherited via UIElement
+	virtual bool		HitTest			( const Position& point )		override;
+	virtual void		OnRender		( DrawingContext& context )		override;
+	virtual Size2D		Measure			( Size2D availableSize )		override;
+	virtual void		Arrange			( Rect& finalRect )				override;
+	virtual Size		GetNumChildren	()								override;
+	virtual UIElement*	GetUIChild		( Size idx )					override;
+	virtual bool		AddChild		( UIElementOPtr&& child )		override;
+
+
+private:
+
+	void				HandleKeyInput	();
 };
 
 

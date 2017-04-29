@@ -110,6 +110,7 @@ public:
 	///@{
 	void			Init			();
 	int				MainLoop		();
+	void			HandleEvents	();
 	///@}
 
 public:

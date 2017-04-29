@@ -59,6 +59,8 @@ int					GUISystem::MainLoop()
 		bool end = m_nativeGUI->MainLoop( true );
 		if( end ) break;
 
+		HandleEvents();
+
 		// @todo How should it be done ??
 		OnIdle();
 		if( m_focusedWindow )
@@ -70,9 +72,30 @@ int					GUISystem::MainLoop()
 	return 0;
 }
 
+/**@brief Processes messages and passes them to focused window.*/
+void				GUISystem::HandleEvents()
+{
+	// @todo We should pass correct time in parameter.
+	m_input->Update( 0.0 );
+
+	if( m_focusedWindow )
+		m_focusedWindow->HandleInput();
+	else
+	{
+		for( auto& device : m_input->GetKeyboardDevice() )
+			device->ApplyAllEvents();
+
+		for( auto& device : m_input->GetMouseDevice() )
+			device->ApplyAllEvents();
+
+		for( auto& device : m_input->GetJoystickDevice() )
+			device->ApplyAllEvents();
+	}
+}
+
 
 /**@brief Invoke this function in application entry point (main).*/
-void GUISystem::Init()
+void				GUISystem::Init()
 {
 	Initialize();		// Initialize subsystems.
 	OnInitialized();	// User initialization.
