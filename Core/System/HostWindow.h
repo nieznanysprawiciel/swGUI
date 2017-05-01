@@ -7,7 +7,7 @@
 
 
 #include "swGUI/Native/INativeWindow.h"
-#include "swGUI/Core/Controls/UIElement.h"
+#include "HostLogic.h"
 #include "swGUI/Core/Controls/TopLevelControl.h"
 
 #include "swInputLibrary/InputCore/IInput.h"
@@ -25,8 +25,8 @@ namespace gui
 
 /**@brief Root class for controls hierarchy, contains native window.
 
-Children of this class must inherit from TopLevelControl. This means that top level classes must be
-Windows, ContextMenus, PopupMenus or others similar.
+This class connects native window and gui windows. GUI system logic is redirected to HostLogic class.
+HostWindow is responsible for rendering and presenting content on native window by using render target and swap chain.
 
 @ingroup GUICore
 @ingroup ControlsFramework*/
@@ -38,23 +38,10 @@ private:
 	input::IInput*				m_input;
 	ResourceManager*			m_resourceManager;
 
-	std::vector< UIElement* >	m_mousePath;		///< Controls hierarchy that captured mouse in this frame.
-	std::vector< UIElement* >	m_focusPath;		///< Controls hierarchy that have focus in this frame.
-	std::vector< UIElement* >	m_invalidated;		///< Controls which needs to be redrawn in this frame.
-
-	std::vector< UIElement* >			m_controlTree;	///< Top level controls.
-
 	ResourcePtr< RenderTargetObject >	m_renderTarget;
 	ResourcePtr< SwapChain >			m_swapChain;
 
-	///@name Controls info
-	///@{
-
-	/// Map containing windows names. Most controls don't have name, so it's better to store
-	/// them separatly, to lower memory consumption.
-	std::map< UIElement*, std::string >	m_controlsNames;
-
-	///@}
+	HostLogic					m_hostLogic;
 
 protected:
 public:
@@ -101,9 +88,6 @@ public:
 	virtual bool		AddChild		( UIElementOPtr&& child )		override;
 
 
-private:
-
-	void				HandleKeyInput	();
 };
 
 

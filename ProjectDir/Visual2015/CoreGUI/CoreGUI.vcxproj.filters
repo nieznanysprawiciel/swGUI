@@ -156,6 +156,9 @@
     <ClInclude Include="..\..\..\Core\Media\Media.h">
       <Filter>Core\Media</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\HostLogic.h">
+      <Filter>Core\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp">
@@ -220,6 +223,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Core\System\Events\EventHandlers.cpp">
       <Filter>Core\System\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Core\System\HostLogic.cpp">
+      <Filter>Core\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
