@@ -17,6 +17,13 @@
 #include "swGUI/Core/System/Events/Input/KeyEventArgs.h"
 
 
+
+/**@defgroup ControlsFramework Controls Framework
+@brief Base control classes and controls processing framework.
+@ingroup GUICore*/
+
+
+
 namespace sw {
 namespace gui
 {
@@ -41,7 +48,9 @@ Provides functionalities:
 - Managing focus
 - Parent/Child relationship
 
-Connects WPF UIElement and FrameworkElement classes.*/
+Connects WPF UIElement and FrameworkElement classes.
+
+@ingroup ControlsFramework*/
 class UIElement : public Visual
 {
 	RTTR_ENABLE( Visual );

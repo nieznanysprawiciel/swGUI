@@ -14,10 +14,13 @@ namespace sw {
 namespace gui
 {
 
+/**@brief Event type identifier.
+@ingroup EventSystem*/
 typedef uint32 EventType;
 
 
-/**@brief Describes how event behaves in visual tree.*/
+/**@brief Describes how event behaves in visual tree.
+@ingroup EventSystem*/
 enum class RoutingStrategy : uint8
 {
 	Bubble,
@@ -29,7 +32,9 @@ enum class RoutingStrategy : uint8
 
 /**@brief Structure describes event registered by controls.
 
-You can register event by calling @ref EventsSystem::RegisterEvent*/
+You can register event by calling @ref EventsSystem::RegisterEvent
+
+@ingroup EventSystem*/
 struct RegisteredEvent
 {
 	TypeID				OwnerType;

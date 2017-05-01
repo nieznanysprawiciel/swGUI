@@ -6,10 +6,6 @@
 #include <string>
 
 
-/**@defgroup EngineGUI
-@ingroup ModulesStructure
-@brief Modu³ s³u¿¹cy do renderowania interfejsu graficznego u¿ytkownika.*/
-
 
 
 

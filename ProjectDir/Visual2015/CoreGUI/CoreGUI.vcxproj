@@ -152,6 +152,7 @@
     <ClInclude Include="..\..\..\Core\Media\Brushes\LinearGradient.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\RadialGradient.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\SolidColorBrush.h" />
+    <ClInclude Include="..\..\..\Core\Media\Media.h" />
     <ClInclude Include="..\..\..\Core\System\CommonTypes\AccessKey.h" />
     <ClInclude Include="..\..\..\Core\System\CommonTypes\CommonTypes.h" />
     <ClInclude Include="..\..\..\Core\System\CommonTypes\Thickness.h" />

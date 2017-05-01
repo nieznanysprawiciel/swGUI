@@ -9,6 +9,9 @@ namespace sw {
 namespace gui
 {
 
+
+/**@brief Base class for keyboard events.
+@ingroup InputEvents*/
 struct KeyboardEventArgs : public InputEventArgs
 {
 	RTTR_ENABLE( InputEventArgs )

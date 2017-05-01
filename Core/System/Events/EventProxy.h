@@ -17,7 +17,9 @@ namespace gui
 {
 
 
-/**@brief Helper class for accessing event*/
+/**@brief Helper class for accessing event.
+
+@ingroup EventSystemImpl*/
 template< typename EventArgType >
 class EventProxy
 {

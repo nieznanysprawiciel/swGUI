@@ -16,6 +16,17 @@ namespace gui
 {
 
 
+/**@defgroup SWGUI Sleeping Wombat GUI
+@ingroup ModulesStructure
+@brief Graphic user interface library based on GPU rendering.*/
+
+
+/**@defgroup GUICore Core
+@ingroup SWGUI
+@brief Graphic user interface library based on GPU rendering.*/
+
+
+/**@brief Structure for command line arguments.*/
 struct CommandLineArgs
 {
 	int				ArgsCount;
@@ -33,7 +44,7 @@ struct CommandLineArgs
 
 /**@brief Main GUI application class.
 
-@ingroup EngineGUI
+@ingroup GUICore
 
 Use example of GUI:
 @code

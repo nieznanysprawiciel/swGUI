@@ -1,4 +1,11 @@
 #pragma once
+/**
+@file KeyEventArgs.h
+@author nieznanysprawiciel
+@copyright File is part of Sleeping Wombat Libraries.
+*/
+
+
 
 #include "swGUI/Core/System/Events/Input/KeyboardEventArgs.h"
 
@@ -7,6 +14,10 @@ namespace sw {
 namespace gui
 {
 
+
+/**@brief Key state changed event.
+
+@ingroup InputEvents*/
 struct KeyEventArgs : public KeyboardEventArgs
 {
 	RTTR_ENABLE( KeyboardEventArgs )

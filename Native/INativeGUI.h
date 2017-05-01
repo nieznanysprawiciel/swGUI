@@ -6,7 +6,12 @@
 
 #include "swInputLibrary/InputCore/IInput.h"
 
-class IInput;
+
+/**@defgroup NativeGUI Native GUI system
+@brief OS specific stuff.
+Here are things using underlying system API to create windows and handle events from system.
+@ingroup SWGUI*/
+
 
 namespace sw {
 namespace gui
@@ -15,14 +20,16 @@ namespace gui
 typedef fastdelegate::FastDelegate2< INativeWindow*, bool > ChangedFocusDelegate;
 
 
-/**@brief Provides data needed for native GUI system initialization.*/
+/**@brief Provides data needed for native GUI system initialization.
+@ingroup NativeGUI*/
 struct NativeGUIInitData
 {
 	ChangedFocusDelegate		FocusChanged;
 };
 
 
-/**@brief Encasulates native GUI system.*/
+/**@brief Interface encasulates native GUI system.
+@ingroup NativeGUI*/
 class INativeGUI
 {
 private:

@@ -16,8 +16,7 @@ namespace gui
 
 
 /**@brief Native window uses WinApi.
-
-@todo Move to separate library in future.*/
+@ingroup Win32APINativeGUI*/
 class Win32ApiWindow : public INativeWindow
 {
 private:

@@ -18,7 +18,9 @@ struct IEventArgs;
 struct RegisteredEvent;
 
 
-/**@brief Container class for delegates.*/
+/**@brief Container class for delegates.
+
+@ingroup EventSystem*/
 class EventHandlers
 {
 	template< typename EventArgType > friend class EventProxy;

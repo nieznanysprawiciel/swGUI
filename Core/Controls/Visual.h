@@ -25,7 +25,8 @@ Provides interfaces and base implementation of:
 - HitTesting
 - Rendering
 
-This classs correpsonds to WPF Visual class.*/
+This classs correpsonds to WPF Visual class.
+@ingroup ControlsFramework*/
 class Visual : public DependencyObject
 {
 	RTTR_ENABLE( DependencyObject );

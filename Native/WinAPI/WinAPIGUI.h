@@ -29,13 +29,18 @@ class WinApiInputProxy;
 
 
 
+/**@defgroup Win32APINativeGUI WinAPI native GUI
+@brief Native GUI basedon windows API.
+@ingroup NativeGUI*/
+
 
 namespace sw {
 namespace gui
 {
 
 
-/**@brief */
+/**@brief 
+@ingroup Win32APINativeGUI*/
 class WinAPIGUI : public INativeGUI
 {
 private:

@@ -153,6 +153,9 @@
     <ClInclude Include="..\..\..\Core\System\CommonTypes\AccessKey.h">
       <Filter>Core\System\CommonTypes</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Core\Media\Media.h">
+      <Filter>Core\Media</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp">

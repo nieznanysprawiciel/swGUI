@@ -1,4 +1,10 @@
 #pragma once
+/**
+@file MouseEventArgs.h
+@author nieznanysprawiciel
+@copyright File is part of Sleeping Wombat Libraries.
+*/
+
 
 #include "InputEventArgs.h"
 
@@ -10,6 +16,9 @@ namespace sw {
 namespace gui
 {
 
+
+/**@brief Base class for mouse input events.
+@ingroup InputEvents*/
 struct MouseEventArgs : public InputEventArgs
 {
 	RTTR_ENABLE( InputEventArgs )

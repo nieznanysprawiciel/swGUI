@@ -20,6 +20,17 @@
 #include <string>
 
 
+/**@defgroup EventSystem Events System
+@brief Sending and receiving events.
+
+@ingroup GUICore*/
+
+/**@defgroup EventSystemImpl Events System Implementation
+@brief Detailed implementation of events system. 
+Here are things that shouldn't interest ordinary users.
+@ingroup EventSystem*/
+
+
 namespace sw {
 namespace gui
 {
@@ -35,7 +46,11 @@ using EventHandlerPointer = void ( UIElement::* )( UIElement*, ArgumentType* );
 
 For now this class stores only registered events. Think about future use.
 
-Registering events needs to be in separate dll, otherwise controls can't register their static variables.*/
+Registering events needs to be in separate dll, otherwise controls can't register their static variables.
+
+All calsses derived from @ref UIElement can register they own events.
+
+@ingroup EventSystem*/
 class EventsSystem
 {
 private:

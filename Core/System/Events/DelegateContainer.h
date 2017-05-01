@@ -46,7 +46,9 @@ DelegatesContainer for each event.
 
 This class owns next delegates container and is responsible for releasing memory.
 
-@todo Consider extracting intrusive list as separate class.*/
+@todo Consider extracting intrusive list as separate class.
+
+@ingroup EventSystemImpl*/
 class DelegatesContainerBase
 {
 private:

@@ -25,10 +25,11 @@ namespace gui
 
 /**@brief Root class for controls hierarchy, contains native window.
 
-@ingroup EngineGUI
-
 Children of this class must inherit from TopLevelControl. This means that top level classes must be
-Windows, ContextMenus, PopupMenus or others similar.*/
+Windows, ContextMenus, PopupMenus or others similar.
+
+@ingroup GUICore
+@ingroup ControlsFramework*/
 class HostWindow : public UIElement
 {
 private:
