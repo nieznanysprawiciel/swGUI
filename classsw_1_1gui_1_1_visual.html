@@ -92,10 +92,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsw_1_1gui_1_1_visual-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">sw::gui::Visual Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">sw::gui::Visual Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___g_u_i_core.html">Core</a> &raquo; <a class="el" href="group___controls_framework.html">Controls Framework</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -109,8 +110,10 @@ Inheritance diagram for sw::gui::Visual:</div>
  <div class="center">
   <img src="classsw_1_1gui_1_1_visual.png" usemap="#sw::gui::Visual_map" alt=""/>
   <map id="sw::gui::Visual_map" name="sw::gui::Visual_map">
-<area href="classsw_1_1gui_1_1_dependency_object.html" title="Support for data binding. " alt="sw::gui::DependencyObject" shape="rect" coords="0,56,165,80"/>
-<area href="classsw_1_1gui_1_1_u_i_element.html" title="Interface for all controls in tree. " alt="sw::gui::UIElement" shape="rect" coords="0,168,165,192"/>
+<area href="classsw_1_1gui_1_1_dependency_object.html" title="Support for data binding. " alt="sw::gui::DependencyObject" shape="rect" coords="87,56,252,80"/>
+<area href="classsw_1_1gui_1_1_u_i_element.html" title="Interface for all controls in tree. " alt="sw::gui::UIElement" shape="rect" coords="87,168,252,192"/>
+<area href="classsw_1_1gui_1_1_host_window.html" title="Root class for controls hierarchy, contains native window. " alt="sw::gui::HostWindow" shape="rect" coords="0,224,165,248"/>
+<area href="class_test_u_i_element_class.html" alt="TestUIElementClass" shape="rect" coords="175,224,340,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -124,8 +127,17 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:acb648f3d3f8a791b894982c28fca4416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control rendering behavior. <br /></td></tr>
 <tr class="separator:acb648f3d3f8a791b894982c28fca4416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab591f64532d2254c196870a9be4dc11d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab591f64532d2254c196870a9be4dc11d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RTTR_ENABLE</b> (<a class="el" href="classsw_1_1gui_1_1_dependency_object.html">DependencyObject</a>)</td></tr>
+<tr class="separator:ab591f64532d2254c196870a9be4dc11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ab67857cef8933588cb6217b6323909cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab67857cef8933588cb6217b6323909cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RTTR_REGISTRATION_FRIEND</b></td></tr>
+<tr class="separator:ab67857cef8933588cb6217b6323909cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b4a1c6b50f9df1e3d4bf0a6febca4a1"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">m_position</a></td></tr>
 <tr class="memdesc:a2b4a1c6b50f9df1e3d4bf0a6febca4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control position. (.  <a href="#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">More...</a><br /></td></tr>
 <tr class="separator:a2b4a1c6b50f9df1e3d4bf0a6febca4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +186,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Checks if point is within this object. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>We must specify if point is in relative coordinates or absolut. </dd></dl>
 
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_host_window.html#a8007d0d14f90d476220984c9c546359a">sw::gui::HostWindow</a>, and <a class="el" href="class_test_u_i_element_class.html#a783d9de802e73bdae2e1741dfd490826">TestUIElementClass</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -206,7 +220,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:42 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['getcontrolname',['GetControlName',['../classsw_1_1gui_1_1_host_window.html#a9312bf502a91fc5d55a3f0c4f6eefa18',1,'sw::gui::HostWindow']]],
-  ['geteventtype',['GetEventType',['../classsw_1_1gui_1_1_delegates_container_base.html#a06c30efdb6b8794cb7b8de2fe1cdeaff',1,'sw::gui::DelegatesContainerBase']]],
-  ['gethost',['GetHost',['../classsw_1_1gui_1_1_i_control.html#a3c997bc5bc8aa4418f85fecc656cadda',1,'sw::gui::IControl']]],
-  ['getmemorysize',['GetMemorySize',['../classsw_1_1gui_1_1_g_u_i_system.html#a41be43c02053a3d35ef995ea3e915b47',1,'sw::gui::GUISystem::GetMemorySize()'],['../classsw_1_1gui_1_1_host_window.html#a50851ebb5372a60872629afa08593e21',1,'sw::gui::HostWindow::GetMemorySize()']]],
-  ['getname',['GetName',['../classsw_1_1gui_1_1_i_control.html#a11f60481ccdad228df58b0264f5fd71a',1,'sw::gui::IControl']]],
-  ['getnextcontainer',['GetNextContainer',['../classsw_1_1gui_1_1_delegates_container_base.html#abadc5377c7814fd8cb7eff9b10d9a89f',1,'sw::gui::DelegatesContainerBase']]],
-  ['getnumchildren',['GetNumChildren',['../classsw_1_1gui_1_1_u_i_element.html#a8c07ede9b2451d457e3367ff1153a637',1,'sw::gui::UIElement']]],
-  ['getrootcontrol',['GetRootControl',['../classsw_1_1gui_1_1_i_control.html#a60630f6708ef3b4aa1961c267ca932ed',1,'sw::gui::IControl']]],
-  ['getuichild',['GetUIChild',['../classsw_1_1gui_1_1_u_i_element.html#abde2c70b1eedc5cee1b544eadcd05d8f',1,'sw::gui::UIElement']]],
-  ['getwindowclassname',['GetWindowClassName',['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#adebffbb610276ff2cc3a9f0ef5541555',1,'sw::gui::WinAPIGUI']]],
-  ['grid',['Grid',['../classsw_1_1gui_1_1_grid.html',1,'sw::gui']]],
-  ['guisystem',['GUISystem',['../classsw_1_1gui_1_1_g_u_i_system.html',1,'sw::gui']]]
+  ['eventhandlers',['EventHandlers',['../classsw_1_1gui_1_1_event_handlers.html',1,'sw::gui']]],
+  ['eventhandlers_2ecpp',['EventHandlers.cpp',['../_event_handlers_8cpp.html',1,'']]],
+  ['eventhandlers_2eh',['EventHandlers.h',['../_event_handlers_8h.html',1,'']]],
+  ['eventproxy',['EventProxy',['../classsw_1_1gui_1_1_event_proxy.html',1,'sw::gui']]],
+  ['eventproxy_2eh',['EventProxy.h',['../_event_proxy_8h.html',1,'']]],
+  ['events',['Events',['../group___events.html',1,'']]],
+  ['eventssystem',['EventsSystem',['../classsw_1_1gui_1_1_events_system.html',1,'sw::gui']]],
+  ['eventssystem_2eh',['EventsSystem.h',['../_events_system_8h.html',1,'']]],
+  ['eventssystem_2einl',['EventsSystem.inl',['../_events_system_8inl.html',1,'']]],
+  ['events_20system',['Events System',['../group___event_system.html',1,'']]],
+  ['events_20system_20implementation',['Events System Implementation',['../group___event_system_impl.html',1,'']]],
+  ['eventtype',['EventType',['../group___event_system.html#gab331329f020c803a1fa0f32a30d4054b',1,'sw::gui']]],
+  ['exists',['Exists',['../classsw_1_1gui_1_1_event_handlers.html#a1de1046248158eb3cee85dc973b48b23',1,'sw::gui::EventHandlers']]],
+  ['existsdelegatescontainer',['ExistsDelegatesContainer',['../class_test_u_i_element_class.html#a1be67e9126d874197df987bf39909b13',1,'TestUIElementClass']]]
 ];

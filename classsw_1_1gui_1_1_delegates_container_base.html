@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsw_1_1gui_1_1_delegates_container_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">sw::gui::DelegatesContainerBase Class Reference</div>  </div>
+<div class="title">sw::gui::DelegatesContainerBase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___g_u_i_core.html">Core</a> &raquo; <a class="el" href="group___event_system.html">Events System</a> &raquo; <a class="el" href="group___event_system_impl.html">Events System Implementation</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -115,11 +115,11 @@ Inheritance diagram for sw::gui::DelegatesContainerBase:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a55d0061aa567dce2423fd0fb26abd007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d0061aa567dce2423fd0fb26abd007"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DelegatesContainerBase</b> (EventType type)</td></tr>
-<tr class="separator:a55d0061aa567dce2423fd0fb26abd007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0300d9c1bbd6f5ffc819fdc17be554c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0300d9c1bbd6f5ffc819fdc17be554c1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DelegatesContainerBase</b> (<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> eventID)</td></tr>
+<tr class="separator:a0300d9c1bbd6f5ffc819fdc17be554c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c30efdb6b8794cb7b8de2fe1cdeaff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06c30efdb6b8794cb7b8de2fe1cdeaff"></a>
-EventType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a06c30efdb6b8794cb7b8de2fe1cdeaff">GetEventType</a> ()</td></tr>
+<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a06c30efdb6b8794cb7b8de2fe1cdeaff">GetEventType</a> ()</td></tr>
 <tr class="memdesc:a06c30efdb6b8794cb7b8de2fe1cdeaff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this function to check event type holded by derived class. <br /></td></tr>
 <tr class="separator:a06c30efdb6b8794cb7b8de2fe1cdeaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abadc5377c7814fd8cb7eff9b10d9a89f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abadc5377c7814fd8cb7eff9b10d9a89f"></a>
@@ -134,6 +134,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#adad904b98f5400c0c284b17bcfa965b8">RemoveNext</a> ()</td></tr>
 <tr class="memdesc:adad904b98f5400c0c284b17bcfa965b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removed element following this object. <br /></td></tr>
 <tr class="separator:adad904b98f5400c0c284b17bcfa965b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b2cdcf5c50839a3f3ea5abe8bd6aec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b2cdcf5c50839a3f3ea5abe8bd6aec"></a>
+DelegatesContainerBaseOPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a97b2cdcf5c50839a3f3ea5abe8bd6aec">StealRestOfList</a> ()</td></tr>
+<tr class="memdesc:a97b2cdcf5c50839a3f3ea5abe8bd6aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steal list following this. <br /></td></tr>
+<tr class="separator:a97b2cdcf5c50839a3f3ea5abe8bd6aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75a8b2d655698144ca12c1a4723f365"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac75a8b2d655698144ca12c1a4723f365"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#ac75a8b2d655698144ca12c1a4723f365">CallDelegates</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments)=0</td></tr>
+<tr class="memdesc:ac75a8b2d655698144ca12c1a4723f365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes delegates functions. <br /></td></tr>
+<tr class="separator:ac75a8b2d655698144ca12c1a4723f365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -142,7 +150,7 @@ DelegatesContainerBaseOPtr&#160;</td><td class="memItemRight" valign="bottom"><a
 <tr class="memdesc:ab315f51f061c5ed5a045be1c1965b166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intrusive list. <br /></td></tr>
 <tr class="separator:ab315f51f061c5ed5a045be1c1965b166"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15e0cbda109f3b926f30c2369a5baf2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15e0cbda109f3b926f30c2369a5baf2d"></a>
-EventType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a15e0cbda109f3b926f30c2369a5baf2d">m_eventType</a></td></tr>
+<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a15e0cbda109f3b926f30c2369a5baf2d">m_eventType</a></td></tr>
 <tr class="memdesc:a15e0cbda109f3b926f30c2369a5baf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of event used to distinguish between Delegates Containers. <br /></td></tr>
 <tr class="separator:a15e0cbda109f3b926f30c2369a5baf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -151,14 +159,15 @@ EventType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Purpose of this class is to provide interface for storing delegates of different types in one list. Derived classes are templates that can hold typed delegates. Note that each derived class can correspond to multiple events, because different event can be sent with the same structure that holds parameters.</p>
 <p>Thats why there's m_eventType field. While looking for appropriate container EventManager will check this field to compare it with sent event type.</p>
 <p>This class is designed to minimize memory footprint in Control classes. That's why I use intrusive list to store consecutive containers. Since there're only few delegates used at the same time, there's no sense to expose <a class="el" href="classsw_1_1gui_1_1_delegates_container.html" title="Derived template class for delegates. ">DelegatesContainer</a> for each event.</p>
-<p>This class owns next delegates container and is responsible for releasing memory. </p>
+<p>This class owns next delegates container and is responsible for releasing memory.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Consider extracting intrusive list as separate class.</dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Core/System/Events/<a class="el" href="_delegate_container_8h_source.html">DelegateContainer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

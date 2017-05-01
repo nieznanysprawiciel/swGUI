@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsw_1_1gui_1_1_win_a_p_i_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">sw::gui::WinAPIGUI Class Reference</div>  </div>
+<div class="title">sw::gui::WinAPIGUI Class Reference<div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___native_g_u_i.html">Native GUI system</a> &raquo; <a class="el" href="group___win32_a_p_i_native_g_u_i.html">WinAPI native GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -106,7 +106,7 @@ Inheritance diagram for sw::gui::WinAPIGUI:</div>
  <div class="center">
   <img src="classsw_1_1gui_1_1_win_a_p_i_g_u_i.png" usemap="#sw::gui::WinAPIGUI_map" alt=""/>
   <map id="sw::gui::WinAPIGUI_map" name="sw::gui::WinAPIGUI_map">
-<area href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Encasulates native GUI system. " alt="sw::gui::INativeGUI" shape="rect" coords="0,0,117,24"/>
+<area href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. " alt="sw::gui::INativeGUI" shape="rect" coords="0,0,117,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -118,10 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a335ef1c47cccd8721d84770b0c6b57a5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a335ef1c47cccd8721d84770b0c6b57a5">Init</a> (const <a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a> &amp;initData) override</td></tr>
 <tr class="memdesc:a335ef1c47cccd8721d84770b0c6b57a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes native GUI.  <a href="#a335ef1c47cccd8721d84770b0c6b57a5">More...</a><br /></td></tr>
 <tr class="separator:a335ef1c47cccd8721d84770b0c6b57a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a821d2370c72fc0819cc5ad2f174d8a04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a821d2370c72fc0819cc5ad2f174d8a04"></a>
-virtual IInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a821d2370c72fc0819cc5ad2f174d8a04">UseNativeInput</a> () override</td></tr>
-<tr class="memdesc:a821d2370c72fc0819cc5ad2f174d8a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Encasulates native GUI system. ">INativeGUI</a> does nothing. <br /></td></tr>
-<tr class="separator:a821d2370c72fc0819cc5ad2f174d8a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955b13f737f6169efb1b51dc9cb8ec33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a955b13f737f6169efb1b51dc9cb8ec33"></a>
+virtual sw::input::IInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a955b13f737f6169efb1b51dc9cb8ec33">UseNativeInput</a> () override</td></tr>
+<tr class="memdesc:a955b13f737f6169efb1b51dc9cb8ec33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing. <br /></td></tr>
+<tr class="separator:a955b13f737f6169efb1b51dc9cb8ec33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5fd12a787e0554ab72b65f09039947b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac5fd12a787e0554ab72b65f09039947b">CreateWindow</a> (<a class="el" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a> &amp;descriptor) override</td></tr>
 <tr class="memdesc:ac5fd12a787e0554ab72b65f09039947b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates native GUI window.  <a href="#ac5fd12a787e0554ab72b65f09039947b">More...</a><br /></td></tr>
 <tr class="separator:ac5fd12a787e0554ab72b65f09039947b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +158,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aafb5d7759c71f3baa8a59ac973f2e7ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafb5d7759c71f3baa8a59ac973f2e7ff"></a>
-WinApiInputProxy *&#160;</td><td class="memItemRight" valign="bottom"><b>m_input</b></td></tr>
-<tr class="separator:aafb5d7759c71f3baa8a59ac973f2e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9099e42c58ce2fe1933a2d325d618c56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9099e42c58ce2fe1933a2d325d618c56"></a>
+sw::input::WinApiInputProxy *&#160;</td><td class="memItemRight" valign="bottom"><b>m_input</b></td></tr>
+<tr class="separator:a9099e42c58ce2fe1933a2d325d618c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b6bd660b5bc85dbb6ea56707b6cd3a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b6bd660b5bc85dbb6ea56707b6cd3a2"></a>
 <a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_initData</b></td></tr>
 <tr class="separator:a8b6bd660b5bc85dbb6ea56707b6cd3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,7 +299,7 @@ WinApiInputProxy *&#160;</td><td class="memItemRight" valign="bottom"><b>m_input
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:42 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

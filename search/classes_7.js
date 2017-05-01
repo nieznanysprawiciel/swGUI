@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['keyboardeventargs',['KeyboardEventArgs',['../structsw_1_1gui_1_1_keyboard_event_args.html',1,'sw::gui']]],
-  ['keyeventargs',['KeyEventArgs',['../structsw_1_1gui_1_1_key_event_args.html',1,'sw::gui']]]
+  ['icontrol',['IControl',['../classsw_1_1gui_1_1_i_control.html',1,'sw::gui']]],
+  ['ieventargs',['IEventArgs',['../structsw_1_1gui_1_1_i_event_args.html',1,'sw::gui']]],
+  ['imagebrush',['ImageBrush',['../classsw_1_1gui_1_1_image_brush.html',1,'sw::gui']]],
+  ['inativegui',['INativeGUI',['../classsw_1_1gui_1_1_i_native_g_u_i.html',1,'sw::gui']]],
+  ['inativewindow',['INativeWindow',['../classsw_1_1gui_1_1_i_native_window.html',1,'sw::gui']]],
+  ['inputeventargs',['InputEventArgs',['../structsw_1_1gui_1_1_input_event_args.html',1,'sw::gui']]],
+  ['ipanel',['IPanel',['../classsw_1_1gui_1_1_i_panel.html',1,'sw::gui']]]
 ];

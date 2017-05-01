@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['usenativeinput',['UseNativeInput',['../classsw_1_1gui_1_1_i_native_g_u_i.html#a807da463bd71ac04ca30c7a56e93231b',1,'sw::gui::INativeGUI::UseNativeInput()'],['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a821d2370c72fc0819cc5ad2f174d8a04',1,'sw::gui::WinAPIGUI::UseNativeInput()']]]
+  ['printlasterror',['PrintLastError',['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a317ad06c46a95d99e9396cc6a126cb5b',1,'sw::gui::WinAPIGUI']]],
+  ['programpath',['ProgramPath',['../classsw_1_1gui_1_1_g_u_i_system.html#a650447a43c2b1d75e1489330702ed617',1,'sw::gui::GUISystem']]]
 ];

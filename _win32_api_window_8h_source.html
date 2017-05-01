@@ -98,15 +98,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#undef CreateWindow</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#undef min</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#undef max</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>gui</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>gui</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a> : <span class="keyword">public</span> <a class="code" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
@@ -152,13 +153,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}   <span class="comment">// gui</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}   <span class="comment">// sw</span></div>
 <div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
-<div class="ttc" id="structsw_1_1gui_1_1_native_window_descriptor_html"><div class="ttname"><a href="structsw_1_1gui_1_1_native_window_descriptor.html">sw::gui::NativeWindowDescriptor</a></div><div class="ttdef"><b>Definition:</b> INativeWindow.h:16</div></div>
-<div class="ttc" id="classsw_1_1gui_1_1_i_native_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_window.html">sw::gui::INativeWindow</a></div><div class="ttdoc">Klasa bazowa kontenera dla natywnego okna danego systemu. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:71</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_native_window_descriptor_html"><div class="ttname"><a href="structsw_1_1gui_1_1_native_window_descriptor.html">sw::gui::NativeWindowDescriptor</a></div><div class="ttdoc">Dedcriptor used to create native GUI window. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:17</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_i_native_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_window.html">sw::gui::INativeWindow</a></div><div class="ttdoc">Interface for native window sing OS specific ffunctions. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:74</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html">sw::gui::Win32ApiWindow</a></div><div class="ttdoc">Native window uses WinApi. </div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

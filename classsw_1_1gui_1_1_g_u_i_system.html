@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classsw_1_1gui_1_1_g_u_i_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">sw::gui::GUISystem Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___engine_g_u_i.html">EngineGUI</a></div></div>  </div>
+<div class="title">sw::gui::GUISystem Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___g_u_i_core.html">Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -159,6 +159,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a4ff76aa79da14c603e1e05c2836f906e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a4ff76aa79da14c603e1e05c2836f906e">MainLoop</a> ()</td></tr>
 <tr class="memdesc:a4ff76aa79da14c603e1e05c2836f906e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_application.html" title="Application template class. ">Application</a> main loop.  <a href="#a4ff76aa79da14c603e1e05c2836f906e">More...</a><br /></td></tr>
 <tr class="separator:a4ff76aa79da14c603e1e05c2836f906e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3605d2e3803dadd0eac5ffc0fabf9d6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3605d2e3803dadd0eac5ffc0fabf9d6f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a3605d2e3803dadd0eac5ffc0fabf9d6f">HandleEvents</a> ()</td></tr>
+<tr class="memdesc:a3605d2e3803dadd0eac5ffc0fabf9d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes messages and passes them to focused window. <br /></td></tr>
+<tr class="separator:a3605d2e3803dadd0eac5ffc0fabf9d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -182,6 +186,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClosing</b>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnIdle</b> ()=0</td></tr>
 <tr class="separator:aa4b776cecbab01d82b83ac76dcf4402a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Default initialization functions</div></td></tr>
+<tr class="memitem:adff422d2f644f9232b78d728a370ae42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adff422d2f644f9232b78d728a370ae42"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#adff422d2f644f9232b78d728a370ae42">DefaultInitWithoutWindow</a> ()</td></tr>
+<tr class="memdesc:adff422d2f644f9232b78d728a370ae42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes initialization but leaves window creation for user. <br /></td></tr>
+<tr class="separator:adff422d2f644f9232b78d728a370ae42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a267ecf8f1e746444acdbcb86444f57d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a267ecf8f1e746444acdbcb86444f57d9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a267ecf8f1e746444acdbcb86444f57d9">DefaultInit</a> (uint16 width, uint16 height, const std::string &amp;windowTitle)</td></tr>
 <tr class="memdesc:a267ecf8f1e746444acdbcb86444f57d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default GUI system initialization function. <br /></td></tr>
@@ -193,6 +201,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a75294593a2fd6e20e83fba7819d9653e">DefaultInitGraphicAPI</a> ()</td></tr>
 <tr class="memdesc:a75294593a2fd6e20e83fba7819d9653e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default graphic api initialization. <br /></td></tr>
 <tr class="separator:a75294593a2fd6e20e83fba7819d9653e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42407f41cd6797d52ee6753c6c73d45e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a42407f41cd6797d52ee6753c6c73d45e">DefaultInitRenderingSystem</a> ()</td></tr>
+<tr class="memdesc:a42407f41cd6797d52ee6753c6c73d45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes rendering system.  <a href="#a42407f41cd6797d52ee6753c6c73d45e">More...</a><br /></td></tr>
+<tr class="separator:a42407f41cd6797d52ee6753c6c73d45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -204,14 +215,18 @@ IGraphicAPIInitializer *&#160;</td><td class="memItemRight" valign="bottom"><a c
 <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html">INativeGUI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a8ae3ba8802726518ebaa1b06b7d0dc5c">m_nativeGUI</a></td></tr>
 <tr class="memdesc:a8ae3ba8802726518ebaa1b06b7d0dc5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Native window system used to display main application window. <br /></td></tr>
 <tr class="separator:a8ae3ba8802726518ebaa1b06b7d0dc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd9507366728ba4131642aa0e7b9a9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dd9507366728ba4131642aa0e7b9a9f"></a>
-IInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a7dd9507366728ba4131642aa0e7b9a9f">m_input</a></td></tr>
-<tr class="memdesc:a7dd9507366728ba4131642aa0e7b9a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input processor. <br /></td></tr>
-<tr class="separator:a7dd9507366728ba4131642aa0e7b9a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4a7c3502a37dc5a000ec97c9feb09e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d4a7c3502a37dc5a000ec97c9feb09e"></a>
+input::IInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a4d4a7c3502a37dc5a000ec97c9feb09e">m_input</a></td></tr>
+<tr class="memdesc:a4d4a7c3502a37dc5a000ec97c9feb09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input processor. <br /></td></tr>
+<tr class="separator:a4d4a7c3502a37dc5a000ec97c9feb09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e5aa342499f22a3b788cb497751f94f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e5aa342499f22a3b788cb497751f94f"></a>
 ResourceManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a9e5aa342499f22a3b788cb497751f94f">m_resourceManager</a></td></tr>
 <tr class="memdesc:a9e5aa342499f22a3b788cb497751f94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resources. <br /></td></tr>
 <tr class="separator:a9e5aa342499f22a3b788cb497751f94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5552445d6bde4681525d839a55434e58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5552445d6bde4681525d839a55434e58"></a>
+RenderingSystemOPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a5552445d6bde4681525d839a55434e58">m_renderingSystem</a></td></tr>
+<tr class="memdesc:a5552445d6bde4681525d839a55434e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">All rendering connceted functionalities. <br /></td></tr>
+<tr class="separator:a5552445d6bde4681525d839a55434e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4210cf85ec93de9ef0ee88cba5497f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4210cf85ec93de9ef0ee88cba5497f8"></a>
 std::vector&lt; <a class="el" href="classsw_1_1gui_1_1_host_window.html">HostWindow</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_windows</b></td></tr>
 <tr class="separator:ae4210cf85ec93de9ef0ee88cba5497f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,7 +259,7 @@ static <a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html">GUISystem</a> *
 <div class="line">    <span class="keywordflow">return</span> app.MainLoop();</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>You don't have to write main function. Instead use project templates for different platforms. To use gui implement <a class="el" href="class_application.html" title="Application template class. ">Application</a> class.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Supply project templates. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Supply project templates. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae6cc3822893c4d4c3ea664d8af0f3804"></a>
 <div class="memitem">
@@ -323,6 +338,32 @@ static <a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html">GUISystem</a> *
 
 <p>Default native GUI initialization. </p>
 <p>Native GUI object is set in constructor. Here we initialize it. Function creates native input object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a42407f41cd6797d52ee6753c6c73d45e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::GUISystem::DefaultInitRenderingSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes rendering system. </p>
+<dl class="section note"><dt>Note</dt><dd>m_resourceManager and m_graphicApi must be already initialized; </dd></dl>
 
 </div>
 </div>
@@ -443,7 +484,7 @@ static <a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html">GUISystem</a> *
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

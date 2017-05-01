@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['datacontext',['DataContext',['../classsw_1_1gui_1_1_host_window.html#a505a657b4f538655f6e86debd4cc75c3',1,'sw::gui::HostWindow']]],
-  ['defaultinit',['DefaultInit',['../classsw_1_1gui_1_1_g_u_i_system.html#a267ecf8f1e746444acdbcb86444f57d9',1,'sw::gui::GUISystem']]],
-  ['defaultinitgraphicapi',['DefaultInitGraphicAPI',['../classsw_1_1gui_1_1_g_u_i_system.html#a75294593a2fd6e20e83fba7819d9653e',1,'sw::gui::GUISystem']]],
-  ['defaultinitnativegui',['DefaultInitNativeGUI',['../classsw_1_1gui_1_1_g_u_i_system.html#ab6c3ae4f9d83743e68be5c8a60b04f7f',1,'sw::gui::GUISystem']]],
-  ['delegatecontainer_2eh',['DelegateContainer.h',['../_delegate_container_8h.html',1,'']]],
-  ['delegatescontainer',['DelegatesContainer',['../classsw_1_1gui_1_1_delegates_container.html',1,'sw::gui']]],
-  ['delegatescontainerbase',['DelegatesContainerBase',['../classsw_1_1gui_1_1_delegates_container_base.html',1,'sw::gui']]],
-  ['dependencyobject',['DependencyObject',['../classsw_1_1gui_1_1_dependency_object.html',1,'sw::gui']]],
-  ['dependencyobject_2ecpp',['DependencyObject.cpp',['../_dependency_object_8cpp.html',1,'']]],
-  ['dependencyobject_2eh',['DependencyObject.h',['../_dependency_object_8h.html',1,'']]],
-  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
-  ['dockpanel',['DockPanel',['../classsw_1_1gui_1_1_dock_panel.html',1,'sw::gui']]],
-  ['drawingcontext',['DrawingContext',['../classsw_1_1gui_1_1_drawing_context.html',1,'sw::gui']]]
+  ['calldelegates',['CallDelegates',['../classsw_1_1gui_1_1_delegates_container_base.html#ac75a8b2d655698144ca12c1a4723f365',1,'sw::gui::DelegatesContainerBase::CallDelegates()'],['../classsw_1_1gui_1_1_delegates_container.html#a01a1a7726029e6feb65d54cec9264f22',1,'sw::gui::DelegatesContainer::CallDelegates()']]],
+  ['commandlinearg',['CommandLineArg',['../classsw_1_1gui_1_1_g_u_i_system.html#abf2b77f0c653ccd9bb447e3baa413da4',1,'sw::gui::GUISystem']]],
+  ['commandlineargs',['CommandLineArgs',['../structsw_1_1gui_1_1_command_line_args.html',1,'sw::gui']]],
+  ['commontypes_2eh',['CommonTypes.h',['../_common_types_8h.html',1,'']]],
+  ['controls_20framework',['Controls Framework',['../group___controls_framework.html',1,'']]],
+  ['create',['Create',['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ab7a481081238791b97c9afa2f8c2336e',1,'sw::gui::WinAPIGUI']]],
+  ['createnativehostwindow',['CreateNativeHostWindow',['../classsw_1_1gui_1_1_g_u_i_system.html#ae6cc3822893c4d4c3ea664d8af0f3804',1,'sw::gui::GUISystem::CreateNativeHostWindow(uint16 width, uint16 height, const std::string &amp;windowTitle)'],['../classsw_1_1gui_1_1_g_u_i_system.html#adb45f5687d123543ced66f197748f8a2',1,'sw::gui::GUISystem::CreateNativeHostWindow(NativeWindowDescriptor &amp;windowDesc)']]],
+  ['createwindow',['CreateWindow',['../classsw_1_1gui_1_1_i_native_g_u_i.html#a9cf4339d9c85809770bb4958668e5364',1,'sw::gui::INativeGUI::CreateWindow()'],['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac5fd12a787e0554ab72b65f09039947b',1,'sw::gui::WinAPIGUI::CreateWindow()']]],
+  ['core',['Core',['../group___g_u_i_core.html',1,'']]]
 ];

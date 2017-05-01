@@ -90,28 +90,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structsw_1_1gui_1_1_key_event_args-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">sw::gui::KeyEventArgs Struct Reference</div>  </div>
+<div class="title">sw::gui::KeyEventArgs Struct Reference<div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___g_u_i_core.html">Core</a> &raquo; <a class="el" href="group___event_system.html">Events System</a> &raquo; <a class="el" href="group___events.html">Events</a> &raquo; <a class="el" href="group___input_events.html">Input Events</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Key state changed event.  
+ <a href="structsw_1_1gui_1_1_key_event_args.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_key_event_args_8h_source.html">KeyEventArgs.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sw::gui::KeyEventArgs:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="structsw_1_1gui_1_1_key_event_args.png" usemap="#sw::gui::KeyEventArgs_map" alt=""/>
   <map id="sw::gui::KeyEventArgs_map" name="sw::gui::KeyEventArgs_map">
-<area href="structsw_1_1gui_1_1_keyboard_event_args.html" alt="sw::gui::KeyboardEventArgs" shape="rect" coords="0,112,170,136"/>
-<area href="structsw_1_1gui_1_1_input_event_args.html" alt="sw::gui::InputEventArgs" shape="rect" coords="0,56,170,80"/>
-<area href="structsw_1_1gui_1_1_i_event_args.html" title="Klasa bazowa dla eventów. " alt="sw::gui::IEventArgs" shape="rect" coords="0,0,170,24"/>
+<area href="structsw_1_1gui_1_1_keyboard_event_args.html" title="Base class for keyboard events. " alt="sw::gui::KeyboardEventArgs" shape="rect" coords="0,112,170,136"/>
+<area href="structsw_1_1gui_1_1_input_event_args.html" title="Base class for input events. " alt="sw::gui::InputEventArgs" shape="rect" coords="0,56,170,80"/>
+<area href="structsw_1_1gui_1_1_i_event_args.html" title="Base class for events. " alt="sw::gui::IEventArgs" shape="rect" coords="0,0,170,24"/>
 </map>
  </div></div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac21aefc95ed93a74599ce61bf3fc3cb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac21aefc95ed93a74599ce61bf3fc3cb6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>KeyEventArgs</b> (input::KeyboardDevice *device, input::Keyboard::PhysicalKeys key)</td></tr>
+<tr class="separator:ac21aefc95ed93a74599ce61bf3fc3cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structsw_1_1gui_1_1_keyboard_event_args"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structsw_1_1gui_1_1_keyboard_event_args')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structsw_1_1gui_1_1_keyboard_event_args.html">sw::gui::KeyboardEventArgs</a></td></tr>
+<tr class="memitem:a937d2edd5b07f09a3214bc2ad01fa05b inherit pub_methods_structsw_1_1gui_1_1_keyboard_event_args"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a937d2edd5b07f09a3214bc2ad01fa05b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>KeyboardEventArgs</b> (input::KeyboardDevice *keyboard)</td></tr>
+<tr class="separator:a937d2edd5b07f09a3214bc2ad01fa05b inherit pub_methods_structsw_1_1gui_1_1_keyboard_event_args"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structsw_1_1gui_1_1_input_event_args"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structsw_1_1gui_1_1_input_event_args')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structsw_1_1gui_1_1_input_event_args.html">sw::gui::InputEventArgs</a></td></tr>
+<tr class="memitem:aca3df02863178340f0011193a45acd52 inherit pub_methods_structsw_1_1gui_1_1_input_event_args"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca3df02863178340f0011193a45acd52"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>InputEventArgs</b> (input::Device *device)</td></tr>
+<tr class="separator:aca3df02863178340f0011193a45acd52 inherit pub_methods_structsw_1_1gui_1_1_input_event_args"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a02ec0626edc0daa7da83fdddb58df282"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02ec0626edc0daa7da83fdddb58df282"></a>
+const input::KeyState *&#160;</td><td class="memItemRight" valign="bottom"><b>State</b></td></tr>
+<tr class="separator:a02ec0626edc0daa7da83fdddb58df282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e372b0ea4f7fe63199460947063f72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43e372b0ea4f7fe63199460947063f72"></a>
+input::Keyboard::PhysicalKeys&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b></td></tr>
+<tr class="separator:a43e372b0ea4f7fe63199460947063f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e3c18a8af2cc436b91f6a446875121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4e3c18a8af2cc436b91f6a446875121"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsUp</b></td></tr>
+<tr class="separator:aa4e3c18a8af2cc436b91f6a446875121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f4c1ac5921fc40cc919c1246bea1f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12f4c1ac5921fc40cc919c1246bea1f3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDown</b></td></tr>
+<tr class="separator:a12f4c1ac5921fc40cc919c1246bea1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structsw_1_1gui_1_1_keyboard_event_args"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structsw_1_1gui_1_1_keyboard_event_args')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structsw_1_1gui_1_1_keyboard_event_args.html">sw::gui::KeyboardEventArgs</a></td></tr>
+<tr class="memitem:a1d823986f48e0dd5b8f44ae615443e6a inherit pub_attribs_structsw_1_1gui_1_1_keyboard_event_args"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d823986f48e0dd5b8f44ae615443e6a"></a>
+input::KeyboardDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>Keyboard</b></td></tr>
+<tr class="separator:a1d823986f48e0dd5b8f44ae615443e6a inherit pub_attribs_structsw_1_1gui_1_1_keyboard_event_args"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structsw_1_1gui_1_1_input_event_args"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structsw_1_1gui_1_1_input_event_args')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structsw_1_1gui_1_1_input_event_args.html">sw::gui::InputEventArgs</a></td></tr>
+<tr class="memitem:a21d76774fc5d5f25e83384f2c409667c inherit pub_attribs_structsw_1_1gui_1_1_input_event_args"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21d76774fc5d5f25e83384f2c409667c"></a>
+input::Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsw_1_1gui_1_1_input_event_args.html#a21d76774fc5d5f25e83384f2c409667c">Device</a></td></tr>
+<tr class="memdesc:a21d76774fc5d5f25e83384f2c409667c inherit pub_attribs_structsw_1_1gui_1_1_input_event_args"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device which produced this event. <br /></td></tr>
+<tr class="separator:a21d76774fc5d5f25e83384f2c409667c inherit pub_attribs_structsw_1_1gui_1_1_input_event_args"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structsw_1_1gui_1_1_i_event_args"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structsw_1_1gui_1_1_i_event_args')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">sw::gui::IEventArgs</a></td></tr>
+<tr class="memitem:ab5b2de2abc96831f6a13210290863895 inherit pub_attribs_structsw_1_1gui_1_1_i_event_args"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b2de2abc96831f6a13210290863895"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsw_1_1gui_1_1_i_event_args.html#ab5b2de2abc96831f6a13210290863895">Handled</a></td></tr>
+<tr class="memdesc:ab5b2de2abc96831f6a13210290863895 inherit pub_attribs_structsw_1_1gui_1_1_i_event_args"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark event as handled to stop further processing. <br /></td></tr>
+<tr class="separator:ab5b2de2abc96831f6a13210290863895 inherit pub_attribs_structsw_1_1gui_1_1_i_event_args"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Key state changed event. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>Core/System/Events/Input/<a class="el" href="_key_event_args_8h_source.html">KeyEventArgs.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['commandlineargs',['CommandLineArgs',['../structsw_1_1gui_1_1_command_line_args.html',1,'sw::gui']]]
+  ['brush',['Brush',['../classsw_1_1gui_1_1_brush.html',1,'sw::gui']]]
 ];

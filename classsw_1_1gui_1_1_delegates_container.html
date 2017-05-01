@@ -116,33 +116,40 @@ Inheritance diagram for sw::gui::DelegatesContainer&lt; EventArgType &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:abdc83242170d05cab4e677dc11994679"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc83242170d05cab4e677dc11994679"></a>
-typedef fastdelegate::FastDelegate1&lt; EventArgType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DelegateType</b></td></tr>
-<tr class="separator:abdc83242170d05cab4e677dc11994679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9041cd56e87aeda49477d8fce440753"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9041cd56e87aeda49477d8fce440753"></a>
+typedef EventDelegate&lt; EventArgType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DelegateType</b></td></tr>
+<tr class="separator:ad9041cd56e87aeda49477d8fce440753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:addb3cab2c81811e3487da015f58571f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addb3cab2c81811e3487da015f58571f2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DelegatesContainer</b> (EventType type)</td></tr>
-<tr class="separator:addb3cab2c81811e3487da015f58571f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b758c67f6e840ef1d2b8a11fcc85222"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b758c67f6e840ef1d2b8a11fcc85222"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (DelegateType delgate)</td></tr>
-<tr class="separator:a5b758c67f6e840ef1d2b8a11fcc85222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accaa1d41e75f23a940f4d1680be73bbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accaa1d41e75f23a940f4d1680be73bbd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddDelegate</b> (DelegateType delgate)</td></tr>
-<tr class="separator:accaa1d41e75f23a940f4d1680be73bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c3ce29ccda92ea72f55d11aaf1e1bf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c3ce29ccda92ea72f55d11aaf1e1bf2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveDelegate</b> (DelegateType delgate)</td></tr>
-<tr class="separator:a8c3ce29ccda92ea72f55d11aaf1e1bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a055e8cbf1ea7e7d57e193d6ce6b7d2a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a055e8cbf1ea7e7d57e193d6ce6b7d2a5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Exists</b> (DelegateType delgate)</td></tr>
-<tr class="separator:a055e8cbf1ea7e7d57e193d6ce6b7d2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafac1ac0e5728ca5565cfe2d98630c2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafac1ac0e5728ca5565cfe2d98630c2f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DelegatesContainer</b> (<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> type)</td></tr>
+<tr class="separator:aafac1ac0e5728ca5565cfe2d98630c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348a9dc5afaa64a3c9cf920269b00a4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a348a9dc5afaa64a3c9cf920269b00a4c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (DelegateType delegate)</td></tr>
+<tr class="separator:a348a9dc5afaa64a3c9cf920269b00a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c4538e2b038b08e90cd47c505eb53d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31c4538e2b038b08e90cd47c505eb53d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddDelegate</b> (DelegateType delegate)</td></tr>
+<tr class="separator:a31c4538e2b038b08e90cd47c505eb53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc584f732b08ee4023c3c44b6b56147"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfc584f732b08ee4023c3c44b6b56147"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveDelegate</b> (DelegateType delegate)</td></tr>
+<tr class="separator:adfc584f732b08ee4023c3c44b6b56147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dee19c9616f76b3f44d4e3e93d20eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38dee19c9616f76b3f44d4e3e93d20eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Exists</b> (DelegateType delegate)</td></tr>
+<tr class="separator:a38dee19c9616f76b3f44d4e3e93d20eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee8d0b59a79f815687daa47b9865767"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acee8d0b59a79f815687daa47b9865767"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> () const </td></tr>
+<tr class="separator:acee8d0b59a79f815687daa47b9865767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a1a7726029e6feb65d54cec9264f22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01a1a7726029e6feb65d54cec9264f22"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container.html#a01a1a7726029e6feb65d54cec9264f22">CallDelegates</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments) override</td></tr>
+<tr class="memdesc:a01a1a7726029e6feb65d54cec9264f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes delegates functions. <br /></td></tr>
+<tr class="separator:a01a1a7726029e6feb65d54cec9264f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsw_1_1gui_1_1_delegates_container_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html">sw::gui::DelegatesContainerBase</a></td></tr>
-<tr class="memitem:a55d0061aa567dce2423fd0fb26abd007 inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d0061aa567dce2423fd0fb26abd007"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DelegatesContainerBase</b> (EventType type)</td></tr>
-<tr class="separator:a55d0061aa567dce2423fd0fb26abd007 inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0300d9c1bbd6f5ffc819fdc17be554c1 inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0300d9c1bbd6f5ffc819fdc17be554c1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DelegatesContainerBase</b> (<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> eventID)</td></tr>
+<tr class="separator:a0300d9c1bbd6f5ffc819fdc17be554c1 inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c30efdb6b8794cb7b8de2fe1cdeaff inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06c30efdb6b8794cb7b8de2fe1cdeaff"></a>
-EventType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a06c30efdb6b8794cb7b8de2fe1cdeaff">GetEventType</a> ()</td></tr>
+<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a06c30efdb6b8794cb7b8de2fe1cdeaff">GetEventType</a> ()</td></tr>
 <tr class="memdesc:a06c30efdb6b8794cb7b8de2fe1cdeaff inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this function to check event type holded by derived class. <br /></td></tr>
 <tr class="separator:a06c30efdb6b8794cb7b8de2fe1cdeaff inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abadc5377c7814fd8cb7eff9b10d9a89f inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abadc5377c7814fd8cb7eff9b10d9a89f"></a>
@@ -157,6 +164,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#adad904b98f5400c0c284b17bcfa965b8">RemoveNext</a> ()</td></tr>
 <tr class="memdesc:adad904b98f5400c0c284b17bcfa965b8 inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removed element following this object. <br /></td></tr>
 <tr class="separator:adad904b98f5400c0c284b17bcfa965b8 inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b2cdcf5c50839a3f3ea5abe8bd6aec inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b2cdcf5c50839a3f3ea5abe8bd6aec"></a>
+DelegatesContainerBaseOPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html#a97b2cdcf5c50839a3f3ea5abe8bd6aec">StealRestOfList</a> ()</td></tr>
+<tr class="memdesc:a97b2cdcf5c50839a3f3ea5abe8bd6aec inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steal list following this. <br /></td></tr>
+<tr class="separator:a97b2cdcf5c50839a3f3ea5abe8bd6aec inherit pub_methods_classsw_1_1gui_1_1_delegates_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -192,7 +203,7 @@ template&lt;typename EventArgType &gt; </div>
 </div><div class="memdoc">
 
 <p>Delegates for EventType defined in <a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html">DelegatesContainerBase</a>. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Consider using linked list to minimize memory usage. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Consider using linked list to minimize memory usage. </dd></dl>
 
 </div>
 </div>
@@ -202,7 +213,7 @@ template&lt;typename EventArgType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 4 2017 18:47:35 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

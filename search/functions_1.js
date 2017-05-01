@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calldelegates',['CallDelegates',['../classsw_1_1gui_1_1_delegates_container_base.html#ac75a8b2d655698144ca12c1a4723f365',1,'sw::gui::DelegatesContainerBase::CallDelegates()'],['../classsw_1_1gui_1_1_delegates_container.html#a01a1a7726029e6feb65d54cec9264f22',1,'sw::gui::DelegatesContainer::CallDelegates()']]],
   ['commandlinearg',['CommandLineArg',['../classsw_1_1gui_1_1_g_u_i_system.html#abf2b77f0c653ccd9bb447e3baa413da4',1,'sw::gui::GUISystem']]],
   ['create',['Create',['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ab7a481081238791b97c9afa2f8c2336e',1,'sw::gui::WinAPIGUI']]],
   ['createnativehostwindow',['CreateNativeHostWindow',['../classsw_1_1gui_1_1_g_u_i_system.html#ae6cc3822893c4d4c3ea664d8af0f3804',1,'sw::gui::GUISystem::CreateNativeHostWindow(uint16 width, uint16 height, const std::string &amp;windowTitle)'],['../classsw_1_1gui_1_1_g_u_i_system.html#adb45f5687d123543ced66f197748f8a2',1,'sw::gui::GUISystem::CreateNativeHostWindow(NativeWindowDescriptor &amp;windowDesc)']]],

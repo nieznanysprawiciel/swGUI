@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['handleevent',['HandleEvent',['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a8106ad66c0ea976748a315385fb5330c',1,'sw::gui::WinAPIGUI']]],
-  ['hittest',['HitTest',['../classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96',1,'sw::gui::Visual']]],
-  ['hostwindow',['HostWindow',['../classsw_1_1gui_1_1_host_window.html',1,'sw::gui']]]
+  ['findcontainer',['FindContainer',['../classsw_1_1gui_1_1_event_handlers.html#a454173936e63151b895b361d66346091',1,'sw::gui::EventHandlers']]]
 ];
