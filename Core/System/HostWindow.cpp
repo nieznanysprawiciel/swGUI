@@ -5,6 +5,8 @@
 #include "swGraphicAPI/Rendering/IGraphicAPIInitializer.h"
 #include "swGraphicAPI/ResourceManager/ResourceManager.h"
 
+#include "swInputLibrary/InputCore/Helpers/InputDispatcher.h"
+
 #include "CommonTypes/CommonTypes.h"
 
 
@@ -147,7 +149,13 @@ void				HostWindow::GotFocus			()
 //
 void				HostWindow::HandleInput			()
 {
+	input::InputDispatcher dispatcher( m_input );
 
+	while( !dispatcher.NoEventsLeft() )
+	{
+		auto dispatched = dispatcher.NextEvent();
+
+	}
 }
 
 //====================================================================================//
