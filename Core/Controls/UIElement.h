@@ -50,6 +50,8 @@ Provides functionalities:
 
 Connects WPF UIElement and FrameworkElement classes.
 
+@todo Implement logical focus in future. (Check in WPF)
+
 @ingroup ControlsFramework*/
 class UIElement : public Visual
 {
@@ -61,9 +63,13 @@ protected:
 	UIElement*				m_parent;				///< Parent in controls visual tree.
 
 	bool					m_isVisible : 1;
-	bool					m_isEnabled : 1;		///< @todo Maybe it's something from higher level.
+	bool					m_isEnabled : 1;				///< @todo Maybe it's something from higher level.
 	bool					m_isMouseOver : 1;
-	bool					m_isFocused : 1;
+	bool					m_isFocused : 1;				///< This is logical focus.
+	bool					m_isKeyboardFocus : 1;			///< This element has keyboard focus and will receive keyboard events.
+	bool					m_isKeyboardFocusWithin : 1;	///< This element or it's children have keyboard focus.
+	bool					m_isMouseCaptured : 1;			///< Check if element have captured mouse.
+	bool					m_isMouseCapturedWithin : 1;	///< Element or it's children have captured mouse.
 	bool					m_isFocusable : 1;
 
 	Size2D					m_desiredSize;			///< Desired size after Messure pass.

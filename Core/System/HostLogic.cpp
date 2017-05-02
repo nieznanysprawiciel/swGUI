@@ -112,15 +112,14 @@ Size					HostLogic::GetMemorySize()
 	Size size = sizeof( HostLogic );
 
 	size += m_mousePath.capacity() * sizeof( UIElement* );
-	size += m_focusPath.capacity() * sizeof( UIElement* );
 	size += m_invalidated.capacity() * sizeof( UIElement* );
-	size += m_controlTree.capacity() * sizeof( UIElement* );
+	size += m_controlsTree.capacity() * sizeof( UIElement* );
 
 	size += m_controlsNames.size() * ( sizeof( std::pair< UIElement*, std::string > ) + STD_MAP_OVERHEAD_PER_ELEMENT );
 
 	//size += m_nativeWindow->MemorySize();
 
-	for( auto control : m_controlTree )
+	for( auto control : m_controlsTree )
 		size += control->MemorySize();
 
 	return size;

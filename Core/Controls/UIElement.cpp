@@ -7,6 +7,14 @@
 #include "UIElement.h"
 
 
+RTTR_REGISTRATION
+{
+	rttr::registration::class_< sw::gui::UIElement >( "sw::gui::UIElement" );
+	rttr::registration::class_< sw::gui::Visual >( "sw::gui::Visual" );
+}
+
+
+
 namespace sw {
 namespace gui
 {

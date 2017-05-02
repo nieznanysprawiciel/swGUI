@@ -27,11 +27,14 @@ class HostLogic
 {
 private:
 
-	std::vector< UIElement* >	m_mousePath;		///< Controls hierarchy that captured mouse in this frame.
-	std::vector< UIElement* >	m_focusPath;		///< Controls hierarchy that have focus in this frame.
-	std::vector< UIElement* >	m_invalidated;		///< Controls which needs to be redrawn in this frame.
+	std::vector< UIElement* >	m_controlsTree;		///< Top level controls. This vector holds entire tree.
 
-	std::vector< UIElement* >	m_controlTree;		///< Top level controls.
+	std::vector< UIElement* >	m_mousePath;		///< Controls hierarchy that have mouse over in this frame.
+	UIElement*					m_mouseCapture;		///< Element that captured mouse. Can be nullptr.
+	std::vector< UIElement* >	m_keyboardFocus;	///< Path of controls that have keyboard focus and all events are directed to them.
+
+	std::vector< UIElement* >	m_invalidated;		///< Controls which needs to be redrawn in this frame. @todo Move to different logic. Separate rearrangement and redraw.
+	
 
 	///@name Controls info
 	///@{
@@ -45,7 +48,7 @@ private:
 protected:
 public:
 	explicit		HostLogic		() = default;
-	~HostLogic		() = default;
+					~HostLogic		() = default;
 
 
 	void				RemoveControl		( UIElement* control );
@@ -66,12 +69,14 @@ public:
 
 
 public:
-
+	///@name Input habdling
+	///@{
 	void				HandleKeyInput			( const input::DeviceEvent& event, input::Device* device );
 	void				HandleCharInput			( const input::DeviceEvent& event, input::Device* device );
 	void				HandleMouseButtonInput	( const input::DeviceEvent& event, input::Device* device );
 	void				HandleMouseWheelInput	( const input::DeviceEvent& event, input::Device* device );
 	void				HandleMouseMoveInput	( const input::DeviceEvent& event, input::Device* device );
+	///@}
 
 public:
 
