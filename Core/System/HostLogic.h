@@ -17,7 +17,7 @@ namespace sw {
 namespace gui
 {
 
-
+class HostWindow;
 
 
 /**@brief Logic of host window for managing child controls.
@@ -47,7 +47,7 @@ private:
 
 protected:
 public:
-	explicit		HostLogic		() = default;
+	explicit		HostLogic		( HostWindow* hostWindow );
 					~HostLogic		() = default;
 
 

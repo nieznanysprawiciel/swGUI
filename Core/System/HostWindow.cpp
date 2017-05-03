@@ -22,9 +22,10 @@ namespace gui
 
 
 HostWindow::HostWindow( INativeWindow* nativeWindow, input::IInput* input, ResourceManager* resourceManager, IGraphicAPIInitializer* graphicApi )
-	: m_input( input )
-	, m_nativeWindow( nativeWindow )
-	, m_resourceManager( resourceManager )
+	:	m_input( input )
+	,	m_nativeWindow( nativeWindow )
+	,	m_resourceManager( resourceManager )
+	,	m_hostLogic( this )
 {
 	// Create RenderTarget and SwapChain
 	SwapChainInitData init;

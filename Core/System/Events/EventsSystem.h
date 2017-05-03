@@ -86,20 +86,20 @@ public:
 private:
 
 	template< typename ArgumentType >
-	bool			RaiseDirectEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
+	bool			RaiseDirectEvent			( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler );
 
 	template< typename ArgumentType >
-	bool			RaiseBubbleEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
+	bool			RaiseBubbleEvent			( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler );
 
 	template< typename ArgumentType >
-	bool			RaiseTunnelEvent			( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
+	bool			RaiseTunnelEvent			( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler );
 
 	/**@brief Calls recursivly event for parents.*/
 	template< typename ArgumentType >
-	void			RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement, EventHandlerPointer< ArgumentType > handler );
+	void			RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, UIElement* raiseForElement, EventHandlerPointer< ArgumentType > handler );
 
 	template< typename ArgumentType >
-	bool			RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler );
+	bool			RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler );
 
 public:
 	static EventsSystem&		Get	();

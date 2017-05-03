@@ -25,7 +25,7 @@ inline bool					EventsSystem::RaiseEvent			( const RegisteredEvent* eventInfo, U
 // ================================ //
 //
 template< typename ArgumentType >
-inline bool					EventsSystem::RaiseDirectEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler )
+inline bool					EventsSystem::RaiseDirectEvent		( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler )
 {
 	if( handler )
 		( sender->*handler )( sender, arguments );
@@ -37,7 +37,7 @@ inline bool					EventsSystem::RaiseDirectEvent		( const RegisteredEvent* eventIn
 // ================================ //
 //
 template< typename ArgumentType >
-inline bool					EventsSystem::RaiseBubbleEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler )
+inline bool					EventsSystem::RaiseBubbleEvent		( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler )
 {
 	UIElement* element = sender;
 	while( element && !arguments->Handled )
@@ -55,7 +55,7 @@ inline bool					EventsSystem::RaiseBubbleEvent		( const RegisteredEvent* eventIn
 // ================================ //
 //
 template< typename ArgumentType >
-inline bool					EventsSystem::RaiseTunnelEvent		( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler )
+inline bool					EventsSystem::RaiseTunnelEvent		( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler )
 {
 	RaiseTunnelEventForParents< ArgumentType >( eventInfo, sender, arguments, sender, handler );
 	return true;
@@ -64,7 +64,7 @@ inline bool					EventsSystem::RaiseTunnelEvent		( const RegisteredEvent* eventIn
 // ================================ //
 //
 template< typename ArgumentType >
-inline void					EventsSystem::RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, UIElement* raiseForElement, EventHandlerPointer< ArgumentType > handler )
+inline void					EventsSystem::RaiseTunnelEventForParents	( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, UIElement* raiseForElement, EventHandlerPointer< ArgumentType > handler )
 {
 	if( !raiseForElement )
 		return;
@@ -82,7 +82,7 @@ inline void					EventsSystem::RaiseTunnelEventForParents	( const RegisteredEvent
 // ================================ //
 //
 template< typename ArgumentType >
-inline bool					EventsSystem::RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, IEventArgs* arguments, EventHandlerPointer< ArgumentType > handler )
+inline bool					EventsSystem::RaiseEventImpl				( const RegisteredEvent* eventInfo, UIElement* sender, ArgumentType* arguments, EventHandlerPointer< ArgumentType > handler )
 {
 	// Type checking. If sender is different then registered then something gone wrong.
 	// Argument checking could be done only in debug mode...

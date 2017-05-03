@@ -1,7 +1,22 @@
+/**
+@file HostLogic.coo
+@author nieznanysprawiciel
+@copyright File is part of Sleeping Wombat Libraries.
+*/
+
 #include "HostLogic.h"
 
 
 #include "CommonTypes/CommonTypes.h"
+
+#include "HostWindow.h"
+
+// Events system.
+#include "Events/EventsSystem.h"
+#include "Events/EventsSystem.inl"
+
+// Events arguments structures.
+#include "Events/Input/KeyEventArgs.h"
 
 
 
@@ -12,6 +27,15 @@
 namespace sw {
 namespace gui
 {
+
+
+// ================================ //
+//
+HostLogic::HostLogic	( HostWindow* hostWindow )
+{
+	m_mouseCapture = hostWindow;
+	m_keyboardFocus.push_back( hostWindow );
+}
 
 
 // ================================ //
@@ -77,7 +101,38 @@ void			HostLogic::OnMinimized		()
 // ================================ //
 //
 void				HostLogic::HandleKeyInput			( const input::DeviceEvent& event, input::Device* device )
-{}
+{
+	// Send event to UIElement that has keyboard focus.
+	if( m_keyboardFocus.size() )
+	{
+		UIElement* bottomElement = m_keyboardFocus.back();
+		KeyEventArgsOPtr keyEvent = KeyEventArgsOPtr( new KeyEventArgs( static_cast< input::KeyboardDevice* >( device ), event.Key.Key ) );
+
+		if( keyEvent->IsUp )
+		{
+			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyUp, bottomElement, keyEvent.get(), &UIElement::PreviewKeyUp );
+			assert( result );		/// @todo Handle failing during event raising.
+
+			if( !keyEvent->Handled )
+			{
+				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyUp, bottomElement, keyEvent.get(), &UIElement::KeyUp );
+				assert( result );		/// @todo Handle failing during event raising.
+			}
+		}
+		else
+		{
+			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyDown, bottomElement, keyEvent.get(), &UIElement::PreviewKeyDown );
+			assert( result );		/// @todo Handle failing during event raising.
+
+			if( !keyEvent->Handled )
+			{
+				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyDown, bottomElement, keyEvent.get(), &UIElement::KeyDown );
+				assert( result );		/// @todo Handle failing during event raising.
+			}
+		}
+		
+	}
+}
 
 // ================================ //
 //

@@ -30,7 +30,7 @@ public:
 
 public:
 
-	explicit KeyEventArgs( input::KeyboardDevice* device, input::Keyboard::PhysicalKeys key )
+	KeyEventArgs( input::KeyboardDevice* device, input::Keyboard::PhysicalKeys key )
 		:	KeyboardEventArgs( device )
 		,	State( &device->GetState()[ key ] )
 		,	Key( key )
@@ -39,6 +39,8 @@ public:
 	{}
 
 };
+DEFINE_OPTR_TYPE( KeyEventArgs );
+
 
 }	// gui
 }	// sw
