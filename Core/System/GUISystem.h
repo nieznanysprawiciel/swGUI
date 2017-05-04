@@ -69,6 +69,7 @@ To use gui implement Application class.
 */
 class GUISystem
 {
+	friend class GUISystemTester;
 private:
 
 	static GUISystem*			m_instance;

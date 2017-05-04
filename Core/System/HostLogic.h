@@ -25,13 +25,14 @@ class HostWindow;
 @ingroup ControlsFramework*/
 class HostLogic
 {
+	friend class HostLogicTester;
 private:
 
 	std::vector< UIElement* >	m_controlsTree;		///< Top level controls. This vector holds entire tree.
 
 	std::vector< UIElement* >	m_mousePath;		///< Controls hierarchy that have mouse over in this frame.
-	UIElement*					m_mouseCapture;		///< Element that captured mouse. Can be nullptr.
 	std::vector< UIElement* >	m_keyboardFocus;	///< Path of controls that have keyboard focus and all events are directed to them.
+	UIElement*					m_mouseCapture;		///< Element that captured mouse. Can be nullptr.
 
 	std::vector< UIElement* >	m_invalidated;		///< Controls which needs to be redrawn in this frame. @todo Move to different logic. Separate rearrangement and redraw.
 	

@@ -21,8 +21,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{16150492-838D-4376-8E74-88F569E6050D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>TestUIElement</RootNamespace>
+    <RootNamespace>TestGUISystem</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>TestGUISystem</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -58,22 +59,22 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="TestUIElementConfig.props" />
+    <Import Project="TestGUISystemConfig.props" />
     <Import Project="..\..\LinkSleepingWombatGUI.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="TestUIElementConfig.props" />
+    <Import Project="TestGUISystemConfig.props" />
     <Import Project="..\..\LinkSleepingWombatGUI.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="TestUIElementConfig.props" />
+    <Import Project="TestGUISystemConfig.props" />
     <Import Project="..\..\LinkSleepingWombatGUI.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="TestUIElementConfig.props" />
+    <Import Project="TestGUISystemConfig.props" />
     <Import Project="..\..\LinkSleepingWombatGUI.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -150,12 +151,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Tests\TestUIElement\Classes\TestUIElementClass.cpp" />
-    <ClCompile Include="..\..\..\..\Tests\TestUIElement\main.cpp" />
-    <ClCompile Include="..\..\..\..\Tests\TestUIElement\TestEventRouting.cpp" />
-    <ClCompile Include="..\..\..\..\Tests\TestUIElement\TestRegistration.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\swCommonLib\Projects\Visual2015\CommonBase\CommonBase.vcxproj">
       <Project>{9abcbab4-05b4-47c5-b5d8-f201559fd096}</Project>
     </ProjectReference>
@@ -168,12 +163,26 @@
     <ProjectReference Include="..\..\..\..\..\swCommonLib\Projects\Visual2015\SerializerXML\SerializerXML.vcxproj">
       <Project>{91cc6d16-f22c-434a-95e0-35ee857054c7}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\swGraphicAPI\ProjectsDir\Visual2015\MockAPI\MockAPI.vcxproj">
+      <Project>{eeefab61-f404-4957-ac24-a3bf81c5e4ed}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\swInputLibrary\ProjectsDir\Visual2015\InputCore\InputCore.vcxproj">
+      <Project>{ebc3abf4-e788-4242-a949-d366fc128b0e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\CoreGUI\CoreGUI.vcxproj">
       <Project>{c6dab3ee-e9a7-47fc-9b33-a8f4250c219b}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Tests\TestUIElement\Classes\TestUIElementClass.h" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\Classes\TestUIElementClass.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\FrameworkHelpers\HostWindowTester.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\main.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestEventRouting.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestRegistration.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Tests\TestGUISystem\Classes\TestUIElementClass.h" />
+    <ClInclude Include="..\..\..\..\Tests\TestGUISystem\FrameworkHelpers\HostWindowTester.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

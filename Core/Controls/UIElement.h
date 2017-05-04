@@ -57,6 +57,8 @@ class UIElement : public Visual
 {
 	RTTR_ENABLE( Visual );
 	RTTR_REGISTRATION_FRIEND;
+
+	friend class UIElementTester;
 private:
 protected:
 

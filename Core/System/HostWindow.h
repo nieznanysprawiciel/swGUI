@@ -32,6 +32,7 @@ HostWindow is responsible for rendering and presenting content on native window 
 @ingroup ControlsFramework*/
 class HostWindow : public UIElement
 {
+	friend class HostWindowTester;
 private:
 
 	INativeWindow*				m_nativeWindow;
@@ -89,6 +90,9 @@ public:
 
 
 };
+
+DEFINE_OPTR_TYPE( HostWindow );
+DEFINE_PTR_TYPE( HostWindow );
 
 
 }	// gui
