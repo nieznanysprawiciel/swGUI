@@ -55,21 +55,33 @@ int					GUISystem::MainLoop()
 {
 	while( true )
 	{
-		// Process native events.
-		bool end = m_nativeGUI->MainLoop( true );
+		bool end = MainLoopCore();
 		if( end ) break;
-
-		HandleEvents();
-
-		// @todo How should it be done ??
-		OnIdle();
-		if( m_focusedWindow )
-			m_focusedWindow->GetSwapChain()->Present( 1 );
 	}
 
 	OnClosing();
 
 	return 0;
+}
+
+/**@brief One step of main loop.
+@todo Consider making this function virtual in future.
+
+@return Returns true if application should end. Otherwise returns false.*/
+bool				GUISystem::MainLoopCore()
+{
+	// Process native events.
+	bool end = m_nativeGUI->MainLoop( true );
+	if( end ) return true;;
+
+	HandleEvents();
+
+	// @todo How should it be done ??
+	OnIdle();
+	if( m_focusedWindow )
+		m_focusedWindow->GetSwapChain()->Present( 1 );
+
+	return false;
 }
 
 /**@brief Processes messages and passes them to focused window.*/

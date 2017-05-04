@@ -26,6 +26,11 @@
     <ClInclude Include="..\..\..\Native\MockNativeGUI\MockGUI.h" />
     <ClInclude Include="..\..\..\Native\MockNativeGUI\MockWindow.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\swInputLibrary\ProjectsDir\Visual2015\InputCore\InputCore.vcxproj">
+      <Project>{ebc3abf4-e788-4242-a949-d366fc128b0e}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2800312A-1970-47FB-87B3-DD7E96405D85}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

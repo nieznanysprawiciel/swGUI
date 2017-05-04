@@ -9,6 +9,7 @@
 #include "MockGUI.h"
 #include "MockWindow.h"
 
+#include "swInputLibrary/InputCore/Debugging/DebugInput.h"
 
 
 
@@ -39,9 +40,15 @@ MockGUI*		MockGUI::Create()
 
 
 // ================================ //
-/// @todo In future MockGUI could work together with DebugInput.
+///
 sw::input::IInput*		MockGUI::UseNativeInput()
 {
+	input::InputInitInfo info;
+	input::IInput* input = new input::DebugInput();
+	
+	if( input->Init( info ) )
+		return input;
+
 	return nullptr;
 }
 

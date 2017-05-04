@@ -10,4 +10,6 @@
 #include "swGUI/Core/System/GUISystem.h"
 #include "swGUI/Core/System/HostWindow.h"
 
+#include "swInputLibrary/InputCore/Debugging/DebugInput.h"
+
 // TODO: reference additional headers your program requires here

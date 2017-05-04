@@ -122,6 +122,7 @@ public:
 	///@{
 	void			Init			();
 	int				MainLoop		();
+	bool			MainLoopCore	();
 	void			HandleEvents	();
 	///@}
 
