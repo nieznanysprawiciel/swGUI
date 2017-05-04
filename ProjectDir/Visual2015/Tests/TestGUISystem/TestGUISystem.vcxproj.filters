@@ -25,6 +25,9 @@
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\FrameworkHelpers\HostWindowTester.cpp">
       <Filter>FrameworkHelpers</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestKeyEvents.cpp">
+      <Filter>TestGUISystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Tests\TestGUISystem\Classes\TestUIElementClass.h">

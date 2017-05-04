@@ -49,6 +49,11 @@ public:
 private:
 	bool			InitTesterNativeGUI		();
 	void			InitTesterDebugInput	();
+
+	// Inherited via GUISystem
+	virtual void	OnInitialized			() override {};
+	virtual void	OnClosing				() override {};
+	virtual void	OnIdle					() override {};
 };
 
 

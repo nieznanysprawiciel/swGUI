@@ -172,12 +172,16 @@
     <ProjectReference Include="..\..\CoreGUI\CoreGUI.vcxproj">
       <Project>{c6dab3ee-e9a7-47fc-9b33-a8f4250c219b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\TestFramework\TestFramework.vcxproj">
+      <Project>{187f6b99-c04b-4093-9cdf-13d8fc994817}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\Classes\TestUIElementClass.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\FrameworkHelpers\HostWindowTester.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\main.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestEventRouting.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestKeyEvents.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestRegistration.cpp" />
   </ItemGroup>
   <ItemGroup>
