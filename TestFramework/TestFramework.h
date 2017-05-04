@@ -43,6 +43,7 @@ public:
 	/**@brief Calls main loop but returns after making full step.*/
 	bool						TesterMainStep		();
 
+	using GUISystem::CreateNativeHostWindow;
 	///@}
 
 private:
