@@ -125,46 +125,46 @@ public:
 	///@name GUISystem interaction events
 	///Mouse and Keyboard input events and focus.
 	///@{
-	virtual void			Loaded						( UIElement* sender, IEventArgs* e ) { }
-	virtual void			Unloaded					( UIElement* sender, IEventArgs* e ) { }
+	virtual void			OnLoaded					( UIElement* sender, IEventArgs* e ) { }
+	virtual void			OnUnloaded					( UIElement* sender, IEventArgs* e ) { }
 
-	virtual void			GotFocus					( UIElement* sender, IEventArgs* e ) { }
-	virtual void			LostFocus					( UIElement* sender, IEventArgs* e ) { }
+	virtual void			OnGotFocus					( UIElement* sender, IEventArgs* e ) { }
+	virtual void			OnLostFocus					( UIElement* sender, IEventArgs* e ) { }
 
 	// Mouse
-	virtual void			MouseEnter					( UIElement* sender, MouseEventArgs* e ) { }
-	virtual void			MouseLeave					( UIElement* sender, MouseEventArgs* e ) { }
-	virtual void			MouseMove					( UIElement* sender, MouseEventArgs* e ) { }
-	virtual void			MouseWheel					( UIElement* sender, MouseWheelEventArgs* e ) { }
+	virtual void			OnMouseEnter				( UIElement* sender, MouseEventArgs* e ) { }
+	virtual void			OnMouseLeave				( UIElement* sender, MouseEventArgs* e ) { }
+	virtual void			OnMouseMove					( UIElement* sender, MouseEventArgs* e ) { }
+	virtual void			OnMouseWheel				( UIElement* sender, MouseWheelEventArgs* e ) { }
 
-	virtual void			MouseDown					( UIElement* sender, MouseButtonEventArgs* e ) { }
-	virtual void			MouseUp						( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnMouseDown					( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnMouseUp					( UIElement* sender, MouseButtonEventArgs* e ) { }
 
-	virtual void			MouseRightButtonDown		( UIElement* sender, MouseButtonEventArgs* e ) { }
-	virtual void			MouseRightButtonUp			( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnMouseRightButtonDown		( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnMouseRightButtonUp		( UIElement* sender, MouseButtonEventArgs* e ) { }
 
-	virtual void			MouseLeftButtonDown			( UIElement* sender, MouseButtonEventArgs* e ) { }
-	virtual void			MouseLeftButtonUp			( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnMouseLeftButtonDown		( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnMouseLeftButtonUp			( UIElement* sender, MouseButtonEventArgs* e ) { }
 
 
-	virtual void			PreviewMouseMove				( UIElement* sender, MouseEventArgs* e ) { }
-	virtual void			PreviewMouseWheel				( UIElement* sender, MouseWheelEventArgs* e ) { }
+	virtual void			OnPreviewMouseMove				( UIElement* sender, MouseEventArgs* e ) { }
+	virtual void			OnPreviewMouseWheel				( UIElement* sender, MouseWheelEventArgs* e ) { }
 
-	virtual void			PreviewMouseDown				( UIElement* sender, MouseButtonEventArgs* e ) { }
-	virtual void			PreviewMouseUp					( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnPreviewMouseDown				( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnPreviewMouseUp				( UIElement* sender, MouseButtonEventArgs* e ) { }
 
-	virtual void			PreviewMouseRightButtonDown		( UIElement* sender, MouseButtonEventArgs* e ) { }
-	virtual void			PreviewMouseRightButtonUp		( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnPreviewMouseRightButtonDown	( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnPreviewMouseRightButtonUp		( UIElement* sender, MouseButtonEventArgs* e ) { }
 
-	virtual void			PreviewMouseLeftButtonDown		( UIElement* sender, MouseButtonEventArgs* e ) { }
-	virtual void			PreviewMouseLeftButtonUp		( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnPreviewMouseLeftButtonDown	( UIElement* sender, MouseButtonEventArgs* e ) { }
+	virtual void			OnPreviewMouseLeftButtonUp		( UIElement* sender, MouseButtonEventArgs* e ) { }
 
 	//Keyboard
-	virtual void			KeyDown							( UIElement* sender, KeyEventArgs* e ) { }
-	virtual void			KeyUp							( UIElement* sender, KeyEventArgs* e ) { }
+	virtual void			OnKeyDown						( UIElement* sender, KeyEventArgs* e ) { }
+	virtual void			OnKeyUp							( UIElement* sender, KeyEventArgs* e ) { }
 
-	virtual void			PreviewKeyDown					( UIElement* sender, KeyEventArgs* e ) { }
-	virtual void			PreviewKeyUp					( UIElement* sender, KeyEventArgs* e ) { }
+	virtual void			OnPreviewKeyDown				( UIElement* sender, KeyEventArgs* e ) { }
+	virtual void			OnPreviewKeyUp					( UIElement* sender, KeyEventArgs* e ) { }
 	///@}
 
 

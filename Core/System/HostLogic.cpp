@@ -110,23 +110,23 @@ void				HostLogic::HandleKeyInput			( const input::DeviceEvent& event, input::De
 
 		if( keyEvent->IsUp )
 		{
-			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyUp, bottomElement, keyEvent.get(), &UIElement::PreviewKeyUp );
+			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyUp, bottomElement, keyEvent.get(), &UIElement::OnPreviewKeyUp );
 			assert( result );		/// @todo Handle failing during event raising.
 
 			if( !keyEvent->Handled )
 			{
-				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyUp, bottomElement, keyEvent.get(), &UIElement::KeyUp );
+				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyUp, bottomElement, keyEvent.get(), &UIElement::OnKeyUp );
 				assert( result );		/// @todo Handle failing during event raising.
 			}
 		}
 		else
 		{
-			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyDown, bottomElement, keyEvent.get(), &UIElement::PreviewKeyDown );
+			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyDown, bottomElement, keyEvent.get(), &UIElement::OnPreviewKeyDown );
 			assert( result );		/// @todo Handle failing during event raising.
 
 			if( !keyEvent->Handled )
 			{
-				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyDown, bottomElement, keyEvent.get(), &UIElement::KeyDown );
+				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyDown, bottomElement, keyEvent.get(), &UIElement::OnKeyDown );
 				assert( result );		/// @todo Handle failing during event raising.
 			}
 		}

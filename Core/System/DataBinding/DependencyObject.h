@@ -25,8 +25,8 @@ It should correpsond WPF DependencyObject.
 @ingroup ControlsFramework*/
 class DependencyObject : public EngineObject
 {
-	RTTR_ENABLE( EngineObject )
-		RTTR_REGISTRATION_FRIEND
+	RTTR_ENABLE( EngineObject );
+	RTTR_REGISTRATION_FRIEND
 private:
 protected:
 

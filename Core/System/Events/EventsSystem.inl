@@ -86,7 +86,7 @@ inline bool					EventsSystem::RaiseEventImpl				( const RegisteredEvent* eventIn
 {
 	// Type checking. If sender is different then registered then something gone wrong.
 	// Argument checking could be done only in debug mode...
-	if( sender->GetType().is_derived_from( eventInfo->OwnerType ) )
+	if( !sender->GetType().is_derived_from( eventInfo->OwnerType ) )
 		return false;
 
 	if( !arguments->get_type().is_derived_from( eventInfo->EventArgumentsType ) )

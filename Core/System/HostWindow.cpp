@@ -14,13 +14,22 @@
 #include <iostream>
 
 
+
+RTTR_REGISTRATION
+{
+	rttr::registration::class_< sw::gui::HostWindow >( "sw::gui::HostWindow" );
+}
+
+
+
 namespace sw {
 namespace gui
 {
 
 
 
-
+// ================================ //
+//
 HostWindow::HostWindow( INativeWindow* nativeWindow, input::IInput* input, ResourceManager* resourceManager, IGraphicAPIInitializer* graphicApi )
 	:	m_input( input )
 	,	m_nativeWindow( nativeWindow )
@@ -42,6 +51,8 @@ HostWindow::HostWindow( INativeWindow* nativeWindow, input::IInput* input, Resou
 	resourceManager->AddRenderTarget( m_renderTarget.Ptr(), Convert::FromString< std::wstring >( "::" + m_nativeWindow->GetTitle(), L"" ) );
 }
 
+// ================================ //
+//
 HostWindow::~HostWindow()
 {
 	m_swapChain->DeleteObjectReference();

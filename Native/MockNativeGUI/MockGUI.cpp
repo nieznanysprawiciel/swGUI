@@ -81,7 +81,7 @@ bool		MockGUI::Init				( const NativeGUIInitData& initData )
 /**@copydoc INativeGUI::MainLoop*/
 bool		MockGUI::MainLoop                 ( bool blockingMode )
 {
-	return true;
+	return false;
 }
 
 

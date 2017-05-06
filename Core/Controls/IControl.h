@@ -91,7 +91,7 @@ protected:
 public:
 	// Event handlers
 
-	virtual void			Loaded						( IControl* sender, IEventArgs* e ) { }
+	virtual void			OnLoaded						( IControl* sender, IEventArgs* e ) { }
 	virtual void			Unloaded					( IControl* sender, IEventArgs* e ) { }
 
 	virtual void			GotFocus					( IControl* sender, IEventArgs* e ) { }

@@ -36,6 +36,7 @@ DEFINE_OPTR_TYPE( UnusedEventArgs );
 
 class TestUIElementClass : public sw::gui::UIElement
 {
+	RTTR_ENABLE( sw::gui::UIElement );
 private:
 
 	std::vector< sw::gui::UIElementOPtr >		m_children;

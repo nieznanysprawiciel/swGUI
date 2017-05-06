@@ -6,6 +6,7 @@
 //
 RTTR_REGISTRATION
 {
+	rttr::registration::class_< TestUIElementClass >( "TestUIElementClass" );
 	rttr::registration::class_< ValidationEventArgs >( "ValidationEventArgs" );
 	rttr::registration::class_< UnusedEventArgs >( "UnusedEventArgs" );
 }

@@ -32,6 +32,7 @@ HostWindow is responsible for rendering and presenting content on native window 
 @ingroup ControlsFramework*/
 class HostWindow : public UIElement
 {
+	RTTR_ENABLE( UIElement );
 	friend class HostWindowTester;
 private:
 
