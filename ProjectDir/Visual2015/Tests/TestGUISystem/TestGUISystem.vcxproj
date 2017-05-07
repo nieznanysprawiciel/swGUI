@@ -163,15 +163,6 @@
     <ProjectReference Include="..\..\..\..\..\swCommonLib\Projects\Visual2015\SerializerXML\SerializerXML.vcxproj">
       <Project>{91cc6d16-f22c-434a-95e0-35ee857054c7}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\swGraphicAPI\ProjectsDir\Visual2015\MockAPI\MockAPI.vcxproj">
-      <Project>{eeefab61-f404-4957-ac24-a3bf81c5e4ed}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\swInputLibrary\ProjectsDir\Visual2015\InputCore\InputCore.vcxproj">
-      <Project>{ebc3abf4-e788-4242-a949-d366fc128b0e}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CoreGUI\CoreGUI.vcxproj">
-      <Project>{c6dab3ee-e9a7-47fc-9b33-a8f4250c219b}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\TestFramework\TestFramework.vcxproj">
       <Project>{187f6b99-c04b-4093-9cdf-13d8fc994817}</Project>
     </ProjectReference>
