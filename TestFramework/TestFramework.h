@@ -114,6 +114,7 @@ public:
 
 	/**@brief Returns event capturer which can emulate events.*/
 	input::EventCapture*		GetEventCapturer	() { return m_eventCapture; }
+	input::IInput*				GetInput			() { return m_input; }
 
 	/**@brief Calls main loop but returns after making full step.*/
 	bool						TesterMainStep		();

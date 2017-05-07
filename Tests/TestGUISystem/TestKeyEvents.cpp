@@ -169,4 +169,22 @@ TEST_CASE( "KeyUp/KeyDown event" )
 	CheckVectorsContent( testUpKeys, testDownKeys );
 
 
+// ================================ //
+// Check state after Main loop
+
+	eventCapturer->QueueDownKeyEvent( input::Keyboard::PhysicalKeys::KEY_Z );
+	testDownKeys.push_back( input::Keyboard::PhysicalKeys::KEY_Z );			// PreviewKeyDown
+
+	// Make two loop steps to 
+	framework.TesterMainStep();
+	framework.TesterMainStep();
+	CheckVectorsContent( testUpKeys, testDownKeys );
+
+	auto& keybord = framework.GetInput()->GetKeyboardDevice()[ 0 ];
+	const input::KeyState& state = keybord->GetState()[ input::Keyboard::PhysicalKeys::KEY_Z ];
+
+	CHECK( state.IsKeyDownEvent() == false );
+	CHECK( state.IsKeyUpEvent() == false );
+	CHECK( state.IsPressed() == true );
+	CHECK( state.IsUp() == false );
 }
