@@ -31,6 +31,8 @@ public:
 	const input::KeyState*		XButton1;		///< State of first extended button in moment of sending this event.
 	const input::KeyState*		XButton2;		///< State of second extended button in moment of sending this event.
 
+	float						WindowPosX;		///< Position of mouse in window space.
+	float						WindowPosY;		///< Position of mouse in window space.
 
 public:
 	explicit MouseEventArgs( input::MouseDevice* device )
@@ -41,6 +43,8 @@ public:
 		,	MiddleButton( device->GetState().MiddleButton() )
 		,	XButton1( device->GetState().XButton1() )
 		,	XButton2( device->GetState().XButton2() )
+		,	WindowPosX( device->GetState().GetPositionX() )
+		,	WindowPosY( device->GetState().GetPositionY() )
 	{}
 };
 

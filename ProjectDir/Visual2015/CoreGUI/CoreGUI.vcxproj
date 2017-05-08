@@ -167,6 +167,7 @@
     <ClInclude Include="..\..\..\Core\System\Events\Input\InputEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseButtonEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseEventArgs.h" />
+    <ClInclude Include="..\..\..\Core\System\Events\Input\MouseMoveEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\Input\MouseWheelEventArgs.h" />
     <ClInclude Include="..\..\..\Core\System\Events\RegisteredEvent.h" />
     <ClInclude Include="..\..\..\Core\System\GUISystem.h" />
