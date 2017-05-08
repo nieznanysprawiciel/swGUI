@@ -142,7 +142,42 @@ void				HostLogic::HandleCharInput			( const input::DeviceEvent& event, input::D
 // ================================ //
 //
 void				HostLogic::HandleMouseButtonInput	( const input::DeviceEvent& event, input::Device* device )
-{}
+{
+	UIElement* target = nullptr;
+
+	if( m_mouseCapture )
+		target = m_mouseCapture;
+	else if( !m_mousePath.empty() )
+		target = m_mousePath.back();
+
+	if( target )
+	{
+		MouseButtonEventArgsOPtr mouseEvent = MouseButtonEventArgsOPtr( new MouseButtonEventArgs( static_cast< input::MouseDevice* >( device ), event.Button.Button ) );
+		if( mouseEvent->IsUp )
+		{
+			bool result = EventsSystem::Get().RaiseEvent( target->sPreviewMouseUp, target, mouseEvent.get(), &UIElement::OnPreviewMouseUp );
+			assert( result );		/// @todo Handle failing during event raising.
+
+			if( !mouseEvent->Handled )
+			{
+				result = EventsSystem::Get().RaiseEvent( target->sMouseUp, target, mouseEvent.get(), &UIElement::OnMouseUp );
+				assert( result );		/// @todo Handle failing during event raising.
+			}
+		}
+		else
+		{
+			bool result = EventsSystem::Get().RaiseEvent( target->sPreviewMouseDown, target, mouseEvent.get(), &UIElement::OnPreviewMouseDown );
+			assert( result );		/// @todo Handle failing during event raising.
+
+			if( !mouseEvent->Handled )
+			{
+				result = EventsSystem::Get().RaiseEvent( target->sMouseDown, target, mouseEvent.get(), &UIElement::OnMouseDown );
+				assert( result );		/// @todo Handle failing during event raising.
+			}
+		}
+
+	}
+}
 
 // ================================ //
 //

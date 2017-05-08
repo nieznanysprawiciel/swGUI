@@ -70,7 +70,7 @@ public:
 
 
 public:
-	///@name Input habdling
+	///@name Input handling
 	///@{
 	void				HandleKeyInput			( const input::DeviceEvent& event, input::Device* device );
 	void				HandleCharInput			( const input::DeviceEvent& event, input::Device* device );
@@ -78,6 +78,10 @@ public:
 	void				HandleMouseWheelInput	( const input::DeviceEvent& event, input::Device* device );
 	void				HandleMouseMoveInput	( const input::DeviceEvent& event, input::Device* device );
 	///@}
+
+private:
+
+	UIElement*			HitTesting				();
 
 public:
 

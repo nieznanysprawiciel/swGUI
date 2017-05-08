@@ -24,7 +24,7 @@ struct MouseButtonEventArgs : public MouseEventArgs
 	RTTR_ENABLE( MouseEventArgs )
 public:
 
-	const input::KeyState*				State;
+	const input::KeyState&				State;
 	input::Mouse::PhysicalButtons		Button;
 	bool								IsUp;
 	bool								IsDown;
@@ -32,14 +32,16 @@ public:
 public:
 	explicit	MouseButtonEventArgs( input::MouseDevice* device, input::Mouse::PhysicalButtons button )
 		:	MouseEventArgs( device )
-		,	State( &device->GetState()[ button ] )
+		,	Button( button )
+		,	State( device->GetState()[ button ] )
 		,	IsUp( device->GetState()[ button ].IsUp() )
 		,	IsDown( device->GetState()[ button ].IsPressed() )
 	{}
 };
 
+DEFINE_OPTR_TYPE( MouseButtonEventArgs );
+
 
 
 }	// gui
-
 }	// sw
