@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['numcommandlineargs',['NumCommandLineArgs',['../classsw_1_1gui_1_1_g_u_i_system.html#a56b3f2bc389dc4cfc520b2b1ad1deae0',1,'sw::gui::GUISystem']]]
+  ['joystickdevice',['JoystickDevice',['../classsw_1_1input_1_1_joystick_device.html#a0736f31a03198f1e4ed595efcb7bfea6',1,'sw::input::JoystickDevice']]],
+  ['joystickstate',['JoystickState',['../classsw_1_1input_1_1_joystick_state.html#ad90d092f5d9a05f711466d03b2474722',1,'sw::input::JoystickState']]]
 ];

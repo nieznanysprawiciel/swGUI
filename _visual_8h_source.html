@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_5e7550b1f85710d633bfea66eaff8f38.html">Controls</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_4d3066253a2a9d389e06ec3dacaffe10.html">Controls</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_common_types_8h.html">swGUI/Core/System/CommonTypes/CommonTypes.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_access_key_8h.html">swGUI/Core/System/CommonTypes/AccessKey.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;swGUI/Core/System/Rendering/DrawingContext.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_drawing_context_8h.html">swGUI/Core/System/Rendering/DrawingContext.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
@@ -107,21 +109,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_visual.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_visual.html">Visual</a> : <span class="keyword">public</span> <a class="code" href="classsw_1_1gui_1_1_dependency_object.html">DependencyObject</a></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    RTTR_ENABLE( <a class="code" href="classsw_1_1gui_1_1_dependency_object.html">DependencyObject</a> );</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    RTTR_REGISTRATION_FRIEND;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_visual.html#ab591f64532d2254c196870a9be4dc11d">RTTR_ENABLE</a>( <a class="code" href="classsw_1_1gui_1_1_dependency_object.html">DependencyObject</a> );</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_visual.html#ab67857cef8933588cb6217b6323909cb">   33</a></span>&#160;    <a class="code" href="classsw_1_1gui_1_1_visual.html#ab67857cef8933588cb6217b6323909cb">RTTR_REGISTRATION_FRIEND</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">   36</a></span>&#160;    Position        <a class="code" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">m_position</a>;     </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_visual.html#aa436b375173db06c789602c016de6264">   37</a></span>&#160;    Size2D          <a class="code" href="classsw_1_1gui_1_1_visual.html#aa436b375173db06c789602c016de6264">m_actualSize</a>;   </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">   36</a></span>&#160;    <a class="code" href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">Position</a>        <a class="code" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">m_position</a>;     </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_visual.html#aa436b375173db06c789602c016de6264">   37</a></span>&#160;    <a class="code" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a>          <a class="code" href="classsw_1_1gui_1_1_visual.html#aa436b375173db06c789602c016de6264">m_actualSize</a>;   </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">explicit</span>        <a class="code" href="classsw_1_1gui_1_1_visual.html">Visual</a>      () = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ~<a class="code" href="classsw_1_1gui_1_1_visual.html">Visual</a>     () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">explicit</span>        <a class="code" href="classsw_1_1gui_1_1_visual.html#a4509e13342ea8ff232fd374d6f5e6f03">Visual</a>      () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_visual.html#a4ce3bc685f43af7ea8e380a1e878eb23">~Visual</a>     () = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>            <a class="code" href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">HitTest</a>             ( <span class="keyword">const</span> Position&amp; point )       = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>            <a class="code" href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">HitTest</a>             ( <span class="keyword">const</span> <a class="code" href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">Position</a>&amp; point )       = 0;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>            <a class="code" href="classsw_1_1gui_1_1_visual.html#acb648f3d3f8a791b894982c28fca4416">OnRender</a>            ( <a class="code" href="classsw_1_1gui_1_1_drawing_context.html">DrawingContext</a>&amp; context )     = 0;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
@@ -134,21 +136,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}   <span class="comment">// sw</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="ttc" id="_drawing_context_8h_html"><div class="ttname"><a href="_drawing_context_8h.html">DrawingContext.h</a></div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
 <div class="ttc" id="_dependency_object_8h_html"><div class="ttname"><a href="_dependency_object_8h.html">DependencyObject.h</a></div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_visual_html_a4ce3bc685f43af7ea8e380a1e878eb23"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#a4ce3bc685f43af7ea8e380a1e878eb23">sw::gui::Visual::~Visual</a></div><div class="ttdeci">~Visual()=default</div></div>
 <div class="ttc" id="_access_key_8h_html"><div class="ttname"><a href="_access_key_8h.html">AccessKey.h</a></div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_visual_html_a2b4a1c6b50f9df1e3d4bf0a6febca4a1"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">sw::gui::Visual::m_position</a></div><div class="ttdeci">Position m_position</div><div class="ttdoc">Control position. (. </div><div class="ttdef"><b>Definition:</b> Visual.h:36</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_visual_html_ab591f64532d2254c196870a9be4dc11d"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#ab591f64532d2254c196870a9be4dc11d">sw::gui::Visual::RTTR_ENABLE</a></div><div class="ttdeci">RTTR_ENABLE(DependencyObject)</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_ac4016e8950fa391b61d115a48fad5d97"><div class="ttname"><a href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">sw::gui::Size2D</a></div><div class="ttdeci">DirectX::XMFLOAT2 Size2D</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:28</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_dependency_object_html"><div class="ttname"><a href="classsw_1_1gui_1_1_dependency_object.html">sw::gui::DependencyObject</a></div><div class="ttdoc">Support for data binding. </div><div class="ttdef"><b>Definition:</b> DependencyObject.h:26</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_visual_html_acb648f3d3f8a791b894982c28fca4416"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#acb648f3d3f8a791b894982c28fca4416">sw::gui::Visual::OnRender</a></div><div class="ttdeci">virtual void OnRender(DrawingContext &amp;context)=0</div><div class="ttdoc">Control rendering behavior. </div></div>
 <div class="ttc" id="_common_types_8h_html"><div class="ttname"><a href="_common_types_8h.html">CommonTypes.h</a></div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_visual_html_aa436b375173db06c789602c016de6264"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#aa436b375173db06c789602c016de6264">sw::gui::Visual::m_actualSize</a></div><div class="ttdeci">Size2D m_actualSize</div><div class="ttdoc">Size of control used for rendering. This size will be set after for example layout arrangment will be...</div><div class="ttdef"><b>Definition:</b> Visual.h:37</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_drawing_context_html"><div class="ttname"><a href="classsw_1_1gui_1_1_drawing_context.html">sw::gui::DrawingContext</a></div><div class="ttdoc">Context passed to rendering functions. </div><div class="ttdef"><b>Definition:</b> DrawingContext.h:22</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_visual_html_a4509e13342ea8ff232fd374d6f5e6f03"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#a4509e13342ea8ff232fd374d6f5e6f03">sw::gui::Visual::Visual</a></div><div class="ttdeci">Visual()=default</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_a8e73557abbfd912fe81a8d3915e19058"><div class="ttname"><a href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">sw::gui::Position</a></div><div class="ttdeci">DirectX::XMFLOAT2 Position</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:27</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_visual_html_a989803f37a8add98bd0354006bb3ce96"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">sw::gui::Visual::HitTest</a></div><div class="ttdeci">virtual bool HitTest(const Position &amp;point)=0</div><div class="ttdoc">Checks if point is within this object. </div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_visual_html_ab67857cef8933588cb6217b6323909cb"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html#ab67857cef8933588cb6217b6323909cb">sw::gui::Visual::RTTR_REGISTRATION_FRIEND</a></div><div class="ttdeci">RTTR_REGISTRATION_FRIEND</div><div class="ttdef"><b>Definition:</b> Visual.h:33</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_visual_html"><div class="ttname"><a href="classsw_1_1gui_1_1_visual.html">sw::gui::Visual</a></div><div class="ttdoc">Provide interface for visual controls which can be rendered. </div><div class="ttdef"><b>Definition:</b> Visual.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

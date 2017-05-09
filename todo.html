@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,25 +84,144 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classsw_1_1gui_1_1_delegates_container.html#a33d538c7f9f34b3be00670a215a1eb07">sw::gui::DelegatesContainer&lt; EventArgType &gt;::m_delegates</a>  </dt>
+<dt><a class="anchor" id="_todo000058"></a>Member <a class="el" href="namespace_default_interpolators.html#af89eb7aeb3c2a585494f03ea831bf1b4">DefaultInterpolators::Create</a>  (InterpolatorType type, const Key&lt; KeyType &gt; &amp;leftKey, const Key&lt; KeyType &gt; &amp;rightKey, <a class="el" href="class_u_ptr.html">UPtr</a>&lt; const IInterpolator&lt; KeyType &gt; &gt; &amp;leftInterpolator, <a class="el" href="class_u_ptr.html">UPtr</a>&lt; const IInterpolator&lt; KeyType &gt; &gt; &amp;rightInterpolator)</dt>
+<dd>Implement Bezier interpolator.  </dd>
+<dt><a class="anchor" id="_todo000051"></a>globalScope&gt; Member <a class="el" href="_config_helper_8h.html#a6afab2970f18bc56d7ba95ba05294452">DEFINE_CONFIG_VALUE_DEFAULT</a>  (type, name, defaultValue)</dt>
+<dd>Write base class for configs and make automatic serialization and deserialization.  </dd>
+<dt><a class="anchor" id="_todo000061"></a>Member <a class="el" href="class_direct_property.html#ad7b5e45ed02c189408f65afa42ab20d9">DirectProperty&lt; KeyType &gt;::m_object</a>  </dt>
+<dd>Change to typed pointer some way.  </dd>
+<dt><a class="anchor" id="_todo000037"></a>Member <a class="el" href="class_d_x11_buffer.html#a1f05f8c6e7a8dbbf8a27491976a6342c">DX11Buffer::CopyData</a>  () override</dt>
+<dd>Nie trzeba by wykonywać kopiowania na GPU, gdyby bufor był stworzony z flagą D3D11_USAGE_STAGING lub D3D11_USAGE_DEFAULT. Trzeba sprawdzić flagi i robić kopiowanie tylko, gdy to konieczne. </dd>
+<dt><a class="anchor" id="_todo000039"></a>Member <a class="el" href="class_d_x11_render_target.html#a964b118e0963323b0d4215ea4f0dca91">DX11RenderTarget::CreateRenderTarget</a>  (const std::wstring &amp;name, const <a class="el" href="struct_render_target_descriptor.html" title="Struktura używana do tworzenia render targetu. ">RenderTargetDescriptor</a> &amp;renderTargetDescriptor)</dt>
+<dd>W przyszłości powinna być możliwość tworzenia tekstur innych niż 2D. Poza tym renderować powinno się móc do dowolnego poziomu mipmap. Decyzja powinna być podejmowana w runtimie, więc trzeba chyba stworzyć wiele widoków (???). Przydatne to jest w przypadku Environmental mappingu. Jeżeli obiekt jest mocno oddalony, to nie ma co renderować mu mapy z dużą rozdzielczością. </dd>
+<dt><a class="anchor" id="_todo000038"></a>Member <a class="el" href="class_d_x11_render_target.html#a3d7f1140a862df6a9444f7bbbab929e3">DX11RenderTarget::CreateScreenRenderTarget</a>  ()</dt>
+<dd>Wersja troszkę niewłaściwa. RenderTarget jest już stworzony wcześniej przy zwykłej inicjalizacji <a class="el" href="class_d_x11_a_p_i_objects.html" title="Klasa przechowuje w zmiennych statycznych najważniejsze interfejsy DirectX11. ">DX11APIObjects</a>. Tutaj jest jedynie tworzony obiekt silnikowy, który potrafi to obsłużyć. Trzeba to zmienić, żeby całe tworzenie render targetu odbywało się tutaj. </dd>
+<dt><a class="anchor" id="_todo000040"></a>Member <a class="el" href="class_d_x11_swap_chain.html#a8331589ab2da2bc6df91ecf70bb367dc">DX11SwapChain::CreateScreenSwapChain</a>  (<a class="el" href="class_render_target_object.html" title="Klasa dla render targetów.Klasa umożliwia pobranie jednej z tekstur składowych i udostępnienie dla sh...">RenderTargetObject</a> *screenRT)</dt>
+<dd>Wersja troszkę niewłaściwa. <a class="el" href="class_swap_chain.html">SwapChain</a> jest już stworzony wcześniej przy zwykłej inicjalizacji <a class="el" href="class_d_x11_a_p_i_objects.html" title="Klasa przechowuje w zmiennych statycznych najważniejsze interfejsy DirectX11. ">DX11APIObjects</a>. Tutaj jest jedynie tworzony obiekt silnikowy, który potrafi to obsłużyć. Trzeba to zmienić, żeby całe tworzenie render targetu odbywało się tutaj.  </dd>
+<dt><a class="anchor" id="_todo000041"></a>Member <a class="el" href="class_d_x11_texture.html#a5866d43f9f523024d3abc467789230f5">DX11Texture::CreateFromMemory</a>  (const <a class="el" href="class_memory_chunk.html" title="Klasa przechowuje pamięć o dowolnym przeznaczeniu. ">MemoryChunk</a> &amp;texData, <a class="el" href="struct_texture_info.html" title="Deskryptor tekstury. ">TextureInfo</a> &amp;&amp;texInfo)</dt>
+<dd>Trzeba zacząć kiedyś obśługiwac inne typy tekstur.  </dd>
+<dt><a class="anchor" id="_todo000042"></a>Member <a class="el" href="class_d_x11_vertex_shader.html#a5f941c812bdd0b94d58d7f6fce54081b">DX11VertexShader::CreateFromFile</a>  (const std::wstring &amp;fileName, const std::string &amp;shaderName, <a class="el" href="class_shader_input_layout.html" title="Klasa przechowuje layout wierzchołka trafiającego do vertex shadera. ">ShaderInputLayout</a> **layout, <a class="el" href="class_input_layout_descriptor.html" title="Klasa przechowuje opis layoutu wierzchołka, na podstawie którego tworzony jest obiekt layoutu...">InputLayoutDescriptor</a> *layout_desc, const char *shaderModel="vs_4_0")</dt>
+<dd>Lepiej obsłużyć ten błąd.  </dd>
+<dt><a class="anchor" id="_todo000056"></a>globalScope&gt; Member <a class="el" href="_r_t_t_r_8h.html#a6760f423085f8a63374b1e2db102a6d1a865f62e2f976f8cd28d4b83db8dd9604">EditorName</a>  </dt>
+<dd>Zaimplementować.  </dd>
+<dt><a class="anchor" id="_todo000052"></a>Class <a class="el" href="class_engine_object.html">EngineObject</a>  </dt>
+<dd>Dobrze by było, gdyby <a class="el" href="class_engine_object.html" title="Klasa bazowa dla obiektów, które mają być dostępne w edytorze poprzez rttr. Należy po niej odziedzicz...">EngineObject</a> implementował domyślną serializację, ale wtedy jest problem, że nie wiadomo, która z bibliotek powinna tę implementację kompilować. </dd>
+<dt><a class="anchor" id="_todo000059"></a>Module <a class="el" href="group___interpolators.html">Interpolators</a>  </dt>
+<dd>Complete description.  </dd>
+<dt><a class="anchor" id="_todo000060"></a>Member <a class="el" href="struct_key_set.html#a035c258fe38e1c7f8196946005d5942e">KeySet&lt; KeyType &gt;::Evaluate</a>  (TimeType time)</dt>
+<dd>Check if we can find keywith std::lower_bound or FindPlace. Messure performance in cases with multiple keys and choose better version.  </dd>
+<dt><a class="anchor" id="_todo000054"></a>Module <a class="el" href="group___reflection.html">Reflection</a>  </dt>
+<dd>W obecnej wersji silnika wymaganie posiadania <a class="el" href="class_engine_object.html" title="Klasa bazowa dla obiektów, które mają być dostępne w edytorze poprzez rttr. Należy po niej odziedzicz...">EngineObject</a> w hierarchii nie jest już konieczne z punktu widzenia edytora. W kolejnych wersjach trzeba zmienić mechanizmy serializacji, żeby potrafiły zapisywać również takie struktury. </dd>
+<dt><a class="anchor" id="_todo000048"></a>Member <a class="el" href="class_render_target_object.html#a4a2553fd25ff6bc7c2a0d44be921ede2">RenderTargetObject::GetResourceName</a>  () const override</dt>
+<dd>RenderTargety powinny mieć swoje nazwy.  </dd>
+<dt><a class="anchor" id="_todo000043"></a>Class <a class="el" href="class_resource_container.html">ResourceContainer&lt; TYPE &gt;</a>  </dt>
+<dd><p class="startdd">Dodać IDki obok ścieżek. </p>
+<p class="enddd">Kontrner powinien obsługiwać ścieżki, jako obiekty typu Path zamiast wstringów.  </p>
+</dd>
+<dt><a class="anchor" id="_todo000047"></a>Class <a class="el" href="class_resource_manager.html">ResourceManager</a>  </dt>
+<dd>This class should implement generic high level asssets managment. </dd>
+<dt><a class="anchor" id="_todo000045"></a>Member <a class="el" href="class_resource_manager.html#a6d4f0b23fa0b0de46a8d28fff79eb318">ResourceManager::AddRenderTarget</a>  (<a class="el" href="class_render_target_object.html" title="Klasa dla render targetów.Klasa umożliwia pobranie jednej z tekstur składowych i udostępnienie dla sh...">RenderTargetObject</a> *renderTarget, const std::wstring &amp;name)</dt>
+<dd>Nie może tak zostać, że ktoś dodaje renderTarget i musi sprawdzić czy nie dostał innego. Nie można też zmuszać kogoś do zwalniania pamięci po renderTargecie. Wogóle dodawanie renderTargetów musi się odbywać jakoś inaczej. Najlepiej, żeby były one tworzone przez <a class="el" href="class_resource_manager.html" title="Manager for low level resources. ">ResourceManager</a>, ale wtedy trzeba wymyśleć sposób dodawania renderTargetu związanego z buforem okna. </dd>
+<dt><a class="anchor" id="_todo000044"></a>Member <a class="el" href="class_resource_manager.html#a4a00d9a302bf876e5da170ef13385e53">ResourceManager::CreateRenderTarget</a>  (const std::wstring &amp;name, const <a class="el" href="struct_render_target_descriptor.html" title="Struktura używana do tworzenia render targetu. ">RenderTargetDescriptor</a> &amp;renderTargetDescriptor)</dt>
+<dd>Przy dodawaniu tekstur nie jest sprawdzane czy one już istnieją. Trzeba albo to sprawdzać, albo zapewnić np. jakąś polityką nazewnictwa, że w ten sposób nie nadpisujemy istniejącej tekstury. </dd>
+<dt><a class="anchor" id="_todo000046"></a>Member <a class="el" href="class_resource_manager.html#a19e57a77cdcdb9dd34412ec5de7bd8ac">ResourceManager::LoadVertexShader</a>  (const std::wstring &amp;fileName, const std::string &amp;shaderEntry, <a class="el" href="class_shader_input_layout.html" title="Klasa przechowuje layout wierzchołka trafiającego do vertex shadera. ">ShaderInputLayout</a> **layout, <a class="el" href="class_input_layout_descriptor.html" title="Klasa przechowuje opis layoutu wierzchołka, na podstawie którego tworzony jest obiekt layoutu...">InputLayoutDescriptor</a> *layout_desc)</dt>
+<dd>Ten kod to jakiś totalny shit. Jak komuś się będzie nudziło kiedyś (ha ha), to może niech poprawi.  </dd>
+<dt><a class="anchor" id="_todo000049"></a>Class <a class="el" href="class_resource_object.html">ResourceObject</a>  </dt>
+<dd>Zliczanie referencji w <a class="el" href="class_resource_object.html" title="Klasa ułatwiająca zarządzanie odwołaniami do assetów.Obiekty assetów (np. MaterialObject, TextureObject, VertexShader, PixelShader itp.) wymagają jakiegoś systemu zapewniającego współdzielenie między innymi obiektami. ">ResourceObject</a> nie nadaje się do wielowątkowości. Poprawić w odpowiednim momencie.  </dd>
+<dt><a class="anchor" id="_todo000050"></a>Member <a class="el" href="class_resource_object.html#a1557acb2249b2e2a90d47b3b3ac46dc6">ResourceObject::m_objectReferences</a>  </dt>
+<dd>To powinien być std::atomic_uint, ale wtedy nie kompiluje się z CLRem.  </dd>
+<dt><a class="anchor" id="_todo000062"></a>Member <a class="el" href="class_serialization.html#ad4d9e06e398255dd082471c0fa9714cc">Serialization::DeserializeArrayTypes</a>  (<a class="el" href="class_i_deserializer.html" title="Interface for deserializers. ">IDeserializer</a> *deser, const rttr::instance &amp;object, rttr::property &amp;prop)</dt>
+<dd>Error handling.  </dd>
+<dt><a class="anchor" id="_todo000064"></a>Member <a class="el" href="class_serialization.html#a41067b3b3863a550173d92c8bd925335">Serialization::DeserializeProperty</a>  (<a class="el" href="class_i_deserializer.html" title="Interface for deserializers. ">IDeserializer</a> *deser, rttr::property prop, const rttr::instance &amp;object)</dt>
+<dd>Można zoptymalizować pobieranie nazwy z właściwości i ograniczyć alokację stringów.  </dd>
+<dt><a class="anchor" id="_todo000063"></a>Member <a class="el" href="class_serialization.html#ad48a8e77c61881e58ee409e539320f09">Serialization::SerializeProperty</a>  (<a class="el" href="class_i_serializer.html" title="Serializers interface. ">ISerializer</a> *ser, rttr::property prop, const rttr::instance &amp;object)</dt>
+<dd>Można zoptymalizować pobieranie nazwy z właściwości i ograniczyć alokację stringów.  </dd>
+<dt><a class="anchor" id="_todo000055"></a>globalScope&gt; Member <a class="el" href="_r_t_t_r_8h.html#a6760f423085f8a63374b1e2db102a6d1a28d276cefbc49fa972184081b8090c5b">ShowInEditor</a>  </dt>
+<dd>Zaimplementować filtrowanie w edytorze propertiesów.  </dd>
+<dt><a class="anchor" id="_todo000026"></a>Class <a class="el" href="structsw_1_1gui_1_1_command_line_args.html">sw::gui::CommandLineArgs</a>  </dt>
+<dd>Move to separate file.  </dd>
+<dt><a class="anchor" id="_todo000024"></a>Member <a class="el" href="namespacesw_1_1gui.html#aefa3734d6fb00a4acbb27d63d7c224bb">sw::gui::CreateNativeGUI</a>  ()</dt>
+<dd>This should be moved domewhere else.  </dd>
+<dt><a class="anchor" id="_todo000023"></a>Member <a class="el" href="classsw_1_1gui_1_1_delegates_container.html#a33d538c7f9f34b3be00670a215a1eb07">sw::gui::DelegatesContainer&lt; EventArgType &gt;::m_delegates</a>  </dt>
 <dd>Consider using linked list to minimize memory usage.  </dd>
-<dt><a class="anchor" id="_todo000005"></a>Class <a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html">sw::gui::DelegatesContainerBase</a>  </dt>
+<dt><a class="anchor" id="_todo000022"></a>Class <a class="el" href="classsw_1_1gui_1_1_delegates_container_base.html">sw::gui::DelegatesContainerBase</a>  </dt>
 <dd>Consider extracting intrusive list as separate class. </dd>
-<dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classsw_1_1gui_1_1_dependency_object.html#a4a9d17c5b92797bcf8b9316409dab31f">sw::gui::DependencyObject::m_dataContext</a>  </dt>
+<dt><a class="anchor" id="_todo000021"></a>Member <a class="el" href="classsw_1_1gui_1_1_dependency_object.html#a4a9d17c5b92797bcf8b9316409dab31f">sw::gui::DependencyObject::m_dataContext</a>  </dt>
 <dd>Consider using std::shared_ptr.  </dd>
-<dt><a class="anchor" id="_todo000008"></a>Class <a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html">sw::gui::GUISystem</a>  </dt>
+<dt><a class="anchor" id="_todo000027"></a>Class <a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html">sw::gui::GUISystem</a>  </dt>
 <dd>Supply project templates.  </dd>
-<dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ac0cd1c7d9f944429fc6082f7fecd65b8">sw::gui::UIElement::m_isEnabled</a>  </dt>
+<dt><a class="anchor" id="_todo000025"></a>Member <a class="el" href="classsw_1_1gui_1_1_g_u_i_system.html#a4a00d49f9267b75aa30a410d9eb7c446">sw::gui::GUISystem::MainLoopCore</a>  ()</dt>
+<dd>Consider making this function virtual in future. </dd>
+<dt><a class="anchor" id="_todo000028"></a>Member <a class="el" href="classsw_1_1gui_1_1_host_logic.html#a3833fe4e9d91bbe07fcbfb74769f8a1d">sw::gui::HostLogic::HandleKeyInput</a>  (const <a class="el" href="structsw_1_1input_1_1_device_event.html" title="KeyStates changed events. ">input::DeviceEvent</a> &amp;event, <a class="el" href="classsw_1_1input_1_1_device.html" title="Interface class for input devices. ">input::Device</a> *device)</dt>
+<dd><p class="startdd">Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p class="enddd">Handle failing during event raising.  </p>
+</dd>
+<dt><a class="anchor" id="_todo000032"></a>Member <a class="el" href="classsw_1_1gui_1_1_host_logic.html#ac8b1b5391aaf9ec4d6d23abf15c53af2">sw::gui::HostLogic::HandleMouseButtonInput</a>  (const <a class="el" href="structsw_1_1input_1_1_device_event.html" title="KeyStates changed events. ">input::DeviceEvent</a> &amp;event, <a class="el" href="classsw_1_1input_1_1_device.html" title="Interface class for input devices. ">input::Device</a> *device)</dt>
+<dd><p class="startdd">Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p>Handle failing during event raising. </p>
+<p class="enddd">Handle failing during event raising.  </p>
+</dd>
+<dt><a class="anchor" id="_todo000036"></a>Member <a class="el" href="classsw_1_1gui_1_1_host_logic.html#ad40b5a9abdcf32699c0e7cb1db20110d">sw::gui::HostLogic::m_invalidated</a>  </dt>
+<dd>Move to different logic. Separate rearrangement and redraw.  </dd>
+<dt><a class="anchor" id="_todo000017"></a>Class <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">sw::gui::UIElement</a>  </dt>
+<dd>Implement logical focus in future. (Check in WPF) </dd>
+<dt><a class="anchor" id="_todo000018"></a>Member <a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ac0cd1c7d9f944429fc6082f7fecd65b8">sw::gui::UIElement::m_isEnabled</a>  </dt>
 <dd>Maybe it's something from higher level.  </dd>
-<dt><a class="anchor" id="_todo000003"></a>Member <a class="el" href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">sw::gui::Visual::HitTest</a>  (const Position &amp;point)=0</dt>
+<dt><a class="anchor" id="_todo000020"></a>Member <a class="el" href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">sw::gui::Visual::HitTest</a>  (const Position &amp;point)=0</dt>
 <dd>We must specify if point is in relative coordinates or absolut.  </dd>
-<dt><a class="anchor" id="_todo000002"></a>Member <a class="el" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">sw::gui::Visual::m_position</a>  </dt>
-<dd>Relative to parent ???) </dd>
+<dt><a class="anchor" id="_todo000019"></a>Member <a class="el" href="classsw_1_1gui_1_1_visual.html#a2b4a1c6b50f9df1e3d4bf0a6febca4a1">sw::gui::Visual::m_position</a>  </dt>
+<dd>Relative to parent ???)  </dd>
+<dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="classsw_1_1input_1_1_direct_input_module.html">sw::input::DirectInputModule</a>  </dt>
+<dd><p class="startdd">Zrobić obsługę wielu urządzeń tego samego typu i jousticka. </p>
+<p class="enddd">Pozbyć się includowania direct input z EngineCore. </p>
+</dd>
+<dt><a class="anchor" id="_todo000005"></a>Member <a class="el" href="classsw_1_1input_1_1_direct_input_module.html#a7067f254672e051fabeacdd38e6af739">sw::input::DirectInputModule::m_keyboardInput</a>  </dt>
+<dd>Pewnie to powienien być wektor.  </dd>
+<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classsw_1_1input_1_1_direct_input_module.html#aed946973133e19bd496e41cce8a2e49a">sw::input::DirectInputModule::m_mouseInput</a>  </dt>
+<dd>Pewnie to powienien być wektor.  </dd>
+<dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="classsw_1_1input_1_1_direct_input_module.html#aef3f242f29d6c17babd7b21f3228e94b">sw::input::DirectInputModule::Update</a>  (float timeInterval) override</dt>
+<dd>Repair  </dd>
+<dt><a class="anchor" id="_todo000002"></a>Member <a class="el" href="classsw_1_1input_1_1_direct_input_module.html#a7be67eb79b2ba80e8a4f79f4759fe662">sw::input::DirectInputModule::UpdateKeyboard</a>  (int idx)</dt>
+<dd>Repair  </dd>
+<dt><a class="anchor" id="_todo000003"></a>Member <a class="el" href="classsw_1_1input_1_1_direct_input_module.html#a535f5e7ed9ce0d1b8e6fd9cab7cab2c1">sw::input::DirectInputModule::UpdateMouse</a>  (int idx)</dt>
+<dd>Repair  </dd>
+<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="classsw_1_1input_1_1_event_capture.html#aeb047a2502308821bdd67e0baac34636">sw::input::EventCapture::QueryEvent</a>  (Size frameNum)</dt>
+<dd>Don't ignore frameNum  </dd>
+<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="classsw_1_1input_1_1_event_capture.html#a3fea7885f5b9240a13c423e1562ed53e">sw::input::EventCapture::QueueEvent</a>  (const <a class="el" href="structsw_1_1input_1_1_debug_event.html" title="Event structure for debugging. This structure holds additionally FrameNumber. This allows user to pro...">DebugEvent</a> &amp;event)</dt>
+<dd>Sort events.  </dd>
+<dt><a class="anchor" id="_todo000009"></a>Class <a class="el" href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a>  </dt>
+<dd><p class="startdd">Deal with situation when we must have two different <a class="el" href="classsw_1_1input_1_1_i_input.html" title="Interface for input classes for capturing user input. ">IInput</a> objects to handle input. For example WinAPI deals with keyboard and mouse and other IINput with Joysticks.</p>
+<p>We must think about handling other devices. For example WPF have such types as StylusDevice, TouchDevice and TabletDevice. Can we do it as combinations of keyboard, mouse and joysticks or we must introduce new API for that.</p>
+<p class="enddd">DirectInput should be created one per window. In this moment we have one input in whole application. We must rethink it. </p>
+</dd>
+<dt><a class="anchor" id="_todo000012"></a>Member <a class="el" href="classsw_1_1input_1_1_win_api_input_proxy.html#affed4c3e54a1272a206601eb1d84bc0c">sw::input::WinApiInputProxy::KeyboardChange</a>  (int keyId, bool pressed)</dt>
+<dd>W przyszłości może trzeba będzie dodać informację o zmienie stanu. Mógłby to być np któryć bit ustawiony na 1 czy coś.  </dd>
+<dt><a class="anchor" id="_todo000014"></a>Member <a class="el" href="classsw_1_1input_1_1_win_api_input_proxy.html#a7e9debb134cfb22722e3bab6449e9c27">sw::input::WinApiInputProxy::LostFocus</a>  ()</dt>
+<dd>Dokończyć  </dd>
+<dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="classsw_1_1input_1_1_win_api_input_proxy.html#a04a611a42e3d1340c8c409190ddca342">sw::input::WinApiInputProxy::MouseButtonChange</a>  (int button, bool pressed)</dt>
+<dd>W przyszłości może trzeba będzie dodać informację o zmienie stanu. Mógłby to być np któryć bit ustawiony na 1 czy coś.  </dd>
+<dt><a class="anchor" id="_todo000016"></a>Member <a class="el" href="classsw_1_1input_1_1_w_p_f_input_proxy.html#a08d05bb8b22f83abbc19b3d0f44dc2e9">sw::input::WPFInputProxy::LostFocus</a>  ()</dt>
+<dd>Dokończyć  </dd>
+<dt><a class="anchor" id="_todo000015"></a>Member <a class="el" href="classsw_1_1input_1_1_w_p_f_input_proxy.html#af2188bd6d34a51df7412643ba448751c">sw::input::WPFInputProxy::MouseButtonChange</a>  (int button, bool pressed)</dt>
+<dd>W przyszłości może trzeba będzie dodać informację o zmienie stanu. Mógłby to być np któryć bit ustawiony na 1 czy coś.  </dd>
+<dt><a class="anchor" id="_todo000053"></a>Class <a class="el" href="classsw_1_1_threads_barrier.html">sw::ThreadsBarrier</a>  </dt>
+<dd>Implement  </dd>
+<dt><a class="anchor" id="_todo000057"></a>globalScope&gt; Member <a class="el" href="_types_definitions_8h.html#ab5a03e633212a5d7774a9e9da4230d03">UPtr</a>  </dt>
+<dd>Use std::unique_ptr instead. Unique_ptr didn't want to compile in current visual compiler. </dd>
 </dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:04 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

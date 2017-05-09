@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6738285cf408ee10740d48933d3bc393.html">Native</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b9f46ce8f2f9daaf55124d7094c43d99.html">Native</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,25 +93,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">INativeGUI.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="_i_native_g_u_i_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;INativeWindow.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_native_window_8h.html">INativeWindow.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;swCommonLib/External/FastDelegate/FastDelegate.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;swInputLibrary/InputCore/IInput.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_input_8h.html">swInputLibrary/InputCore/IInput.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>gui</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">typedef</span> fastdelegate::FastDelegate2&lt; INativeWindow*, bool &gt; ChangedFocusDelegate;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacesw_1_1gui.html#a563baa70e3ac0468cd81d5a3c1cf2b9a">   20</a></span>&#160;<span class="keyword">typedef</span> fastdelegate::FastDelegate2&lt; INativeWindow*, bool &gt; <a class="code" href="namespacesw_1_1gui.html#a563baa70e3ac0468cd81d5a3c1cf2b9a">ChangedFocusDelegate</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ChangedFocusDelegate        FocusChanged;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html#a2d7243a00d908d728553746f66a0c2ea">   27</a></span>&#160;    ChangedFocusDelegate        <a class="code" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html#a2d7243a00d908d728553746f66a0c2ea">FocusChanged</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
@@ -118,15 +120,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html">INativeGUI</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html">INativeGUI</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a91fb801d23e22f2d7bf64669a25527d3">INativeGUI</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a48cba805c194cbbcdd0cfec82a2cfa5d">~INativeGUI</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>                    <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#ad14361cbe7365a843ece4d3f0b44f462">MainLoop</a>        ( <span class="keywordtype">bool</span> blockingMode ) = 0;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>                    <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aff977e8913b47be6883109325ca652d4">Init</a>            ( <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a>&amp; initData ) = 0;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> sw::input::IInput*      <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aa9a5bf452aecc9251938b5398ba3f55c">UseNativeInput</a>  () = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a>*      <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aa9a5bf452aecc9251938b5398ba3f55c">UseNativeInput</a>  () = 0;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a>*          <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a9cf4339d9c85809770bb4958668e5364">CreateWindow</a>    ( <a class="code" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a>&amp; descriptor ) = 0;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
@@ -135,18 +137,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}   <span class="comment">// gui</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}   <span class="comment">// sw</span></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html">sw::gui::INativeGUI</a></div><div class="ttdoc">Interface encasulates native GUI system. </div><div class="ttdef"><b>Definition:</b> INativeGUI.h:33</div></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html_aa9a5bf452aecc9251938b5398ba3f55c"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html#aa9a5bf452aecc9251938b5398ba3f55c">sw::gui::INativeGUI::UseNativeInput</a></div><div class="ttdeci">virtual sw::input::IInput * UseNativeInput()=0</div><div class="ttdoc">Initalize native api for this gui system and return IInput object. GUI can use native input api for s...</div></div>
+<div class="ttc" id="_i_native_window_8h_html"><div class="ttname"><a href="_i_native_window_8h.html">INativeWindow.h</a></div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html_a9cf4339d9c85809770bb4958668e5364"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html#a9cf4339d9c85809770bb4958668e5364">sw::gui::INativeGUI::CreateWindow</a></div><div class="ttdeci">virtual INativeWindow * CreateWindow(NativeWindowDescriptor &amp;descriptor)=0</div><div class="ttdoc">Creates native GUI window. </div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_native_window_descriptor_html"><div class="ttname"><a href="structsw_1_1gui_1_1_native_window_descriptor.html">sw::gui::NativeWindowDescriptor</a></div><div class="ttdoc">Dedcriptor used to create native GUI window. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:17</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_native_g_u_i_init_data_html"><div class="ttname"><a href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">sw::gui::NativeGUIInitData</a></div><div class="ttdoc">Provides data needed for native GUI system initialization. </div><div class="ttdef"><b>Definition:</b> INativeGUI.h:25</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html_aff977e8913b47be6883109325ca652d4"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html#aff977e8913b47be6883109325ca652d4">sw::gui::INativeGUI::Init</a></div><div class="ttdeci">virtual bool Init(const NativeGUIInitData &amp;initData)=0</div><div class="ttdoc">Initializes native GUI. </div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_native_g_u_i_init_data_html_a2d7243a00d908d728553746f66a0c2ea"><div class="ttname"><a href="structsw_1_1gui_1_1_native_g_u_i_init_data.html#a2d7243a00d908d728553746f66a0c2ea">sw::gui::NativeGUIInitData::FocusChanged</a></div><div class="ttdeci">ChangedFocusDelegate FocusChanged</div><div class="ttdef"><b>Definition:</b> INativeGUI.h:27</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_a563baa70e3ac0468cd81d5a3c1cf2b9a"><div class="ttname"><a href="namespacesw_1_1gui.html#a563baa70e3ac0468cd81d5a3c1cf2b9a">sw::gui::ChangedFocusDelegate</a></div><div class="ttdeci">fastdelegate::FastDelegate2&lt; INativeWindow *, bool &gt; ChangedFocusDelegate</div><div class="ttdef"><b>Definition:</b> INativeGUI.h:20</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html_a91fb801d23e22f2d7bf64669a25527d3"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html#a91fb801d23e22f2d7bf64669a25527d3">sw::gui::INativeGUI::INativeGUI</a></div><div class="ttdeci">INativeGUI()=default</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_window.html">sw::gui::INativeWindow</a></div><div class="ttdoc">Interface for native window sing OS specific ffunctions. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:74</div></div>
+<div class="ttc" id="_i_input_8h_html"><div class="ttname"><a href="_i_input_8h.html">IInput.h</a></div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html_ad14361cbe7365a843ece4d3f0b44f462"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html#ad14361cbe7365a843ece4d3f0b44f462">sw::gui::INativeGUI::MainLoop</a></div><div class="ttdeci">virtual bool MainLoop(bool blockingMode)=0</div><div class="ttdoc">Invokes main loop of native GUI. </div></div>
+<div class="ttc" id="classsw_1_1input_1_1_i_input_html"><div class="ttname"><a href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a></div><div class="ttdoc">Interface for input classes for capturing user input. </div><div class="ttdef"><b>Definition:</b> IInput.h:65</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html_a48cba805c194cbbcdd0cfec82a2cfa5d"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html#a48cba805c194cbbcdd0cfec82a2cfa5d">sw::gui::INativeGUI::~INativeGUI</a></div><div class="ttdeci">~INativeGUI()=default</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

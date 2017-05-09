@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_events_system.html">EventsSystem</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesw.html">sw</a></li><li class="navelem"><a class="el" href="namespacesw_1_1gui.html">gui</a></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_events_system.html">EventsSystem</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -108,62 +109,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af841b6743cc33901cfebd187d46dd894"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af841b6743cc33901cfebd187d46dd894"></a>
-const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#af841b6743cc33901cfebd187d46dd894">RegisterEvent</a> (const char *eventName, <a class="el" href="group___event_system.html#gaaad874b405531e224e6c3ce77c1be885">RoutingStrategy</a> strategy, TypeID ownerType, TypeID eventTypeId)</td></tr>
-<tr class="memdesc:af841b6743cc33901cfebd187d46dd894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers new event and return idetifier used in DelegateContainers. <br /></td></tr>
+<tr class="memitem:ad205cfaacf4e9ed9478f72dfada76c85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#ad205cfaacf4e9ed9478f72dfada76c85">~EventsSystem</a> ()=default</td></tr>
+<tr class="separator:ad205cfaacf4e9ed9478f72dfada76c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af841b6743cc33901cfebd187d46dd894"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#af841b6743cc33901cfebd187d46dd894">RegisterEvent</a> (const char *eventName, <a class="el" href="group___event_system.html#gaaad874b405531e224e6c3ce77c1be885">RoutingStrategy</a> strategy, <a class="el" href="_r_t_t_r_8h.html#a5139cd88b85068977b977ddba7804e51">TypeID</a> ownerType, <a class="el" href="_r_t_t_r_8h.html#a5139cd88b85068977b977ddba7804e51">TypeID</a> eventTypeId)</td></tr>
+<tr class="memdesc:af841b6743cc33901cfebd187d46dd894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers new event and return idetifier used in DelegateContainers.  <a href="#af841b6743cc33901cfebd187d46dd894">More...</a><br /></td></tr>
 <tr class="separator:af841b6743cc33901cfebd187d46dd894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72bf3887a4ed00f090849120da6a15b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab72bf3887a4ed00f090849120da6a15b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#ab72bf3887a4ed00f090849120da6a15b">RaiseEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, IEventArgsOPtr &amp;&amp;arguments)</td></tr>
-<tr class="memdesc:ab72bf3887a4ed00f090849120da6a15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends event to visual tree using RoutingStrategy specyfied in eventInfo. <br /></td></tr>
+<tr class="memitem:ab72bf3887a4ed00f090849120da6a15b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#ab72bf3887a4ed00f090849120da6a15b">RaiseEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, IEventArgsOPtr &amp;&amp;arguments)</td></tr>
+<tr class="memdesc:ab72bf3887a4ed00f090849120da6a15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends event to visual tree using <a class="el" href="group___event_system.html#gaaad874b405531e224e6c3ce77c1be885">RoutingStrategy</a> specyfied in eventInfo.  <a href="#ab72bf3887a4ed00f090849120da6a15b">More...</a><br /></td></tr>
 <tr class="separator:ab72bf3887a4ed00f090849120da6a15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae06ed3c6d150ea82ae24a9859ad201a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#ae06ed3c6d150ea82ae24a9859ad201a1">RaiseForwardEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments)</td></tr>
 <tr class="memdesc:ae06ed3c6d150ea82ae24a9859ad201a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends event in response to other event. Use this function when you are in event handler and you want to send the same event structure under different name. Good example is UIElement::MouseRightButtonDown which is sent by <a class="el" href="classsw_1_1gui_1_1_u_i_element.html" title="Interface for all controls in tree. ">UIElement</a> in response to UIElement::MouseDown event sent by <a class="el" href="classsw_1_1gui_1_1_events_system.html" title="Events management. ">EventsSystem</a>.  <a href="#ae06ed3c6d150ea82ae24a9859ad201a1">More...</a><br /></td></tr>
 <tr class="separator:ae06ed3c6d150ea82ae24a9859ad201a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd3e39543ed6194e4a6e51287f138649"><td class="memTemplParams" colspan="2"><a class="anchor" id="abd3e39543ed6194e4a6e51287f138649"></a>
-template&lt;typename ArgumentType &gt; </td></tr>
-<tr class="memitem:abd3e39543ed6194e4a6e51287f138649"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RaiseEvent</b> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, EventHandlerPointer&lt; ArgumentType &gt; handler)</td></tr>
+<tr class="memitem:abd3e39543ed6194e4a6e51287f138649"><td class="memTemplParams" colspan="2">template&lt;typename ArgumentType &gt; </td></tr>
+<tr class="memitem:abd3e39543ed6194e4a6e51287f138649"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#abd3e39543ed6194e4a6e51287f138649">RaiseEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, <a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt; handler)</td></tr>
 <tr class="separator:abd3e39543ed6194e4a6e51287f138649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a98ea4800eebdba3fd6b79022e9f50e97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98ea4800eebdba3fd6b79022e9f50e97"></a>
-static <a class="el" href="classsw_1_1gui_1_1_events_system.html">EventsSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> ()</td></tr>
+<tr class="memitem:a98ea4800eebdba3fd6b79022e9f50e97"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classsw_1_1gui_1_1_events_system.html">EventsSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a98ea4800eebdba3fd6b79022e9f50e97">Get</a> ()</td></tr>
 <tr class="separator:a98ea4800eebdba3fd6b79022e9f50e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a9e9d2e74034234753298cfea9f3d7e32"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9e9d2e74034234753298cfea9f3d7e32"></a>
-template&lt;typename ArgumentType &gt; </td></tr>
-<tr class="memitem:a9e9d2e74034234753298cfea9f3d7e32"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RaiseDirectEvent</b> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments, EventHandlerPointer&lt; ArgumentType &gt; handler)</td></tr>
-<tr class="separator:a9e9d2e74034234753298cfea9f3d7e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5badddc3b4580f3e6a06ba63bcf11a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3c5badddc3b4580f3e6a06ba63bcf11a"></a>
-template&lt;typename ArgumentType &gt; </td></tr>
-<tr class="memitem:a3c5badddc3b4580f3e6a06ba63bcf11a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RaiseBubbleEvent</b> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments, EventHandlerPointer&lt; ArgumentType &gt; handler)</td></tr>
-<tr class="separator:a3c5badddc3b4580f3e6a06ba63bcf11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11986661242d7bfa6042d2c3c1c226a9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a11986661242d7bfa6042d2c3c1c226a9"></a>
-template&lt;typename ArgumentType &gt; </td></tr>
-<tr class="memitem:a11986661242d7bfa6042d2c3c1c226a9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RaiseTunnelEvent</b> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments, EventHandlerPointer&lt; ArgumentType &gt; handler)</td></tr>
-<tr class="separator:a11986661242d7bfa6042d2c3c1c226a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ac66c0984d2eef1bda99a43859c6a29"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6ac66c0984d2eef1bda99a43859c6a29"></a>
-template&lt;typename ArgumentType &gt; </td></tr>
-<tr class="memitem:a6ac66c0984d2eef1bda99a43859c6a29"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a6ac66c0984d2eef1bda99a43859c6a29">RaiseTunnelEventForParents</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *raiseForElement, EventHandlerPointer&lt; ArgumentType &gt; handler)</td></tr>
-<tr class="memdesc:a6ac66c0984d2eef1bda99a43859c6a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls recursivly event for parents. <br /></td></tr>
-<tr class="separator:a6ac66c0984d2eef1bda99a43859c6a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8370be199acbc36e8812f8dd008918"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d8370be199acbc36e8812f8dd008918"></a>
-template&lt;typename ArgumentType &gt; </td></tr>
-<tr class="memitem:a4d8370be199acbc36e8812f8dd008918"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RaiseEventImpl</b> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *arguments, EventHandlerPointer&lt; ArgumentType &gt; handler)</td></tr>
-<tr class="separator:a4d8370be199acbc36e8812f8dd008918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4b3d29b2cfe91ea106a2a8157c2146"><td class="memTemplParams" colspan="2">template&lt;typename ArgumentType &gt; </td></tr>
+<tr class="memitem:a1b4b3d29b2cfe91ea106a2a8157c2146"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a1b4b3d29b2cfe91ea106a2a8157c2146">RaiseDirectEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, <a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt; handler)</td></tr>
+<tr class="separator:a1b4b3d29b2cfe91ea106a2a8157c2146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae745b73d5d5e1bb8c8d0c5df433b806d"><td class="memTemplParams" colspan="2">template&lt;typename ArgumentType &gt; </td></tr>
+<tr class="memitem:ae745b73d5d5e1bb8c8d0c5df433b806d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#ae745b73d5d5e1bb8c8d0c5df433b806d">RaiseBubbleEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, <a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt; handler)</td></tr>
+<tr class="separator:ae745b73d5d5e1bb8c8d0c5df433b806d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fff8eddb3d30fce51a771c54da13133"><td class="memTemplParams" colspan="2">template&lt;typename ArgumentType &gt; </td></tr>
+<tr class="memitem:a8fff8eddb3d30fce51a771c54da13133"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a8fff8eddb3d30fce51a771c54da13133">RaiseTunnelEvent</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, <a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt; handler)</td></tr>
+<tr class="separator:a8fff8eddb3d30fce51a771c54da13133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8112f2caf53c3939bacba21cde504a9d"><td class="memTemplParams" colspan="2">template&lt;typename ArgumentType &gt; </td></tr>
+<tr class="memitem:a8112f2caf53c3939bacba21cde504a9d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a8112f2caf53c3939bacba21cde504a9d">RaiseTunnelEventForParents</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *raiseForElement, <a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt; handler)</td></tr>
+<tr class="memdesc:a8112f2caf53c3939bacba21cde504a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls recursivly event for parents.  <a href="#a8112f2caf53c3939bacba21cde504a9d">More...</a><br /></td></tr>
+<tr class="separator:a8112f2caf53c3939bacba21cde504a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94153b58c3d5807c2a220ea1d810e960"><td class="memTemplParams" colspan="2">template&lt;typename ArgumentType &gt; </td></tr>
+<tr class="memitem:a94153b58c3d5807c2a220ea1d810e960"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a94153b58c3d5807c2a220ea1d810e960">RaiseEventImpl</a> (const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *eventInfo, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, ArgumentType *arguments, <a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt; handler)</td></tr>
+<tr class="separator:a94153b58c3d5807c2a220ea1d810e960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca952355e6a2b0693140a2d40f2b1ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#acca952355e6a2b0693140a2d40f2b1ab">EventsSystem</a> ()</td></tr>
+<tr class="separator:acca952355e6a2b0693140a2d40f2b1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a0ebc984b45e49ce09c20fd58038faa02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ebc984b45e49ce09c20fd58038faa02"></a>
-<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_counter</b></td></tr>
+<tr class="memitem:a0ebc984b45e49ce09c20fd58038faa02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a0ebc984b45e49ce09c20fd58038faa02">m_counter</a></td></tr>
 <tr class="separator:a0ebc984b45e49ce09c20fd58038faa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef5ce9a35ec59e0b7d5f564cb46079f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ef5ce9a35ec59e0b7d5f564cb46079f"></a>
-std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_registerMutex</b></td></tr>
+<tr class="memitem:a5ef5ce9a35ec59e0b7d5f564cb46079f"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#a5ef5ce9a35ec59e0b7d5f564cb46079f">m_registerMutex</a></td></tr>
 <tr class="separator:a5ef5ce9a35ec59e0b7d5f564cb46079f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefbe0cdf7ebaabe0f7d2da9753c2a95f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefbe0cdf7ebaabe0f7d2da9753c2a95f"></a>
-std::set&lt; <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_registeredEvents</b></td></tr>
+<tr class="memitem:aefbe0cdf7ebaabe0f7d2da9753c2a95f"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_events_system.html#aefbe0cdf7ebaabe0f7d2da9753c2a95f">m_registeredEvents</a></td></tr>
 <tr class="separator:aefbe0cdf7ebaabe0f7d2da9753c2a95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -171,7 +164,303 @@ std::set&lt; <a class="el" href="structsw_1_1gui_1_1_registered_event.html">Regi
 <p>For now this class stores only registered events. Think about future use.</p>
 <p>Registering events needs to be in separate dll, otherwise controls can't register their static variables.</p>
 <p>All calsses derived from <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> can register they own events. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad205cfaacf4e9ed9478f72dfada76c85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::EventsSystem::~EventsSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acca952355e6a2b0693140a2d40f2b1ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::EventsSystem::EventsSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a98ea4800eebdba3fd6b79022e9f50e97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsw_1_1gui_1_1_events_system.html">EventsSystem</a> &amp; sw::gui::EventsSystem::Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae745b73d5d5e1bb8c8d0c5df433b806d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgumentType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::EventsSystem::RaiseBubbleEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgumentType *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b4b3d29b2cfe91ea106a2a8157c2146"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgumentType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::EventsSystem::RaiseDirectEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgumentType *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab72bf3887a4ed00f090849120da6a15b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::EventsSystem::RaiseEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEventArgsOPtr &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arguments</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends event to visual tree using <a class="el" href="group___event_system.html#gaaad874b405531e224e6c3ce77c1be885">RoutingStrategy</a> specyfied in eventInfo. </p>
+
+</div>
+</div>
+<a class="anchor" id="abd3e39543ed6194e4a6e51287f138649"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgumentType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::EventsSystem::RaiseEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgumentType *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94153b58c3d5807c2a220ea1d810e960"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgumentType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::EventsSystem::RaiseEventImpl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgumentType *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae06ed3c6d150ea82ae24a9859ad201a1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,15 +501,220 @@ std::set&lt; <a class="el" href="structsw_1_1gui_1_1_registered_event.html">Regi
 
 </div>
 </div>
+<a class="anchor" id="a8fff8eddb3d30fce51a771c54da13133"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgumentType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::EventsSystem::RaiseTunnelEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgumentType *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8112f2caf53c3939bacba21cde504a9d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgumentType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sw::gui::EventsSystem::RaiseTunnelEventForParents </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> *&#160;</td>
+          <td class="paramname"><em>eventInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgumentType *&#160;</td>
+          <td class="paramname"><em>arguments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>raiseForElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#a2c538091d7c58f37027a1b60bf2e34f8">EventHandlerPointer</a>&lt; ArgumentType &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls recursivly event for parents. </p>
+
+</div>
+</div>
+<a class="anchor" id="af841b6743cc33901cfebd187d46dd894"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> * sw::gui::EventsSystem::RegisterEvent </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>eventName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#gaaad874b405531e224e6c3ce77c1be885">RoutingStrategy</a>&#160;</td>
+          <td class="paramname"><em>strategy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_r_t_t_r_8h.html#a5139cd88b85068977b977ddba7804e51">TypeID</a>&#160;</td>
+          <td class="paramname"><em>ownerType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_r_t_t_r_8h.html#a5139cd88b85068977b977ddba7804e51">TypeID</a>&#160;</td>
+          <td class="paramname"><em>eventTypeId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers new event and return idetifier used in DelegateContainers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0ebc984b45e49ce09c20fd58038faa02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> sw::gui::EventsSystem::m_counter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aefbe0cdf7ebaabe0f7d2da9753c2a95f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; <a class="el" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a> &gt; sw::gui::EventsSystem::m_registeredEvents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ef5ce9a35ec59e0b7d5f564cb46079f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex sw::gui::EventsSystem::m_registerMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Core/System/Events/<a class="el" href="_events_system_8h_source.html">EventsSystem.h</a></li>
-<li>Core/System/Events/EventsSystem.cpp</li>
+<li>Core/System/Events/<a class="el" href="_events_system_8cpp.html">EventsSystem.cpp</a></li>
 <li>Core/System/Events/<a class="el" href="_events_system_8inl.html">EventsSystem.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:05 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultinterpolators',['DefaultInterpolators',['namespace_default_interpolators.html',1,'']]]
+  ['defaultinterpolators',['DefaultInterpolators',['../namespace_default_interpolators.html',1,'']]]
 ];

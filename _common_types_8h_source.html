@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47c3104b78625e11c17f736329ec31ef.html">CommonTypes</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_21f7aa70fe0b2a69743ca4d34d00816f.html">CommonTypes</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;DirectXMath.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Thickness.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_thickness_8h.html">Thickness.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
@@ -110,21 +112,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::string    EMPTY_STRING;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">typedef</span> DirectX::XMFLOAT2   Position;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">typedef</span> DirectX::XMFLOAT2   Size2D;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">   27</a></span>&#160;<span class="keyword">typedef</span> DirectX::XMFLOAT2   <a class="code" href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">Position</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">   28</a></span>&#160;<span class="keyword">typedef</span> DirectX::XMFLOAT2   <a class="code" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsw_1_1gui_1_1_rect.html">Rect</a></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">float</span>           Left;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">float</span>           Right;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span>           Top;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">float</span>           Bottom;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a96a4e5f756855d9224d4d3df3b38bb37">   34</a></span>&#160;    <span class="keywordtype">float</span>           <a class="code" href="structsw_1_1gui_1_1_rect.html#a96a4e5f756855d9224d4d3df3b38bb37">Left</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a8f5cdfec73195de3e1719fadc49ac57b">   35</a></span>&#160;    <span class="keywordtype">float</span>           <a class="code" href="structsw_1_1gui_1_1_rect.html#a8f5cdfec73195de3e1719fadc49ac57b">Right</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a3e2924e256ce4a142da55d44dcefb72a">   36</a></span>&#160;    <span class="keywordtype">float</span>           <a class="code" href="structsw_1_1gui_1_1_rect.html#a3e2924e256ce4a142da55d44dcefb72a">Top</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a2ac8f2835f8ed508cc5f8c96a5d2fb89">   37</a></span>&#160;    <span class="keywordtype">float</span>           <a class="code" href="structsw_1_1gui_1_1_rect.html#a2ac8f2835f8ed508cc5f8c96a5d2fb89">Bottom</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">float</span>       GetWidth    () { <span class="keywordflow">return</span> Right - Left; }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">float</span>       GetHeight   () { <span class="keywordflow">return</span> Top - Bottom; }</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a9a942bdb5355a922b658526b320451c9">   39</a></span>&#160;    <span class="keywordtype">float</span>       <a class="code" href="structsw_1_1gui_1_1_rect.html#a9a942bdb5355a922b658526b320451c9">GetWidth</a>    () { <span class="keywordflow">return</span> Right - <a class="code" href="structsw_1_1gui_1_1_rect.html#a96a4e5f756855d9224d4d3df3b38bb37">Left</a>; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a32047501f539536a0d5d2c55f63b0800">   40</a></span>&#160;    <span class="keywordtype">float</span>       <a class="code" href="structsw_1_1gui_1_1_rect.html#a32047501f539536a0d5d2c55f63b0800">GetHeight</a>   () { <span class="keywordflow">return</span> Top - <a class="code" href="structsw_1_1gui_1_1_rect.html#a2ac8f2835f8ed508cc5f8c96a5d2fb89">Bottom</a>; }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span>        Intersects  ( <span class="keyword">const</span> Position&amp; pos )</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_rect.html#a7a2d1b54ed51d2cfb6306594b4504f97">   42</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="structsw_1_1gui_1_1_rect.html#a7a2d1b54ed51d2cfb6306594b4504f97">Intersects</a>  ( <span class="keyword">const</span> Position&amp; pos )</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">if</span>( pos.x &lt; Left )</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -140,12 +142,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}   <span class="comment">// gui</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}   <span class="comment">// sw</span></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a8f5cdfec73195de3e1719fadc49ac57b"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a8f5cdfec73195de3e1719fadc49ac57b">sw::gui::Rect::Right</a></div><div class="ttdeci">float Right</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:35</div></div>
+<div class="ttc" id="_thickness_8h_html"><div class="ttname"><a href="_thickness_8h.html">Thickness.h</a></div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a7a2d1b54ed51d2cfb6306594b4504f97"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a7a2d1b54ed51d2cfb6306594b4504f97">sw::gui::Rect::Intersects</a></div><div class="ttdeci">bool Intersects(const Position &amp;pos)</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:42</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a32047501f539536a0d5d2c55f63b0800"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a32047501f539536a0d5d2c55f63b0800">sw::gui::Rect::GetHeight</a></div><div class="ttdeci">float GetHeight()</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:40</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a3e2924e256ce4a142da55d44dcefb72a"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a3e2924e256ce4a142da55d44dcefb72a">sw::gui::Rect::Top</a></div><div class="ttdeci">float Top</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:36</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_rect_html"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html">sw::gui::Rect</a></div><div class="ttdoc">Rectangle structure. </div><div class="ttdef"><b>Definition:</b> CommonTypes.h:32</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_ac4016e8950fa391b61d115a48fad5d97"><div class="ttname"><a href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">sw::gui::Size2D</a></div><div class="ttdeci">DirectX::XMFLOAT2 Size2D</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:28</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a2ac8f2835f8ed508cc5f8c96a5d2fb89"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a2ac8f2835f8ed508cc5f8c96a5d2fb89">sw::gui::Rect::Bottom</a></div><div class="ttdeci">float Bottom</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:37</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_a8e73557abbfd912fe81a8d3915e19058"><div class="ttname"><a href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">sw::gui::Position</a></div><div class="ttdeci">DirectX::XMFLOAT2 Position</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:27</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a96a4e5f756855d9224d4d3df3b38bb37"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a96a4e5f756855d9224d4d3df3b38bb37">sw::gui::Rect::Left</a></div><div class="ttdeci">float Left</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:34</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_rect_html_a9a942bdb5355a922b658526b320451c9"><div class="ttname"><a href="structsw_1_1gui_1_1_rect.html#a9a942bdb5355a922b658526b320451c9">sw::gui::Rect::GetWidth</a></div><div class="ttdeci">float GetWidth()</div><div class="ttdef"><b>Definition:</b> CommonTypes.h:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

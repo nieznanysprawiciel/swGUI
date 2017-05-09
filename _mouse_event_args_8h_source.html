@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47b211c0d1373c6375e61419d02656fd.html">Events</a></li><li class="navelem"><a class="el" href="dir_c76c11a9370b5045416556b380cc49c5.html">Input</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_9a28b0e78b03d8449db20302129b9209.html">Events</a></li><li class="navelem"><a class="el" href="dir_77cff213ad0a2e8bae449e5bde2c9598.html">Input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,9 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_mouse_event_args_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;InputEventArgs.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_input_event_args_8h.html">InputEventArgs.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;swInputLibrary/InputCore/MouseDevice.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_mouse_device_8h.html">swInputLibrary/InputCore/MouseDevice.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
@@ -109,42 +111,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    RTTR_ENABLE( <a class="code" href="structsw_1_1gui_1_1_input_event_args.html">InputEventArgs</a> )</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#aedf6a8970c752cb06490f2fcec658375">   27</a></span>&#160;    input::MouseDevice*         <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#aedf6a8970c752cb06490f2fcec658375">Mouse</a>;          </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#aac3321a173e2e79eaa5ef548483a7caa">   28</a></span>&#160;    <span class="keyword">const</span> input::KeyState*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#aac3321a173e2e79eaa5ef548483a7caa">RightButton</a>;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a1b8b27e0d69d2657a7462a809151e5c9">   29</a></span>&#160;    <span class="keyword">const</span> input::KeyState*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a1b8b27e0d69d2657a7462a809151e5c9">LeftButton</a>;     </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a54158f47e33e078e68ae68e6f58a9571">   30</a></span>&#160;    <span class="keyword">const</span> input::KeyState*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a54158f47e33e078e68ae68e6f58a9571">MiddleButton</a>;   </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a11c17c4bc90791f4876e808e747be7cd">   31</a></span>&#160;    <span class="keyword">const</span> input::KeyState*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a11c17c4bc90791f4876e808e747be7cd">XButton1</a>;       </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a69f0a95aa788a3e387d7b63bfa4a7dc4">   32</a></span>&#160;    <span class="keyword">const</span> input::KeyState*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a69f0a95aa788a3e387d7b63bfa4a7dc4">XButton2</a>;       </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#aedf6a8970c752cb06490f2fcec658375">   27</a></span>&#160;    <a class="code" href="classsw_1_1input_1_1_mouse_device.html">input::MouseDevice</a>*         <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#aedf6a8970c752cb06490f2fcec658375">Mouse</a>;          </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#aac3321a173e2e79eaa5ef548483a7caa">   28</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classsw_1_1input_1_1_key_state.html">input::KeyState</a>*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#aac3321a173e2e79eaa5ef548483a7caa">RightButton</a>;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a1b8b27e0d69d2657a7462a809151e5c9">   29</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classsw_1_1input_1_1_key_state.html">input::KeyState</a>*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a1b8b27e0d69d2657a7462a809151e5c9">LeftButton</a>;     </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a54158f47e33e078e68ae68e6f58a9571">   30</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classsw_1_1input_1_1_key_state.html">input::KeyState</a>*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a54158f47e33e078e68ae68e6f58a9571">MiddleButton</a>;   </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a11c17c4bc90791f4876e808e747be7cd">   31</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classsw_1_1input_1_1_key_state.html">input::KeyState</a>*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a11c17c4bc90791f4876e808e747be7cd">XButton1</a>;       </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a69f0a95aa788a3e387d7b63bfa4a7dc4">   32</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classsw_1_1input_1_1_key_state.html">input::KeyState</a>*      <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a69f0a95aa788a3e387d7b63bfa4a7dc4">XButton2</a>;       </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>( input::MouseDevice* device )</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        :   <a class="code" href="structsw_1_1gui_1_1_input_event_args.html">InputEventArgs</a>( device )</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ,   Mouse( device )</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        ,   RightButton( device-&gt;GetState().RightButton() )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ,   LeftButton( device-&gt;GetState().LeftButton() )</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        ,   MiddleButton( device-&gt;GetState().MiddleButton() )</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ,   XButton1( device-&gt;GetState().XButton1() )</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        ,   XButton2( device-&gt;GetState().XButton2() )</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}   <span class="comment">// gui</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}   <span class="comment">// sw</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a0b0a56ae2a90334fd2e8084af5afe4c8">   34</a></span>&#160;    <span class="keywordtype">float</span>                       <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a0b0a56ae2a90334fd2e8084af5afe4c8">WindowPosX</a>;     </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a7e5de754874d6a9e018c80f061ce18a2">   35</a></span>&#160;    <span class="keywordtype">float</span>                       <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a7e5de754874d6a9e018c80f061ce18a2">WindowPosY</a>;     </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_mouse_event_args.html#a39bfa24fb9bcf8b8c581e55b92bf8ef2">   38</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structsw_1_1gui_1_1_mouse_event_args.html#a39bfa24fb9bcf8b8c581e55b92bf8ef2">MouseEventArgs</a>( <a class="code" href="classsw_1_1input_1_1_mouse_device.html">input::MouseDevice</a>* device )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        :   <a class="code" href="structsw_1_1gui_1_1_input_event_args.html">InputEventArgs</a>( device )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ,   Mouse( device )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        ,   RightButton( device-&gt;GetState().RightButton() )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ,   LeftButton( device-&gt;GetState().LeftButton() )</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        ,   MiddleButton( device-&gt;GetState().MiddleButton() )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        ,   XButton1( device-&gt;GetState().XButton1() )</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        ,   XButton2( device-&gt;GetState().XButton2() )</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        ,   WindowPosX( device-&gt;GetState().GetPositionX() )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ,   WindowPosY( device-&gt;GetState().GetPositionY() )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}   <span class="comment">// gui</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}   <span class="comment">// sw</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a54158f47e33e078e68ae68e6f58a9571"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a54158f47e33e078e68ae68e6f58a9571">sw::gui::MouseEventArgs::MiddleButton</a></div><div class="ttdeci">const input::KeyState * MiddleButton</div><div class="ttdoc">State of middle button in moment of sending this event. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:30</div></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a69f0a95aa788a3e387d7b63bfa4a7dc4"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a69f0a95aa788a3e387d7b63bfa4a7dc4">sw::gui::MouseEventArgs::XButton2</a></div><div class="ttdeci">const input::KeyState * XButton2</div><div class="ttdoc">State of second extended button in moment of sending this event. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:32</div></div>
+<div class="ttc" id="_mouse_device_8h_html"><div class="ttname"><a href="_mouse_device_8h.html">MouseDevice.h</a></div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html">sw::gui::MouseEventArgs</a></div><div class="ttdoc">Base class for mouse input events. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:22</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_aedf6a8970c752cb06490f2fcec658375"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#aedf6a8970c752cb06490f2fcec658375">sw::gui::MouseEventArgs::Mouse</a></div><div class="ttdeci">input::MouseDevice * Mouse</div><div class="ttdoc">Mouse device. You can get current mouse state here. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:27</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a39bfa24fb9bcf8b8c581e55b92bf8ef2"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a39bfa24fb9bcf8b8c581e55b92bf8ef2">sw::gui::MouseEventArgs::MouseEventArgs</a></div><div class="ttdeci">MouseEventArgs(input::MouseDevice *device)</div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:38</div></div>
+<div class="ttc" id="classsw_1_1input_1_1_mouse_device_html"><div class="ttname"><a href="classsw_1_1input_1_1_mouse_device.html">sw::input::MouseDevice</a></div><div class="ttdoc">Mouse state and events. </div><div class="ttdef"><b>Definition:</b> MouseDevice.h:27</div></div>
+<div class="ttc" id="classsw_1_1input_1_1_key_state_html"><div class="ttname"><a href="classsw_1_1input_1_1_key_state.html">sw::input::KeyState</a></div><div class="ttdoc">Button state structure.. </div><div class="ttdef"><b>Definition:</b> KeyState.h:26</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_aac3321a173e2e79eaa5ef548483a7caa"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#aac3321a173e2e79eaa5ef548483a7caa">sw::gui::MouseEventArgs::RightButton</a></div><div class="ttdeci">const input::KeyState * RightButton</div><div class="ttdoc">State of right button in moment of sending this event. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:28</div></div>
+<div class="ttc" id="_input_event_args_8h_html"><div class="ttname"><a href="_input_event_args_8h.html">InputEventArgs.h</a></div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a11c17c4bc90791f4876e808e747be7cd"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a11c17c4bc90791f4876e808e747be7cd">sw::gui::MouseEventArgs::XButton1</a></div><div class="ttdeci">const input::KeyState * XButton1</div><div class="ttdoc">State of first extended button in moment of sending this event. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:31</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a7e5de754874d6a9e018c80f061ce18a2"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a7e5de754874d6a9e018c80f061ce18a2">sw::gui::MouseEventArgs::WindowPosY</a></div><div class="ttdeci">float WindowPosY</div><div class="ttdoc">Position of mouse in window space. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:35</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a1b8b27e0d69d2657a7462a809151e5c9"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a1b8b27e0d69d2657a7462a809151e5c9">sw::gui::MouseEventArgs::LeftButton</a></div><div class="ttdeci">const input::KeyState * LeftButton</div><div class="ttdoc">State of left button in moment of sending this event. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:29</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_mouse_event_args_html_a0b0a56ae2a90334fd2e8084af5afe4c8"><div class="ttname"><a href="structsw_1_1gui_1_1_mouse_event_args.html#a0b0a56ae2a90334fd2e8084af5afe4c8">sw::gui::MouseEventArgs::WindowPosX</a></div><div class="ttdeci">float WindowPosX</div><div class="ttdoc">Position of mouse in window space. </div><div class="ttdef"><b>Definition:</b> MouseEventArgs.h:34</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_input_event_args_html"><div class="ttname"><a href="structsw_1_1gui_1_1_input_event_args.html">sw::gui::InputEventArgs</a></div><div class="ttdoc">Base class for input events. </div><div class="ttdef"><b>Definition:</b> InputEventArgs.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

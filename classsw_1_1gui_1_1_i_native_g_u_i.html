@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html">INativeGUI</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesw.html">sw</a></li><li class="navelem"><a class="el" href="namespacesw_1_1gui.html">gui</a></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html">INativeGUI</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -108,30 +109,108 @@ Inheritance diagram for sw::gui::INativeGUI:</div>
  <div class="center">
   <img src="classsw_1_1gui_1_1_i_native_g_u_i.png" usemap="#sw::gui::INativeGUI_map" alt=""/>
   <map id="sw::gui::INativeGUI_map" name="sw::gui::INativeGUI_map">
-<area href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html" alt="sw::gui::WinAPIGUI" shape="rect" coords="0,56,117,80"/>
+<area href="classsw_1_1gui_1_1_mock_g_u_i.html" alt="sw::gui::MockGUI" shape="rect" coords="0,56,117,80"/>
+<area href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html" alt="sw::gui::WinAPIGUI" shape="rect" coords="127,56,244,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a91fb801d23e22f2d7bf64669a25527d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a91fb801d23e22f2d7bf64669a25527d3">INativeGUI</a> ()=default</td></tr>
+<tr class="separator:a91fb801d23e22f2d7bf64669a25527d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48cba805c194cbbcdd0cfec82a2cfa5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a48cba805c194cbbcdd0cfec82a2cfa5d">~INativeGUI</a> ()=default</td></tr>
+<tr class="separator:a48cba805c194cbbcdd0cfec82a2cfa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad14361cbe7365a843ece4d3f0b44f462"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#ad14361cbe7365a843ece4d3f0b44f462">MainLoop</a> (bool blockingMode)=0</td></tr>
 <tr class="memdesc:ad14361cbe7365a843ece4d3f0b44f462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes main loop of native GUI.  <a href="#ad14361cbe7365a843ece4d3f0b44f462">More...</a><br /></td></tr>
 <tr class="separator:ad14361cbe7365a843ece4d3f0b44f462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff977e8913b47be6883109325ca652d4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aff977e8913b47be6883109325ca652d4">Init</a> (const <a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a> &amp;initData)=0</td></tr>
 <tr class="memdesc:aff977e8913b47be6883109325ca652d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes native GUI.  <a href="#aff977e8913b47be6883109325ca652d4">More...</a><br /></td></tr>
 <tr class="separator:aff977e8913b47be6883109325ca652d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9a5bf452aecc9251938b5398ba3f55c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9a5bf452aecc9251938b5398ba3f55c"></a>
-virtual sw::input::IInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aa9a5bf452aecc9251938b5398ba3f55c">UseNativeInput</a> ()=0</td></tr>
-<tr class="memdesc:aa9a5bf452aecc9251938b5398ba3f55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing. <br /></td></tr>
+<tr class="memitem:aa9a5bf452aecc9251938b5398ba3f55c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aa9a5bf452aecc9251938b5398ba3f55c">UseNativeInput</a> ()=0</td></tr>
+<tr class="memdesc:aa9a5bf452aecc9251938b5398ba3f55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing.  <a href="#aa9a5bf452aecc9251938b5398ba3f55c">More...</a><br /></td></tr>
 <tr class="separator:aa9a5bf452aecc9251938b5398ba3f55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf4339d9c85809770bb4958668e5364"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf4339d9c85809770bb4958668e5364"></a>
-virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a9cf4339d9c85809770bb4958668e5364">CreateWindow</a> (<a class="el" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a> &amp;descriptor)=0</td></tr>
-<tr class="memdesc:a9cf4339d9c85809770bb4958668e5364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates native GUI window. <br /></td></tr>
+<tr class="memitem:a9cf4339d9c85809770bb4958668e5364"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a9cf4339d9c85809770bb4958668e5364">CreateWindow</a> (<a class="el" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a> &amp;descriptor)=0</td></tr>
+<tr class="memdesc:a9cf4339d9c85809770bb4958668e5364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates native GUI window.  <a href="#a9cf4339d9c85809770bb4958668e5364">More...</a><br /></td></tr>
 <tr class="separator:a9cf4339d9c85809770bb4958668e5364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface encasulates native GUI system. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a91fb801d23e22f2d7bf64669a25527d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::INativeGUI::INativeGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48cba805c194cbbcdd0cfec82a2cfa5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::INativeGUI::~INativeGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9cf4339d9c85809770bb4958668e5364"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a>* sw::gui::INativeGUI::CreateWindow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a> &amp;&#160;</td>
+          <td class="paramname"><em>descriptor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates native GUI window. </p>
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac5fd12a787e0554ab72b65f09039947b">sw::gui::WinAPIGUI</a>, and <a class="el" href="classsw_1_1gui_1_1_mock_g_u_i.html#a030b16500ca9316fcd6f04cd560c689f">sw::gui::MockGUI</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aff977e8913b47be6883109325ca652d4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +236,7 @@ virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWind
 <p>Initializes native GUI. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns false if initialization failed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a335ef1c47cccd8721d84770b0c6b57a5">sw::gui::WinAPIGUI</a>.</p>
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a335ef1c47cccd8721d84770b0c6b57a5">sw::gui::WinAPIGUI</a>, and <a class="el" href="classsw_1_1gui_1_1_mock_g_u_i.html#a37a66a18f610c11c77358615514f00f7">sw::gui::MockGUI</a>.</p>
 
 </div>
 </div>
@@ -186,7 +265,34 @@ virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWind
 <p>Invokes main loop of native GUI. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if application should close. </dd></dl>
 
-<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a450dc91af90e9776994d0555ccb591dc">sw::gui::WinAPIGUI</a>.</p>
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a450dc91af90e9776994d0555ccb591dc">sw::gui::WinAPIGUI</a>, and <a class="el" href="classsw_1_1gui_1_1_mock_g_u_i.html#ab09a6a3d4a5486fea82657e44d21fef1">sw::gui::MockGUI</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9a5bf452aecc9251938b5398ba3f55c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a>* sw::gui::INativeGUI::UseNativeInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing. </p>
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a955b13f737f6169efb1b51dc9cb8ec33">sw::gui::WinAPIGUI</a>, and <a class="el" href="classsw_1_1gui_1_1_mock_g_u_i.html#aa210a5e6a55b86cf44feb3eef0814a8b">sw::gui::MockGUI</a>.</p>
 
 </div>
 </div>
@@ -196,7 +302,7 @@ virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWind
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:05 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

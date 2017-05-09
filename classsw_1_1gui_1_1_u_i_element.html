@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesw.html">sw</a></li><li class="navelem"><a class="el" href="namespacesw_1_1gui.html">gui</a></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classsw_1_1gui_1_1_u_i_element-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">sw::gui::UIElement Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___g_u_i_core.html">Core</a> &raquo; <a class="el" href="group___controls_framework.html">Controls Framework</a></div></div>  </div>
@@ -113,6 +115,7 @@ Inheritance diagram for sw::gui::UIElement:</div>
   <map id="sw::gui::UIElement_map" name="sw::gui::UIElement_map">
 <area href="classsw_1_1gui_1_1_visual.html" title="Provide interface for visual controls which can be rendered. " alt="sw::gui::Visual" shape="rect" coords="87,112,252,136"/>
 <area href="classsw_1_1gui_1_1_dependency_object.html" title="Support for data binding. " alt="sw::gui::DependencyObject" shape="rect" coords="87,56,252,80"/>
+<area href="class_engine_object.html" title="Klasa bazowa dla obiektów, które mają być dostępne w edytorze poprzez rttr. Należy po niej odziedzicz..." alt="EngineObject" shape="rect" coords="87,0,252,24"/>
 <area href="classsw_1_1gui_1_1_host_window.html" title="Root class for controls hierarchy, contains native window. " alt="sw::gui::HostWindow" shape="rect" coords="0,224,165,248"/>
 <area href="class_test_u_i_element_class.html" alt="TestUIElementClass" shape="rect" coords="175,224,340,248"/>
 </map>
@@ -120,239 +123,221 @@ Inheritance diagram for sw::gui::UIElement:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6beccf21d1e861e29de3acff98c7ffd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6beccf21d1e861e29de3acff98c7ffd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseUp, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:afa47b7d7b86b96478bbc23a74b05926a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#afa47b7d7b86b96478bbc23a74b05926a">UIElement</a> ()=default</td></tr>
+<tr class="separator:afa47b7d7b86b96478bbc23a74b05926a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786ec54938da87ddba0db700ef76d64f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a786ec54938da87ddba0db700ef76d64f">~UIElement</a> ()=default</td></tr>
+<tr class="separator:a786ec54938da87ddba0db700ef76d64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6beccf21d1e861e29de3acff98c7ffd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a6beccf21d1e861e29de3acff98c7ffd0">REGISTER_EVENT_DECLARATION</a> (PreviewMouseUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a6beccf21d1e861e29de3acff98c7ffd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef5e9b4dfb5203c3eaec1165789818a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ef5e9b4dfb5203c3eaec1165789818a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseDown, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a5ef5e9b4dfb5203c3eaec1165789818a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5ef5e9b4dfb5203c3eaec1165789818a">REGISTER_EVENT_DECLARATION</a> (PreviewMouseDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a5ef5e9b4dfb5203c3eaec1165789818a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85916a8aca66aae18fe0f96ee9f182c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85916a8aca66aae18fe0f96ee9f182c6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseRightButtonUp, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a85916a8aca66aae18fe0f96ee9f182c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a85916a8aca66aae18fe0f96ee9f182c6">REGISTER_EVENT_DECLARATION</a> (PreviewMouseRightButtonUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a85916a8aca66aae18fe0f96ee9f182c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20cbd09d52271d24a2264fb3e89911af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20cbd09d52271d24a2264fb3e89911af"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseRightButtonDown, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a20cbd09d52271d24a2264fb3e89911af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a20cbd09d52271d24a2264fb3e89911af">REGISTER_EVENT_DECLARATION</a> (PreviewMouseRightButtonDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a20cbd09d52271d24a2264fb3e89911af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79b91fbfeaf2529aae141186ba5da200"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79b91fbfeaf2529aae141186ba5da200"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseLeftButtonDown, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a79b91fbfeaf2529aae141186ba5da200"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a79b91fbfeaf2529aae141186ba5da200">REGISTER_EVENT_DECLARATION</a> (PreviewMouseLeftButtonDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a79b91fbfeaf2529aae141186ba5da200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af040947b7060b1a0f35d4639ff39437e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af040947b7060b1a0f35d4639ff39437e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseLeftButtonUp, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:af040947b7060b1a0f35d4639ff39437e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#af040947b7060b1a0f35d4639ff39437e">REGISTER_EVENT_DECLARATION</a> (PreviewMouseLeftButtonUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:af040947b7060b1a0f35d4639ff39437e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a590aa51e2572e6511f24209686299b5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a590aa51e2572e6511f24209686299b5d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseWheel, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a>)</td></tr>
+<tr class="memitem:a590aa51e2572e6511f24209686299b5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a590aa51e2572e6511f24209686299b5d">REGISTER_EVENT_DECLARATION</a> (PreviewMouseWheel, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a>)</td></tr>
 <tr class="separator:a590aa51e2572e6511f24209686299b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dbfc01dc13bf763682475e73e496c88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dbfc01dc13bf763682475e73e496c88"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewMouseMove, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>)</td></tr>
-<tr class="separator:a3dbfc01dc13bf763682475e73e496c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6f63760da093c7d9b5784423415cc35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6f63760da093c7d9b5784423415cc35"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewKeyDown, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
+<tr class="memitem:a25df4d4289f09d8cb49ffe99a898d797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a25df4d4289f09d8cb49ffe99a898d797">REGISTER_EVENT_DECLARATION</a> (PreviewMouseMove, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a>)</td></tr>
+<tr class="separator:a25df4d4289f09d8cb49ffe99a898d797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f63760da093c7d9b5784423415cc35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ae6f63760da093c7d9b5784423415cc35">REGISTER_EVENT_DECLARATION</a> (PreviewKeyDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
 <tr class="separator:ae6f63760da093c7d9b5784423415cc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5334ee58d6ef27c011b9f16ecef23cea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5334ee58d6ef27c011b9f16ecef23cea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (PreviewKeyUp, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
+<tr class="memitem:a5334ee58d6ef27c011b9f16ecef23cea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5334ee58d6ef27c011b9f16ecef23cea">REGISTER_EVENT_DECLARATION</a> (PreviewKeyUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
 <tr class="separator:a5334ee58d6ef27c011b9f16ecef23cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1603d79dfe6244f525f78aa3f01534"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c1603d79dfe6244f525f78aa3f01534"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseUp, RoutingStrategy::Bubble, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a5c1603d79dfe6244f525f78aa3f01534"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5c1603d79dfe6244f525f78aa3f01534">REGISTER_EVENT_DECLARATION</a> (MouseUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a5c1603d79dfe6244f525f78aa3f01534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28fe29df768dad21e934409f97b2ef58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28fe29df768dad21e934409f97b2ef58"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseDown, RoutingStrategy::Bubble, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a28fe29df768dad21e934409f97b2ef58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a28fe29df768dad21e934409f97b2ef58">REGISTER_EVENT_DECLARATION</a> (MouseDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a28fe29df768dad21e934409f97b2ef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a297cad521dfb0a31922535a32d763d39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a297cad521dfb0a31922535a32d763d39"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseRightButtonDown, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a297cad521dfb0a31922535a32d763d39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a297cad521dfb0a31922535a32d763d39">REGISTER_EVENT_DECLARATION</a> (MouseRightButtonDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a297cad521dfb0a31922535a32d763d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab582246920f677cda657efd324043618"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab582246920f677cda657efd324043618"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseRightButtonUp, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:ab582246920f677cda657efd324043618"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ab582246920f677cda657efd324043618">REGISTER_EVENT_DECLARATION</a> (MouseRightButtonUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:ab582246920f677cda657efd324043618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423f47a03be25dc4ea7b600940de2f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a423f47a03be25dc4ea7b600940de2f67"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseLeftButtonDown, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a423f47a03be25dc4ea7b600940de2f67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a423f47a03be25dc4ea7b600940de2f67">REGISTER_EVENT_DECLARATION</a> (MouseLeftButtonDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a423f47a03be25dc4ea7b600940de2f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187c3a187c4f5ed89787d5e6a3fabc35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a187c3a187c4f5ed89787d5e6a3fabc35"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseLeftButtonUp, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
+<tr class="memitem:a187c3a187c4f5ed89787d5e6a3fabc35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a187c3a187c4f5ed89787d5e6a3fabc35">REGISTER_EVENT_DECLARATION</a> (MouseLeftButtonUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>)</td></tr>
 <tr class="separator:a187c3a187c4f5ed89787d5e6a3fabc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4d293052b9ec2ca48a022b317551ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff4d293052b9ec2ca48a022b317551ef"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseWheel, RoutingStrategy::Bubble, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a>)</td></tr>
+<tr class="memitem:aff4d293052b9ec2ca48a022b317551ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aff4d293052b9ec2ca48a022b317551ef">REGISTER_EVENT_DECLARATION</a> (MouseWheel, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a>)</td></tr>
 <tr class="separator:aff4d293052b9ec2ca48a022b317551ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae92f9244d7d626689f1b113b4b8abc0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae92f9244d7d626689f1b113b4b8abc0c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseMove, RoutingStrategy::Bubble, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>)</td></tr>
-<tr class="separator:ae92f9244d7d626689f1b113b4b8abc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31d67f78e261f09aa63e57f9fb09165a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31d67f78e261f09aa63e57f9fb09165a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (KeyUp, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
+<tr class="memitem:adf4edbdbc31b153dbc592216886a0874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#adf4edbdbc31b153dbc592216886a0874">REGISTER_EVENT_DECLARATION</a> (MouseMove, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a>)</td></tr>
+<tr class="separator:adf4edbdbc31b153dbc592216886a0874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d67f78e261f09aa63e57f9fb09165a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a31d67f78e261f09aa63e57f9fb09165a">REGISTER_EVENT_DECLARATION</a> (KeyUp, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
 <tr class="separator:a31d67f78e261f09aa63e57f9fb09165a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9709f8058ccdfaf9cb052814bbb40ee2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9709f8058ccdfaf9cb052814bbb40ee2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (KeyDown, RoutingStrategy::Tunnel, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
+<tr class="memitem:a9709f8058ccdfaf9cb052814bbb40ee2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9709f8058ccdfaf9cb052814bbb40ee2">REGISTER_EVENT_DECLARATION</a> (KeyDown, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>)</td></tr>
 <tr class="separator:a9709f8058ccdfaf9cb052814bbb40ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca0c2d959c629e6b5a2442033f2dbb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abca0c2d959c629e6b5a2442033f2dbb7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseEnter, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>)</td></tr>
+<tr class="memitem:abca0c2d959c629e6b5a2442033f2dbb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#abca0c2d959c629e6b5a2442033f2dbb7">REGISTER_EVENT_DECLARATION</a> (MouseEnter, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>)</td></tr>
 <tr class="separator:abca0c2d959c629e6b5a2442033f2dbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4f35a6105675780551c59b6dcf9eed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa4f35a6105675780551c59b6dcf9eed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b> (MouseLeave, RoutingStrategy::Direct, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>)</td></tr>
+<tr class="memitem:afa4f35a6105675780551c59b6dcf9eed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#afa4f35a6105675780551c59b6dcf9eed">REGISTER_EVENT_DECLARATION</a> (MouseLeave, <a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>)</td></tr>
 <tr class="separator:afa4f35a6105675780551c59b6dcf9eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Layout fuctions</div></td></tr>
-<tr class="memitem:aa19d5edd15230b4b62ee163b60efd108"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa19d5edd15230b4b62ee163b60efd108"></a>
-virtual Size2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aa19d5edd15230b4b62ee163b60efd108">Measure</a> (Size2D availableSize)=0</td></tr>
-<tr class="memdesc:aa19d5edd15230b4b62ee163b60efd108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meassure pass. Check documentation in WPF. <br /></td></tr>
+<tr class="memitem:aa19d5edd15230b4b62ee163b60efd108"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aa19d5edd15230b4b62ee163b60efd108">Measure</a> (<a class="el" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a> availableSize)=0</td></tr>
+<tr class="memdesc:aa19d5edd15230b4b62ee163b60efd108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meassure pass. Check documentation in WPF.  <a href="#aa19d5edd15230b4b62ee163b60efd108">More...</a><br /></td></tr>
 <tr class="separator:aa19d5edd15230b4b62ee163b60efd108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a4f0512d6d5666f934c496095c58eaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a4f0512d6d5666f934c496095c58eaf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a4a4f0512d6d5666f934c496095c58eaf">Arrange</a> (<a class="el" href="structsw_1_1gui_1_1_rect.html">Rect</a> &amp;finalRect)=0</td></tr>
-<tr class="memdesc:a4a4f0512d6d5666f934c496095c58eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arragement pass. Check WPF documentation. <br /></td></tr>
+<tr class="memitem:a4a4f0512d6d5666f934c496095c58eaf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a4a4f0512d6d5666f934c496095c58eaf">Arrange</a> (<a class="el" href="structsw_1_1gui_1_1_rect.html">Rect</a> &amp;finalRect)=0</td></tr>
+<tr class="memdesc:a4a4f0512d6d5666f934c496095c58eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arragement pass. Check WPF documentation.  <a href="#a4a4f0512d6d5666f934c496095c58eaf">More...</a><br /></td></tr>
 <tr class="separator:a4a4f0512d6d5666f934c496095c58eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Visual tree manipulation</div></td></tr>
-<tr class="memitem:a8c07ede9b2451d457e3367ff1153a637"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c07ede9b2451d457e3367ff1153a637"></a>
-virtual Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a8c07ede9b2451d457e3367ff1153a637">GetNumChildren</a> ()=0</td></tr>
-<tr class="memdesc:a8c07ede9b2451d457e3367ff1153a637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of children in visual tree. <br /></td></tr>
+<tr class="memitem:a8c07ede9b2451d457e3367ff1153a637"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_definitions_8h.html#af9ecec2d692138fab9167164a457cbd4">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a8c07ede9b2451d457e3367ff1153a637">GetNumChildren</a> ()=0</td></tr>
+<tr class="memdesc:a8c07ede9b2451d457e3367ff1153a637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of children in visual tree.  <a href="#a8c07ede9b2451d457e3367ff1153a637">More...</a><br /></td></tr>
 <tr class="separator:a8c07ede9b2451d457e3367ff1153a637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abde2c70b1eedc5cee1b544eadcd05d8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abde2c70b1eedc5cee1b544eadcd05d8f"></a>
-virtual <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#abde2c70b1eedc5cee1b544eadcd05d8f">GetUIChild</a> (Size idx)=0</td></tr>
-<tr class="memdesc:abde2c70b1eedc5cee1b544eadcd05d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets child in visual tree. <br /></td></tr>
+<tr class="memitem:abde2c70b1eedc5cee1b544eadcd05d8f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#abde2c70b1eedc5cee1b544eadcd05d8f">GetUIChild</a> (<a class="el" href="_types_definitions_8h.html#af9ecec2d692138fab9167164a457cbd4">Size</a> idx)=0</td></tr>
+<tr class="memdesc:abde2c70b1eedc5cee1b544eadcd05d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets child in visual tree.  <a href="#abde2c70b1eedc5cee1b544eadcd05d8f">More...</a><br /></td></tr>
 <tr class="separator:abde2c70b1eedc5cee1b544eadcd05d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae736eb8b1c77844742a6525e16c84347"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ae736eb8b1c77844742a6525e16c84347">AddChild</a> (UIElementOPtr &amp;&amp;child)=0</td></tr>
 <tr class="memdesc:ae736eb8b1c77844742a6525e16c84347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add child. This function should set child parent to this pointer.  <a href="#ae736eb8b1c77844742a6525e16c84347">More...</a><br /></td></tr>
 <tr class="separator:ae736eb8b1c77844742a6525e16c84347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0597b900d420b751cd22b4398b1dd9f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0597b900d420b751cd22b4398b1dd9f1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a0597b900d420b751cd22b4398b1dd9f1">SetParent</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *parent)</td></tr>
-<tr class="memdesc:a0597b900d420b751cd22b4398b1dd9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set control parent. Internal use. <br /></td></tr>
+<tr class="memitem:a0597b900d420b751cd22b4398b1dd9f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a0597b900d420b751cd22b4398b1dd9f1">SetParent</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *parent)</td></tr>
+<tr class="memdesc:a0597b900d420b751cd22b4398b1dd9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set control parent. Internal use.  <a href="#a0597b900d420b751cd22b4398b1dd9f1">More...</a><br /></td></tr>
 <tr class="separator:a0597b900d420b751cd22b4398b1dd9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a7c372b42fa415e06ba88721d7dd06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33a7c372b42fa415e06ba88721d7dd06"></a>
-virtual <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a33a7c372b42fa415e06ba88721d7dd06">GetParent</a> ()</td></tr>
-<tr class="memdesc:a33a7c372b42fa415e06ba88721d7dd06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns control parent. <br /></td></tr>
+<tr class="memitem:a33a7c372b42fa415e06ba88721d7dd06"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a33a7c372b42fa415e06ba88721d7dd06">GetParent</a> ()</td></tr>
+<tr class="memdesc:a33a7c372b42fa415e06ba88721d7dd06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns control parent.  <a href="#a33a7c372b42fa415e06ba88721d7dd06">More...</a><br /></td></tr>
 <tr class="separator:a33a7c372b42fa415e06ba88721d7dd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Restricted</div></td></tr>
-<tr class="memitem:a9e68c8403cf63e8dac1eb283e3127d8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e68c8403cf63e8dac1eb283e3127d8c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InvokeEventDelegates</b> (<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> eventID, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e, <a class="el" href="classsw_1_1gui_1_1_access_key.html">AccessKey</a>)</td></tr>
+<tr class="memitem:a9e68c8403cf63e8dac1eb283e3127d8c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9e68c8403cf63e8dac1eb283e3127d8c">InvokeEventDelegates</a> (<a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> eventID, <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e, <a class="el" href="classsw_1_1gui_1_1_access_key.html">AccessKey</a>)</td></tr>
 <tr class="separator:a9e68c8403cf63e8dac1eb283e3127d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">GUISystem interaction events</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Mouse and Keyboard input events and focus. </p>
 </div></td></tr>
-<tr class="memitem:a263b69776ef358b39c86bc5e744ebdee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a263b69776ef358b39c86bc5e744ebdee"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Loaded</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
-<tr class="separator:a263b69776ef358b39c86bc5e744ebdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d79e34627734808f9d8e00d045f858"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0d79e34627734808f9d8e00d045f858"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Unloaded</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
-<tr class="separator:aa0d79e34627734808f9d8e00d045f858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae28d61aaf315bde20891aa81d7d9b501"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae28d61aaf315bde20891aa81d7d9b501"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GotFocus</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
-<tr class="separator:ae28d61aaf315bde20891aa81d7d9b501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c9e05ed1af0c0d0a1531d4af6019eab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c9e05ed1af0c0d0a1531d4af6019eab"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>LostFocus</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
-<tr class="separator:a0c9e05ed1af0c0d0a1531d4af6019eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e857f5e56767b41f4085b9a71b1ff57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e857f5e56767b41f4085b9a71b1ff57"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseEnter</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *e)</td></tr>
-<tr class="separator:a1e857f5e56767b41f4085b9a71b1ff57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee84ac7ccc185022f47c228854a12c94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee84ac7ccc185022f47c228854a12c94"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseLeave</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *e)</td></tr>
-<tr class="separator:aee84ac7ccc185022f47c228854a12c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ecfd69dc4eaf8f26713f514e7fc735c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ecfd69dc4eaf8f26713f514e7fc735c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseMove</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *e)</td></tr>
-<tr class="separator:a7ecfd69dc4eaf8f26713f514e7fc735c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bfc2f7c823d7b827d888283c8387882"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bfc2f7c823d7b827d888283c8387882"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseWheel</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a> *e)</td></tr>
-<tr class="separator:a5bfc2f7c823d7b827d888283c8387882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a55be8d0917b2c792e249179b366d4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a55be8d0917b2c792e249179b366d4a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a8a55be8d0917b2c792e249179b366d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43f600bb1be6becdc424e9cfde8de885"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43f600bb1be6becdc424e9cfde8de885"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a43f600bb1be6becdc424e9cfde8de885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2614a4e2d046e265f950b4760317df82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2614a4e2d046e265f950b4760317df82"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseRightButtonDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a2614a4e2d046e265f950b4760317df82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81999c1b933ad055bc0bed96dd0782b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81999c1b933ad055bc0bed96dd0782b2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseRightButtonUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a81999c1b933ad055bc0bed96dd0782b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08505a5d00fe446aa341d821ca6c7515"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08505a5d00fe446aa341d821ca6c7515"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseLeftButtonDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a08505a5d00fe446aa341d821ca6c7515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08c933854caa8c573d3dd273063222ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08c933854caa8c573d3dd273063222ac"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseLeftButtonUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a08c933854caa8c573d3dd273063222ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0da71b75c2de492c9039ca5730ece1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0da71b75c2de492c9039ca5730ece1b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseMove</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *e)</td></tr>
-<tr class="separator:ac0da71b75c2de492c9039ca5730ece1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23562f14a5950c77761ac374bfec7353"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23562f14a5950c77761ac374bfec7353"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseWheel</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a> *e)</td></tr>
-<tr class="separator:a23562f14a5950c77761ac374bfec7353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac32923239b161a4833f5d47aa4a86c05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac32923239b161a4833f5d47aa4a86c05"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:ac32923239b161a4833f5d47aa4a86c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7971e88c6f419d301a1cc27dfc91aeda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7971e88c6f419d301a1cc27dfc91aeda"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a7971e88c6f419d301a1cc27dfc91aeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91241c5d4714af9c19a44e9e779fe9b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91241c5d4714af9c19a44e9e779fe9b5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseRightButtonDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:a91241c5d4714af9c19a44e9e779fe9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb73815c993dc97d3614bebea9394246"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb73815c993dc97d3614bebea9394246"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseRightButtonUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:adb73815c993dc97d3614bebea9394246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac011287053614d01ec51ff359c14ea01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac011287053614d01ec51ff359c14ea01"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseLeftButtonDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:ac011287053614d01ec51ff359c14ea01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca85041ae79c9f656b3a79b80b557df5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca85041ae79c9f656b3a79b80b557df5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewMouseLeftButtonUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
-<tr class="separator:aca85041ae79c9f656b3a79b80b557df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae001b7e4da90a76b56012d7fa957fc73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae001b7e4da90a76b56012d7fa957fc73"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>KeyDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
-<tr class="separator:ae001b7e4da90a76b56012d7fa957fc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67f8e878e297482a91494660625bf107"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67f8e878e297482a91494660625bf107"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>KeyUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
-<tr class="separator:a67f8e878e297482a91494660625bf107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecc16db10dadde5285b9df3225b4dc9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecc16db10dadde5285b9df3225b4dc9f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewKeyDown</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
-<tr class="separator:aecc16db10dadde5285b9df3225b4dc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9fc424c215ac044d88329831a9d019f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9fc424c215ac044d88329831a9d019f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewKeyUp</b> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
-<tr class="separator:ae9fc424c215ac044d88329831a9d019f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc370a59c1fe0a6999becedcdc5ca1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a3bc370a59c1fe0a6999becedcdc5ca1c">OnLoaded</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
+<tr class="separator:a3bc370a59c1fe0a6999becedcdc5ca1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe3ac2817050aa9626d91892e9e3efc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#abfe3ac2817050aa9626d91892e9e3efc">OnUnloaded</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
+<tr class="separator:abfe3ac2817050aa9626d91892e9e3efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7e6de733495d743f4154c7c675e711"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#adc7e6de733495d743f4154c7c675e711">OnGotFocus</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
+<tr class="separator:adc7e6de733495d743f4154c7c675e711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8011cd1fff51e54b77cc7b6589fc0e6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a8011cd1fff51e54b77cc7b6589fc0e6f">OnLostFocus</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *e)</td></tr>
+<tr class="separator:a8011cd1fff51e54b77cc7b6589fc0e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99eb5fd9450d46f9008dc01e6542ac4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ab99eb5fd9450d46f9008dc01e6542ac4">OnMouseEnter</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *e)</td></tr>
+<tr class="separator:ab99eb5fd9450d46f9008dc01e6542ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae35d14a782c87a38f975728d26d1be9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aae35d14a782c87a38f975728d26d1be9">OnMouseLeave</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *e)</td></tr>
+<tr class="separator:aae35d14a782c87a38f975728d26d1be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dfa9b7d8b46fc09ba7835c500ff920f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a3dfa9b7d8b46fc09ba7835c500ff920f">OnMouseMove</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a> *e)</td></tr>
+<tr class="separator:a3dfa9b7d8b46fc09ba7835c500ff920f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872d419e90736719edefdb16768e83f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a872d419e90736719edefdb16768e83f3">OnMouseWheel</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a> *e)</td></tr>
+<tr class="separator:a872d419e90736719edefdb16768e83f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2859fc29e93a508f589e06de641cd89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#af2859fc29e93a508f589e06de641cd89">OnMouseDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:af2859fc29e93a508f589e06de641cd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b76c66d4b501ccbbe0364e43fb21d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ae0b76c66d4b501ccbbe0364e43fb21d0">OnMouseUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:ae0b76c66d4b501ccbbe0364e43fb21d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7bbaeeb483442a18bbd19b31978a27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a7f7bbaeeb483442a18bbd19b31978a27">OnMouseRightButtonDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a7f7bbaeeb483442a18bbd19b31978a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f48652b96ecd4e77e1475fdbc55c882"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a7f48652b96ecd4e77e1475fdbc55c882">OnMouseRightButtonUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a7f48652b96ecd4e77e1475fdbc55c882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f7bbcc70f908d1326b9c5ed371c527"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a15f7bbcc70f908d1326b9c5ed371c527">OnMouseLeftButtonDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a15f7bbcc70f908d1326b9c5ed371c527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a18f0b4b72e7dd4c862de072a2a0409"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a7a18f0b4b72e7dd4c862de072a2a0409">OnMouseLeftButtonUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a7a18f0b4b72e7dd4c862de072a2a0409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c5b8c64830b2f049ff79fcc755a659"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aa5c5b8c64830b2f049ff79fcc755a659">OnPreviewMouseMove</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a> *e)</td></tr>
+<tr class="separator:aa5c5b8c64830b2f049ff79fcc755a659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf49e51784a1202f208a2819bdc55cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#accf49e51784a1202f208a2819bdc55cc">OnPreviewMouseWheel</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a> *e)</td></tr>
+<tr class="separator:accf49e51784a1202f208a2819bdc55cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9192d0d528214bbb79e8394651a9dc0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9192d0d528214bbb79e8394651a9dc0d">OnPreviewMouseDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a9192d0d528214bbb79e8394651a9dc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad4cdcef504ab84b98a69f2992de38b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#abad4cdcef504ab84b98a69f2992de38b">OnPreviewMouseUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:abad4cdcef504ab84b98a69f2992de38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e7d5f8079401760267452d5a7292a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a04e7d5f8079401760267452d5a7292a9">OnPreviewMouseRightButtonDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a04e7d5f8079401760267452d5a7292a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f561d9c28e68ecf0c7b379ac8f29d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ac3f561d9c28e68ecf0c7b379ac8f29d2">OnPreviewMouseRightButtonUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:ac3f561d9c28e68ecf0c7b379ac8f29d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2961ced7c4003fb3da8fd58577cecc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9b2961ced7c4003fb3da8fd58577cecc">OnPreviewMouseLeftButtonDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a9b2961ced7c4003fb3da8fd58577cecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369dfe1ec96dac05da5f15272b8f8275"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a369dfe1ec96dac05da5f15272b8f8275">OnPreviewMouseLeftButtonUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *e)</td></tr>
+<tr class="separator:a369dfe1ec96dac05da5f15272b8f8275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81392d735df6b663b4cdcd6ab4b2bdf0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a81392d735df6b663b4cdcd6ab4b2bdf0">OnKeyDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
+<tr class="separator:a81392d735df6b663b4cdcd6ab4b2bdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9673f6df896b46b5d4bcf1651c5ae5d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9673f6df896b46b5d4bcf1651c5ae5d4">OnKeyUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
+<tr class="separator:a9673f6df896b46b5d4bcf1651c5ae5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed6ef3e30952a7d0b54003dcb4e1410"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5ed6ef3e30952a7d0b54003dcb4e1410">OnPreviewKeyDown</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
+<tr class="separator:a5ed6ef3e30952a7d0b54003dcb4e1410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d87a946f8d2c6724715b076d4b40c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a64d87a946f8d2c6724715b076d4b40c1">OnPreviewKeyUp</a> (<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *sender, <a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *e)</td></tr>
+<tr class="separator:a64d87a946f8d2c6724715b076d4b40c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsw_1_1gui_1_1_visual"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsw_1_1gui_1_1_visual')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsw_1_1gui_1_1_visual.html">sw::gui::Visual</a></td></tr>
-<tr class="memitem:a989803f37a8add98bd0354006bb3ce96 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">HitTest</a> (const Position &amp;point)=0</td></tr>
+<tr class="memitem:a4509e13342ea8ff232fd374d6f5e6f03 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#a4509e13342ea8ff232fd374d6f5e6f03">Visual</a> ()=default</td></tr>
+<tr class="separator:a4509e13342ea8ff232fd374d6f5e6f03 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce3bc685f43af7ea8e380a1e878eb23 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#a4ce3bc685f43af7ea8e380a1e878eb23">~Visual</a> ()=default</td></tr>
+<tr class="separator:a4ce3bc685f43af7ea8e380a1e878eb23 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989803f37a8add98bd0354006bb3ce96 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96">HitTest</a> (const <a class="el" href="namespacesw_1_1gui.html#a8e73557abbfd912fe81a8d3915e19058">Position</a> &amp;point)=0</td></tr>
 <tr class="memdesc:a989803f37a8add98bd0354006bb3ce96 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if point is within this object.  <a href="#a989803f37a8add98bd0354006bb3ce96">More...</a><br /></td></tr>
 <tr class="separator:a989803f37a8add98bd0354006bb3ce96 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb648f3d3f8a791b894982c28fca4416 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb648f3d3f8a791b894982c28fca4416"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#acb648f3d3f8a791b894982c28fca4416">OnRender</a> (<a class="el" href="classsw_1_1gui_1_1_drawing_context.html">DrawingContext</a> &amp;context)=0</td></tr>
-<tr class="memdesc:acb648f3d3f8a791b894982c28fca4416 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control rendering behavior. <br /></td></tr>
+<tr class="memitem:acb648f3d3f8a791b894982c28fca4416 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_visual.html#acb648f3d3f8a791b894982c28fca4416">OnRender</a> (<a class="el" href="classsw_1_1gui_1_1_drawing_context.html">DrawingContext</a> &amp;context)=0</td></tr>
+<tr class="memdesc:acb648f3d3f8a791b894982c28fca4416 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control rendering behavior.  <a href="#acb648f3d3f8a791b894982c28fca4416">More...</a><br /></td></tr>
 <tr class="separator:acb648f3d3f8a791b894982c28fca4416 inherit pub_methods_classsw_1_1gui_1_1_visual"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsw_1_1gui_1_1_dependency_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsw_1_1gui_1_1_dependency_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsw_1_1gui_1_1_dependency_object.html">sw::gui::DependencyObject</a></td></tr>
+<tr class="memitem:a82bff6bec994970882382f0d925e3d93 inherit pub_methods_classsw_1_1gui_1_1_dependency_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_dependency_object.html#a82bff6bec994970882382f0d925e3d93">DependencyObject</a> ()</td></tr>
+<tr class="separator:a82bff6bec994970882382f0d925e3d93 inherit pub_methods_classsw_1_1gui_1_1_dependency_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c1979c5530f8709d1a75cab32632f6 inherit pub_methods_classsw_1_1gui_1_1_dependency_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_dependency_object.html#ad9c1979c5530f8709d1a75cab32632f6">~DependencyObject</a> ()=default</td></tr>
+<tr class="separator:ad9c1979c5530f8709d1a75cab32632f6 inherit pub_methods_classsw_1_1gui_1_1_dependency_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_engine_object.html">EngineObject</a></td></tr>
+<tr class="memitem:aafc8171efb45eb8ebd776ec09051b08d inherit pub_methods_class_engine_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_r_t_t_r_8h.html#a5139cd88b85068977b977ddba7804e51">TypeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_object.html#aafc8171efb45eb8ebd776ec09051b08d">GetType</a> () const </td></tr>
+<tr class="separator:aafc8171efb45eb8ebd776ec09051b08d inherit pub_methods_class_engine_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e128d1530c3772e6bd826e3ff32b1ce inherit pub_methods_class_engine_object"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_object.html#a5e128d1530c3772e6bd826e3ff32b1ce">GetTypeName</a> () const </td></tr>
+<tr class="separator:a5e128d1530c3772e6bd826e3ff32b1ce inherit pub_methods_class_engine_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd6ce8a45796814cccbfee320fd5c5e inherit pub_methods_class_engine_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_object.html#a5dd6ce8a45796814cccbfee320fd5c5e">Serialize</a> (<a class="el" href="class_i_serializer.html">ISerializer</a> *ser) const </td></tr>
+<tr class="memdesc:a5dd6ce8a45796814cccbfee320fd5c5e inherit pub_methods_class_engine_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements default serialization.  Serializes only declared properties.  <a href="#a5dd6ce8a45796814cccbfee320fd5c5e">More...</a><br /></td></tr>
+<tr class="separator:a5dd6ce8a45796814cccbfee320fd5c5e inherit pub_methods_class_engine_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75a619db892e51fa9cb28aa4dceee38 inherit pub_methods_class_engine_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_object.html#aa75a619db892e51fa9cb28aa4dceee38">Deserialize</a> (<a class="el" href="class_i_deserializer.html">IDeserializer</a> *deser)</td></tr>
+<tr class="memdesc:aa75a619db892e51fa9cb28aa4dceee38 inherit pub_methods_class_engine_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements default deserialization.  <a href="#aa75a619db892e51fa9cb28aa4dceee38">More...</a><br /></td></tr>
+<tr class="separator:aa75a619db892e51fa9cb28aa4dceee38 inherit pub_methods_class_engine_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9412b884612f08341e1f638e3cbed90 inherit pub_methods_class_engine_object"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_definitions_8h.html#af9ecec2d692138fab9167164a457cbd4">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_object.html#ae9412b884612f08341e1f638e3cbed90">MemorySize</a> ()</td></tr>
+<tr class="separator:ae9412b884612f08341e1f638e3cbed90 inherit pub_methods_class_engine_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93de3587dbe7d3b8045c83224b9bfcb6 inherit pub_methods_class_engine_object"><td class="memTemplParams" colspan="2">template&lt;typename TargetType &gt; </td></tr>
+<tr class="memitem:a93de3587dbe7d3b8045c83224b9bfcb6 inherit pub_methods_class_engine_object"><td class="memTemplItemLeft" align="right" valign="top">TargetType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_engine_object.html#a93de3587dbe7d3b8045c83224b9bfcb6">DynamicCast</a> ()</td></tr>
+<tr class="separator:a93de3587dbe7d3b8045c83224b9bfcb6 inherit pub_methods_class_engine_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a41ebe4824d9e5d468b617a98004d8de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41ebe4824d9e5d468b617a98004d8de4"></a>
-<a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a41ebe4824d9e5d468b617a98004d8de4">m_parent</a></td></tr>
-<tr class="memdesc:a41ebe4824d9e5d468b617a98004d8de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent in controls visual tree. <br /></td></tr>
+<tr class="memitem:a41ebe4824d9e5d468b617a98004d8de4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a41ebe4824d9e5d468b617a98004d8de4">m_parent</a></td></tr>
+<tr class="memdesc:a41ebe4824d9e5d468b617a98004d8de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent in controls visual tree.  <a href="#a41ebe4824d9e5d468b617a98004d8de4">More...</a><br /></td></tr>
 <tr class="separator:a41ebe4824d9e5d468b617a98004d8de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad928fee7fd7ac242c65995624f01976"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad928fee7fd7ac242c65995624f01976"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isVisible</b>: 1</td></tr>
+<tr class="memitem:aad928fee7fd7ac242c65995624f01976"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aad928fee7fd7ac242c65995624f01976">m_isVisible</a>: 1</td></tr>
 <tr class="separator:aad928fee7fd7ac242c65995624f01976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0cd1c7d9f944429fc6082f7fecd65b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ac0cd1c7d9f944429fc6082f7fecd65b8">m_isEnabled</a>: 1</td></tr>
 <tr class="separator:ac0cd1c7d9f944429fc6082f7fecd65b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55660bd156af63e3fa975e30de8a92d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55660bd156af63e3fa975e30de8a92d5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isMouseOver</b>: 1</td></tr>
+<tr class="memitem:a55660bd156af63e3fa975e30de8a92d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a55660bd156af63e3fa975e30de8a92d5">m_isMouseOver</a>: 1</td></tr>
 <tr class="separator:a55660bd156af63e3fa975e30de8a92d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a115b2d45f9afb885f6e5090bb0c7b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a115b2d45f9afb885f6e5090bb0c7b1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isFocused</b>: 1</td></tr>
+<tr class="memitem:a5a115b2d45f9afb885f6e5090bb0c7b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5a115b2d45f9afb885f6e5090bb0c7b1">m_isFocused</a>: 1</td></tr>
+<tr class="memdesc:a5a115b2d45f9afb885f6e5090bb0c7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is logical focus.  <a href="#a5a115b2d45f9afb885f6e5090bb0c7b1">More...</a><br /></td></tr>
 <tr class="separator:a5a115b2d45f9afb885f6e5090bb0c7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd3aebba74cb9fe73607aa43337b9cdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd3aebba74cb9fe73607aa43337b9cdd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isFocusable</b>: 1</td></tr>
+<tr class="memitem:a67ea363f188c40803074d05b58c3559c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a67ea363f188c40803074d05b58c3559c">m_isKeyboardFocus</a>: 1</td></tr>
+<tr class="memdesc:a67ea363f188c40803074d05b58c3559c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This element has keyboard focus and will receive keyboard events.  <a href="#a67ea363f188c40803074d05b58c3559c">More...</a><br /></td></tr>
+<tr class="separator:a67ea363f188c40803074d05b58c3559c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083246bce77d305e8b4020bda8c67329"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a083246bce77d305e8b4020bda8c67329">m_isKeyboardFocusWithin</a>: 1</td></tr>
+<tr class="memdesc:a083246bce77d305e8b4020bda8c67329"><td class="mdescLeft">&#160;</td><td class="mdescRight">This element or it's children have keyboard focus.  <a href="#a083246bce77d305e8b4020bda8c67329">More...</a><br /></td></tr>
+<tr class="separator:a083246bce77d305e8b4020bda8c67329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70dade18c6ba09d3ca1e1979edb22e18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a70dade18c6ba09d3ca1e1979edb22e18">m_isMouseCaptured</a>: 1</td></tr>
+<tr class="memdesc:a70dade18c6ba09d3ca1e1979edb22e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if element have captured mouse.  <a href="#a70dade18c6ba09d3ca1e1979edb22e18">More...</a><br /></td></tr>
+<tr class="separator:a70dade18c6ba09d3ca1e1979edb22e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c772daf680a6b5ce5bf447c000d6b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#ac8c772daf680a6b5ce5bf447c000d6b6">m_isMouseCapturedWithin</a>: 1</td></tr>
+<tr class="memdesc:ac8c772daf680a6b5ce5bf447c000d6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element or it's children have captured mouse.  <a href="#ac8c772daf680a6b5ce5bf447c000d6b6">More...</a><br /></td></tr>
+<tr class="separator:ac8c772daf680a6b5ce5bf447c000d6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3aebba74cb9fe73607aa43337b9cdd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#acd3aebba74cb9fe73607aa43337b9cdd">m_isFocusable</a>: 1</td></tr>
 <tr class="separator:acd3aebba74cb9fe73607aa43337b9cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b66a7e8a2d74d11039f8bba3347a999"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b66a7e8a2d74d11039f8bba3347a999"></a>
-Size2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5b66a7e8a2d74d11039f8bba3347a999">m_desiredSize</a></td></tr>
-<tr class="memdesc:a5b66a7e8a2d74d11039f8bba3347a999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired size after Messure pass. <br /></td></tr>
+<tr class="memitem:a5b66a7e8a2d74d11039f8bba3347a999"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a5b66a7e8a2d74d11039f8bba3347a999">m_desiredSize</a></td></tr>
+<tr class="memdesc:a5b66a7e8a2d74d11039f8bba3347a999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired size after Messure pass.  <a href="#a5b66a7e8a2d74d11039f8bba3347a999">More...</a><br /></td></tr>
 <tr class="separator:a5b66a7e8a2d74d11039f8bba3347a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9adc91c051096af1e3dae3a482094910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9adc91c051096af1e3dae3a482094910"></a>
-<a class="el" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9adc91c051096af1e3dae3a482094910">m_eventHandlers</a></td></tr>
-<tr class="memdesc:a9adc91c051096af1e3dae3a482094910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing delegates. <br /></td></tr>
+<tr class="memitem:a9adc91c051096af1e3dae3a482094910"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a9adc91c051096af1e3dae3a482094910">m_eventHandlers</a></td></tr>
+<tr class="memdesc:a9adc91c051096af1e3dae3a482094910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing delegates.  <a href="#a9adc91c051096af1e3dae3a482094910">More...</a><br /></td></tr>
 <tr class="separator:a9adc91c051096af1e3dae3a482094910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classsw_1_1gui_1_1_dependency_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsw_1_1gui_1_1_dependency_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classsw_1_1gui_1_1_dependency_object.html">sw::gui::DependencyObject</a></td></tr>
-<tr class="memitem:a4a9d17c5b92797bcf8b9316409dab31f inherit pro_attribs_classsw_1_1gui_1_1_dependency_object"><td class="memItemLeft" align="right" valign="top">EngineObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_dependency_object.html#a4a9d17c5b92797bcf8b9316409dab31f">m_dataContext</a></td></tr>
+<tr class="memitem:a4a9d17c5b92797bcf8b9316409dab31f inherit pro_attribs_classsw_1_1gui_1_1_dependency_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_engine_object.html">EngineObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_dependency_object.html#a4a9d17c5b92797bcf8b9316409dab31f">m_dataContext</a></td></tr>
 <tr class="memdesc:a4a9d17c5b92797bcf8b9316409dab31f inherit pro_attribs_classsw_1_1gui_1_1_dependency_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context for binding.  <a href="#a4a9d17c5b92797bcf8b9316409dab31f">More...</a><br /></td></tr>
 <tr class="separator:a4a9d17c5b92797bcf8b9316409dab31f inherit pro_attribs_classsw_1_1gui_1_1_dependency_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a04ddb51352b5b863a088ad53feb7b15b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04ddb51352b5b863a088ad53feb7b15b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RTTR_ENABLE</b> (<a class="el" href="classsw_1_1gui_1_1_visual.html">Visual</a>)</td></tr>
+<tr class="memitem:a04ddb51352b5b863a088ad53feb7b15b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a04ddb51352b5b863a088ad53feb7b15b">RTTR_ENABLE</a> (<a class="el" href="classsw_1_1gui_1_1_visual.html">Visual</a>)</td></tr>
 <tr class="separator:a04ddb51352b5b863a088ad53feb7b15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a55834b298716077301437643cbce2beb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55834b298716077301437643cbce2beb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RTTR_REGISTRATION_FRIEND</b></td></tr>
+<tr class="memitem:a55834b298716077301437643cbce2beb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#a55834b298716077301437643cbce2beb">RTTR_REGISTRATION_FRIEND</a></td></tr>
 <tr class="separator:a55834b298716077301437643cbce2beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aabcb80b46d58e365f1fd8e42477a7c54"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html#aabcb80b46d58e365f1fd8e42477a7c54">UIElementTester</a></td></tr>
+<tr class="separator:aabcb80b46d58e365f1fd8e42477a7c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for all controls in tree. </p>
@@ -362,8 +347,56 @@ Private Attributes</h2></td></tr>
 <li>Managing focus</li>
 <li>Parent/Child relationship</li>
 </ul>
-<p>Connects WPF <a class="el" href="classsw_1_1gui_1_1_u_i_element.html" title="Interface for all controls in tree. ">UIElement</a> and FrameworkElement classes. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>Connects WPF <a class="el" href="classsw_1_1gui_1_1_u_i_element.html" title="Interface for all controls in tree. ">UIElement</a> and FrameworkElement classes.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>Implement logical focus in future. (Check in WPF)</dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afa47b7d7b86b96478bbc23a74b05926a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::UIElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a786ec54938da87ddba0db700ef76d64f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sw::gui::UIElement::~UIElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae736eb8b1c77844742a6525e16c84347"></a>
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +426,2024 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4a4f0512d6d5666f934c496095c58eaf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::Arrange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_rect.html">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>finalRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Arragement pass. Check WPF documentation. </p>
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_host_window.html#a189dcbb722598b422132dd2a9176a916">sw::gui::HostWindow</a>, and <a class="el" href="class_test_u_i_element_class.html#a77b1976e5aac50d46984f5ae997075ab">TestUIElementClass</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c07ede9b2451d457e3367ff1153a637"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_definitions_8h.html#af9ecec2d692138fab9167164a457cbd4">Size</a> sw::gui::UIElement::GetNumChildren </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get number of children in visual tree. </p>
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_host_window.html#adaef2a896c0ba55b7bb27aa40ee4efa9">sw::gui::HostWindow</a>, and <a class="el" href="class_test_u_i_element_class.html#a1ef25c525e7078dce69756e7fe3cbfdb">TestUIElementClass</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33a7c372b42fa415e06ba88721d7dd06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>* sw::gui::UIElement::GetParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns control parent. </p>
+
+</div>
+</div>
+<a class="anchor" id="abde2c70b1eedc5cee1b544eadcd05d8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>* sw::gui::UIElement::GetUIChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_definitions_8h.html#af9ecec2d692138fab9167164a457cbd4">Size</a>&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets child in visual tree. </p>
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_host_window.html#a2bf9c70da939f652f665213fa3bfbe3b">sw::gui::HostWindow</a>, and <a class="el" href="class_test_u_i_element_class.html#ae0377d6cd480bd5e661d5477bb41118d">TestUIElementClass</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e68c8403cf63e8dac1eb283e3127d8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sw::gui::UIElement::InvokeEventDelegates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a>&#160;</td>
+          <td class="paramname"><em>eventID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_access_key.html">AccessKey</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa19d5edd15230b4b62ee163b60efd108"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a> sw::gui::UIElement::Measure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a>&#160;</td>
+          <td class="paramname"><em>availableSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Meassure pass. Check documentation in WPF. </p>
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_host_window.html#a94e569b5dc7aa6abb5fbfbb3bbbce649">sw::gui::HostWindow</a>, and <a class="el" href="class_test_u_i_element_class.html#a94f71c9ba52329072771d06346f348de">TestUIElementClass</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc7e6de733495d743f4154c7c675e711"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnGotFocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81392d735df6b663b4cdcd6ab4b2bdf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnKeyDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9673f6df896b46b5d4bcf1651c5ae5d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnKeyUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bc370a59c1fe0a6999becedcdc5ca1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnLoaded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8011cd1fff51e54b77cc7b6589fc0e6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnLostFocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af2859fc29e93a508f589e06de641cd89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab99eb5fd9450d46f9008dc01e6542ac4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aae35d14a782c87a38f975728d26d1be9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseLeave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15f7bbcc70f908d1326b9c5ed371c527"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseLeftButtonDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a18f0b4b72e7dd4c862de072a2a0409"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseLeftButtonUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3dfa9b7d8b46fc09ba7835c500ff920f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f7bbaeeb483442a18bbd19b31978a27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseRightButtonDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f48652b96ecd4e77e1475fdbc55c882"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseRightButtonUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae0b76c66d4b501ccbbe0364e43fb21d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a872d419e90736719edefdb16768e83f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnMouseWheel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ed6ef3e30952a7d0b54003dcb4e1410"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewKeyDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64d87a946f8d2c6724715b076d4b40c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewKeyUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9192d0d528214bbb79e8394651a9dc0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b2961ced7c4003fb3da8fd58577cecc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseLeftButtonDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a369dfe1ec96dac05da5f15272b8f8275"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseLeftButtonUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa5c5b8c64830b2f049ff79fcc755a659"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a04e7d5f8079401760267452d5a7292a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseRightButtonDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac3f561d9c28e68ecf0c7b379ac8f29d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseRightButtonUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abad4cdcef504ab84b98a69f2992de38b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="accf49e51784a1202f208a2819bdc55cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnPreviewMouseWheel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abfe3ac2817050aa9626d91892e9e3efc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::UIElement::OnUnloaded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_i_event_args.html">IEventArgs</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6beccf21d1e861e29de3acff98c7ffd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ef5e9b4dfb5203c3eaec1165789818a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a85916a8aca66aae18fe0f96ee9f182c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseRightButtonUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a20cbd09d52271d24a2264fb3e89911af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseRightButtonDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a79b91fbfeaf2529aae141186ba5da200"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseLeftButtonDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af040947b7060b1a0f35d4639ff39437e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseLeftButtonUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a590aa51e2572e6511f24209686299b5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseWheel&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a25df4d4289f09d8cb49ffe99a898d797"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewMouseMove&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6f63760da093c7d9b5784423415cc35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewKeyDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5334ee58d6ef27c011b9f16ecef23cea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">PreviewKeyUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c1603d79dfe6244f525f78aa3f01534"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a28fe29df768dad21e934409f97b2ef58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a297cad521dfb0a31922535a32d763d39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseRightButtonDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab582246920f677cda657efd324043618"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseRightButtonUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a423f47a03be25dc4ea7b600940de2f67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseLeftButtonDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a187c3a187c4f5ed89787d5e6a3fabc35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseLeftButtonUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_button_event_args.html">MouseButtonEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff4d293052b9ec2ca48a022b317551ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseWheel&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_wheel_event_args.html">MouseWheelEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf4edbdbc31b153dbc592216886a0874"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseMove&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885ab6230dfc594205d0ea15d5890ac22d7f">RoutingStrategy::Bubble</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_move_event_args.html">MouseMoveEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a31d67f78e261f09aa63e57f9fb09165a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">KeyUp&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9709f8058ccdfaf9cb052814bbb40ee2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">KeyDown&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885aeebee9ab199d3cc4d44e19b341b65b7d">RoutingStrategy::Tunnel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abca0c2d959c629e6b5a2442033f2dbb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseEnter&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa4f35a6105675780551c59b6dcf9eed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::REGISTER_EVENT_DECLARATION </td>
+          <td>(</td>
+          <td class="paramtype">MouseLeave&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___event_system.html#ggaaad874b405531e224e6c3ce77c1be885afd1dd0c603be8170f9eae0be9f2f6afb">RoutingStrategy::Direct</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsw_1_1gui_1_1_mouse_event_args.html">MouseEventArgs</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a04ddb51352b5b863a088ad53feb7b15b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::RTTR_ENABLE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_visual.html">Visual</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0597b900d420b751cd22b4398b1dd9f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sw::gui::UIElement::SetParent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a> *&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set control parent. Internal use. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="aabcb80b46d58e365f1fd8e42477a7c54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class UIElementTester</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5b66a7e8a2d74d11039f8bba3347a999"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacesw_1_1gui.html#ac4016e8950fa391b61d115a48fad5d97">Size2D</a> sw::gui::UIElement::m_desiredSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desired size after Messure pass. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9adc91c051096af1e3dae3a482094910"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a> sw::gui::UIElement::m_eventHandlers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Managing delegates. </p>
+
+</div>
+</div>
 <a class="anchor" id="ac0cd1c7d9f944429fc6082f7fecd65b8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +2461,219 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Maybe it's something from higher level. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>Maybe it's something from higher level. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd3aebba74cb9fe73607aa43337b9cdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isFocusable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5a115b2d45f9afb885f6e5090bb0c7b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isFocused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is logical focus. </p>
+
+</div>
+</div>
+<a class="anchor" id="a67ea363f188c40803074d05b58c3559c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isKeyboardFocus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This element has keyboard focus and will receive keyboard events. </p>
+
+</div>
+</div>
+<a class="anchor" id="a083246bce77d305e8b4020bda8c67329"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isKeyboardFocusWithin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This element or it's children have keyboard focus. </p>
+
+</div>
+</div>
+<a class="anchor" id="a70dade18c6ba09d3ca1e1979edb22e18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isMouseCaptured</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if element have captured mouse. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8c772daf680a6b5ce5bf447c000d6b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isMouseCapturedWithin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Element or it's children have captured mouse. </p>
+
+</div>
+</div>
+<a class="anchor" id="a55660bd156af63e3fa975e30de8a92d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isMouseOver</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aad928fee7fd7ac242c65995624f01976"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::UIElement::m_isVisible</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41ebe4824d9e5d468b617a98004d8de4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>* sw::gui::UIElement::m_parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parent in controls visual tree. </p>
+
+</div>
+</div>
+<a class="anchor" id="a55834b298716077301437643cbce2beb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::UIElement::RTTR_REGISTRATION_FRIEND</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -422,7 +2684,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:42 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:05 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

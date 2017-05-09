@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesw.html">sw</a></li><li class="navelem"><a class="el" href="namespacesw_1_1gui.html">gui</a></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,6 +101,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">sw::gui::WinAPIGUI Class Reference<div class="ingroups"><a class="el" href="group___s_w_g_u_i.html">Sleeping Wombat GUI</a> &raquo; <a class="el" href="group___native_g_u_i.html">Native GUI system</a> &raquo; <a class="el" href="group___win32_a_p_i_native_g_u_i.html">WinAPI native GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_win_a_p_i_g_u_i_8h_source.html">WinAPIGUI.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sw::gui::WinAPIGUI:</div>
 <div class="dyncontent">
@@ -112,15 +115,18 @@ Inheritance diagram for sw::gui::WinAPIGUI:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a246784396850a17bc75ab17ea14a2a73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a246784396850a17bc75ab17ea14a2a73">WinAPIGUI</a> ()</td></tr>
+<tr class="separator:a246784396850a17bc75ab17ea14a2a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4785c4edd0ee6afcf108f45625ea06f3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a4785c4edd0ee6afcf108f45625ea06f3">~WinAPIGUI</a> ()=default</td></tr>
+<tr class="separator:a4785c4edd0ee6afcf108f45625ea06f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450dc91af90e9776994d0555ccb591dc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a450dc91af90e9776994d0555ccb591dc">MainLoop</a> (bool blockingMode) override</td></tr>
 <tr class="memdesc:a450dc91af90e9776994d0555ccb591dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes main loop of native GUI.  <a href="#a450dc91af90e9776994d0555ccb591dc">More...</a><br /></td></tr>
 <tr class="separator:a450dc91af90e9776994d0555ccb591dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a335ef1c47cccd8721d84770b0c6b57a5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a335ef1c47cccd8721d84770b0c6b57a5">Init</a> (const <a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a> &amp;initData) override</td></tr>
 <tr class="memdesc:a335ef1c47cccd8721d84770b0c6b57a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes native GUI.  <a href="#a335ef1c47cccd8721d84770b0c6b57a5">More...</a><br /></td></tr>
 <tr class="separator:a335ef1c47cccd8721d84770b0c6b57a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a955b13f737f6169efb1b51dc9cb8ec33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a955b13f737f6169efb1b51dc9cb8ec33"></a>
-virtual sw::input::IInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a955b13f737f6169efb1b51dc9cb8ec33">UseNativeInput</a> () override</td></tr>
-<tr class="memdesc:a955b13f737f6169efb1b51dc9cb8ec33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing. <br /></td></tr>
+<tr class="memitem:a955b13f737f6169efb1b51dc9cb8ec33"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a955b13f737f6169efb1b51dc9cb8ec33">UseNativeInput</a> () override</td></tr>
+<tr class="memdesc:a955b13f737f6169efb1b51dc9cb8ec33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing.  <a href="#a955b13f737f6169efb1b51dc9cb8ec33">More...</a><br /></td></tr>
 <tr class="separator:a955b13f737f6169efb1b51dc9cb8ec33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5fd12a787e0554ab72b65f09039947b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac5fd12a787e0554ab72b65f09039947b">CreateWindow</a> (<a class="el" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a> &amp;descriptor) override</td></tr>
 <tr class="memdesc:ac5fd12a787e0554ab72b65f09039947b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates native GUI window.  <a href="#ac5fd12a787e0554ab72b65f09039947b">More...</a><br /></td></tr>
@@ -129,43 +135,113 @@ virtual sw::input::IInput *&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a8106ad66c0ea976748a315385fb5330c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a8106ad66c0ea976748a315385fb5330c">HandleEvent</a> (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="memdesc:a8106ad66c0ea976748a315385fb5330c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures important events like changing focus.  <a href="#a8106ad66c0ea976748a315385fb5330c">More...</a><br /></td></tr>
 <tr class="separator:a8106ad66c0ea976748a315385fb5330c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsw_1_1gui_1_1_i_native_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsw_1_1gui_1_1_i_native_g_u_i')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html">sw::gui::INativeGUI</a></td></tr>
+<tr class="memitem:a91fb801d23e22f2d7bf64669a25527d3 inherit pub_methods_classsw_1_1gui_1_1_i_native_g_u_i"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a91fb801d23e22f2d7bf64669a25527d3">INativeGUI</a> ()=default</td></tr>
+<tr class="separator:a91fb801d23e22f2d7bf64669a25527d3 inherit pub_methods_classsw_1_1gui_1_1_i_native_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48cba805c194cbbcdd0cfec82a2cfa5d inherit pub_methods_classsw_1_1gui_1_1_i_native_g_u_i"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a48cba805c194cbbcdd0cfec82a2cfa5d">~INativeGUI</a> ()=default</td></tr>
+<tr class="separator:a48cba805c194cbbcdd0cfec82a2cfa5d inherit pub_methods_classsw_1_1gui_1_1_i_native_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7a481081238791b97c9afa2f8c2336e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7a481081238791b97c9afa2f8c2336e"></a>
-static <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ab7a481081238791b97c9afa2f8c2336e">Create</a> ()</td></tr>
-<tr class="memdesc:ab7a481081238791b97c9afa2f8c2336e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a> object. <br /></td></tr>
+<tr class="memitem:ab7a481081238791b97c9afa2f8c2336e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ab7a481081238791b97c9afa2f8c2336e">Create</a> ()</td></tr>
+<tr class="memdesc:ab7a481081238791b97c9afa2f8c2336e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a> object.  <a href="#ab7a481081238791b97c9afa2f8c2336e">More...</a><br /></td></tr>
 <tr class="separator:ab7a481081238791b97c9afa2f8c2336e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a317ad06c46a95d99e9396cc6a126cb5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a317ad06c46a95d99e9396cc6a126cb5b"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a317ad06c46a95d99e9396cc6a126cb5b">PrintLastError</a> ()</td></tr>
-<tr class="memdesc:a317ad06c46a95d99e9396cc6a126cb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets last win api error and prints to debug window. <br /></td></tr>
+<tr class="memitem:a317ad06c46a95d99e9396cc6a126cb5b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a317ad06c46a95d99e9396cc6a126cb5b">PrintLastError</a> ()</td></tr>
+<tr class="memdesc:a317ad06c46a95d99e9396cc6a126cb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets last win api error and prints to debug window.  <a href="#a317ad06c46a95d99e9396cc6a126cb5b">More...</a><br /></td></tr>
 <tr class="separator:a317ad06c46a95d99e9396cc6a126cb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebffbb610276ff2cc3a9f0ef5541555"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adebffbb610276ff2cc3a9f0ef5541555"></a>
-static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#adebffbb610276ff2cc3a9f0ef5541555">GetWindowClassName</a> ()</td></tr>
-<tr class="memdesc:adebffbb610276ff2cc3a9f0ef5541555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window class registered in WinAPI. <br /></td></tr>
+<tr class="memitem:adebffbb610276ff2cc3a9f0ef5541555"><td class="memItemLeft" align="right" valign="top">static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#adebffbb610276ff2cc3a9f0ef5541555">GetWindowClassName</a> ()</td></tr>
+<tr class="memdesc:adebffbb610276ff2cc3a9f0ef5541555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window class registered in WinAPI.  <a href="#adebffbb610276ff2cc3a9f0ef5541555">More...</a><br /></td></tr>
 <tr class="separator:adebffbb610276ff2cc3a9f0ef5541555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a36b0b3dcc59711dedef91e5dd80b5c3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36b0b3dcc59711dedef91e5dd80b5c3c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a36b0b3dcc59711dedef91e5dd80b5c3c">RegisterWindowClass</a> ()</td></tr>
-<tr class="memdesc:a36b0b3dcc59711dedef91e5dd80b5c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers window class. <br /></td></tr>
+<tr class="memitem:a36b0b3dcc59711dedef91e5dd80b5c3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a36b0b3dcc59711dedef91e5dd80b5c3c">RegisterWindowClass</a> ()</td></tr>
+<tr class="memdesc:a36b0b3dcc59711dedef91e5dd80b5c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers window class.  <a href="#a36b0b3dcc59711dedef91e5dd80b5c3c">More...</a><br /></td></tr>
 <tr class="separator:a36b0b3dcc59711dedef91e5dd80b5c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7555a40d030ebd255c3e983196b55ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7555a40d030ebd255c3e983196b55ef"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac7555a40d030ebd255c3e983196b55ef">MainLoopCore</a> (MSG *msg)</td></tr>
-<tr class="memdesc:ac7555a40d030ebd255c3e983196b55ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core functionality of main loop function. <br /></td></tr>
+<tr class="memitem:ac7555a40d030ebd255c3e983196b55ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#ac7555a40d030ebd255c3e983196b55ef">MainLoopCore</a> (MSG *msg)</td></tr>
+<tr class="memdesc:ac7555a40d030ebd255c3e983196b55ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core functionality of main loop function.  <a href="#ac7555a40d030ebd255c3e983196b55ef">More...</a><br /></td></tr>
 <tr class="separator:ac7555a40d030ebd255c3e983196b55ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9099e42c58ce2fe1933a2d325d618c56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9099e42c58ce2fe1933a2d325d618c56"></a>
-sw::input::WinApiInputProxy *&#160;</td><td class="memItemRight" valign="bottom"><b>m_input</b></td></tr>
+<tr class="memitem:a9099e42c58ce2fe1933a2d325d618c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsw_1_1input_1_1_win_api_input_proxy.html">sw::input::WinApiInputProxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a9099e42c58ce2fe1933a2d325d618c56">m_input</a></td></tr>
 <tr class="separator:a9099e42c58ce2fe1933a2d325d618c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b6bd660b5bc85dbb6ea56707b6cd3a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b6bd660b5bc85dbb6ea56707b6cd3a2"></a>
-<a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_initData</b></td></tr>
+<tr class="memitem:a8b6bd660b5bc85dbb6ea56707b6cd3a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a8b6bd660b5bc85dbb6ea56707b6cd3a2">m_initData</a></td></tr>
 <tr class="separator:a8b6bd660b5bc85dbb6ea56707b6cd3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a246784396850a17bc75ab17ea14a2a73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::WinAPIGUI::WinAPIGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4785c4edd0ee6afcf108f45625ea06f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sw::gui::WinAPIGUI::~WinAPIGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab7a481081238791b97c9afa2f8c2336e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a> * sw::gui::WinAPIGUI::Create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classsw_1_1gui_1_1_win_a_p_i_g_u_i.html">WinAPIGUI</a> object. </p>
+
+</div>
+</div>
 <a class="anchor" id="ac5fd12a787e0554ab72b65f09039947b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -191,6 +267,31 @@ sw::input::WinApiInputProxy *&#160;</td><td class="memItemRight" valign="bottom"
 <p>Creates native GUI window. </p>
 
 <p>Implements <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#a9cf4339d9c85809770bb4958668e5364">sw::gui::INativeGUI</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adebffbb610276ff2cc3a9f0ef5541555"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * sw::gui::WinAPIGUI::GetWindowClassName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Window class registered in WinAPI. </p>
 
 </div>
 </div>
@@ -292,14 +393,158 @@ sw::input::WinApiInputProxy *&#160;</td><td class="memItemRight" valign="bottom"
 
 </div>
 </div>
+<a class="anchor" id="ac7555a40d030ebd255c3e983196b55ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sw::gui::WinAPIGUI::MainLoopCore </td>
+          <td>(</td>
+          <td class="paramtype">MSG *&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Core functionality of main loop function. </p>
+
+</div>
+</div>
+<a class="anchor" id="a317ad06c46a95d99e9396cc6a126cb5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sw::gui::WinAPIGUI::PrintLastError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets last win api error and prints to debug window. </p>
+
+</div>
+</div>
+<a class="anchor" id="a36b0b3dcc59711dedef91e5dd80b5c3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sw::gui::WinAPIGUI::RegisterWindowClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers window class. </p>
+
+</div>
+</div>
+<a class="anchor" id="a955b13f737f6169efb1b51dc9cb8ec33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsw_1_1input_1_1_i_input.html">sw::input::IInput</a> * sw::gui::WinAPIGUI::UseNativeInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initalize native api for this gui system and return IInput object. GUI can use native input api for specific gui system or provide different library to deal directly with hardware. Classes derived from <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> are reposible for updating native inputs in main loop. In case of using separate hardware input library <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html" title="Interface encasulates native GUI system. ">INativeGUI</a> does nothing. </p>
+
+<p>Implements <a class="el" href="classsw_1_1gui_1_1_i_native_g_u_i.html#aa9a5bf452aecc9251938b5398ba3f55c">sw::gui::INativeGUI</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a8b6bd660b5bc85dbb6ea56707b6cd3a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsw_1_1gui_1_1_native_g_u_i_init_data.html">NativeGUIInitData</a> sw::gui::WinAPIGUI::m_initData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9099e42c58ce2fe1933a2d325d618c56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsw_1_1input_1_1_win_api_input_proxy.html">sw::input::WinApiInputProxy</a>* sw::gui::WinAPIGUI::m_input</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Native/WinAPI/<a class="el" href="_win_a_p_i_g_u_i_8h_source.html">WinAPIGUI.h</a></li>
-<li>Native/WinAPI/WinAPIGUI.cpp</li>
+<li>Native/WinAPI/<a class="el" href="_win_a_p_i_g_u_i_8cpp.html">WinAPIGUI.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:42 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:05 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

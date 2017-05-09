@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47b211c0d1373c6375e61419d02656fd.html">Events</a></li><li class="navelem"><a class="el" href="dir_c76c11a9370b5045416556b380cc49c5.html">Input</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_9a28b0e78b03d8449db20302129b9209.html">Events</a></li><li class="navelem"><a class="el" href="dir_77cff213ad0a2e8bae449e5bde2c9598.html">Input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_key_event_args_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;swGUI/Core/System/Events/Input/KeyboardEventArgs.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_keyboard_event_args_8h.html">swGUI/Core/System/Events/Input/KeyboardEventArgs.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
@@ -106,32 +108,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    RTTR_ENABLE( <a class="code" href="structsw_1_1gui_1_1_keyboard_event_args.html">KeyboardEventArgs</a> )</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> input::KeyState*              State;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    input::Keyboard::PhysicalKeys       Key;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span>                                IsUp;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span>                                IsDown;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_key_event_args.html#acbb8f81178008c7ab3137cc07b1586fd">   26</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classsw_1_1input_1_1_key_state.html">input::KeyState</a>&amp;              <a class="code" href="structsw_1_1gui_1_1_key_event_args.html#acbb8f81178008c7ab3137cc07b1586fd">State</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_key_event_args.html#a43e372b0ea4f7fe63199460947063f72">   27</a></span>&#160;    <a class="code" href="group___input.html#ga328c1724443473b2c64b39a059667e06">input::Keyboard::PhysicalKeys</a>       <a class="code" href="structsw_1_1gui_1_1_key_event_args.html#a43e372b0ea4f7fe63199460947063f72">Key</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_key_event_args.html#aa4e3c18a8af2cc436b91f6a446875121">   28</a></span>&#160;    <span class="keywordtype">bool</span>                                <a class="code" href="structsw_1_1gui_1_1_key_event_args.html#aa4e3c18a8af2cc436b91f6a446875121">IsUp</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_key_event_args.html#a12f4c1ac5921fc40cc919c1246bea1f3">   29</a></span>&#160;    <span class="keywordtype">bool</span>                                <a class="code" href="structsw_1_1gui_1_1_key_event_args.html#a12f4c1ac5921fc40cc919c1246bea1f3">IsDown</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structsw_1_1gui_1_1_key_event_args.html">KeyEventArgs</a>( input::KeyboardDevice* device, input::Keyboard::PhysicalKeys key )</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structsw_1_1gui_1_1_key_event_args.html#ac21aefc95ed93a74599ce61bf3fc3cb6">   33</a></span>&#160;    <a class="code" href="structsw_1_1gui_1_1_key_event_args.html#ac21aefc95ed93a74599ce61bf3fc3cb6">KeyEventArgs</a>( <a class="code" href="classsw_1_1input_1_1_keyboard_device.html">input::KeyboardDevice</a>* device, <a class="code" href="group___input.html#ga328c1724443473b2c64b39a059667e06">input::Keyboard::PhysicalKeys</a> key )</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        :   <a class="code" href="structsw_1_1gui_1_1_keyboard_event_args.html">KeyboardEventArgs</a>( device )</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        ,   State( &amp;device-&gt;GetState()[ key ] )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        ,   State( device-&gt;GetState()[ key ] )</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        ,   Key( key )</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        ,   IsUp( device-&gt;GetState()[ key ].IsUp() )</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ,   IsDown( device-&gt;GetState()[ key ].IsPressed() )</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}   <span class="comment">// gui</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}   <span class="comment">// sw</span></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="namespacesw_1_1gui.html#a87d391f004578da1660585ad4c044be9">DEFINE_OPTR_TYPE</a>( KeyEventArgs );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}   <span class="comment">// gui</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}   <span class="comment">// sw</span></div>
+<div class="ttc" id="structsw_1_1gui_1_1_key_event_args_html_aa4e3c18a8af2cc436b91f6a446875121"><div class="ttname"><a href="structsw_1_1gui_1_1_key_event_args.html#aa4e3c18a8af2cc436b91f6a446875121">sw::gui::KeyEventArgs::IsUp</a></div><div class="ttdeci">bool IsUp</div><div class="ttdef"><b>Definition:</b> KeyEventArgs.h:28</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_key_event_args_html"><div class="ttname"><a href="structsw_1_1gui_1_1_key_event_args.html">sw::gui::KeyEventArgs</a></div><div class="ttdoc">Key state changed event. </div><div class="ttdef"><b>Definition:</b> KeyEventArgs.h:21</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_keyboard_event_args_html"><div class="ttname"><a href="structsw_1_1gui_1_1_keyboard_event_args.html">sw::gui::KeyboardEventArgs</a></div><div class="ttdoc">Base class for keyboard events. </div><div class="ttdef"><b>Definition:</b> KeyboardEventArgs.h:15</div></div>
+<div class="ttc" id="classsw_1_1input_1_1_keyboard_device_html"><div class="ttname"><a href="classsw_1_1input_1_1_keyboard_device.html">sw::input::KeyboardDevice</a></div><div class="ttdoc">Keyboard state and events. </div><div class="ttdef"><b>Definition:</b> KeyboardDevice.h:40</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_key_event_args_html_ac21aefc95ed93a74599ce61bf3fc3cb6"><div class="ttname"><a href="structsw_1_1gui_1_1_key_event_args.html#ac21aefc95ed93a74599ce61bf3fc3cb6">sw::gui::KeyEventArgs::KeyEventArgs</a></div><div class="ttdeci">KeyEventArgs(input::KeyboardDevice *device, input::Keyboard::PhysicalKeys key)</div><div class="ttdef"><b>Definition:</b> KeyEventArgs.h:33</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_key_event_args_html_acbb8f81178008c7ab3137cc07b1586fd"><div class="ttname"><a href="structsw_1_1gui_1_1_key_event_args.html#acbb8f81178008c7ab3137cc07b1586fd">sw::gui::KeyEventArgs::State</a></div><div class="ttdeci">const input::KeyState &amp; State</div><div class="ttdef"><b>Definition:</b> KeyEventArgs.h:26</div></div>
+<div class="ttc" id="classsw_1_1input_1_1_key_state_html"><div class="ttname"><a href="classsw_1_1input_1_1_key_state.html">sw::input::KeyState</a></div><div class="ttdoc">Button state structure.. </div><div class="ttdef"><b>Definition:</b> KeyState.h:26</div></div>
+<div class="ttc" id="_keyboard_event_args_8h_html"><div class="ttname"><a href="_keyboard_event_args_8h.html">KeyboardEventArgs.h</a></div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_key_event_args_html_a43e372b0ea4f7fe63199460947063f72"><div class="ttname"><a href="structsw_1_1gui_1_1_key_event_args.html#a43e372b0ea4f7fe63199460947063f72">sw::gui::KeyEventArgs::Key</a></div><div class="ttdeci">input::Keyboard::PhysicalKeys Key</div><div class="ttdef"><b>Definition:</b> KeyEventArgs.h:27</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_a87d391f004578da1660585ad4c044be9"><div class="ttname"><a href="namespacesw_1_1gui.html#a87d391f004578da1660585ad4c044be9">sw::gui::DEFINE_OPTR_TYPE</a></div><div class="ttdeci">DEFINE_OPTR_TYPE(UIElement)</div></div>
+<div class="ttc" id="structsw_1_1gui_1_1_key_event_args_html_a12f4c1ac5921fc40cc919c1246bea1f3"><div class="ttname"><a href="structsw_1_1gui_1_1_key_event_args.html#a12f4c1ac5921fc40cc919c1246bea1f3">sw::gui::KeyEventArgs::IsDown</a></div><div class="ttdeci">bool IsDown</div><div class="ttdef"><b>Definition:</b> KeyEventArgs.h:29</div></div>
+<div class="ttc" id="group___input_html_ga328c1724443473b2c64b39a059667e06"><div class="ttname"><a href="group___input.html#ga328c1724443473b2c64b39a059667e06">sw::input::Keyboard::PhysicalKeys</a></div><div class="ttdeci">PhysicalKeys</div><div class="ttdoc">Physical keys numbers. Numbers are the same as in DirectInput. </div><div class="ttdef"><b>Definition:</b> InputDeviceEvent.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

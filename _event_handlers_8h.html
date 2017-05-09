@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,12 +85,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47b211c0d1373c6375e61419d02656fd.html">Events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_9a28b0e78b03d8449db20302129b9209.html">Events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">EventHandlers.h File Reference</div>  </div>
@@ -105,12 +108,18 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container class for delegates.  <a href="classsw_1_1gui_1_1_event_handlers.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacesw"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesw.html">sw</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacesw_1_1gui"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesw_1_1gui.html">sw::gui</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a919e7193d02c4dff2857c718fead98db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DECLARATION</b>(name,  strategy,  className,  argsType)</td></tr>
+<tr class="memitem:a919e7193d02c4dff2857c718fead98db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_handlers_8h.html#a919e7193d02c4dff2857c718fead98db">REGISTER_EVENT_DECLARATION</a>(name,  strategy,  className,  argsType)</td></tr>
 <tr class="separator:a919e7193d02c4dff2857c718fead98db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a654d98d5dd58757bcd70bbd2d8f2b96c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a654d98d5dd58757bcd70bbd2d8f2b96c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_EVENT_DEFINITION</b>(name,  strategy,  className,  argsType)&#160;&#160;&#160;const ::<a class="el" href="structsw_1_1gui_1_1_registered_event.html">sw::gui::RegisteredEvent</a>* className::s ## name = ::sw::gui::EventsSystem::Get().RegisterEvent( #name, ::sw::gui::strategy, TypeID::get&lt; className &gt;(), TypeID::get&lt; argsType &gt;() );</td></tr>
+<tr class="memitem:a654d98d5dd58757bcd70bbd2d8f2b96c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_handlers_8h.html#a654d98d5dd58757bcd70bbd2d8f2b96c">REGISTER_EVENT_DEFINITION</a>(name,  strategy,  className,  argsType)&#160;&#160;&#160;const ::<a class="el" href="structsw_1_1gui_1_1_registered_event.html">sw::gui::RegisteredEvent</a>* className::s ## name = ::<a class="el" href="classsw_1_1gui_1_1_events_system.html#a98ea4800eebdba3fd6b79022e9f50e97">sw::gui::EventsSystem::Get</a>().RegisterEvent( #name, ::sw::gui::strategy, TypeID::get&lt; className &gt;(), TypeID::get&lt; argsType &gt;() );</td></tr>
 <tr class="separator:a654d98d5dd58757bcd70bbd2d8f2b96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -158,10 +167,48 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a class="anchor" id="a654d98d5dd58757bcd70bbd2d8f2b96c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGISTER_EVENT_DEFINITION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">strategy, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">className, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">argsType&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;const ::<a class="el" href="structsw_1_1gui_1_1_registered_event.html">sw::gui::RegisteredEvent</a>* className::s ## name = ::<a class="el" href="classsw_1_1gui_1_1_events_system.html#a98ea4800eebdba3fd6b79022e9f50e97">sw::gui::EventsSystem::Get</a>().RegisterEvent( #name, ::sw::gui::strategy, TypeID::get&lt; className &gt;(), TypeID::get&lt; argsType &gt;() );</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:03 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

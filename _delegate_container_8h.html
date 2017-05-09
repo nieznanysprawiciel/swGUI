@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,19 +85,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47b211c0d1373c6375e61419d02656fd.html">Events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_9a28b0e78b03d8449db20302129b9209.html">Events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">DelegateContainer.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;swCommonLib/Common/TypesDefinitions.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_types_definitions_8h_source.html">swCommonLib/Common/TypesDefinitions.h</a>&quot;</code><br />
 <code>#include &quot;swCommonLib/External/FastDelegate/FastDelegate.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_registered_event_8h_source.html">RegisteredEvent.h</a>&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -111,17 +114,22 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived template class for delegates.  <a href="classsw_1_1gui_1_1_delegates_container.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacesw"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesw.html">sw</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacesw_1_1gui"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesw_1_1gui.html">sw::gui</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a35ac501f6307d311383d7d1a9577ecbd"><td class="memTemplParams" colspan="2"><a class="anchor" id="a35ac501f6307d311383d7d1a9577ecbd"></a>
-template&lt;typename EventArgType &gt; </td></tr>
-<tr class="memitem:a35ac501f6307d311383d7d1a9577ecbd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sw::gui::EventDelegate</b> = fastdelegate::FastDelegate2&lt; UIElement *, EventArgType * &gt;</td></tr>
+<tr class="memitem:a35ac501f6307d311383d7d1a9577ecbd"><td class="memTemplParams" colspan="2">template&lt;typename EventArgType &gt; </td></tr>
+<tr class="memitem:a35ac501f6307d311383d7d1a9577ecbd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesw_1_1gui.html#a35ac501f6307d311383d7d1a9577ecbd">sw::gui::EventDelegate</a> = fastdelegate::FastDelegate2&lt; UIElement *, EventArgType * &gt;</td></tr>
 <tr class="separator:a35ac501f6307d311383d7d1a9577ecbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a121a571aca35830f9b5ac00f68262797"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a121a571aca35830f9b5ac00f68262797"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>sw::gui::DEFINE_OPTR_TYPE</b> (DelegatesContainerBase)</td></tr>
+<tr class="memitem:a121a571aca35830f9b5ac00f68262797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesw_1_1gui.html#a121a571aca35830f9b5ac00f68262797">sw::gui::DEFINE_OPTR_TYPE</a> (DelegatesContainerBase)</td></tr>
 <tr class="separator:a121a571aca35830f9b5ac00f68262797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -130,7 +138,7 @@ Functions</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:03 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

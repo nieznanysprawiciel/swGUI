@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lineargradient',['LinearGradient',['../classsw_1_1gui_1_1_linear_gradient.html',1,'sw::gui']]]
+  ['joystickdevice',['JoystickDevice',['../classsw_1_1input_1_1_joystick_device.html',1,'sw::input']]],
+  ['joystickstate',['JoystickState',['../classsw_1_1input_1_1_joystick_state.html',1,'sw::input']]]
 ];

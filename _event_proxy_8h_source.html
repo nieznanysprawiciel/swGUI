@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47b211c0d1373c6375e61419d02656fd.html">Events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_9a28b0e78b03d8449db20302129b9209.html">Events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -107,23 +109,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_event_proxy.html">EventProxy</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">typedef</span> EventDelegate&lt; EventArgType &gt;       DelegateType;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">typedef</span> std::unique_ptr&lt; EventArgType &gt;     ArgumentsOwnerPtr;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">   27</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="namespacesw_1_1gui.html#a35ac501f6307d311383d7d1a9577ecbd">EventDelegate&lt; EventArgType &gt;</a>       <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">DelegateType</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#a6050b92c39fdacd2e12d0704591a1cea">   28</a></span>&#160;    <span class="keyword">typedef</span> std::unique_ptr&lt; EventArgType &gt;     <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a6050b92c39fdacd2e12d0704591a1cea">ArgumentsOwnerPtr</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&amp;                          m_handlers;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a>*                  m_eventInfo;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#ae25a49f7a9fe56cd5395902c40c1ef01">   31</a></span>&#160;    <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&amp;                          <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#ae25a49f7a9fe56cd5395902c40c1ef01">m_handlers</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#ae990a03e6bb7e3af4ecc8f77c64f4372">   32</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a>*                  <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#ae990a03e6bb7e3af4ecc8f77c64f4372">m_eventInfo</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">explicit</span>            <a class="code" href="classsw_1_1gui_1_1_event_proxy.html">EventProxy</a>      ( <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&amp; delegatesContainer, <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a>* eventInfo );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">explicit</span>            <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a3b87de9ce60e08ee2fdbc1c12482fc97">EventProxy</a>      ( <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&amp; delegatesContainer, <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a>* eventInfo );</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span>         operator+=      ( DelegateType delegate );</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>         operator-=      ( DelegateType delegate );</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span>         AddDelegate     ( DelegateType delegate );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>         RemoveDelegate  ( DelegateType delegate );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span>         <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#ab6fe94f9522496d84e2fcd994048547b">operator+=		</a>( DelegateType delegate );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>         <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a8a982b9a603c2993c6a701df21d8de7e">operator-=		</a>( DelegateType delegate );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span>         <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#ae85243a22a2d1e2a522d5af871f19d1f">AddDelegate</a>     ( DelegateType delegate );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>         <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#add896fac550f981ccb427313e760b89a">RemoveDelegate</a>  ( DelegateType delegate );</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span>                RaiseEvent      ( <a class="code" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>* sender, ArgumentsOwnerPtr&amp;&amp; arguments );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span>                <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a5189ed3761fe6ff61c8b2d7c94ae56d6">RaiseEvent</a>      ( <a class="code" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>* sender, ArgumentsOwnerPtr&amp;&amp; arguments );</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
@@ -134,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// ================================ //</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">inline</span>                  <a class="code" href="classsw_1_1gui_1_1_event_proxy.html">EventProxy&lt; EventArgType &gt;::EventProxy</a>      ( <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&amp; delegatesContainer, <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a>* eventInfo )</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#a3b87de9ce60e08ee2fdbc1c12482fc97">   54</a></span>&#160;<span class="keyword">inline</span>                  <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a3b87de9ce60e08ee2fdbc1c12482fc97">EventProxy&lt; EventArgType &gt;::EventProxy</a>      ( <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>&amp; delegatesContainer, <span class="keyword">const</span> <a class="code" href="structsw_1_1gui_1_1_registered_event.html">RegisteredEvent</a>* eventInfo )</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    :   m_handlers( delegatesContainer )</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ,   m_eventInfo( eventInfo )</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{}</div>
@@ -142,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// ================================ //</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>             EventProxy&lt; EventArgType &gt;::operator+=      ( <span class="keyword">typename</span> EventProxy&lt; EventArgType &gt;::DelegateType delegate )</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#ab6fe94f9522496d84e2fcd994048547b">   62</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>             <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#ab6fe94f9522496d84e2fcd994048547b">EventProxy&lt; EventArgType &gt;::operator+=		</a>( <span class="keyword">typename</span> <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">EventProxy&lt; EventArgType &gt;::DelegateType</a> delegate )</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    AddDelegate( delegate );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
@@ -150,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// ================================ //</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span>             EventProxy&lt; EventArgType &gt;::operator-=      ( <span class="keyword">typename</span> EventProxy&lt; EventArgType &gt;::DelegateType delegate )</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#a8a982b9a603c2993c6a701df21d8de7e">   70</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a8a982b9a603c2993c6a701df21d8de7e">EventProxy&lt; EventArgType &gt;::operator-=		</a>( <span class="keyword">typename</span> <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">EventProxy&lt; EventArgType &gt;::DelegateType</a> delegate )</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> RemoveDelegate( delegate );</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
@@ -158,37 +160,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// ================================ //</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>             EventProxy&lt; EventArgType &gt;::AddDelegate     ( <span class="keyword">typename</span> EventProxy&lt; EventArgType &gt;::DelegateType delegate )</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#ae85243a22a2d1e2a522d5af871f19d1f">   78</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span>             <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#ae85243a22a2d1e2a522d5af871f19d1f">EventProxy&lt; EventArgType &gt;::AddDelegate</a>     ( <span class="keyword">typename</span> <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">EventProxy&lt; EventArgType &gt;::DelegateType</a> delegate )</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Find delegates container.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    DelegatesContainerBase* delegateContainer = m_handlers.FindContainer( m_eventInfo-&gt;ID );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    DelegatesContainer&lt; EventArgType &gt;* typedDelegateContainer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_delegates_container_base.html">DelegatesContainerBase</a>* delegateContainer = m_handlers.FindContainer( m_eventInfo-&gt;ID );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_delegates_container.html">DelegatesContainer&lt; EventArgType &gt;</a>* typedDelegateContainer = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// Create delegates container if it doesn&#39;t exists.</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span>( !delegateContainer )</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        DelegatesContainer&lt; EventArgType &gt;* container = <span class="keyword">new</span> DelegatesContainer&lt; EventArgType &gt;( m_eventInfo-&gt;ID );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        delegateContainer = m_handlers.AddContainer( std::move( DelegatesContainerBaseOPtr( container ) ) );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classsw_1_1gui_1_1_delegates_container.html">DelegatesContainer&lt; EventArgType &gt;</a>* container = <span class="keyword">new</span> <a class="code" href="classsw_1_1gui_1_1_delegates_container.html">DelegatesContainer&lt; EventArgType &gt;</a>( m_eventInfo-&gt;ID );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        delegateContainer = m_handlers.<a class="code" href="classsw_1_1gui_1_1_delegates_container_base.html#a862a82f5c6f2bb389a200f332e0e1811">AddContainer</a>( std::move( DelegatesContainerBaseOPtr( container ) ) );</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    typedDelegateContainer = <span class="keyword">static_cast&lt;</span> DelegatesContainer&lt; EventArgType &gt;* <span class="keyword">&gt;</span>( delegateContainer );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    typedDelegateContainer-&gt;AddDelegate( delegate );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    typedDelegateContainer = <span class="keyword">static_cast&lt;</span> <a class="code" href="classsw_1_1gui_1_1_delegates_container.html">DelegatesContainer&lt; EventArgType &gt;</a>* <span class="keyword">&gt;</span>( delegateContainer );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    typedDelegateContainer-&gt;<a class="code" href="classsw_1_1gui_1_1_delegates_container.html#a31c4538e2b038b08e90cd47c505eb53d">AddDelegate</a>( delegate );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// ================================ //</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span>             EventProxy&lt; EventArgType &gt;::RemoveDelegate  ( <span class="keyword">typename</span> EventProxy&lt; EventArgType &gt;::DelegateType delegate )</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#add896fac550f981ccb427313e760b89a">   98</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#add896fac550f981ccb427313e760b89a">EventProxy&lt; EventArgType &gt;::RemoveDelegate</a>  ( <span class="keyword">typename</span> <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">EventProxy&lt; EventArgType &gt;::DelegateType</a> delegate )</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    DelegatesContainerBase* delegateContainer = m_handlers.FindContainer( m_eventInfo-&gt;ID );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_delegates_container_base.html">DelegatesContainerBase</a>* delegateContainer = m_handlers.FindContainer( m_eventInfo-&gt;ID );</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>( delegateContainer )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        DelegatesContainer&lt; EventArgType &gt;* typedDelegateContainer = <span class="keyword">static_cast&lt;</span> DelegatesContainer&lt; EventArgType &gt;* <span class="keyword">&gt;</span>( delegateContainer );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">bool</span> result = typedDelegateContainer-&gt;RemoveDelegate( delegate );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classsw_1_1gui_1_1_delegates_container.html">DelegatesContainer&lt; EventArgType &gt;</a>* typedDelegateContainer = <span class="keyword">static_cast&lt;</span> <a class="code" href="classsw_1_1gui_1_1_delegates_container.html">DelegatesContainer&lt; EventArgType &gt;</a>* <span class="keyword">&gt;</span>( delegateContainer );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">bool</span> result = typedDelegateContainer-&gt;<a class="code" href="classsw_1_1gui_1_1_delegates_container.html#adfc584f732b08ee4023c3c44b6b56147">RemoveDelegate</a>( delegate );</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// Remove container if isn&#39;t usufull anymore.</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>( typedDelegateContainer-&gt;IsEmpty() )</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>( typedDelegateContainer-&gt;<a class="code" href="classsw_1_1gui_1_1_delegates_container.html#acee8d0b59a79f815687daa47b9865767">IsEmpty</a>() )</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            m_handlers.RemoveContainer( m_eventInfo-&gt;ID );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
@@ -201,25 +203,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">// ================================ //</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span>             EventProxy&lt; EventArgType &gt;::RaiseEvent      ( UIElement* sender, ArgumentsOwnerPtr&amp;&amp; arguments )</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_proxy.html#a5189ed3761fe6ff61c8b2d7c94ae56d6">  121</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a5189ed3761fe6ff61c8b2d7c94ae56d6">EventProxy&lt; EventArgType &gt;::RaiseEvent</a>      ( <a class="code" href="classsw_1_1gui_1_1_u_i_element.html">UIElement</a>* sender, <a class="code" href="classsw_1_1gui_1_1_event_proxy.html#a6050b92c39fdacd2e12d0704591a1cea">ArgumentsOwnerPtr</a>&amp;&amp; arguments )</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> m_handlers.RaiseEvent( m_eventInfo, sender, std::move( arguments ) );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}   <span class="comment">// gui</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}   <span class="comment">// sw</span></div>
+<div class="ttc" id="classsw_1_1gui_1_1_delegates_container_html"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container.html">sw::gui::DelegatesContainer</a></div><div class="ttdoc">Derived template class for delegates. </div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:91</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_delegates_container_base_html"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container_base.html">sw::gui::DelegatesContainerBase</a></div><div class="ttdoc">Base class for delegates containers. </div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:52</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_a8a982b9a603c2993c6a701df21d8de7e"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#a8a982b9a603c2993c6a701df21d8de7e">sw::gui::EventProxy::operator-=</a></div><div class="ttdeci">bool operator-=(DelegateType delegate)</div><div class="ttdef"><b>Definition:</b> EventProxy.h:70</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_a3b87de9ce60e08ee2fdbc1c12482fc97"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#a3b87de9ce60e08ee2fdbc1c12482fc97">sw::gui::EventProxy::EventProxy</a></div><div class="ttdeci">EventProxy(EventHandlers &amp;delegatesContainer, const RegisteredEvent *eventInfo)</div><div class="ttdef"><b>Definition:</b> EventProxy.h:54</div></div>
 <div class="ttc" id="_event_handlers_8h_html"><div class="ttname"><a href="_event_handlers_8h.html">EventHandlers.h</a></div></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
-<div class="ttc" id="classsw_1_1gui_1_1_u_i_element_html"><div class="ttname"><a href="classsw_1_1gui_1_1_u_i_element.html">sw::gui::UIElement</a></div><div class="ttdoc">Interface for all controls in tree. </div><div class="ttdef"><b>Definition:</b> UIElement.h:54</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_ae990a03e6bb7e3af4ecc8f77c64f4372"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#ae990a03e6bb7e3af4ecc8f77c64f4372">sw::gui::EventProxy::m_eventInfo</a></div><div class="ttdeci">const RegisteredEvent * m_eventInfo</div><div class="ttdef"><b>Definition:</b> EventProxy.h:32</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_ab6fe94f9522496d84e2fcd994048547b"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#ab6fe94f9522496d84e2fcd994048547b">sw::gui::EventProxy::operator+=</a></div><div class="ttdeci">void operator+=(DelegateType delegate)</div><div class="ttdef"><b>Definition:</b> EventProxy.h:62</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_u_i_element_html"><div class="ttname"><a href="classsw_1_1gui_1_1_u_i_element.html">sw::gui::UIElement</a></div><div class="ttdoc">Interface for all controls in tree. </div><div class="ttdef"><b>Definition:</b> UIElement.h:57</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_ae85243a22a2d1e2a522d5af871f19d1f"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#ae85243a22a2d1e2a522d5af871f19d1f">sw::gui::EventProxy::AddDelegate</a></div><div class="ttdeci">void AddDelegate(DelegateType delegate)</div><div class="ttdef"><b>Definition:</b> EventProxy.h:78</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_delegates_container_html_adfc584f732b08ee4023c3c44b6b56147"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container.html#adfc584f732b08ee4023c3c44b6b56147">sw::gui::DelegatesContainer::RemoveDelegate</a></div><div class="ttdeci">bool RemoveDelegate(DelegateType delegate)</div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:192</div></div>
 <div class="ttc" id="_delegate_container_8h_html"><div class="ttname"><a href="_delegate_container_8h.html">DelegateContainer.h</a></div></div>
 <div class="ttc" id="_registered_event_8h_html"><div class="ttname"><a href="_registered_event_8h.html">RegisteredEvent.h</a></div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_a5189ed3761fe6ff61c8b2d7c94ae56d6"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#a5189ed3761fe6ff61c8b2d7c94ae56d6">sw::gui::EventProxy::RaiseEvent</a></div><div class="ttdeci">bool RaiseEvent(UIElement *sender, ArgumentsOwnerPtr &amp;&amp;arguments)</div><div class="ttdef"><b>Definition:</b> EventProxy.h:121</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_a02b2a819c84d51e2e4f70ac680ec44cd"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#a02b2a819c84d51e2e4f70ac680ec44cd">sw::gui::EventProxy::DelegateType</a></div><div class="ttdeci">EventDelegate&lt; EventArgType &gt; DelegateType</div><div class="ttdef"><b>Definition:</b> EventProxy.h:27</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_delegates_container_base_html_a862a82f5c6f2bb389a200f332e0e1811"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container_base.html#a862a82f5c6f2bb389a200f332e0e1811">sw::gui::DelegatesContainerBase::AddContainer</a></div><div class="ttdeci">void AddContainer(DelegatesContainerBaseOPtr &amp;&amp;container)</div><div class="ttdoc">Adds container on the end of list. </div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:132</div></div>
+<div class="ttc" id="namespacesw_1_1gui_html_a35ac501f6307d311383d7d1a9577ecbd"><div class="ttname"><a href="namespacesw_1_1gui.html#a35ac501f6307d311383d7d1a9577ecbd">sw::gui::EventDelegate</a></div><div class="ttdeci">fastdelegate::FastDelegate2&lt; UIElement *, EventArgType * &gt; EventDelegate</div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:31</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_delegates_container_html_a31c4538e2b038b08e90cd47c505eb53d"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container.html#a31c4538e2b038b08e90cd47c505eb53d">sw::gui::DelegatesContainer::AddDelegate</a></div><div class="ttdeci">void AddDelegate(DelegateType delegate)</div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:183</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html">sw::gui::EventHandlers</a></div><div class="ttdoc">Container class for delegates. </div><div class="ttdef"><b>Definition:</b> EventHandlers.h:24</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_ae25a49f7a9fe56cd5395902c40c1ef01"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#ae25a49f7a9fe56cd5395902c40c1ef01">sw::gui::EventProxy::m_handlers</a></div><div class="ttdeci">EventHandlers &amp; m_handlers</div><div class="ttdef"><b>Definition:</b> EventProxy.h:31</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_registered_event_html"><div class="ttname"><a href="structsw_1_1gui_1_1_registered_event.html">sw::gui::RegisteredEvent</a></div><div class="ttdoc">Structure describes event registered by controls. </div><div class="ttdef"><b>Definition:</b> RegisteredEvent.h:38</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_a6050b92c39fdacd2e12d0704591a1cea"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#a6050b92c39fdacd2e12d0704591a1cea">sw::gui::EventProxy::ArgumentsOwnerPtr</a></div><div class="ttdeci">std::unique_ptr&lt; EventArgType &gt; ArgumentsOwnerPtr</div><div class="ttdef"><b>Definition:</b> EventProxy.h:28</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html">sw::gui::EventProxy</a></div><div class="ttdoc">Helper class for accessing event. </div><div class="ttdef"><b>Definition:</b> EventProxy.h:24</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_delegates_container_html_acee8d0b59a79f815687daa47b9865767"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container.html#acee8d0b59a79f815687daa47b9865767">sw::gui::DelegatesContainer::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const </div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:225</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html_add896fac550f981ccb427313e760b89a"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html#add896fac550f981ccb427313e760b89a">sw::gui::EventProxy::RemoveDelegate</a></div><div class="ttdeci">bool RemoveDelegate(DelegateType delegate)</div><div class="ttdef"><b>Definition:</b> EventProxy.h:98</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nativeguiinitdata',['NativeGUIInitData',['../structsw_1_1gui_1_1_native_g_u_i_init_data.html',1,'sw::gui']]],
-  ['nativewindowdescriptor',['NativeWindowDescriptor',['../structsw_1_1gui_1_1_native_window_descriptor.html',1,'sw::gui']]]
+  ['lineargradient',['LinearGradient',['../classsw_1_1gui_1_1_linear_gradient.html',1,'sw::gui']]],
+  ['linearinterpolator',['LinearInterpolator',['../class_linear_interpolator.html',1,'']]]
 ];

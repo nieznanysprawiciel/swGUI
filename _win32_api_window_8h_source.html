@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6738285cf408ee10740d48933d3bc393.html">Native</a></li><li class="navelem"><a class="el" href="dir_d62e9d8591dc4e4adc846321030db179.html">WinAPI</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b9f46ce8f2f9daaf55124d7094c43d99.html">Native</a></li><li class="navelem"><a class="el" href="dir_58acbdc1ad7aca020a056bd878625224.html">WinAPI</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,75 +93,98 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Win32ApiWindow.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="_win32_api_window_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;swGUI/Native/INativeWindow.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_native_window_8h.html">swGUI/Native/INativeWindow.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#undef CreateWindow</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#undef min</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#undef max</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#undef XBUTTON1</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#undef XBUTTON2</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>gui</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesw.html">sw</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>gui</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a> : <span class="keyword">public</span> <a class="code" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    HWND            m_windowHandle;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::wstring    m_title;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint16          m_width;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    uint16          m_height;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">explicit</span>            <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a>  ();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a> ();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a> : <span class="keyword">public</span> <a class="code" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html#ada94c3d2dc54c925e2345f3da5cc5f92">   25</a></span>&#160;    HWND            <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#ada94c3d2dc54c925e2345f3da5cc5f92">m_windowHandle</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html#a9a65dc950220402ae1eee4b0f026efca">   26</a></span>&#160;    std::wstring    <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a9a65dc950220402ae1eee4b0f026efca">m_title</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html#af2bc203bc25aef00d5beb99274d1c363">   28</a></span>&#160;    <a class="code" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>          <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#af2bc203bc25aef00d5beb99274d1c363">m_width</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_win32_api_window.html#a787363fb2ac004a110bc61514e2f5bb3">   29</a></span>&#160;    <a class="code" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>          <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a787363fb2ac004a110bc61514e2f5bb3">m_height</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">explicit</span>            <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#ad3ef9b844d5941a296a4c99cc3391b29">Win32ApiWindow</a>  ();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a8dd17c2e995c4e99e6e1d0e65074379f">~Win32ApiWindow</a> ();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a>*      CreateWindowInstance    ( <a class="code" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a>&amp; descriptor );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span>            ShowAppWindow           ();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span>            HideAppWindow           ();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span>            Initialize              ( <a class="code" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a>&amp; descriptor );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">static</span> <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html">Win32ApiWindow</a>*      <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#ac1e34d9ddb06b4761b5f9e5ba3c0319d">CreateWindowInstance</a>    ( <a class="code" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a>&amp; descriptor );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span>            <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a694eea459dd3458cbc46c7dd929e0f85">ShowAppWindow</a>           ();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span>            <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a21ca10647bce16962f30e1c7e8b3afd1">HideAppWindow</a>           ();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a3db84f2b13bd49e7212c2c780631195f">Initialize</a>              ( <a class="code" href="structsw_1_1gui_1_1_native_window_descriptor.html">NativeWindowDescriptor</a>&amp; descriptor );</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Inherited via INativeWindow</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> uint16              GetWidth        () <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> uint16              GetHeight       () <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> uint16              GetClientWidth  () <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> uint16              GetClientHeight () <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> WindowHandler       GetHandle       () <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> std::string         GetTitle        () <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                Show            () <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                Hide            () <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                SetTitle        ( <span class="keyword">const</span> std::string &amp; newTitle ) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Inherited via INativeWindow</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>              <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#ae7c2eb76d6b22978b3882cdaab1f43bb">GetWidth</a>        () <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>              <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#ad8aae2f6ed8f925136b130ee80ac0300">GetHeight</a>       () <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>              <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a6c86b1f2bcbc498b0ddcb8936c0c095a">GetClientWidth</a>  () <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>              <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#acff1297d0d2bae9fe35391055ac79870">GetClientHeight</a> () <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_swap_chain_8h.html#a8b17f2eefac2c1d54b9deccf97b1ee2c">WindowHandler</a>       <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#aa127b83c8e10633a66b4e8ccafe6a888">GetHandle</a>       () <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> std::string         <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#abed0c5c35c6645a41a12b488aeaa70ee">GetTitle</a>        () <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#ad150ec046462f0f86e482c1a0aee1403">Show</a>            () <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a866016d9d50d87acece6376e81f8598e">Hide</a>            () <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="classsw_1_1gui_1_1_win32_api_window.html#a9911fc83648e0f9d1293056af992dcf9">SetTitle</a>        ( <span class="keyword">const</span> std::string &amp; newTitle ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}   <span class="comment">// gui</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}   <span class="comment">// sw</span></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}   <span class="comment">// gui</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}   <span class="comment">// sw</span></div>
+<div class="ttc" id="_types_definitions_8h_html_ac2a9e79eb120216f855626495b7bd18a"><div class="ttname"><a href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a></div><div class="ttdeci">uint16_t uint16</div><div class="ttdef"><b>Definition:</b> TypesDefinitions.h:29</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a9a65dc950220402ae1eee4b0f026efca"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a9a65dc950220402ae1eee4b0f026efca">sw::gui::Win32ApiWindow::m_title</a></div><div class="ttdeci">std::wstring m_title</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:26</div></div>
+<div class="ttc" id="_swap_chain_8h_html_a8b17f2eefac2c1d54b9deccf97b1ee2c"><div class="ttname"><a href="_swap_chain_8h.html#a8b17f2eefac2c1d54b9deccf97b1ee2c">WindowHandler</a></div><div class="ttdeci">void * WindowHandler</div><div class="ttdef"><b>Definition:</b> SwapChain.h:6</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_af2bc203bc25aef00d5beb99274d1c363"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#af2bc203bc25aef00d5beb99274d1c363">sw::gui::Win32ApiWindow::m_width</a></div><div class="ttdeci">uint16 m_width</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:28</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_ad8aae2f6ed8f925136b130ee80ac0300"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#ad8aae2f6ed8f925136b130ee80ac0300">sw::gui::Win32ApiWindow::GetHeight</a></div><div class="ttdeci">virtual uint16 GetHeight() const override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:112</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a787363fb2ac004a110bc61514e2f5bb3"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a787363fb2ac004a110bc61514e2f5bb3">sw::gui::Win32ApiWindow::m_height</a></div><div class="ttdeci">uint16 m_height</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:29</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_acff1297d0d2bae9fe35391055ac79870"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#acff1297d0d2bae9fe35391055ac79870">sw::gui::Win32ApiWindow::GetClientHeight</a></div><div class="ttdeci">virtual uint16 GetClientHeight() const override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:165</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a8dd17c2e995c4e99e6e1d0e65074379f"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a8dd17c2e995c4e99e6e1d0e65074379f">sw::gui::Win32ApiWindow::~Win32ApiWindow</a></div><div class="ttdeci">~Win32ApiWindow()</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:18</div></div>
+<div class="ttc" id="_i_native_window_8h_html"><div class="ttname"><a href="_i_native_window_8h.html">INativeWindow.h</a></div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_native_window_descriptor_html"><div class="ttname"><a href="structsw_1_1gui_1_1_native_window_descriptor.html">sw::gui::NativeWindowDescriptor</a></div><div class="ttdoc">Dedcriptor used to create native GUI window. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:17</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a866016d9d50d87acece6376e81f8598e"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a866016d9d50d87acece6376e81f8598e">sw::gui::Win32ApiWindow::Hide</a></div><div class="ttdeci">virtual void Hide() override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:140</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a21ca10647bce16962f30e1c7e8b3afd1"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a21ca10647bce16962f30e1c7e8b3afd1">sw::gui::Win32ApiWindow::HideAppWindow</a></div><div class="ttdeci">void HideAppWindow()</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:183</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_abed0c5c35c6645a41a12b488aeaa70ee"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#abed0c5c35c6645a41a12b488aeaa70ee">sw::gui::Win32ApiWindow::GetTitle</a></div><div class="ttdeci">virtual std::string GetTitle() const override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:126</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a694eea459dd3458cbc46c7dd929e0f85"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a694eea459dd3458cbc46c7dd929e0f85">sw::gui::Win32ApiWindow::ShowAppWindow</a></div><div class="ttdeci">void ShowAppWindow()</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:176</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_window.html">sw::gui::INativeWindow</a></div><div class="ttdoc">Interface for native window sing OS specific ffunctions. </div><div class="ttdef"><b>Definition:</b> INativeWindow.h:74</div></div>
-<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html">sw::gui::Win32ApiWindow</a></div><div class="ttdoc">Native window uses WinApi. </div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:20</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a3db84f2b13bd49e7212c2c780631195f"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a3db84f2b13bd49e7212c2c780631195f">sw::gui::Win32ApiWindow::Initialize</a></div><div class="ttdeci">bool Initialize(NativeWindowDescriptor &amp;descriptor)</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:35</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a6c86b1f2bcbc498b0ddcb8936c0c095a"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a6c86b1f2bcbc498b0ddcb8936c0c095a">sw::gui::Win32ApiWindow::GetClientWidth</a></div><div class="ttdeci">virtual uint16 GetClientWidth() const override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:155</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_ad150ec046462f0f86e482c1a0aee1403"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#ad150ec046462f0f86e482c1a0aee1403">sw::gui::Win32ApiWindow::Show</a></div><div class="ttdeci">virtual void Show() override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:133</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_ae7c2eb76d6b22978b3882cdaab1f43bb"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#ae7c2eb76d6b22978b3882cdaab1f43bb">sw::gui::Win32ApiWindow::GetWidth</a></div><div class="ttdeci">virtual uint16 GetWidth() const override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:105</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html">sw::gui::Win32ApiWindow</a></div><div class="ttdoc">Native window uses WinApi. </div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:21</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_ada94c3d2dc54c925e2345f3da5cc5f92"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#ada94c3d2dc54c925e2345f3da5cc5f92">sw::gui::Win32ApiWindow::m_windowHandle</a></div><div class="ttdeci">HWND m_windowHandle</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.h:25</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_a9911fc83648e0f9d1293056af992dcf9"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#a9911fc83648e0f9d1293056af992dcf9">sw::gui::Win32ApiWindow::SetTitle</a></div><div class="ttdeci">virtual void SetTitle(const std::string &amp;newTitle) override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:147</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_ad3ef9b844d5941a296a4c99cc3391b29"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#ad3ef9b844d5941a296a4c99cc3391b29">sw::gui::Win32ApiWindow::Win32ApiWindow</a></div><div class="ttdeci">Win32ApiWindow()</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:14</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_ac1e34d9ddb06b4761b5f9e5ba3c0319d"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#ac1e34d9ddb06b4761b5f9e5ba3c0319d">sw::gui::Win32ApiWindow::CreateWindowInstance</a></div><div class="ttdeci">static Win32ApiWindow * CreateWindowInstance(NativeWindowDescriptor &amp;descriptor)</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:22</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_win32_api_window_html_aa127b83c8e10633a66b4e8ccafe6a888"><div class="ttname"><a href="classsw_1_1gui_1_1_win32_api_window.html#aa127b83c8e10633a66b4e8ccafe6a888">sw::gui::Win32ApiWindow::GetHandle</a></div><div class="ttdeci">virtual WindowHandler GetHandle() const override</div><div class="ttdef"><b>Definition:</b> Win32ApiWindow.cpp:119</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

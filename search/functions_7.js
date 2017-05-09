@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['init',['Init',['../classsw_1_1gui_1_1_g_u_i_system.html#a3ed892f5db4d3383f4703d4f9d10d660',1,'sw::gui::GUISystem::Init()'],['../classsw_1_1gui_1_1_i_native_g_u_i.html#aff977e8913b47be6883109325ca652d4',1,'sw::gui::INativeGUI::Init()'],['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a335ef1c47cccd8721d84770b0c6b57a5',1,'sw::gui::WinAPIGUI::Init()']]],
-  ['initialize',['Initialize',['../classsw_1_1gui_1_1_g_u_i_system.html#a346864a59a4ebe1bfa926c28ec2afacf',1,'sw::gui::GUISystem::Initialize()'],['../class_application.html#a6663f47f035f8c0b030fea7592f86ab1',1,'Application::Initialize()']]]
+  ['handlecharinput',['HandleCharInput',['../classsw_1_1gui_1_1_host_logic.html#a7d991105386c2cbde97c6e4aeaae382f',1,'sw::gui::HostLogic']]],
+  ['handleevent',['HandleEvent',['../classsw_1_1input_1_1_win_api_input_proxy.html#a90be23537d85d7458cdaf30915a1f117',1,'sw::input::WinApiInputProxy::HandleEvent()'],['../classsw_1_1gui_1_1_win_a_p_i_g_u_i.html#a8106ad66c0ea976748a315385fb5330c',1,'sw::gui::WinAPIGUI::HandleEvent()']]],
+  ['handleevents',['HandleEvents',['../classsw_1_1gui_1_1_g_u_i_system.html#a3605d2e3803dadd0eac5ffc0fabf9d6f',1,'sw::gui::GUISystem']]],
+  ['handleinput',['HandleInput',['../classsw_1_1gui_1_1_host_window.html#a3174664c6c5d45fbd14b5944c5c3658b',1,'sw::gui::HostWindow']]],
+  ['handlekeyinput',['HandleKeyInput',['../classsw_1_1gui_1_1_host_logic.html#a3833fe4e9d91bbe07fcbfb74769f8a1d',1,'sw::gui::HostLogic']]],
+  ['handlemousebuttoninput',['HandleMouseButtonInput',['../classsw_1_1gui_1_1_host_logic.html#ac8b1b5391aaf9ec4d6d23abf15c53af2',1,'sw::gui::HostLogic']]],
+  ['handlemousemoveinput',['HandleMouseMoveInput',['../classsw_1_1gui_1_1_host_logic.html#ab41ae8569184c878d548771fd41c120c',1,'sw::gui::HostLogic']]],
+  ['handlemousewheelinput',['HandleMouseWheelInput',['../classsw_1_1gui_1_1_host_logic.html#a9d9683913a8cde32d3ff0f51376de897',1,'sw::gui::HostLogic']]],
+  ['haschildren',['HasChildren',['../classsw_1_1_chunk.html#ac0095ddb11af89b1e2bc75c418ca5e67',1,'sw::Chunk::HasChildren()'],['../classsw_1_1_chunk_repr.html#a2609c2bc36c2df6b5439f8106b449933',1,'sw::ChunkRepr::HasChildren()']]],
+  ['hasextension',['HasExtension',['../classfilesystem_1_1_path.html#a8538a13d75e163754a6e048ce5c77b53',1,'filesystem::Path']]],
+  ['hasfilename',['HasFileName',['../classfilesystem_1_1_path.html#ae288e99e27f09bebfdb27eda46246b58',1,'filesystem::Path']]],
+  ['hasroot',['HasRoot',['../classfilesystem_1_1_path.html#a7f55344c5106576a68ae978e983f296c',1,'filesystem::Path']]],
+  ['hcf',['HCF',['../classsw_1_1_h_c_f.html#a96c590fcddd503074c5c03b8f85a9073',1,'sw::HCF']]],
+  ['hide',['Hide',['../classsw_1_1gui_1_1_i_native_window.html#a55c16eda5aa2b36c61d4288bf85bd4f5',1,'sw::gui::INativeWindow::Hide()'],['../classsw_1_1gui_1_1_mock_window.html#a89cdf0ee2fcb62a983d71447e2734d6f',1,'sw::gui::MockWindow::Hide()'],['../classsw_1_1gui_1_1_win32_api_window.html#a866016d9d50d87acece6376e81f8598e',1,'sw::gui::Win32ApiWindow::Hide()']]],
+  ['hideappwindow',['HideAppWindow',['../classsw_1_1gui_1_1_mock_window.html#a3155e924dd816c7f97db2ef18935a269',1,'sw::gui::MockWindow::HideAppWindow()'],['../classsw_1_1gui_1_1_win32_api_window.html#a21ca10647bce16962f30e1c7e8b3afd1',1,'sw::gui::Win32ApiWindow::HideAppWindow()']]],
+  ['hittest',['HitTest',['../classsw_1_1gui_1_1_i_control.html#ad57bea1788cab6a2ed9b74731552ae9b',1,'sw::gui::IControl::HitTest()'],['../classsw_1_1gui_1_1_visual.html#a989803f37a8add98bd0354006bb3ce96',1,'sw::gui::Visual::HitTest()'],['../classsw_1_1gui_1_1_host_window.html#a8007d0d14f90d476220984c9c546359a',1,'sw::gui::HostWindow::HitTest()'],['../class_test_u_i_element_class.html#a783d9de802e73bdae2e1741dfd490826',1,'TestUIElementClass::HitTest()']]],
+  ['hittesting',['HitTesting',['../classsw_1_1gui_1_1_host_logic.html#aa8ffd2a29bb5e124efdb6d9fa8e045cc',1,'sw::gui::HostLogic']]],
+  ['holdstate',['HoldState',['../classsw_1_1input_1_1_key_state.html#a1a81189919cfeade36e4f33e52da68ab',1,'sw::input::KeyState']]],
+  ['hostlogic',['HostLogic',['../classsw_1_1gui_1_1_host_logic.html#a28a44de08e9330b38847cbbef319fabe',1,'sw::gui::HostLogic']]],
+  ['hostwindow',['HostWindow',['../classsw_1_1gui_1_1_host_window.html#a7c159b508db8e60365a59f652b7c3884',1,'sw::gui::HostWindow']]],
+  ['hostwindowtester',['HostWindowTester',['../class_host_window_tester.html#a6d0a3214b24fb63e9896304c790f4265',1,'HostWindowTester']]]
 ];

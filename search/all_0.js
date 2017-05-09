@@ -1,11 +1,19 @@
 var searchData=
 [
-  ['accesskey',['AccessKey',['../classsw_1_1gui_1_1_access_key.html',1,'sw::gui']]],
-  ['accesskey',['AccessKey',['../classsw_1_1gui_1_1_access_key.html#af06ec2ced2fbe07cc494dbdb89179122',1,'sw::gui::AccessKey::AccessKey()=default'],['../classsw_1_1gui_1_1_access_key.html#a3fdec7475303c08732387b66568cbf93',1,'sw::gui::AccessKey::AccessKey(const AccessKey &amp;)'],['../classsw_1_1gui_1_1_access_key.html#a64d4e80e889b866dad45f3366acf46be',1,'sw::gui::AccessKey::AccessKey(const AccessKey &amp;&amp;)']]],
-  ['accesskey_2eh',['AccessKey.h',['../_access_key_8h.html',1,'']]],
-  ['addchild',['AddChild',['../classsw_1_1gui_1_1_u_i_element.html#ae736eb8b1c77844742a6525e16c84347',1,'sw::gui::UIElement::AddChild()'],['../classsw_1_1gui_1_1_host_window.html#af5317760a265022baab798baeed799d6',1,'sw::gui::HostWindow::AddChild()']]],
-  ['addcontainer',['AddContainer',['../classsw_1_1gui_1_1_delegates_container_base.html#a862a82f5c6f2bb389a200f332e0e1811',1,'sw::gui::DelegatesContainerBase::AddContainer()'],['../classsw_1_1gui_1_1_event_handlers.html#ae0f2c0410219d7a970facfbc543a1a3f',1,'sw::gui::EventHandlers::AddContainer()']]],
-  ['adjustsize',['AdjustSize',['../structsw_1_1gui_1_1_native_window_descriptor.html#ab766579777d64c863f34161357cdd770',1,'sw::gui::NativeWindowDescriptor']]],
-  ['application',['Application',['../class_application.html',1,'']]],
-  ['arrange',['Arrange',['../classsw_1_1gui_1_1_u_i_element.html#a4a4f0512d6d5666f934c496095c58eaf',1,'sw::gui::UIElement::Arrange()'],['../classsw_1_1gui_1_1_host_window.html#a189dcbb722598b422132dd2a9176a916',1,'sw::gui::HostWindow::Arrange()'],['../class_test_u_i_element_class.html#a77b1976e5aac50d46984f5ae997075ab',1,'TestUIElementClass::Arrange()']]]
+  ['_5fcurrent_5ffeature_5flevel',['_current_feature_level',['../class_d_x11_a_p_i_objects.html#a047e6c79886fd67c21710ca678f63b04',1,'DX11APIObjects']]],
+  ['_5ffeature_5flevels',['_feature_levels',['../class_d_x11_a_p_i_objects.html#a9de85e1670d70c466aeb0a3cad4c5b6d',1,'DX11APIObjects']]],
+  ['_5flayout_5felements_5fcount',['_layout_elements_count',['../class_d_x11_a_p_i_objects.html#a3cf96367ad6c9384e6b1e015f0e7b3d5',1,'DX11APIObjects']]],
+  ['_5fnum_5ffeature_5flevels',['_num_feature_levels',['../class_d_x11_a_p_i_objects.html#a2ad7e583bf1cbe0455895fb8c552564c',1,'DX11APIObjects']]],
+  ['_5fpixel_5fshader_5fmodel',['_pixel_shader_model',['../class_d_x11_a_p_i_objects.html#afcfaabab11087abe0e1984a7ebda57eb',1,'DX11APIObjects']]],
+  ['_5frasterizer_5fdesc',['_rasterizer_desc',['../class_d_x11_a_p_i_objects.html#a358a21a9d3f8e45d7f1ba4676dc9f74c',1,'DX11APIObjects']]],
+  ['_5fsampler_5fdesc',['_sampler_desc',['../class_d_x11_a_p_i_objects.html#a496c9d64d501c6f267423197b38713e3',1,'DX11APIObjects']]],
+  ['_5fswap_5fchain_5fdesc',['_swap_chain_desc',['../class_d_x11_a_p_i_objects.html#aa4520866737642cf111b2dce865f9794',1,'DX11APIObjects']]],
+  ['_5fuse_5fmath_5fdefines',['_USE_MATH_DEFINES',['../_cosinus_interpolator_8h.html#a525335710b53cb064ca56b936120431e',1,'CosinusInterpolator.h']]],
+  ['_5fvertex_5flayout_5fdesc',['_vertex_layout_desc',['../class_d_x11_a_p_i_objects.html#ae42ce54fbdb7d39a5384e71c76bddec1',1,'DX11APIObjects']]],
+  ['_5fvertex_5fshader_5fmodel',['_vertex_shader_model',['../class_d_x11_a_p_i_objects.html#ab8f18eee9954913ff3d552714bb4312e',1,'DX11APIObjects']]],
+  ['_5fview_5fport_5fdesc',['_view_port_desc',['../class_d_x11_a_p_i_objects.html#ae7f1756180ddc42d6176c9572f4bf91a',1,'DX11APIObjects']]],
+  ['_5fwindow_5fheight',['_window_height',['../class_d_x11_a_p_i_objects.html#a54022208794bd070d5288dde3cb486f5',1,'DX11APIObjects']]],
+  ['_5fwindow_5fwidth',['_window_width',['../class_d_x11_a_p_i_objects.html#ab8f95b57dfb74dc2d81c22093b300daa',1,'DX11APIObjects']]],
+  ['_5fz_5fbuffer_5fdesc',['_z_buffer_desc',['../class_d_x11_a_p_i_objects.html#a4e9ea21ed8905170cf54c6fa539ed836',1,'DX11APIObjects']]],
+  ['_5fz_5fbuffer_5fview_5fdesc',['_z_buffer_view_desc',['../class_d_x11_a_p_i_objects.html#a6cb3bf84820db3bfc7a64daea1dfa39f',1,'DX11APIObjects']]]
 ];

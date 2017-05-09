@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesw.html">sw</a></li><li class="navelem"><a class="el" href="namespacesw_1_1gui.html">gui</a></li><li class="navelem"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html">INativeWindow</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -108,50 +109,320 @@ Inheritance diagram for sw::gui::INativeWindow:</div>
  <div class="center">
   <img src="classsw_1_1gui_1_1_i_native_window.png" usemap="#sw::gui::INativeWindow_map" alt=""/>
   <map id="sw::gui::INativeWindow_map" name="sw::gui::INativeWindow_map">
-<area href="classsw_1_1gui_1_1_win32_api_window.html" title="Native window uses WinApi. " alt="sw::gui::Win32ApiWindow" shape="rect" coords="0,56,154,80"/>
+<area href="classsw_1_1gui_1_1_mock_window.html" title="Fake window for tests. " alt="sw::gui::MockWindow" shape="rect" coords="0,56,154,80"/>
+<area href="classsw_1_1gui_1_1_win32_api_window.html" title="Native window uses WinApi. " alt="sw::gui::Win32ApiWindow" shape="rect" coords="164,56,318,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37a3bcce8c4ddde6428765e1ed000735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a3bcce8c4ddde6428765e1ed000735"></a>
-virtual uint16&#160;</td><td class="memItemRight" valign="bottom"><b>GetWidth</b> () const =0</td></tr>
+<tr class="memitem:a178c1985590a29dcf82904af2586ad13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a178c1985590a29dcf82904af2586ad13">INativeWindow</a> ()=default</td></tr>
+<tr class="separator:a178c1985590a29dcf82904af2586ad13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6f45bb1e4ee16d449e721451710080"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a3c6f45bb1e4ee16d449e721451710080">~INativeWindow</a> ()=default</td></tr>
+<tr class="separator:a3c6f45bb1e4ee16d449e721451710080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a3bcce8c4ddde6428765e1ed000735"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a37a3bcce8c4ddde6428765e1ed000735">GetWidth</a> () const =0</td></tr>
 <tr class="separator:a37a3bcce8c4ddde6428765e1ed000735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0098919221e716e9251d8365d41d17f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0098919221e716e9251d8365d41d17f"></a>
-virtual uint16&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeight</b> () const =0</td></tr>
+<tr class="memitem:ac0098919221e716e9251d8365d41d17f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#ac0098919221e716e9251d8365d41d17f">GetHeight</a> () const =0</td></tr>
 <tr class="separator:ac0098919221e716e9251d8365d41d17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680715524cce14eb35b81c743fdba776"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a680715524cce14eb35b81c743fdba776"></a>
-virtual uint16&#160;</td><td class="memItemRight" valign="bottom"><b>GetClientWidth</b> () const =0</td></tr>
+<tr class="memitem:a680715524cce14eb35b81c743fdba776"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a680715524cce14eb35b81c743fdba776">GetClientWidth</a> () const =0</td></tr>
 <tr class="separator:a680715524cce14eb35b81c743fdba776"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f13a02f69e30202e526e41a8c9199d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f13a02f69e30202e526e41a8c9199d"></a>
-virtual uint16&#160;</td><td class="memItemRight" valign="bottom"><b>GetClientHeight</b> () const =0</td></tr>
+<tr class="memitem:aa1f13a02f69e30202e526e41a8c9199d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#aa1f13a02f69e30202e526e41a8c9199d">GetClientHeight</a> () const =0</td></tr>
 <tr class="separator:aa1f13a02f69e30202e526e41a8c9199d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56ca728a544e11bccded2124483a0066"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56ca728a544e11bccded2124483a0066"></a>
-virtual WindowHandler&#160;</td><td class="memItemRight" valign="bottom"><b>GetHandle</b> () const =0</td></tr>
+<tr class="memitem:a56ca728a544e11bccded2124483a0066"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_swap_chain_8h.html#a8b17f2eefac2c1d54b9deccf97b1ee2c">WindowHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a56ca728a544e11bccded2124483a0066">GetHandle</a> () const =0</td></tr>
 <tr class="separator:a56ca728a544e11bccded2124483a0066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b5bae32fee152da2156bc44703a7904"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b5bae32fee152da2156bc44703a7904"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetTitle</b> () const =0</td></tr>
+<tr class="memitem:a8b5bae32fee152da2156bc44703a7904"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a8b5bae32fee152da2156bc44703a7904">GetTitle</a> () const =0</td></tr>
 <tr class="separator:a8b5bae32fee152da2156bc44703a7904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad728b1720d847a96886a504a8fd9014a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad728b1720d847a96886a504a8fd9014a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Show</b> ()=0</td></tr>
+<tr class="memitem:ad728b1720d847a96886a504a8fd9014a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#ad728b1720d847a96886a504a8fd9014a">Show</a> ()=0</td></tr>
 <tr class="separator:ad728b1720d847a96886a504a8fd9014a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c16eda5aa2b36c61d4288bf85bd4f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55c16eda5aa2b36c61d4288bf85bd4f5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Hide</b> ()=0</td></tr>
+<tr class="memitem:a55c16eda5aa2b36c61d4288bf85bd4f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a55c16eda5aa2b36c61d4288bf85bd4f5">Hide</a> ()=0</td></tr>
 <tr class="separator:a55c16eda5aa2b36c61d4288bf85bd4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03d8fd6fc3d3453ce6cc3339e24b2735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03d8fd6fc3d3453ce6cc3339e24b2735"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTitle</b> (const std::string &amp;newTitle)=0</td></tr>
+<tr class="memitem:a03d8fd6fc3d3453ce6cc3339e24b2735"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsw_1_1gui_1_1_i_native_window.html#a03d8fd6fc3d3453ce6cc3339e24b2735">SetTitle</a> (const std::string &amp;newTitle)=0</td></tr>
 <tr class="separator:a03d8fd6fc3d3453ce6cc3339e24b2735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for native window sing OS specific ffunctions. </p>
 <p>Natywne okno powinno udostępniać przynajmniej swój render target i swapchain. Ponadto może zawierać funkcje do obsługi prawdziwego okna, ale nie jest to konieczne. GUI nie musi samo obsługiwać prawdziwych okien, może mieć je dostarczone przez aplikację. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a178c1985590a29dcf82904af2586ad13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::INativeWindow::INativeWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3c6f45bb1e4ee16d449e721451710080"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sw::gui::INativeWindow::~INativeWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa1f13a02f69e30202e526e41a8c9199d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> sw::gui::INativeWindow::GetClientHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#a08ab400b272a2cf98cc0d1a2b972b28c">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#acff1297d0d2bae9fe35391055ac79870">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a680715524cce14eb35b81c743fdba776"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> sw::gui::INativeWindow::GetClientWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#a61067c98671dace84c851b56f8393624">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#a6c86b1f2bcbc498b0ddcb8936c0c095a">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56ca728a544e11bccded2124483a0066"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_swap_chain_8h.html#a8b17f2eefac2c1d54b9deccf97b1ee2c">WindowHandler</a> sw::gui::INativeWindow::GetHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#aab79a78403c77ac83b5186a0d739123e">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#aa127b83c8e10633a66b4e8ccafe6a888">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0098919221e716e9251d8365d41d17f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> sw::gui::INativeWindow::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#a73d122f35e048a4a5efaa1130d0007fd">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#ad8aae2f6ed8f925136b130ee80ac0300">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b5bae32fee152da2156bc44703a7904"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string sw::gui::INativeWindow::GetTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#af57d0e6344361d1a379175006a6b2bdf">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#abed0c5c35c6645a41a12b488aeaa70ee">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37a3bcce8c4ddde6428765e1ed000735"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_definitions_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> sw::gui::INativeWindow::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#a95f848da9b372362b2eb917310b52318">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#ae7c2eb76d6b22978b3882cdaab1f43bb">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55c16eda5aa2b36c61d4288bf85bd4f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::INativeWindow::Hide </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#a89cdf0ee2fcb62a983d71447e2734d6f">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#a866016d9d50d87acece6376e81f8598e">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03d8fd6fc3d3453ce6cc3339e24b2735"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::INativeWindow::SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>newTitle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#aae0c26c2dba856ccdcd55394d2a614b8">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#a9911fc83648e0f9d1293056af992dcf9">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad728b1720d847a96886a504a8fd9014a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sw::gui::INativeWindow::Show </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsw_1_1gui_1_1_mock_window.html#ade13fb5b4a8daf07735589c5f82b8cd2">sw::gui::MockWindow</a>, and <a class="el" href="classsw_1_1gui_1_1_win32_api_window.html#ad150ec046462f0f86e482c1a0aee1403">sw::gui::Win32ApiWindow</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Native/<a class="el" href="_i_native_window_8h_source.html">INativeWindow.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:05 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_87523e216a6603c4c77018f1fbf99254.html">System</a></li><li class="navelem"><a class="el" href="dir_47b211c0d1373c6375e61419d02656fd.html">Events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1d4981c6b6955b42124b613d78c1d9aa.html">Core</a></li><li class="navelem"><a class="el" href="dir_1336b3b8719b9bc86b9dac5e62f993f7.html">System</a></li><li class="navelem"><a class="el" href="dir_9a28b0e78b03d8449db20302129b9209.html">Events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -107,13 +109,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_handlers.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_event_proxy.html">EventProxy</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_handlers.html#ac86f551235b8e32571b676282ff4448e">   26</a></span>&#160;    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> EventArgType &gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classsw_1_1gui_1_1_event_proxy.html">EventProxy</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    DelegatesContainerBaseOPtr      m_delegatesList;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsw_1_1gui_1_1_event_handlers.html#a4f825883dc982498a9346ac6af1494d9">   29</a></span>&#160;    DelegatesContainerBaseOPtr      <a class="code" href="classsw_1_1gui_1_1_event_handlers.html#a4f825883dc982498a9346ac6af1494d9">m_delegatesList</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">explicit</span>            <a class="code" href="classsw_1_1gui_1_1_event_handlers.html">EventHandlers</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">explicit</span>            <a class="code" href="classsw_1_1gui_1_1_event_handlers.html#a7b29d840b7ff15fb4210ca9230293b28">EventHandlers</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classsw_1_1gui_1_1_delegates_container_base.html">DelegatesContainerBase</a>*     <a class="code" href="classsw_1_1gui_1_1_event_handlers.html#a454173936e63151b895b361d66346091">FindContainer</a>       ( <a class="code" href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">EventType</a> eventID );</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
@@ -138,31 +140,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}   <span class="comment">// gui</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}   <span class="comment">// sw</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#define REGISTER_EVENT_DECLARATION( name, strategy, className, argsType )               \</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_event_handlers_8h.html#a919e7193d02c4dff2857c718fead98db">   71</a></span>&#160;<span class="preprocessor">#define REGISTER_EVENT_DECLARATION( name, strategy, className, argsType )               \</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">static const ::sw::gui::RegisteredEvent* s ## name;                                     \</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">::sw::gui::EventProxy&lt; argsType &gt;       name() { return ::sw::gui::EventProxy&lt; argsType &gt;( m_eventHandlers, s ## name ); }</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#define REGISTER_EVENT_DEFINITION( name, strategy, className, argsType )                \</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="_event_handlers_8h.html#a654d98d5dd58757bcd70bbd2d8f2b96c">   75</a></span>&#160;<span class="preprocessor">#define REGISTER_EVENT_DEFINITION( name, strategy, className, argsType )                \</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">const ::sw::gui::RegisteredEvent* className::s ## name = ::sw::gui::EventsSystem::Get().RegisterEvent( #name, ::sw::gui::strategy, TypeID::get&lt; className &gt;(), TypeID::get&lt; argsType &gt;() );</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="ttc" id="classsw_1_1gui_1_1_delegates_container_base_html"><div class="ttname"><a href="classsw_1_1gui_1_1_delegates_container_base.html">sw::gui::DelegatesContainerBase</a></div><div class="ttdoc">Base class for delegates containers. </div><div class="ttdef"><b>Definition:</b> DelegateContainer.h:52</div></div>
-<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DockPanel.cpp:12</div></div>
+<div class="ttc" id="namespacesw_html"><div class="ttname"><a href="namespacesw.html">sw</a></div><div class="ttdef"><b>Definition:</b> DirectInputModule.cpp:11</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_a1de1046248158eb3cee85dc973b48b23"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#a1de1046248158eb3cee85dc973b48b23">sw::gui::EventHandlers::Exists</a></div><div class="ttdeci">bool Exists(EventType eventID)</div><div class="ttdoc">Checks if container exists. </div><div class="ttdef"><b>Definition:</b> EventHandlers.cpp:111</div></div>
 <div class="ttc" id="_i_event_args_8h_html"><div class="ttname"><a href="_i_event_args_8h.html">IEventArgs.h</a></div></div>
-<div class="ttc" id="classsw_1_1gui_1_1_u_i_element_html"><div class="ttname"><a href="classsw_1_1gui_1_1_u_i_element.html">sw::gui::UIElement</a></div><div class="ttdoc">Interface for all controls in tree. </div><div class="ttdef"><b>Definition:</b> UIElement.h:54</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_u_i_element_html"><div class="ttname"><a href="classsw_1_1gui_1_1_u_i_element.html">sw::gui::UIElement</a></div><div class="ttdoc">Interface for all controls in tree. </div><div class="ttdef"><b>Definition:</b> UIElement.h:57</div></div>
 <div class="ttc" id="group___event_system_html_gab331329f020c803a1fa0f32a30d4054b"><div class="ttname"><a href="group___event_system.html#gab331329f020c803a1fa0f32a30d4054b">sw::gui::EventType</a></div><div class="ttdeci">uint32 EventType</div><div class="ttdoc">Event type identifier. </div><div class="ttdef"><b>Definition:</b> RegisteredEvent.h:19</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_a454173936e63151b895b361d66346091"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#a454173936e63151b895b361d66346091">sw::gui::EventHandlers::FindContainer</a></div><div class="ttdeci">DelegatesContainerBase * FindContainer(EventType eventID)</div><div class="ttdoc">Search for events container. </div><div class="ttdef"><b>Definition:</b> EventHandlers.cpp:26</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_a92109f9cd45e05599f1bb8e6038dd8c0"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#a92109f9cd45e05599f1bb8e6038dd8c0">sw::gui::EventHandlers::RaiseEvent</a></div><div class="ttdeci">bool RaiseEvent(const RegisteredEvent *eventInfo, UIElement *sender, IEventArgsOPtr &amp;&amp;arguments)</div><div class="ttdoc">Sends event to visual tree using RoutingStrategy specyfied in eventInfo. Calls EventsSystem::RaiseEve...</div><div class="ttdef"><b>Definition:</b> EventHandlers.cpp:99</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_ae0f2c0410219d7a970facfbc543a1a3f"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#ae0f2c0410219d7a970facfbc543a1a3f">sw::gui::EventHandlers::AddContainer</a></div><div class="ttdeci">DelegatesContainerBase * AddContainer(DelegatesContainerBaseOPtr &amp;&amp;container)</div><div class="ttdoc">Adds delegates container. </div><div class="ttdef"><b>Definition:</b> EventHandlers.cpp:47</div></div>
 <div class="ttc" id="_delegate_container_8h_html"><div class="ttname"><a href="_delegate_container_8h.html">DelegateContainer.h</a></div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_ae019bb2b671487dff063fab7043922ec"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#ae019bb2b671487dff063fab7043922ec">sw::gui::EventHandlers::RemoveContainer</a></div><div class="ttdeci">bool RemoveContainer(EventType eventID)</div><div class="ttdoc">Removes container with deelgates. </div><div class="ttdef"><b>Definition:</b> EventHandlers.cpp:65</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_a7b29d840b7ff15fb4210ca9230293b28"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#a7b29d840b7ff15fb4210ca9230293b28">sw::gui::EventHandlers::EventHandlers</a></div><div class="ttdeci">EventHandlers()</div><div class="ttdef"><b>Definition:</b> EventHandlers.cpp:20</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html_a4f825883dc982498a9346ac6af1494d9"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html#a4f825883dc982498a9346ac6af1494d9">sw::gui::EventHandlers::m_delegatesList</a></div><div class="ttdeci">DelegatesContainerBaseOPtr m_delegatesList</div><div class="ttdef"><b>Definition:</b> EventHandlers.h:29</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_handlers_html"><div class="ttname"><a href="classsw_1_1gui_1_1_event_handlers.html">sw::gui::EventHandlers</a></div><div class="ttdoc">Container class for delegates. </div><div class="ttdef"><b>Definition:</b> EventHandlers.h:24</div></div>
 <div class="ttc" id="structsw_1_1gui_1_1_registered_event_html"><div class="ttname"><a href="structsw_1_1gui_1_1_registered_event.html">sw::gui::RegisteredEvent</a></div><div class="ttdoc">Structure describes event registered by controls. </div><div class="ttdef"><b>Definition:</b> RegisteredEvent.h:38</div></div>
 <div class="ttc" id="classsw_1_1gui_1_1_event_proxy_html"><div class="ttname"><a href="classsw_1_1gui_1_1_event_proxy.html">sw::gui::EventProxy</a></div><div class="ttdoc">Helper class for accessing event. </div><div class="ttdef"><b>Definition:</b> EventProxy.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

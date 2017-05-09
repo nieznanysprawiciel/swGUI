@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sleeping Wombat GUI
-   &#160;<span id="projectnumber">1.010</span>
+   &#160;<span id="projectnumber">0.100</span>
    </div>
    <div id="projectbrief">swGUI</div>
   </td>
@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -65,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_33c78a012c8d08979f57a54a07694c46.html">Tests</a></li><li class="navelem"><a class="el" href="dir_fa696d97c6333cce4f10685947d7e4ed.html">PrototyperGUI</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8701096c615735be4915a32c8ddae44b.html">Tests</a></li><li class="navelem"><a class="el" href="dir_0d130c11eea483bc28368a33cda51e59.html">PrototyperGUI</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,9 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Application.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="_application_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;swGUI/Core/System/GUISystem.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_g_u_i_system_8h.html">swGUI/Core/System/GUISystem.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
@@ -102,27 +104,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">explicit</span>    <a class="code" href="class_application.html">Application</a>     ( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html">sw::gui::INativeGUI</a>* gui );</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                ~<a class="code" href="class_application.html">Application</a>    () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">explicit</span>    <a class="code" href="class_application.html#a6ad5b91f1888b2e90aceced60400e9db">Application</a>     ( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, <a class="code" href="classsw_1_1gui_1_1_i_native_g_u_i.html">sw::gui::INativeGUI</a>* gui );</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <a class="code" href="class_application.html#a062db49b40383051e3d3c2bd50ec9670">~Application</a>    () = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_application.html#a6663f47f035f8c0b030fea7592f86ab1">Initialize</a>      () <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_application.html#aecdd5e936964b2b6bc8b05eecbc278c6">OnInitialized</a>   () <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_application.html#a39ffc2172ca6822c5b62734d63e10642">OnClosing</a>       () <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    OnIdle          () <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_application.html#ac8b6b808aacdee71f6d7c930f1a39b64">OnIdle</a>          () <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="ttc" id="classsw_1_1gui_1_1_i_native_g_u_i_html"><div class="ttname"><a href="classsw_1_1gui_1_1_i_native_g_u_i.html">sw::gui::INativeGUI</a></div><div class="ttdoc">Interface encasulates native GUI system. </div><div class="ttdef"><b>Definition:</b> INativeGUI.h:33</div></div>
+<div class="ttc" id="class_application_html_a062db49b40383051e3d3c2bd50ec9670"><div class="ttname"><a href="class_application.html#a062db49b40383051e3d3c2bd50ec9670">Application::~Application</a></div><div class="ttdeci">~Application()=default</div></div>
+<div class="ttc" id="_g_u_i_system_8h_html"><div class="ttname"><a href="_g_u_i_system_8h.html">GUISystem.h</a></div></div>
 <div class="ttc" id="class_application_html_a39ffc2172ca6822c5b62734d63e10642"><div class="ttname"><a href="class_application.html#a39ffc2172ca6822c5b62734d63e10642">Application::OnClosing</a></div><div class="ttdeci">virtual void OnClosing() override</div><div class="ttdoc">Function invoked when application is going to close itself. </div><div class="ttdef"><b>Definition:</b> Application.cpp:37</div></div>
 <div class="ttc" id="class_application_html_aecdd5e936964b2b6bc8b05eecbc278c6"><div class="ttname"><a href="class_application.html#aecdd5e936964b2b6bc8b05eecbc278c6">Application::OnInitialized</a></div><div class="ttdeci">virtual void OnInitialized() override</div><div class="ttdoc">Function is called when GUI initialization is completed. </div><div class="ttdef"><b>Definition:</b> Application.cpp:28</div></div>
-<div class="ttc" id="classsw_1_1gui_1_1_g_u_i_system_html"><div class="ttname"><a href="classsw_1_1gui_1_1_g_u_i_system.html">sw::gui::GUISystem</a></div><div class="ttdoc">Main GUI application class. </div><div class="ttdef"><b>Definition:</b> GUISystem.h:70</div></div>
+<div class="ttc" id="classsw_1_1gui_1_1_g_u_i_system_html"><div class="ttname"><a href="classsw_1_1gui_1_1_g_u_i_system.html">sw::gui::GUISystem</a></div><div class="ttdoc">Main GUI application class. </div><div class="ttdef"><b>Definition:</b> GUISystem.h:243</div></div>
 <div class="ttc" id="class_application_html_a6663f47f035f8c0b030fea7592f86ab1"><div class="ttname"><a href="class_application.html#a6663f47f035f8c0b030fea7592f86ab1">Application::Initialize</a></div><div class="ttdeci">virtual void Initialize() override</div><div class="ttdoc">GUI subsystems initialization. </div><div class="ttdef"><b>Definition:</b> Application.cpp:19</div></div>
+<div class="ttc" id="class_application_html_ac8b6b808aacdee71f6d7c930f1a39b64"><div class="ttname"><a href="class_application.html#ac8b6b808aacdee71f6d7c930f1a39b64">Application::OnIdle</a></div><div class="ttdeci">virtual void OnIdle() override</div><div class="ttdef"><b>Definition:</b> Application.cpp:41</div></div>
 <div class="ttc" id="class_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application template class. </div><div class="ttdef"><b>Definition:</b> Application.h:10</div></div>
+<div class="ttc" id="class_application_html_a6ad5b91f1888b2e90aceced60400e9db"><div class="ttname"><a href="class_application.html#a6ad5b91f1888b2e90aceced60400e9db">Application::Application</a></div><div class="ttdeci">Application(int argc, char **argv, sw::gui::INativeGUI *gui)</div><div class="ttdef"><b>Definition:</b> Application.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 13:58:41 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 9 2017 15:46:02 for Sleeping Wombat GUI by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
