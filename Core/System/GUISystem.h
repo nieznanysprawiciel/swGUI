@@ -64,7 +64,130 @@ Sleeping Wombat GUI is still in development process.
 
 @section Installation
 
+Sleeping Wombat gui uses:
+- https://github.com/nieznanysprawiciel/swInputLibrary
+- https://github.com/nieznanysprawiciel/swCommonLib
+- https://github.com/nieznanysprawiciel/swGraphicAPI
 
+The best option is to add all libraries as subtrees to your project. Imagine that you have all libraries in folder /External.
+Your directory should look like this:
+
+- External/
+	- swInputLibrary/
+	- swGraphicAPI/
+	- swGUI/
+
+You must add folder External to additional include directories. All paths in sw libraries are relative to folder ../
+
+@subsection Installation_Linking Linking Libraries
+
+The best way to link sw libraries is to add all projects to your own solution (for example make merge solution).
+Then you can simply add CoreGUI as reference. Then Add swGUI\ProjectDir\Visual2015\LinkSleepingWombatGUI.props file
+to project that uses GUI.
+
+
+Note that all libraries are in development and not all commits will work together.
+In future we will tag which versions should be used or think of better solution for that, but first all
+libraries must stabilize.
+
+@subsection Installation_Usage
+
+Usage example of GUI:
+main.cpp
+
+@code
+#include "swGUI/Core/System/GUISystem.h"
+#include "swGUI/Native/WinAPI/WinAPIGUI.h"
+
+#include "Application.h"
+
+int main( int argc, char** argv )
+{
+	Application app( argc, argv, GUI::WinAPIGUI::Create() );
+	app.Init();
+
+	return app.MainLoop();
+}
+@endcode
+
+Note you must reference specific Native API in project.
+
+Application.h
+@code
+#pragma once
+
+#include "swGUI/Core/System/GUISystem.h"
+
+
+
+class Application : public sw::gui::GUISystem
+{
+private:
+protected:
+public:
+	explicit	Application		( int argc, char** argv, sw::gui::INativeGUI* gui );
+				~Application	() = default;
+
+protected:
+	virtual	void	Initialize		() override;
+	virtual void	OnInitialized	() override;
+	virtual void	OnClosing		() override;
+	virtual void	OnIdle			() override;
+
+};
+
+@endcode
+
+
+Application.cpp
+
+@code
+
+#include "Application.h"
+
+
+#include "Sizeofs/Sizeofs.h"
+
+
+
+// ================================ //
+//
+Application::Application	( int argc, char** argv, sw::gui::INativeGUI* gui )
+	:	sw::gui::GUISystem( argc, argv, gui )
+{}
+
+// ================================ //
+//
+void Application::Initialize()
+{
+	DefaultInit( 1024, 768, "Window Tittle" );
+}
+
+// ================================ //
+//
+void		Application::OnInitialized()
+{
+	// In this function sizeofs basic classes are printed. Test purposes only.
+	PrintSizeofs();
+
+	CreateNativeHostWindow( 500, 500, "Additional window" );
+}
+
+// ================================ //
+//
+void		Application::OnClosing()
+{ }
+
+// ================================ //
+//
+void		Application::OnIdle()
+{ }
+
+@endcode
+
+
+
+In future we will provide better usage examples!
 
 */
 
