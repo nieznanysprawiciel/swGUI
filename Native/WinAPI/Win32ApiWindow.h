@@ -7,7 +7,8 @@
 #undef CreateWindow
 #undef min
 #undef max
-
+#undef XBUTTON1
+#undef XBUTTON2
 
 
 namespace sw {

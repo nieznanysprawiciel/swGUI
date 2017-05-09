@@ -18,15 +18,65 @@ namespace gui
 
 /**@defgroup SWGUI Sleeping Wombat GUI
 @ingroup ModulesStructure
-@brief Graphic user interface library based on GPU rendering.*/
+@brief Graphic user interface library based on GPU rendering.
+
+
+@mainpage
+
+@section Intro Introduction
+
+This GUI is platform independent system for writing GUI applications in C++.
+The main idea of this gui is to cover the most common WPF functionalities and allow user to load already created xaml
+sheets. Of course WPF is to rich to implement all features.
+The key features are:
+- Support for data binding (gui uses RTTR reflection system)
+- Separating controls functionality and visual behavior (control templates, styles)
+- Extensibility and controls customization
+- GPU rendering
+
+GUI will support similar controls with similar properties, but we will choose only most usefull properties which 
+we used in our short practise with WPF, so porting from WPF to Wombat GUI will not always be simple.
+
+The second goal of this gui are game engines. GUI system should be efficient enough to be used in real time graphics
+and to not consume to much CPU and GPU resources. These two goals can be defficult to bring together...
+
+
+Sleeping Wombat GUI is still in development process.
+
+@section RoadMap Road map
+
+1. Handling main input events (keyboard mouse)
+2. Hit testing, mouse and keyboard capture
+3. Basic rendering - rectangle, circle with using simple brushes
+4. Controls layout and arrangment system
+5. Controls visual states (Fake implementation for testing)
+6. Basic controls (Buttons, StackPanels ...)
+7. Data binding
+8. Control Templates
+9. Storyboard and visual states - proper implementation
+10. XAML deserialization
+11. Control Styles
+12. Basic controls set (Buttons, Layout controls, Tree, List, Window)
+13. ...
+
+
+
+
+@section Installation
+
+
+
+*/
 
 
 /**@defgroup GUICore Core
 @ingroup SWGUI
-@brief Graphic user interface library based on GPU rendering.*/
+@brief Core modules and functionalities..*/
 
 
-/**@brief Structure for command line arguments.*/
+/**@brief Structure for command line arguments.
+
+@todo Move to separate file.*/
 struct CommandLineArgs
 {
 	int				ArgsCount;

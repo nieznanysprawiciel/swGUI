@@ -5,6 +5,8 @@
 
 #include <Windows.h>
 #undef CreateWindow
+#undef XBUTTON1
+#undef XBUTTON2
 
 
 
