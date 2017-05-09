@@ -93,28 +93,34 @@ void		MouseMoveEventReceived			( UIElement* sender, MouseMoveEventArgs* e )
 	MouseEventReceived( sender, e );
 
 	///
+	mouseDeltas.push_back( e->MouseDeltaX );
+	mouseDeltas.push_back( e->MouseDeltaY );
 }
 
 
 
 // ================================ //
 //
-void		CheckVectorsContent					( const std::vector< input::Mouse::PhysicalButtons >& testUpKeys, const std::vector< input::Mouse::PhysicalButtons >& testDownKeys )
+template< typename VecElement >
+void		CompareContent						( const std::vector< VecElement >& testVec, const std::vector< VecElement >& refVec )
 {
-	CHECK( upKeys.size() == testUpKeys.size() );
-	for( Size i = 0; i < std::min( upKeys.size(), testUpKeys.size() ); ++i )
+	CHECK( testVec.size() == refVec.size() );
+	for( Size i = 0; i < std::min( testVec.size(), refVec.size() ); ++i )
 	{
 		INFO( i );
-		CHECK( upKeys[ i ] == testUpKeys[ i ] );
-	}
-
-	CHECK( downKeys.size() == testDownKeys.size() );
-	for( Size i = 0; i < std::min( downKeys.size(), testDownKeys.size() ); ++i )
-	{
-		INFO( i );
-		CHECK( downKeys[ i ] == testDownKeys[ i ] );
+		CHECK( testVec[ i ] == refVec[ i ] );
 	}
 }
+
+
+// ================================ //
+//
+void		CheckVectorsContent					( const std::vector< input::Mouse::PhysicalButtons >& testUpKeys, const std::vector< input::Mouse::PhysicalButtons >& testDownKeys )
+{
+	CompareContent( upKeys, testUpKeys );
+	CompareContent( downKeys, testDownKeys );
+}
+
 
 
 
@@ -269,7 +275,12 @@ TEST_CASE( "MouseMove event" )
 	std::vector< float >	testMousePos;
 	std::vector< float >	testMouseDeltas;
 
+	eventCapturer->QueueMouseMove( 30, -40 );
+	testMouseDeltas.push_back( 30 );
+	testMouseDeltas.push_back( -40 );
 
+	framework.TesterMainStep();
+	CompareContent( testMouseDeltas, mouseDeltas );
 
 }
 

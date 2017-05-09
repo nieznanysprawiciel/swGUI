@@ -97,6 +97,25 @@ void			HostLogic::OnMinimized		()
 //			Input handling	
 //====================================================================================//
 
+// ================================ //
+//
+template< typename ArgumentType >
+void				SendBubbleTunnelEventsPair			( UIElement* element,
+														  ArgumentType* event,
+														  const RegisteredEvent* bubble,
+														  const RegisteredEvent* tunnel,
+														  EventHandlerPointer< ArgumentType > bubbleHandler,
+														  EventHandlerPointer< ArgumentType > tunnelHandler )
+{
+	bool result = EventsSystem::Get().RaiseEvent( bubble, element, event, bubbleHandler );
+	assert( result );		/// @todo Handle failing during event raising.
+
+	if( !event->Handled )
+	{
+		result = EventsSystem::Get().RaiseEvent( tunnel, element, event, tunnelHandler );
+		assert( result );	/// @todo Handle failing during event raising.
+	}
+}
 
 // ================================ //
 //
@@ -109,28 +128,9 @@ void				HostLogic::HandleKeyInput			( const input::DeviceEvent& event, input::De
 		KeyEventArgsOPtr keyEvent = KeyEventArgsOPtr( new KeyEventArgs( static_cast< input::KeyboardDevice* >( device ), event.Key.Key ) );
 
 		if( keyEvent->IsUp )
-		{
-			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyUp, bottomElement, keyEvent.get(), &UIElement::OnPreviewKeyUp );
-			assert( result );		/// @todo Handle failing during event raising.
-
-			if( !keyEvent->Handled )
-			{
-				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyUp, bottomElement, keyEvent.get(), &UIElement::OnKeyUp );
-				assert( result );		/// @todo Handle failing during event raising.
-			}
-		}
+			SendBubbleTunnelEventsPair( bottomElement, keyEvent.get(), UIElement::sPreviewKeyUp, UIElement::sKeyUp, &UIElement::OnPreviewKeyUp, &UIElement::OnKeyUp );
 		else
-		{
-			bool result = EventsSystem::Get().RaiseEvent( bottomElement->sPreviewKeyDown, bottomElement, keyEvent.get(), &UIElement::OnPreviewKeyDown );
-			assert( result );		/// @todo Handle failing during event raising.
-
-			if( !keyEvent->Handled )
-			{
-				result = EventsSystem::Get().RaiseEvent( bottomElement->sKeyDown, bottomElement, keyEvent.get(), &UIElement::OnKeyDown );
-				assert( result );		/// @todo Handle failing during event raising.
-			}
-		}
-		
+			SendBubbleTunnelEventsPair( bottomElement, keyEvent.get(), UIElement::sPreviewKeyDown, UIElement::sKeyDown, &UIElement::OnPreviewKeyDown, &UIElement::OnKeyDown );
 	}
 }
 
@@ -153,29 +153,11 @@ void				HostLogic::HandleMouseButtonInput	( const input::DeviceEvent& event, inp
 	if( target )
 	{
 		MouseButtonEventArgsOPtr mouseEvent = MouseButtonEventArgsOPtr( new MouseButtonEventArgs( static_cast< input::MouseDevice* >( device ), event.Button.Button ) );
+
 		if( mouseEvent->IsUp )
-		{
-			bool result = EventsSystem::Get().RaiseEvent( target->sPreviewMouseUp, target, mouseEvent.get(), &UIElement::OnPreviewMouseUp );
-			assert( result );		/// @todo Handle failing during event raising.
-
-			if( !mouseEvent->Handled )
-			{
-				result = EventsSystem::Get().RaiseEvent( target->sMouseUp, target, mouseEvent.get(), &UIElement::OnMouseUp );
-				assert( result );		/// @todo Handle failing during event raising.
-			}
-		}
+			SendBubbleTunnelEventsPair( target, mouseEvent.get(), UIElement::sPreviewMouseUp, UIElement::sMouseUp, &UIElement::OnPreviewMouseUp, &UIElement::OnMouseUp );
 		else
-		{
-			bool result = EventsSystem::Get().RaiseEvent( target->sPreviewMouseDown, target, mouseEvent.get(), &UIElement::OnPreviewMouseDown );
-			assert( result );		/// @todo Handle failing during event raising.
-
-			if( !mouseEvent->Handled )
-			{
-				result = EventsSystem::Get().RaiseEvent( target->sMouseDown, target, mouseEvent.get(), &UIElement::OnMouseDown );
-				assert( result );		/// @todo Handle failing during event raising.
-			}
-		}
-
+			SendBubbleTunnelEventsPair( target, mouseEvent.get(), UIElement::sPreviewMouseDown, UIElement::sMouseDown, &UIElement::OnPreviewMouseDown, &UIElement::OnMouseDown );
 	}
 }
 
@@ -186,9 +168,32 @@ void				HostLogic::HandleMouseWheelInput	( const input::DeviceEvent& event, inpu
 
 // ================================ //
 //
-void				HostLogic::HandleMouseMoveInput	( const input::DeviceEvent& event, input::Device* device )
-{}
+void				HostLogic::HandleMouseMoveInput		( const input::DeviceEvent& event, input::Device* device )
+{
+	UIElement* target = nullptr;
 
+	if( m_mouseCapture )
+		target = m_mouseCapture;
+	else if( !m_mousePath.empty() )
+		target = HitTesting();
+	
+
+	if( target )
+	{
+
+	}
+}
+
+
+// ================================ //
+//
+UIElement*			HostLogic::HitTesting				()
+{
+	// Check if mouse is still in m_mousePath. Change this vector if not. Send MouseLeave and MouseEnter
+	// events to all windows that lost mouse or which were entered by mouse.
+
+	return nullptr;
+}
 
 //====================================================================================//
 //			Additional functionalities	
