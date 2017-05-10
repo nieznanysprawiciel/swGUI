@@ -180,7 +180,8 @@ void				HostLogic::HandleMouseMoveInput		( const input::DeviceEvent& event, inpu
 
 	if( target )
 	{
-
+		MouseMoveEventArgsOPtr mouseEvent = MouseMoveEventArgsOPtr( new MouseMoveEventArgs( static_cast< input::MouseDevice* >( device ), event.Cursor.OffsetX, event.Cursor.OffsetY ) );
+		SendBubbleTunnelEventsPair( target, mouseEvent.get(), UIElement::sPreviewMouseMove, UIElement::sMouseMove, &UIElement::OnPreviewMouseMove, &UIElement::OnMouseMove );
 	}
 }
 

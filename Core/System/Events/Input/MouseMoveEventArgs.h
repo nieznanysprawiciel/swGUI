@@ -24,12 +24,12 @@ struct MouseMoveEventArgs : public MouseEventArgs
 	RTTR_ENABLE( MouseEventArgs )
 public:
 
-	uint16			MouseDeltaX;
-	uint16			MouseDeltaY;
+	int16			MouseDeltaX;
+	int16			MouseDeltaY;
 
 public:
 
-	explicit MouseMoveEventArgs( input::MouseDevice* device, uint16 deltaX, uint16 deltaY )
+	explicit MouseMoveEventArgs( input::MouseDevice* device, int16 deltaX, int16 deltaY )
 		:	MouseEventArgs( device )
 		,	MouseDeltaX( deltaX )
 		,	MouseDeltaY( deltaY )

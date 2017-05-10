@@ -97,6 +97,13 @@ void		MouseMoveEventReceived			( UIElement* sender, MouseMoveEventArgs* e )
 	mouseDeltas.push_back( e->MouseDeltaY );
 }
 
+// ================================ //
+//
+void		MouseMoveEventReceivedHandled	( UIElement* sender, MouseMoveEventArgs* e )
+{
+	MouseMoveEventReceived( sender, e );
+	e->Handled = true;
+}
 
 
 // ================================ //
@@ -252,6 +259,21 @@ TEST_CASE( "MouseButtonUp/MouseButtonDown event" )
 
 // ================================ //
 //
+void		AddMouseMove		( input::EventCapture* eventCapturer, std::vector< float >& testMouseDeltas, int deltaX, int deltaY, bool handled = false )
+{
+	eventCapturer->QueueMouseMove( deltaX, deltaY );
+	testMouseDeltas.push_back( (float)deltaX );
+	testMouseDeltas.push_back( (float)deltaY );
+
+	if( !handled )
+	{
+		testMouseDeltas.push_back( (float)deltaX );
+		testMouseDeltas.push_back( (float)deltaY );
+	}
+}
+
+// ================================ //
+//
 TEST_CASE( "MouseMove event" )
 {
 	// Initialize framework.
@@ -275,13 +297,36 @@ TEST_CASE( "MouseMove event" )
 	std::vector< float >	testMousePos;
 	std::vector< float >	testMouseDeltas;
 
-	eventCapturer->QueueMouseMove( 30, -40 );
-	testMouseDeltas.push_back( 30 );
-	testMouseDeltas.push_back( -40 );
+	AddMouseMove( eventCapturer, testMouseDeltas, 40, -30 );
 
 	framework.TesterMainStep();
 	CompareContent( testMouseDeltas, mouseDeltas );
 
+// ================================ //
+//
+	AddMouseMove( eventCapturer, testMouseDeltas, 1000, 1000 );
+
+	framework.TesterMainStep();
+	CompareContent( testMouseDeltas, mouseDeltas );
+
+// ================================ //
+//
+	AddMouseMove( eventCapturer, testMouseDeltas, -1000, -1000 );
+
+	framework.TesterMainStep();
+	CompareContent( testMouseDeltas, mouseDeltas );
+
+// ================================ //
+//
+	window->PreviewMouseMove() -= EventDelegate< MouseMoveEventArgs >( &MouseMoveEventReceived );
+	window->PreviewMouseMove() += EventDelegate< MouseMoveEventArgs >( &MouseMoveEventReceivedHandled );
+
+// ================================ //
+//
+	AddMouseMove( eventCapturer, testMouseDeltas, 1000, 1000, true );
+
+	framework.TesterMainStep();
+	CompareContent( testMouseDeltas, mouseDeltas );
 }
 
 
