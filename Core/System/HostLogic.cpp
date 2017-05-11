@@ -45,7 +45,7 @@ void					HostLogic::RemoveControl		( UIElement* control )
 
 // ================================ //
 //
-void					HostLogic::RegisterControlName	( UIElement* control, const std::string& name )
+void					HostLogic::RegisterControlName	( const UIElement* control, const std::string& name )
 {
 	assert( m_controlsNames.find( control ) == m_controlsNames.end() );
 	m_controlsNames[ control ] = name;
@@ -53,7 +53,7 @@ void					HostLogic::RegisterControlName	( UIElement* control, const std::string&
 
 // ================================ //
 //
-const std::string&		HostLogic::GetControlName	( UIElement* control )
+const std::string&		HostLogic::GetControlName	( const UIElement* control ) const
 {
 	auto iter = m_controlsNames.find( control );
 	if( iter != m_controlsNames.end() )

@@ -57,14 +57,16 @@ public:
 	EngineObject*&		DataContext			();
 	void				RemoveControl		( UIElement* control );
 
-	void				RegisterControlName	( UIElement* control, const std::string& name );
-	const std::string&	GetControlName		( UIElement* control );
+	void				RegisterControlName	( const UIElement* control, const std::string& name );
+	const std::string&	GetControlName		( const UIElement* control ) const;
 
 
 	ResourcePtr< RenderTargetObject >	GetRenderTarget		();
 	ResourcePtr< SwapChain >			GetSwapChain		();
 
 	INativeWindow*						GetNativeWindow		();
+
+	virtual HostWindow*					GetHost				() const override;
 
 public:
 	///@name GUI system interaction
@@ -85,8 +87,8 @@ public:
 	virtual void		OnRender		( DrawingContext& context )		override;
 	virtual Size2D		Measure			( Size2D availableSize )		override;
 	virtual void		Arrange			( Rect& finalRect )				override;
-	virtual Size		GetNumChildren	()								override;
-	virtual UIElement*	GetUIChild		( Size idx )					override;
+	virtual Size		GetNumChildren	() const						override;
+	virtual UIElement*	GetUIChild		( Size idx ) const				override;
 	virtual bool		AddChild		( UIElementOPtr&& child )		override;
 
 

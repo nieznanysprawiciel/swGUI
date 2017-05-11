@@ -38,6 +38,8 @@ public:
 
 DEFINE_OPTR_TYPE( MouseMoveEventArgs );
 
+typedef EventDelegate< MouseMoveEventArgs > MouseMoveEventHandler;
+
 }	// gui
 }	// sw
 

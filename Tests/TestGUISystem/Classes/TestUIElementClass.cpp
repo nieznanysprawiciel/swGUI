@@ -66,14 +66,14 @@ bool			TestUIElementClass::ExistsDelegatesContainer	( ::sw::gui::EventType event
 
 // ================================ //
 //
-Size			TestUIElementClass::GetNumChildren()
+Size			TestUIElementClass::GetNumChildren() const
 {
 	return m_children.size();
 }
 
 // ================================ //
 //
-UIElement *		TestUIElementClass::GetUIChild( Size idx )
+UIElement *		TestUIElementClass::GetUIChild( Size idx ) const
 {
 	if( idx < m_children.size() )
 		return m_children[ idx ].get();

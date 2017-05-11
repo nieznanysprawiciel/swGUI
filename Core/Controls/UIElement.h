@@ -29,6 +29,7 @@ namespace sw {
 namespace gui
 {
 
+class HostWindow;
 class UIElement;
 DEFINE_OPTR_TYPE( UIElement );
 
@@ -95,10 +96,10 @@ public:
 	///@name Visual tree manipulation
 	///@{
 	/**@brief Get number of children in visual tree.*/
-	virtual Size			GetNumChildren		()								= 0;
+	virtual Size			GetNumChildren		() const						= 0;
 	
 	/**@brief Gets child in visual tree.*/
-	virtual UIElement*		GetUIChild			( Size idx )					= 0;
+	virtual UIElement*		GetUIChild			( Size idx ) const				= 0;
 	
 	/**@brief Add child.
 	This function should set child parent to this pointer.
@@ -110,10 +111,12 @@ public:
 	virtual void			SetParent			( UIElement* parent );
 
 	/**@brief Returns control parent.*/
-	virtual UIElement*		GetParent			() { return m_parent; }
+	virtual UIElement*		GetParent			() const { return m_parent; }
 
 	///@}
 
+	virtual const std::string&		GetName		() const;
+	virtual HostWindow*				GetHost		() const;
 public:
 
 	///@name Restricted

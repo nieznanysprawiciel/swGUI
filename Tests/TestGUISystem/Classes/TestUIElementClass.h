@@ -77,8 +77,8 @@ public:
 	virtual void Arrange( sw::gui::Rect & finalRect ) override
 	{}
 
-	virtual Size				GetNumChildren			() override;
-	virtual UIElement *			GetUIChild				( Size idx ) override;
+	virtual Size				GetNumChildren			() const override;
+	virtual UIElement *			GetUIChild				( Size idx ) const override;
 	virtual bool				AddChild				( sw::gui::UIElementOPtr && child ) override;
 
 #pragma endregion

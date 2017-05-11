@@ -42,7 +42,7 @@ private:
 
 	/// Map containing windows names. Most controls don't have name, so it's better to store
 	/// them separatly, to lower memory consumption.
-	std::map< UIElement*, std::string >		m_controlsNames;
+	std::map< const UIElement*, std::string >		m_controlsNames;
 
 	///@}
 
@@ -54,8 +54,8 @@ public:
 
 	void				RemoveControl		( UIElement* control );
 
-	void				RegisterControlName	( UIElement* control, const std::string& name );
-	const std::string&	GetControlName		( UIElement* control );
+	void				RegisterControlName	( const UIElement* control, const std::string& name );
+	const std::string&	GetControlName		( const UIElement* control ) const;
 
 
 	///@name GUI system interaction

@@ -89,13 +89,13 @@ void				HostWindow::RemoveControl		( UIElement* control )
 }
 
 /**@brief Allows control to register it's name.*/
-void				HostWindow::RegisterControlName	( UIElement* control, const std::string& name )
+void				HostWindow::RegisterControlName	( const UIElement* control, const std::string& name )
 {
 	m_hostLogic.RegisterControlName( control, name );
 }
 
 /**@brief Gets name of registered control.*/
-const std::string& HostWindow::GetControlName		( UIElement* control )
+const std::string&	HostWindow::GetControlName		( const UIElement* control ) const
 {
 	return m_hostLogic.GetControlName( control );
 }
@@ -119,6 +119,13 @@ ResourcePtr< SwapChain >	HostWindow::GetSwapChain()
 INativeWindow*		HostWindow::GetNativeWindow		()
 {
 	return m_nativeWindow;
+}
+
+// ================================ //
+//
+HostWindow*			HostWindow::GetHost				() const
+{
+	return const_cast< HostWindow* >( this );
 }
 
 //====================================================================================//
@@ -229,14 +236,14 @@ void				HostWindow::Arrange				( Rect & finalRect )
 
 // ================================ //
 //
-Size				HostWindow::GetNumChildren		()
+Size				HostWindow::GetNumChildren		() const
 {
 	return Size();
 }
 
 // ================================ //
 //
-UIElement*			HostWindow::GetUIChild			( Size idx )
+UIElement*			HostWindow::GetUIChild			( Size idx ) const
 {
 	return nullptr;
 }

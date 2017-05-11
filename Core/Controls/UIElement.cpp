@@ -5,6 +5,7 @@
 */
 
 #include "UIElement.h"
+#include "swGUI/Core/System/HostWindow.h"
 
 
 RTTR_REGISTRATION
@@ -64,6 +65,24 @@ REGISTER_EVENT_DEFINITION( MouseLeave, RoutingStrategy::Direct, UIElement, Mouse
 void		UIElement::SetParent				( UIElement* parent )
 {
 	m_parent = parent;
+}
+
+// ================================ //
+//
+const std::string&		UIElement::GetName		() const
+{
+	auto& name = GetHost()->GetControlName( this );
+	return name;		// Note: We can return this->ToString() like in .NET but this would require to have ToString function in EngineObject
+}
+
+// ================================ //
+//
+HostWindow*				UIElement::GetHost		() const
+{
+	auto parent = GetParent();
+	if( parent )
+		return parent->GetHost();
+	return nullptr;
 }
 
 // ================================ //
