@@ -20,8 +20,7 @@ WinAPIGUI*				GetNativeAPIPointer	( HWND window );
 // ================================ //
 //
 WinAPIGUI::WinAPIGUI()
-	: m_input( nullptr )
-{ }
+{}
 
 
 /**@brief Creates WinAPIGUI object.*/
@@ -62,20 +61,23 @@ sw::input::IInput*		WinAPIGUI::UseNativeInput	( INativeWindow* nativeWindow )
 //
 sw::input::IInput*		WinAPIGUI::UseNativeInput	( INativeWindow* nativeWindow, input::InputInitInfo& initInfo )
 {
-	if( initInfo.WndHandle == nullptr )
+	if( initInfo.AppInstance == nullptr )
 		initInfo.AppInstance = GetModuleHandle( nullptr );
 
-	if( initInfo.AppInstance == nullptr )
+	if( initInfo.WndHandle == nullptr )
 		initInfo.WndHandle = nativeWindow->GetHandle();
 
-	m_input = new sw::input::WinApiInputProxy();
-	if( !m_input->Init( initInfo ) )
+	input::WinApiInputProxy* input = new sw::input::WinApiInputProxy();
+	if( !input->Init( initInfo ) )
 	{
+		Win32ApiWindow* window = static_cast< Win32ApiWindow* >( nativeWindow );
+		window->UseNativeInput( input );
+
 		assert( !"Initialziation failed" );
 		return nullptr;
 	}
 
-	return m_input;
+	return input;
 }
 
 // WinAPI macros :(
@@ -172,7 +174,6 @@ bool		WinAPIGUI::Init				( const NativeGUIInitData& initData )
 bool		WinAPIGUI::MainLoopCore             ( MSG* msg )
 {
 	TranslateMessage( msg );
-	HandleInput( msg );
 
 	// Don't process same message two times.
 	//HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
@@ -188,12 +189,12 @@ bool		WinAPIGUI::MainLoopCore             ( MSG* msg )
 
 // ================================ //
 //
-void		WinAPIGUI::HandleInput				( MSG* msg )
+void		WinAPIGUI::HandleInput				( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
 {
-	Win32ApiWindow* window = GetNativePointer( msg->hwnd );
+	Win32ApiWindow* window = GetNativePointer( hWnd );
 
 	if( window )
-		window->HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
+		window->HandleEvent( hWnd, message, wParam, lParam );
 }
 
 /**@brief Captures important events like changing focus.*/
@@ -258,6 +259,9 @@ LRESULT CALLBACK		WindowProcedure		( HWND hWnd, UINT message, WPARAM wParam, LPA
 	PAINTSTRUCT ps;
 	HDC hdc;
 
+	auto nativeGUI = GetNativeAPIPointer( hWnd );
+	nativeGUI->HandleInput( hWnd, message, wParam, lParam );
+
 	switch( message )
 	{
 		case WM_PAINT:
@@ -269,7 +273,6 @@ LRESULT CALLBACK		WindowProcedure		( HWND hWnd, UINT message, WPARAM wParam, LPA
 		case WM_KILLFOCUS:
 		case WM_ACTIVATE:
 		{
-			auto nativeGUI = GetNativeAPIPointer( hWnd );
 			if( nativeGUI )
 				nativeGUI->HandleEvent( hWnd, message, wParam, lParam );
 			break;

@@ -12,13 +12,17 @@ namespace gui
 
 
 
-
+// ================================ //
+//
 Win32ApiWindow::Win32ApiWindow()
-{ }
+	:	m_input( nullptr )
+{}
 
-
+// ================================ //
+//
 Win32ApiWindow::~Win32ApiWindow()
-{ }
+{}
+
 
 /**@brief */
 Win32ApiWindow*		Win32ApiWindow::CreateWindowInstance	( NativeWindowDescriptor& descriptor )

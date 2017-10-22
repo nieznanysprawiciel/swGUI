@@ -61,6 +61,9 @@ HostWindow::~HostWindow()
 		delete m_swapChain.Ptr();
 		m_swapChain = nullptr;
 	}
+
+	delete m_input;
+	delete m_nativeWindow;
 }
 
 

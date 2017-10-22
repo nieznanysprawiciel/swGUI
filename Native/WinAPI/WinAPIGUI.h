@@ -46,7 +46,6 @@ namespace gui
 class WinAPIGUI : public INativeGUI
 {
 private:
-	sw::input::WinApiInputProxy*	m_input;
 	NativeGUIInitData				m_initData;
 
 protected:
@@ -68,8 +67,7 @@ public:
 private:
 	void					RegisterWindowClass		();
 	bool					MainLoopCore			( MSG* msg );
-	void					HandleInput				( MSG* msg );
-
+	
 public:
 	// Helpers
 	static void				PrintLastError			();
@@ -79,6 +77,7 @@ public:
 	///@Internal
 	///@{
 	void                    HandleEvent 			( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
+	void					HandleInput				( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
 	///@}
 };
 
