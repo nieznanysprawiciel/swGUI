@@ -28,7 +28,10 @@
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestKeyEvents.cpp">
       <Filter>TestGUISystem</Filter>
     </ClCompile>
-    <ClCompile Include="TestMouseEvents.cpp">
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestHostWindowFocus.cpp">
+      <Filter>TestGUISystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestMouseEvents.cpp">
       <Filter>TestGUISystem</Filter>
     </ClCompile>
   </ItemGroup>

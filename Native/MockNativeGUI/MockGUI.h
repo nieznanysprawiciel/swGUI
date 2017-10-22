@@ -44,7 +44,9 @@ public:
 
 	static MockGUI*				Create			();
 
-	
+public:
+
+	void						SendChangeFocus	( INativeWindow* nativeWindow, bool change );
 
 };
 

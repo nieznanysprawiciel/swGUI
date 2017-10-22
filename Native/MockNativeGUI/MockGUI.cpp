@@ -26,14 +26,21 @@ MockGUI::MockGUI()
 
 
 /**@brief Creates WinAPIGUI object.*/
-MockGUI*		MockGUI::Create()
+MockGUI*		MockGUI::Create				()
 {
 	return new MockGUI();
 }
 
 // ================================ //
 //
-void			MockGUI::EndApplication()
+void			MockGUI::SendChangeFocus	( INativeWindow* nativeWindow, bool change )
+{
+	m_initData.FocusChanged( nativeWindow, change );
+}
+
+// ================================ //
+//
+void			MockGUI::EndApplication		()
 {
 	/// @todo How to close application in MockGUI.
 	exit( 0 );

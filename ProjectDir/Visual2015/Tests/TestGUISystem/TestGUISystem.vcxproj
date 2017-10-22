@@ -172,9 +172,10 @@
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\FrameworkHelpers\HostWindowTester.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\main.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestEventRouting.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestHostWindowFocus.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestKeyEvents.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestMouseEvents.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestGUISystem\TestRegistration.cpp" />
-    <ClCompile Include="TestMouseEvents.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Tests\TestGUISystem\Classes\TestUIElementClass.h" />

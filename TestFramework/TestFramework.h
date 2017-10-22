@@ -115,6 +115,12 @@ public:
 	/**@brief Returns input object for window.*/
 	input::IInput*				GetInput			( HostWindow* window );
 
+	/**@brief Returns native gui manager.*/
+	INativeGUI*					GetNativeGUI		() { return m_nativeGUI; }
+
+	/**@brief Get window that has currently focus. Can return nullptr.*/
+	HostWindow*					GetFocusWindow		() { return m_focusedWindow; }
+
 	/**@brief Calls main loop but returns after making full step.*/
 	bool						TesterMainStep		();
 
