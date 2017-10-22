@@ -70,12 +70,12 @@ sw::input::IInput*		WinAPIGUI::UseNativeInput	( INativeWindow* nativeWindow, inp
 	input::WinApiInputProxy* input = new sw::input::WinApiInputProxy();
 	if( !input->Init( initInfo ) )
 	{
-		Win32ApiWindow* window = static_cast< Win32ApiWindow* >( nativeWindow );
-		window->UseNativeInput( input );
-
 		assert( !"Initialziation failed" );
 		return nullptr;
 	}
+
+	Win32ApiWindow* window = static_cast< Win32ApiWindow* >( nativeWindow );
+	window->UseNativeInput( input );
 
 	return input;
 }
