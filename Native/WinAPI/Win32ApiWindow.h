@@ -10,6 +10,15 @@
 #undef XBUTTON1
 #undef XBUTTON2
 
+namespace sw {
+namespace input
+{
+
+class WinApiInputProxy;
+
+}	// input
+}	// sw
+
 
 namespace sw {
 namespace gui
@@ -27,6 +36,8 @@ private:
 
 	uint16			m_width;
 	uint16			m_height;
+
+	sw::input::WinApiInputProxy*	m_input;
 
 public:
 	explicit			Win32ApiWindow	();
@@ -57,6 +68,11 @@ public:
 	virtual void				Hide			() override;
 
 	virtual void				SetTitle		( const std::string & newTitle ) override;
+
+public:
+
+	void						UseNativeInput	( sw::input::WinApiInputProxy* input );
+	void						HandleEvent		( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
 };
 
 

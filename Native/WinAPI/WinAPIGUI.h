@@ -56,17 +56,19 @@ public:
 
 
 // Inherited via INativeGUI
-	virtual bool				MainLoop		( bool blockingMode )							override;
-	virtual bool				Init			( const NativeGUIInitData& initData )			override;
-	virtual sw::input::IInput*	UseNativeInput	()												override;
-	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor& descriptor )			override;
-	virtual void				EndApplication	()												override;
+	virtual bool				MainLoop		( bool blockingMode )											override;
+	virtual bool				Init			( const NativeGUIInitData& initData )							override;
+	virtual sw::input::IInput*	UseNativeInput	( INativeWindow* nativeWindow )									override;
+	virtual sw::input::IInput*	UseNativeInput	( INativeWindow* nativeWindow, input::InputInitInfo& initInfo )	override;
+	virtual INativeWindow*		CreateWindow	( NativeWindowDescriptor& descriptor )							override;
+	virtual void				EndApplication	()																override;
 
 	static WinAPIGUI*			Create			();
 
 private:
 	void					RegisterWindowClass		();
 	bool					MainLoopCore			( MSG* msg );
+	void					HandleInput				( MSG* msg );
 
 public:
 	// Helpers

@@ -47,12 +47,17 @@ public:
 	@return Returns false if initialization failed.*/
 	virtual bool					Init			( const NativeGUIInitData& initData ) = 0;
 
-	/**@brief Initalize native api for this gui system and return IInput object.
+	/**@brief Initalize native api for window in parameter and return IInput object.
 	GUI can use native input api for specific gui system or provide different
 	library to deal directly with hardware. Classes derived from INativeGUI are reposible
 	for updating native inputs in main loop. In case of using separate hardware input library
 	INativeGUI does nothing.*/
-	virtual sw::input::IInput*		UseNativeInput	() = 0;
+	virtual sw::input::IInput*		UseNativeInput	( INativeWindow* nativeWindow ) = 0;
+
+	/**@brief Provides posibility to specify input init arguments.
+	Note that fields AppInstance and WindowHandle which can be filled by native window system, can
+	be leaved as nullptr.*/
+	virtual sw::input::IInput*		UseNativeInput	( INativeWindow* nativeWindow, input::InputInitInfo& initInfo ) = 0;
 
 	/**@brief Creates native GUI window.*/
 	virtual INativeWindow*			CreateWindow	( NativeWindowDescriptor& descriptor ) = 0;

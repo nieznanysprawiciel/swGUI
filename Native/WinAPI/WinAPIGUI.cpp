@@ -12,7 +12,7 @@ namespace gui
 
 
 LRESULT CALLBACK		WindowProcedure		( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
-INativeWindow*			GetNativePointer	( HWND window );
+Win32ApiWindow*			GetNativePointer	( HWND window );
 WinAPIGUI*				GetNativeAPIPointer	( HWND window );
 
 
@@ -47,14 +47,29 @@ const wchar_t*	WinAPIGUI::GetWindowClassName()
 
 // ================================ //
 //
-sw::input::IInput*		WinAPIGUI::UseNativeInput()
+sw::input::IInput*		WinAPIGUI::UseNativeInput	( INativeWindow* nativeWindow )
 {
+	Win32ApiWindow* window = static_cast< Win32ApiWindow* >( nativeWindow );
+
 	sw::input::InputInitInfo init;
 	init.AppInstance = GetModuleHandle( nullptr );
-	init.WndHandle = nullptr;
+	init.WndHandle = window->GetHandle();
+
+	return UseNativeInput( nativeWindow, init );
+}
+
+// ================================ //
+//
+sw::input::IInput*		WinAPIGUI::UseNativeInput	( INativeWindow* nativeWindow, input::InputInitInfo& initInfo )
+{
+	if( initInfo.WndHandle == nullptr )
+		initInfo.AppInstance = GetModuleHandle( nullptr );
+
+	if( initInfo.AppInstance == nullptr )
+		initInfo.WndHandle = nativeWindow->GetHandle();
 
 	m_input = new sw::input::WinApiInputProxy();
-	if( !m_input->Init( init ) )
+	if( !m_input->Init( initInfo ) )
 	{
 		assert( !"Initialziation failed" );
 		return nullptr;
@@ -124,9 +139,9 @@ void		WinAPIGUI::PrintLastError()
 }
 
 /**@brief Retrives INativeWindow pointer hidden in native window extra bytes.*/
-INativeWindow*		GetNativePointer	( HWND window )
+Win32ApiWindow*		GetNativePointer	( HWND window )
 {
-	return (INativeWindow*)GetWindowLongPtr( window, 0 );
+	return (Win32ApiWindow*)GetWindowLongPtr( window, 0 );
 }
 
 /**@brief Retrives WinAPIGUI pointer hidden in native window extra bytes.*/
@@ -157,9 +172,7 @@ bool		WinAPIGUI::Init				( const NativeGUIInitData& initData )
 bool		WinAPIGUI::MainLoopCore             ( MSG* msg )
 {
 	TranslateMessage( msg );
-
-	if( m_input )
-		m_input->HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
+	HandleInput( msg );
 
 	// Don't process same message two times.
 	//HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
@@ -171,6 +184,16 @@ bool		WinAPIGUI::MainLoopCore             ( MSG* msg )
 		return true;
 	}
 	return false;
+}
+
+// ================================ //
+//
+void		WinAPIGUI::HandleInput				( MSG* msg )
+{
+	Win32ApiWindow* window = GetNativePointer( msg->hwnd );
+
+	if( window )
+		window->HandleEvent( msg->hwnd, msg->message, msg->wParam, msg->lParam );
 }
 
 /**@brief Captures important events like changing focus.*/

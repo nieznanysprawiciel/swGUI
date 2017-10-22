@@ -74,7 +74,7 @@ TEST_CASE( "KeyUp/KeyDown event" )
 
 	// Create main window (fake window) and get input::EventCapture. 
 	HostWindow* window = framework.CreateNativeHostWindow( 400, 400, "TestWindow" );
-	input::EventCapture* eventCapturer = framework.GetEventCapturer();
+	input::EventCapturePtr eventCapturer = framework.GetEventCapturer( window );
 
 	// Set focus to window.
 	framework.OnFocusChanged( window->GetNativeWindow(), true );
@@ -180,7 +180,7 @@ TEST_CASE( "KeyUp/KeyDown event" )
 	framework.TesterMainStep();
 	CheckVectorsContent( testUpKeys, testDownKeys );
 
-	auto& keybord = framework.GetInput()->GetKeyboardDevice()[ 0 ];
+	auto& keybord = framework.GetInput( window )->GetKeyboardDevice()[ 0 ];
 	const input::KeyState& state = keybord->GetState()[ input::Keyboard::PhysicalKeys::KEY_Z ];
 
 	CHECK( state.IsKeyDownEvent() == false );

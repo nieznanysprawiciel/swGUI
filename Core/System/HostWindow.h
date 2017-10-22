@@ -5,10 +5,10 @@
 @copyright File is part of Sleeping Wombat Libraries.
 */
 
-
-#include "swGUI/Native/INativeWindow.h"
 #include "HostLogic.h"
+#include "swGUI/Native/INativeWindow.h"
 #include "swGUI/Core/Controls/TopLevelControl.h"
+#include "swGUI/Core/System/Time/FrameTime.h"
 
 #include "swInputLibrary/InputCore/IInput.h"
 
@@ -65,6 +65,7 @@ public:
 	ResourcePtr< SwapChain >			GetSwapChain		();
 
 	INativeWindow*						GetNativeWindow		();
+	input::IInput*						GetInput			();
 
 	virtual HostWindow*					GetHost				() const override;
 
@@ -78,7 +79,7 @@ public:
 	void				OnMaximized		();
 	void				OnMinimized		();
 
-	void				HandleInput		();
+	void				HandleInput		( const FrameTime& frameTime );
 	///@}
 
 

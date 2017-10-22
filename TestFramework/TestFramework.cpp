@@ -22,54 +22,46 @@ namespace gui
 // ================================ //
 //
 TestFramework::TestFramework		( int argc, char** argv )
-	:	GUISystem( argc, argv, new MockGUI() )
-	,	m_eventCapture( new input::EventCapture() )
+	:	GUISystem( argc, argv, new MockGUI(), SetTestMode::True )
 {}
 
 
 // ================================ //
 //
-bool			TestFramework::Initialize()
+bool					TestFramework::Initialize		()
 {
-	m_resourceManager = new ResourceManager();
-	
-	DefaultInitGraphicAPI( true, true );
-	InitTesterNativeGUI();
-	InitTesterDebugInput();
-	DefaultInitRenderingSystem();
-
-	return true;
+	return DefaultInitWithoutWindow();
 }
 
 // ================================ //
 //
-bool			TestFramework::InitTesterNativeGUI		()
+input::EventCapturePtr	TestFramework::GetEventCapturer	( HostWindow* window )
 {
-	NativeGUIInitData nativeGUIInit;
-	nativeGUIInit.FocusChanged = fastdelegate::MakeDelegate( this, &GUISystem::OnFocusChanged );
+	if( window )
+	{
+		auto input = window->GetInput();
+		if( input )
+		{
+			input::DebugInput* debugInput = static_cast<input::DebugInput*>( input );
+			return debugInput->GetEventCapture();
+		}
+	}
 
-	m_nativeGUI->Init( nativeGUIInit );
-
-	return true;
+	return nullptr;
 }
 
 // ================================ //
 //
-void			TestFramework::InitTesterDebugInput		()
+input::IInput*			TestFramework::GetInput			( HostWindow* window )
 {
-	input::InputInitInfo info;
-	info.EventCapturer = m_eventCapture;
-
-	m_input = new input::DebugInput();
-	
-	bool result = m_input->Init( info );
-	assert( result );
+	if( window )
+		return window->GetInput();
+	return nullptr;
 }
-
 
 // ================================ //
 //
-bool			TestFramework::TesterMainStep()
+bool					TestFramework::TesterMainStep	()
 {
 	return !MainLoopCore();
 }

@@ -4,6 +4,8 @@
 #include "swGraphicAPI/Resources/ResourcesFactory.h"
 #include "swGraphicAPI/ResourceManager/ResourceManager.h"
 
+#include "swInputLibrary/InputCore/Debugging/EventCapture.h"
+
 #include <map>
 #include <string>
 
@@ -23,15 +25,28 @@ GUISystem*			GUISystem::m_instance = nullptr;
 
 // ================================ //
 //
-GUISystem::GUISystem( int argc, char** argv, INativeGUI* gui )
+GUISystem::GUISystem		( int argc, char** argv, INativeGUI* gui )
 	:	m_cmdArgs( argc, argv )
 	,	m_nativeGUI( gui )
 	,	m_focusedWindow( nullptr )
 	,	m_resourceManager( nullptr )
-	,	m_input( nullptr )
 	,	m_renderingSystem( nullptr )
 {
 	m_instance = this;
+}
+
+// ================================ //
+//
+GUISystem::GUISystem		( int argc, char** argv, INativeGUI* gui, SetTestMode testMode )
+	:	m_cmdArgs( argc, argv )
+	,	m_nativeGUI( gui )
+	,	m_focusedWindow( nullptr )
+	,	m_resourceManager( nullptr )
+	,	m_renderingSystem( nullptr )
+{
+	m_instance = this;
+
+	m_guiConfig.IsTestMode = testMode == SetTestMode::True ? true : false;
 }
 
 // ================================ //
@@ -92,22 +107,8 @@ bool				GUISystem::MainLoopCore()
 /**@brief Processes messages and passes them to focused window.*/
 void				GUISystem::HandleEvents		( const FrameTime& frameTime )
 {
-	// @todo We should pass correct time in parameter.
-	m_input->Update( (float)frameTime.Elapsed );
-
-	if( m_focusedWindow )
-		m_focusedWindow->HandleInput();
-	else
-	{
-		for( auto& device : m_input->GetKeyboardDevice() )
-			device->ApplyAllEvents();
-
-		for( auto& device : m_input->GetMouseDevice() )
-			device->ApplyAllEvents();
-
-		for( auto& device : m_input->GetJoystickDevice() )
-			device->ApplyAllEvents();
-	}
+	for( auto window : m_windows )
+		window->HandleInput( frameTime );
 }
 
 // ================================ //
@@ -193,14 +194,7 @@ bool				GUISystem::DefaultInitNativeGUI		()
 	NativeGUIInitData nativeGUIInit;
 	nativeGUIInit.FocusChanged = fastdelegate::MakeDelegate( this, &GUISystem::OnFocusChanged );
 
-	bool result = m_nativeGUI->Init( nativeGUIInit );
-	if( result )
-	{
-		m_input = m_nativeGUI->UseNativeInput();
-		assert( m_input );
-	}
-
-	return result;
+	return m_nativeGUI->Init( nativeGUIInit );
 }
 
 /**@brief Default graphic api initialization.*/
@@ -346,10 +340,20 @@ HostWindow*			GUISystem::CreateNativeHostWindow	( uint16 width, uint16 height, c
 HostWindow*			GUISystem::CreateNativeHostWindow	( NativeWindowDescriptor& windowDesc )
 {
 	auto nativeWindow = m_nativeGUI->CreateWindow( windowDesc );
+	
 	assert( nativeWindow );
+	if( !nativeWindow )
+		return nullptr;
+
+	// In test mode we need to send event manually.
+	input::InputInitInfo initInfo;
+	if( m_guiConfig.IsTestMode )
+		initInfo.EventCapturer = std::make_shared< input::EventCapture >();
+
+	auto input = m_nativeGUI->UseNativeInput( nativeWindow, initInfo );
 
 	// Create host window from underlying native window.
-	HostWindow* hostWindow = new HostWindow( nativeWindow, m_input, m_resourceManager, m_graphicApi );
+	HostWindow* hostWindow = new HostWindow( nativeWindow, input, m_resourceManager, m_graphicApi );
 	m_windows.push_back( hostWindow );
 
 	return hostWindow;

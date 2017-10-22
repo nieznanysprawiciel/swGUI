@@ -141,7 +141,7 @@ TEST_CASE( "MouseButtonUp/MouseButtonDown event" )
 
 	// Create main window (fake window) and get input::EventCapture. 
 	HostWindow* window = framework.CreateNativeHostWindow( 400, 400, "TestWindow" );
-	input::EventCapture* eventCapturer = framework.GetEventCapturer();
+	input::EventCapturePtr eventCapturer = framework.GetEventCapturer( window );
 
 	// Set focus to window.
 	framework.OnFocusChanged( window->GetNativeWindow(), true );
@@ -247,7 +247,7 @@ TEST_CASE( "MouseButtonUp/MouseButtonDown event" )
 	framework.TesterMainStep();
 	CheckVectorsContent( testUpKeys, testDownKeys );
 
-	auto& mouse = framework.GetInput()->GetMouseDevice()[ 0 ];
+	auto& mouse = framework.GetInput( window )->GetMouseDevice()[ 0 ];
 	const input::KeyState& state = mouse->GetState()[ input::Mouse::PhysicalButtons::MIDDLE_BUTTON ];
 
 	CHECK( state.IsKeyDownEvent() == false );
@@ -282,7 +282,7 @@ TEST_CASE( "MouseMove event" )
 
 	// Create main window (fake window) and get input::EventCapture. 
 	HostWindow* window = framework.CreateNativeHostWindow( 400, 400, "TestWindow" );
-	input::EventCapture* eventCapturer = framework.GetEventCapturer();
+	input::EventCapturePtr eventCapturer = framework.GetEventCapturer( window );
 
 	// Set focus to window.
 	framework.OnFocusChanged( window->GetNativeWindow(), true );
@@ -297,21 +297,21 @@ TEST_CASE( "MouseMove event" )
 	std::vector< float >	testMousePos;
 	std::vector< float >	testMouseDeltas;
 
-	AddMouseMove( eventCapturer, testMouseDeltas, 40, -30 );
+	AddMouseMove( eventCapturer.get(), testMouseDeltas, 40, -30 );
 
 	framework.TesterMainStep();
 	CompareContent( testMouseDeltas, mouseDeltas );
 
 // ================================ //
 //
-	AddMouseMove( eventCapturer, testMouseDeltas, 1000, 1000 );
+	AddMouseMove( eventCapturer.get(), testMouseDeltas, 1000, 1000 );
 
 	framework.TesterMainStep();
 	CompareContent( testMouseDeltas, mouseDeltas );
 
 // ================================ //
 //
-	AddMouseMove( eventCapturer, testMouseDeltas, -1000, -1000 );
+	AddMouseMove( eventCapturer.get(), testMouseDeltas, -1000, -1000 );
 
 	framework.TesterMainStep();
 	CompareContent( testMouseDeltas, mouseDeltas );
@@ -323,7 +323,7 @@ TEST_CASE( "MouseMove event" )
 
 // ================================ //
 //
-	AddMouseMove( eventCapturer, testMouseDeltas, 1000, 1000, true );
+	AddMouseMove( eventCapturer.get(), testMouseDeltas, 1000, 1000, true );
 
 	framework.TesterMainStep();
 	CompareContent( testMouseDeltas, mouseDeltas );

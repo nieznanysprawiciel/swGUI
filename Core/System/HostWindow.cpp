@@ -123,6 +123,13 @@ INativeWindow*		HostWindow::GetNativeWindow		()
 
 // ================================ //
 //
+input::IInput*		HostWindow::GetInput			()
+{
+	return m_input;
+}
+
+// ================================ //
+//
 HostWindow*			HostWindow::GetHost				() const
 {
 	return const_cast< HostWindow* >( this );
@@ -175,8 +182,10 @@ void				HostWindow::OnMinimized			()
 
 // ================================ //
 //
-void				HostWindow::HandleInput			()
+void				HostWindow::HandleInput			( const FrameTime& frameTime )
 {
+	m_input->Update( (float)frameTime.Elapsed );
+
 	input::InputDispatcher dispatcher( m_input );
 
 	while( !dispatcher.NoEventsLeft() )

@@ -49,12 +49,22 @@ void			MockGUI::EndApplication()
 
 // ================================ //
 ///
-sw::input::IInput*		MockGUI::UseNativeInput()
+sw::input::IInput*		MockGUI::UseNativeInput		( INativeWindow* nativeWindow )
 {
 	input::InputInitInfo info;
+	info.AppInstance = nullptr;
+	info.WndHandle = nullptr;
+
+	return UseNativeInput( nativeWindow, info );
+}
+
+// ================================ //
+//
+sw::input::IInput*		MockGUI::UseNativeInput		( INativeWindow* nativeWindow, input::InputInitInfo& initInfo )
+{
 	input::IInput* input = new input::DebugInput();
 	
-	if( input->Init( info ) )
+	if( input->Init( initInfo ) )
 		return input;
 
 	return nullptr;

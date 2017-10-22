@@ -21,6 +21,9 @@ public:
 	bool			UseBlockingMode		: 1;		///< GUI will always wait for native events. Set to false if you want maximum FPS.
 	bool			UseVSync			: 1;		///< Synchronize swaping render targets with screen frequency. Set to false if you want maximum FPS.
 	bool			RedrawOnlyFocused	: 1;		///< Only focused window will be redrawn.
+	bool			IsTestMode			: 1;		///< Check this flag in initialization to add test features. Note that if we want testing to be reliable,
+													///< the behaviour of the application should be the same. Use this flag only to add state capturing objects
+													///< or other mock functionalities. Use wise.
 
 public:
 

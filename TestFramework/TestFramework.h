@@ -95,9 +95,6 @@ TestFramework initializes graphic API as MockAPI,
 class TestFramework : public GUISystem
 {
 private:
-
-	input::EventCapture*		m_eventCapture;
-
 protected:
 public:
 	explicit		TestFramework		( int argc, char** argv );
@@ -113,8 +110,10 @@ public:
 	///@{
 
 	/**@brief Returns event capturer which can emulate events.*/
-	input::EventCapture*		GetEventCapturer	() { return m_eventCapture; }
-	input::IInput*				GetInput			() { return m_input; }
+	input::EventCapturePtr		GetEventCapturer	( HostWindow* window );
+
+	/**@brief Returns input object for window.*/
+	input::IInput*				GetInput			( HostWindow* window );
 
 	/**@brief Calls main loop but returns after making full step.*/
 	bool						TesterMainStep		();
@@ -123,8 +122,6 @@ public:
 	///@}
 
 private:
-	bool			InitTesterNativeGUI		();
-	void			InitTesterDebugInput	();
 
 	// Inherited via GUISystem
 	virtual bool	OnInitialized			() override { return true; };

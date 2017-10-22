@@ -3,6 +3,8 @@
 #include "WinAPIGUI.h"
 #include "swCommonLib/Common/Converters.h"
 
+#include "swInputLibrary/InputWinApi/WinApiInputProxy.h"
+
 
 namespace sw {
 namespace gui
@@ -152,7 +154,22 @@ void			Win32ApiWindow::SetTitle		( const std::string& newTitle )
 
 // ================================ //
 //
-uint16 Win32ApiWindow::GetClientWidth() const
+void			Win32ApiWindow::UseNativeInput	( sw::input::WinApiInputProxy* input )
+{
+	m_input = input;
+}
+
+// ================================ //
+//
+void			Win32ApiWindow::HandleEvent		( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
+{
+	if( m_input )
+		m_input->HandleEvent( hWnd, message, wParam, lParam );
+}
+
+// ================================ //
+//
+uint16			Win32ApiWindow::GetClientWidth	() const
 {
 	RECT windowRect;
 	GetClientRect( m_windowHandle, &windowRect );
@@ -162,7 +179,7 @@ uint16 Win32ApiWindow::GetClientWidth() const
 
 // ================================ //
 //
-uint16 Win32ApiWindow::GetClientHeight() const
+uint16			Win32ApiWindow::GetClientHeight	() const
 {
 	RECT windowRect;
 	GetClientRect( m_windowHandle, &windowRect );
