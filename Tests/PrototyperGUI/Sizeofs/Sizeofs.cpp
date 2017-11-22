@@ -60,6 +60,7 @@ void			PrintSizeofs()
 
 	PrintSizeofType< sw::gui::BindingsInfo >( std::cout );
 	PrintSizeofType< sw::gui::Binding >( std::cout );
+	PrintSizeofType< sw::gui::BindingExpression >( std::cout );
 	
 
 	std::cout << std::endl << "RTTR types:" << std::endl;

@@ -20,15 +20,16 @@ namespace gui
 struct BindingInfo;
 DEFINE_PTR_TYPE( BindingInfo )
 
+typedef std::vector< BindingInfoPtr > BindingsVec;
+
 
 /**@brief Holds information about all bindings to property.
 @ingroup DataBindingSystem*/
 struct BindingsInfo
 {
 	Binding					PropertyBinding;
-
-
-	std::vector< BindingInfoPtr >	BoundProperties;	///< All properties receiving values from this one.
+	BindingsVec				BoundProperties;	///< All properties receiving values from this one.
+	BindingExpression		Expression;			///< Use BindingExpression to retrive all info when DataContext changes.
 };
 
 
