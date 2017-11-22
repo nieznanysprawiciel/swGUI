@@ -43,6 +43,15 @@
     <Filter Include="Core\System\Time">
       <UniqueIdentifier>{b0d68f75-7f36-478c-ac2e-b6acb4f286b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\System\DataBinding\Converters">
+      <UniqueIdentifier>{51900ce6-9070-4cf6-9a3d-6b235285f143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\System\DataBinding\Validators">
+      <UniqueIdentifier>{bdb2e068-b766-4cd7-ab9c-427066faf22b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Cultures">
+      <UniqueIdentifier>{7d566607-e326-4770-9771-3147945da9ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\targetver.h">
@@ -176,6 +185,27 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Core\System\Time\FrameTime.h">
       <Filter>Core\System\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingInfo.h">
+      <Filter>Core\System\DataBinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingMode.h">
+      <Filter>Core\System\DataBinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingExpression.h">
+      <Filter>Core\System\DataBinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Binding.h">
+      <Filter>Core\System\DataBinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\Cultures\CultureInfo.h">
+      <Filter>Core\Cultures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Converters\IValueConverter.h">
+      <Filter>Core\System\DataBinding\Converters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Validators\IValueValidator.h">
+      <Filter>Core\System\DataBinding\Validators</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

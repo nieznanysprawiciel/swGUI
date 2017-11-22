@@ -146,6 +146,7 @@
     <ClInclude Include="..\..\..\Core\Controls\TopLevelControl.h" />
     <ClInclude Include="..\..\..\Core\Controls\UIElement.h" />
     <ClInclude Include="..\..\..\Core\Controls\Visual.h" />
+    <ClInclude Include="..\..\..\Core\Cultures\CultureInfo.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\Brush.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\GradientBrush.h" />
     <ClInclude Include="..\..\..\Core\Media\Brushes\ImageBrush.h" />
@@ -157,7 +158,13 @@
     <ClInclude Include="..\..\..\Core\System\CommonTypes\CommonTypes.h" />
     <ClInclude Include="..\..\..\Core\System\CommonTypes\Thickness.h" />
     <ClInclude Include="..\..\..\Core\System\Config\GUISystemConfig.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Binding.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingExpression.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingInfo.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingMode.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Converters\IValueConverter.h" />
     <ClInclude Include="..\..\..\Core\System\DataBinding\DependencyObject.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Validators\IValueValidator.h" />
     <ClInclude Include="..\..\..\Core\System\Events\DelegateContainer.h" />
     <ClInclude Include="..\..\..\Core\System\Events\EventHandlers.h" />
     <ClInclude Include="..\..\..\Core\System\Events\EventProxy.h" />
