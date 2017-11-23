@@ -4,7 +4,7 @@
 #include "swCommonLib/Common/RTTR.h"
 
 #include "BindingMode.h"
-#include "BindingExpression.h"
+#include "Expressions/BindingExpression.h"
 #include "Binding.h"
 
 
@@ -29,7 +29,7 @@ struct BindingsInfo
 {
 	Binding					PropertyBinding;
 	BindingsVec				BoundProperties;	///< All properties receiving values from this one.
-	BindingExpression		Expression;			///< Use BindingExpression to retrive all info when DataContext changes.
+	BindingExpressionPtr	Expression;			///< Use BindingExpression to retrive binding info when DataContext changes.
 };
 
 

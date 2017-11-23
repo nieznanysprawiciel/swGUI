@@ -52,6 +52,9 @@
     <Filter Include="Core\Cultures">
       <UniqueIdentifier>{7d566607-e326-4770-9771-3147945da9ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\System\DataBinding\Expressions">
+      <UniqueIdentifier>{e85465e3-a3b7-4fea-b4e6-830da93e8b1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\targetver.h">
@@ -192,9 +195,6 @@
     <ClInclude Include="..\..\..\Core\System\DataBinding\BindingMode.h">
       <Filter>Core\System\DataBinding</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Core\System\DataBinding\BindingExpression.h">
-      <Filter>Core\System\DataBinding</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Core\System\DataBinding\Binding.h">
       <Filter>Core\System\DataBinding</Filter>
     </ClInclude>
@@ -206,6 +206,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Core\System\DataBinding\Validators\IValueValidator.h">
       <Filter>Core\System\DataBinding\Validators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Expressions\BindingExpression.h">
+      <Filter>Core\System\DataBinding\Expressions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Expressions\PathToContextExpression.h">
+      <Filter>Core\System\DataBinding\Expressions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
