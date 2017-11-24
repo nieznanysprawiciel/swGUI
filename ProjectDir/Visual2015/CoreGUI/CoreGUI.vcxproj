@@ -164,7 +164,7 @@
     <ClInclude Include="..\..\..\Core\System\DataBinding\Converters\IValueConverter.h" />
     <ClInclude Include="..\..\..\Core\System\DataBinding\DependencyObject.h" />
     <ClInclude Include="..\..\..\Core\System\DataBinding\Expressions\BindingExpression.h" />
-    <ClInclude Include="..\..\..\Core\System\DataBinding\Expressions\PathToContextExpression.h" />
+    <ClInclude Include="..\..\..\Core\System\DataBinding\Expressions\DefaultBindingExpression.h" />
     <ClInclude Include="..\..\..\Core\System\DataBinding\Validators\IValueValidator.h" />
     <ClInclude Include="..\..\..\Core\System\Events\DelegateContainer.h" />
     <ClInclude Include="..\..\..\Core\System\Events\EventHandlers.h" />
@@ -199,6 +199,7 @@
     <ClCompile Include="..\..\..\Core\Controls\IControl.cpp" />
     <ClCompile Include="..\..\..\Core\Controls\UIElement.cpp" />
     <ClCompile Include="..\..\..\Core\System\DataBinding\DependencyObject.cpp" />
+    <ClCompile Include="..\..\..\Core\System\DataBinding\Expressions\DefaultBindingExpression.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\EventHandlers.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\EventsSystem.cpp" />
     <ClCompile Include="..\..\..\Core\System\Events\Input\KeyboardEventArgs.cpp" />

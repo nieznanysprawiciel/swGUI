@@ -29,6 +29,20 @@ struct BindingTarget
 };
 
 
+/**@brief Binding expressions types.
+@todo We should implement some other types here like Collection binding, StaticResource binding, ElementName...
+@ingroup DataBindingSystem*/
+enum class BindingExpressionType : uint8
+{
+	DataContext,			///< Find property by path beginning in current DataContext.
+	StaticResource,			///< Bind to property of static resource defined in xml.
+	Self,					///< Binding to property of the same object.
+	FindAncestor,			///< Binding to one of ancestors in controls hierarchy.
+	TemplatedParent,		///< Binding to control which the template is applied to.
+	PreviousData,			///< Maybe won't be supported.
+	ElementName				///< Find control by name.
+};
+
 
 /**@brief Class can evaluate binding address to right property and object.
 
@@ -38,22 +52,6 @@ interface and use subclasses. But we don't want to allocate to many objects, so 
 @ingroup DataBindingSystem*/
 class BindingExpression
 {
-public:
-
-	/**@brief Binding expressions types.
-	@todo We should implement some other types here like Collection binding, StaticResource binding, ElementName...
-	@ingroup DataBindingSystem*/
-	enum class ExpressionType : uint8
-	{
-		DataContext,			///< Find property by path beginning in current DataContext.
-		StaticResource,			///< Bind to property of static resource defined in xml.
-		Self,					///< Binding to property of the same object.
-		FindAncestor,			///< Binding to one of ancestors in controls hierarchy.
-		TemplatedParent,		///< Binding to control which the template is applied to.
-		PreviousData,			///< Maybe won't be supported.
-		ElementName				///< Find control by name.
-	};
-
 private:
 
 	std::string			m_path;
@@ -76,11 +74,11 @@ public:
 	@param[in] dataContext Data context where expression will start evaluation.
 	@param[in] propertyOwner Owner control of property which is bound to source.
 	@return Returns evaluated target object and property.*/
-	virtual Nullable< BindingTarget >		EvaluateExpression		( const rttr::variant & dataContext, const rttr::variant & propertyOwner )		= 0;
+	virtual Nullable< BindingTarget >		EvaluateExpression		( const rttr::variant & dataContext, const rttr::variant & propertyOwner ) const = 0;
 
 
 	/**@brief Gets expression type.*/
-	virtual ExpressionType					GetExpressionType		() = 0;
+	virtual BindingExpressionType			GetExpressionType		() const = 0;
 };
 
 DEFINE_PTR_TYPE( BindingExpression )
