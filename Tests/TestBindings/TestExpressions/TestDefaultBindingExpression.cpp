@@ -21,8 +21,14 @@ TEST_CASE( "DefaultBindingExpression_OneElementPath", "[GUI][BindingSystem][Expr
 	auto bindingTarget = expression->EvaluateExpression( animal, rttr::variant() );
 
 	REQUIRE( bindingTarget.IsValid() );
+	
 	CHECK( bindingTarget.Get().Property.get_name() == "Name" );
-	CHECK( bindingTarget.Get().Property.get_type() == TypeID::get< std::string >() );
+
+	// Property types is reference wrapper to string, so we must check wrapped type.
+	CHECK( bindingTarget.Get().Property.get_type().get_wrapped_type() == TypeID::get< std::string >() );
+	CHECK( bindingTarget.Get().Property.get_declaring_type() == TypeID::get< sw::Animal >() );
+
+	CHECK( bindingTarget.Get().Target.get_value< Animal* >() == animal );
 }
 
 

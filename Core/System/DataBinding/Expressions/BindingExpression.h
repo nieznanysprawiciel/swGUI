@@ -26,6 +26,13 @@ struct BindingTarget
 {
 	rttr::variant		Target;
 	rttr::property		Property;
+
+// ================================ //
+//
+	BindingTarget( const rttr::variant & target, const rttr::property & property )
+		: Target( target )
+		, Property( property )
+	{}
 };
 
 
@@ -52,7 +59,7 @@ interface and use subclasses. But we don't want to allocate to many objects, so 
 @ingroup DataBindingSystem*/
 class BindingExpression
 {
-private:
+protected:
 
 	std::string			m_path;
 	//TypeID				m_ancestorType;
