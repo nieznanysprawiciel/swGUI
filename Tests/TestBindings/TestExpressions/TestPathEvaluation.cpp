@@ -51,3 +51,22 @@ TEST_CASE( "PathEvaluation_PassNullDataContext", "[GUI][BindingSystem][Expressio
 	REQUIRE_FALSE( bindingTarget.IsValid() );
 }
 
+// ================================ //
+// Empty binding path should resolve to invalid property and valid object equal to data context.
+TEST_CASE( "PathEvaluation_EmptyBindingPath", "[GUI][BindingSystem][Expressions]" )
+{
+	std::unique_ptr< Animal > animal = std::unique_ptr< Animal >( new Animal );
+	auto bindingTarget = gui::DefaultBindingExpression::EvaluateRelativeProperty( animal.get(), "" );
+
+	REQUIRE( bindingTarget.IsValid() );
+
+	auto & property = bindingTarget.Get().Property;
+	auto & target = bindingTarget.Get().Target;
+
+	CHECK_FALSE( property.is_valid() );
+	CHECK( target.is_valid() );
+
+	CHECK( target.get_type() == TypeID::get< Animal* >() );
+	CHECK( target.get_value< Animal* >() == animal.get() );
+}
+

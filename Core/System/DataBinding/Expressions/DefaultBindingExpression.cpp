@@ -36,7 +36,8 @@ Nullable< BindingTarget >				DefaultBindingExpression::EvaluateRelativeProperty	
 {
 	auto propObjPair = Properties::GetProperty( dataContext, path );
 
-	if( propObjPair.first.is_valid() && propObjPair.second.is_valid() )
+	// Check only target object for existance.
+	if( propObjPair.first.is_valid() )
 		return BindingTarget( propObjPair.first, propObjPair.second );
 
 	/// @todo Make exception for this error.
