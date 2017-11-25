@@ -34,7 +34,7 @@ BindingExpressionType					DefaultBindingExpression::GetExpressionType		() const
 //
 Nullable< BindingTarget >				DefaultBindingExpression::EvaluateRelativeProperty	( const rttr::variant & dataContext, const std::string & path )
 {
-	auto propObjPair = Properties::GetProperty( dataContext, path );
+	auto propObjPair = Properties::GetProperty( dataContext, path, 0, '.' );
 
 	// Check only target object for existance.
 	if( propObjPair.first.is_valid() )

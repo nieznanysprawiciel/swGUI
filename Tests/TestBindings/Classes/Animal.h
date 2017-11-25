@@ -8,9 +8,19 @@
 namespace sw
 {
 
+/**@defgroup Tests
+@brief Testing environment, classes helpers.*/
+
+/**@defgroup TestClassHierarchy Test Classes Hierarchy
+@ingroup Tests
+@brief Example class hierarchy with rttr properties which can be used in different tests scenarios.
+
+@todo Extract all classes to different library which can be freely linked to any project.
+Move to swCommonLibrary.*/
 
 
-/**@brief */
+/**@brief Base animal class.
+@ingroup TestClassHierarchy*/
 class Animal
 {
 	RTTR_ENABLE();

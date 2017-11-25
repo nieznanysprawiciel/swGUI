@@ -4,6 +4,7 @@
 #include "swGUI/Core/System/DataBinding/Expressions/DefaultBindingExpression.h"
 
 #include "swGUI/Tests/TestBindings/Classes/Animal.h"
+#include "swGUI/Tests/TestBindings/Classes/Mammals/Dog.h"
 
 #include <memory>
 
@@ -70,3 +71,24 @@ TEST_CASE( "PathEvaluation_EmptyBindingPath", "[GUI][BindingSystem][Expressions]
 	CHECK( target.get_value< Animal* >() == animal.get() );
 }
 
+// ================================ //
+// Evaluate path to property in subclass using variant created from base class.
+TEST_CASE( "PathEvaluation_PathToPropertyInSubclass", "[GUI][BindingSystem][Expressions]" )
+{
+	std::unique_ptr< Dog > dog = std::unique_ptr< Dog >( new Dog );
+	Animal* animal = dog.get();
+
+	auto bindingTarget = gui::DefaultBindingExpression::EvaluateRelativeProperty( animal, "Race" );
+	REQUIRE( bindingTarget.IsValid() );
+
+	auto & property = bindingTarget.Get().Property;
+	auto & target = bindingTarget.Get().Target;
+
+	CHECK( property.is_valid() );
+	CHECK( target.is_valid() );
+
+	CHECK( bindingTarget.Get().Property.get_type().get_wrapped_type() == TypeID::get< std::string >() );
+	CHECK( bindingTarget.Get().Property.get_declaring_type() == TypeID::get< sw::Dog >() );
+
+	CHECK( target.get_value< Animal* >() == dog.get() );
+}
