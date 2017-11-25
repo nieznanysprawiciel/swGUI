@@ -22,6 +22,7 @@ private:
 protected:
 public:
 	explicit		Animal		() = default;
+	explicit		Animal		( const std::string & name );
 	virtual			~Animal		();
 
 };

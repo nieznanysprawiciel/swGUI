@@ -23,6 +23,8 @@
     <ClCompile Include="..\..\..\..\Tests\TestBindings\Classes\Registration.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestBindings\main.cpp" />
     <ClCompile Include="..\..\..\..\Tests\TestBindings\TestExpressions\TestDefaultBindingExpression.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestBindings\TestExpressions\TestPathEvaluation.cpp" />
+    <ClCompile Include="..\..\..\..\Tests\TestBindings\TestExpressions\TestRTTRPreconditions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\swCommonLib\Projects\Visual2015\CommonBase\CommonBase.vcxproj">

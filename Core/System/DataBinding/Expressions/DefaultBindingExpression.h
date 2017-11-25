@@ -32,7 +32,7 @@ public:
 
 public:
 
-
+	static Nullable< BindingTarget >	EvaluateRelativeProperty	( const rttr::variant & dataContext, const std::string & path );
 
 };
 

@@ -20,13 +20,7 @@ DefaultBindingExpression::DefaultBindingExpression		( const std::string & bindin
 //
 Nullable< BindingTarget >				DefaultBindingExpression::EvaluateExpression		( const rttr::variant& dataContext, const rttr::variant& propertyOwner ) const
 {
-	auto propObjPair = Properties::GetProperty( dataContext, m_path );
-
-	if( propObjPair.first.is_valid() && propObjPair.second.is_valid() )
-		return BindingTarget( propObjPair.first, propObjPair.second );
-
-	/// @todo Make exception for this error.
-	return Nullable< BindingTarget >();
+	return DefaultBindingExpression::EvaluateRelativeProperty( dataContext, m_path );
 }
 
 // ================================ //
@@ -34,6 +28,19 @@ Nullable< BindingTarget >				DefaultBindingExpression::EvaluateExpression		( con
 BindingExpressionType					DefaultBindingExpression::GetExpressionType		() const
 {
 	return BindingExpressionType::DataContext;
+}
+
+// ================================ //
+//
+Nullable< BindingTarget >				DefaultBindingExpression::EvaluateRelativeProperty	( const rttr::variant & dataContext, const std::string & path )
+{
+	auto propObjPair = Properties::GetProperty( dataContext, path );
+
+	if( propObjPair.first.is_valid() && propObjPair.second.is_valid() )
+		return BindingTarget( propObjPair.first, propObjPair.second );
+
+	/// @todo Make exception for this error.
+	return Nullable< BindingTarget >();
 }
 
 

@@ -10,6 +10,11 @@ RTTR_REGISTRATION
 }
 
 
+// ================================ //
+//
+sw::Animal::Animal	( const std::string & name )
+	:	m_name( name )
+{}
 
 // ================================ //
 // Add one class to pull registration code into library.

@@ -19,6 +19,12 @@
     <ClCompile Include="..\..\..\..\Tests\TestBindings\Classes\Registration.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Tests\TestBindings\TestExpressions\TestPathEvaluation.cpp">
+      <Filter>TestExpressions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Tests\TestBindings\TestExpressions\TestRTTRPreconditions.cpp">
+      <Filter>TestExpressions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Tests\TestBindings\Classes\Animal.h">
