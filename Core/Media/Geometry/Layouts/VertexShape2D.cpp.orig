@@ -23,9 +23,15 @@ const AssetPath		VertexShape2D_LayoutName = "::sw::gui::VertexShape2D";
 template<>
 InputLayoutDescriptor   		CreateLayoutDescriptor< VertexShape2D >	()
 {
+<<<<<<< HEAD
+	InputLayoutDescriptor* desc = ResourcesFactory::CreateInputLayoutDescriptor( GetLayoutName< VertexShape2D >() );
+	desc->AddRow( "POSITION", ResourceFormat::RESOURCE_FORMAT_R32G32_FLOAT, 0, 0, false, 0 );
+	desc->AddRow( "TEXCOORD", ResourceFormat::RESOURCE_FORMAT_R32G32_FLOAT, 0, 8, false, 0 );
+=======
 	InputLayoutDescriptor desc;
     desc.AddEntry( AttributeSemantic::Position, ResourceFormat::RESOURCE_FORMAT_R32G32_FLOAT );
     desc.AddEntry( AttributeSemantic::Texcoord, ResourceFormat::RESOURCE_FORMAT_R32G32_FLOAT );
+>>>>>>> master
 
 	return std::move( desc );
 }
